@@ -5,8 +5,6 @@
  */
 
 
-<<<<<<< HEAD
-
 body {
   margin: 0;
   font-family: cabin, source-sans-pro,muli, josefin-sans, open-sans, sans-serif;
@@ -16,16 +14,10 @@ body {
   background-color: #ffffff;
 }
 
-
-
-
-=======
->>>>>>> a686f940ffad2403ac7b84cebbb8fb2918d06524
 a {
-color: #8b8b8b;
-text-decoration: none;
+    color: #8b8b8b;
+    text-decoration: none;
 }
-
 
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
@@ -33,21 +25,6 @@ text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
-.well {
-  min-height: 20px;
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: #ffffff;
-  border: 1px solid #e3e3e3;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-
-<<<<<<< HEAD
 .siteheader {
   padding: 20px;
   background-color: #3498DB;
@@ -88,13 +65,10 @@ text-decoration: none;
 }
 
 
-.apply {
-  min-height: 20px;
-=======
+
 .apply {
   min-height: 20px;
   padding: 20px;
->>>>>>> a686f940ffad2403ac7b84cebbb8fb2918d06524
   margin-bottom: 20px;
   background-color: #fc4646;
   border: 1px solid #fc4646;
@@ -133,35 +107,23 @@ text-decoration: none;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-
-
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> a686f940ffad2403ac7b84cebbb8fb2918d06524
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: inherit
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-<<<<<<< HEAD
 }
 
 
-
-.modal-body {
-  position: relative;
-  overflow-y: auto;
-  max-height: 900px;
-  max-width: 720px;
-  padding: 15px;
-=======
->>>>>>> a686f940ffad2403ac7b84cebbb8fb2918d06524
+.nav-tabs > li > a,
+.nav-pills > li > a {
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: 2px;
+  line-height: 14px;
 }
