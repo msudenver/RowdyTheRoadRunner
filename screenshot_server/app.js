@@ -56,7 +56,7 @@
           var actualViewPageFileName, fullPageFileName;
           this.echo("Opening at " + width);
           fullPageFileName = "" + now + "/fullPage-" + width + ".png";
-          actualViewPageFileName = "" + now + "-region[x,y]/" + width + "-" + height + ".png";
+          actualViewPageFileName = "" + now + "-region[" + x + "," + y + "]/" + width + "-" + height + ".png";
           this.captureSelector(fullPageFileName, "body");
           this.capture(actualViewPageFileName, {
             top: 0,

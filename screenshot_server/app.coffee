@@ -78,7 +78,7 @@ casperJob = ->
 				# actualViewPageFileName = "#{savedir}-#{moment}/#{width}-#{height}.png"
 
 				fullPageFileName = "#{now}/fullPage-#{width}.png"
-				actualViewPageFileName = "#{now}-region[x,y]/#{width}-#{height}.png"
+				actualViewPageFileName = "#{now}-region[#{x},#{y}]/#{width}-#{height}.png"
 
 				#capture full body
 				@captureSelector(fullPageFileName, "body")
