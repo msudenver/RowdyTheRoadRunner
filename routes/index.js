@@ -2,9 +2,7 @@
 (function() {
 
   exports.index = function(req, res) {
-    return res.render("index", {
-      title: "it works"
-    });
+    return res.render("index");
   };
 
 }).call(this);
