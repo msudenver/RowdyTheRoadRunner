@@ -97,6 +97,7 @@ cronjob = new crontab "00 00 9-5 * * 1-5"
 	, null
 	, true
 
+console.log "cronjob runs every weekday from 9am to 5pm at 30 minute intervals"
 
 
 
