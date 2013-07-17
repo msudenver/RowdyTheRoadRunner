@@ -73,11 +73,9 @@
     });
   };
 
-  cronjob = new crontab("* * * * *", function() {
+  cronjob = new crontab("00 00 9-5 * * 1-5", function() {
     console.log("printing every minute..");
     return casperjob();
-  }, function() {
-    return console.log("cronjob has ended");
-  }, true);
+  }, null, true);
 
 }).call(this);
