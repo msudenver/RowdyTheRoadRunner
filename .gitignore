@@ -23,6 +23,8 @@ node_modules/
 # OS generated files #
 .swp
 
-
 /iisnode
 /web.config
+
+# automatic screenshots
+casperjs_server/screenshots
