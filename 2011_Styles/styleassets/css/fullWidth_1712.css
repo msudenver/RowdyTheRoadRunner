@@ -1,0 +1,13 @@
+/*
+ * Full Width Page
+ * ----------------------
+ * mscd.edu
+ */
+
+#bannerImage {
+	/* border:5px solid white;
+	box-shadow:0 0 2px #AAAAAA; */
+	padding: 5px; border: 1px solid #ececec;
+	width: 918px; overflow:hidden; margin-bottom:20px;
+}
+#bannerImage img { overflow: hidden;}
