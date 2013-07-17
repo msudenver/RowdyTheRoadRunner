@@ -90,7 +90,7 @@ casperjob = ->
 		cronjob.start()
 
 # cronjob runs every weekday from 9am to 5pm 
-cronjob = new crontab "00 00 9-5 * * 1-5"
+cronjob = new crontab "* 00 9-5 * * 1-5"
 	, -> 
 		console.log("printing every minute..")
 		casperjob()
