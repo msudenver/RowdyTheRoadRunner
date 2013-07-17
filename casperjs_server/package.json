@@ -1,0 +1,23 @@
+{
+  "name": "screenshot_server",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "gitHead": "7b5e1d827e8eaa5be7e24e15941d8a50b74b1308",
+  "bin": {
+    "csjs": "app.js"
+  },
+  "devDependencies": {
+    "cron": "~1.0.1",
+    "moment-cli": "0.0.4"
+  },
+  "dependencies": {
+    "moment": "~2.1.0"
+  }
+}
