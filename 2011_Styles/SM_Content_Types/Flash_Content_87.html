@@ -1,0 +1,34 @@
+<t4 type="content" output="selective-output" modifiers="htmlentities" name="Title" format="<h2>$value</h2>" />
+<t4 type="content" output="selective-output" modifiers="htmlentities" name="Sub title" format="<h3>$value</h3>" />
+
+<!-- Flash Content Template, Created by Miguel Garza-Wicker -->
+
+<br />
+<div align="center">
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="<t4 type="content" name="Width" output="normal" modifiers=""  />" height="<t4 type="content" name="Height" output="normal" modifiers=""  />" id="FlashID" title="timeline">
+    <param name="movie" value="<t4 type="content" name="Flash File" output="normal" modifiers=""  />" />
+    <param name="quality" value="high" />
+    <param name="wmode" value="opaque" />
+    <param name="swfversion" value="9.0.45.0" />
+    <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+    <param name="expressinstall" value="http://www.msudenver.edu/namechange/scripts/expressInstall.swf" />
+    <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+    <!--[if !IE]>-->
+    <object type="application/x-shockwave-flash" data="http://www.msudenver.edu<t4 type="content" name="Flash File" output="normal" modifiers=""  />" width="<t4 type="content" name="Width" output="normal" modifiers=""  />" height="<t4 type="content" name="Height" output="normal" modifiers=""  />">
+      <!--<![endif]-->
+      <param name="quality" value="high" />
+      <param name="wmode" value="opaque" />
+      <param name="swfversion" value="9.0.45.0" />
+      <param name="expressinstall" value="http://www.msudenver.edu/namechange/scripts/expressInstall.swf" />
+      <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+      <div>
+        <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+        <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+      </div>
+      <!--[if !IE]>-->
+    </object>
+    <!--<![endif]-->
+  </object>
+</div>
+  <br />
+<!-- End Flash Content Template -->
