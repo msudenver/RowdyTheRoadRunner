@@ -3,13 +3,13 @@
  * Copyright 2013 MSU Denver
  * http://www.msudenver.edu
  */
-.footer > .container > .row-fluid > .span3 > a {
+.footer > .container > .row-fluid > .span3 {
   color: black;
 }
 .footer > .container > .row-fluid > .span5 {
   color: black;
 }
-.footer > .container > .row-fluid > .span5 > a {
+.footer > .container > .row-fluid > .span5 {
   color: black;
 }
 .readmore {
@@ -43,8 +43,8 @@
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .msudenver_logo {
-  width: 370px;
-  padding: 15px;
+  max-width: 370px;
+  padding: 2em;
 }
 .siteheader {
   padding: 20px;
