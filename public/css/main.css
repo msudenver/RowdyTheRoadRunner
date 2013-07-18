@@ -1,3 +1,18 @@
+body {
+	margin: 0;
+	font-family: cabin, source-sans-pro,muli, josefin-sans, open-sans, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+	background-color: #ffffff;
+	background-image: url(/assets/img/background.jpg);
+}
+
+a {
+	color: #8b8b8b;
+	text-decoration: none;
+}
+
 .footer > .container > .row-fluid > .span3 > a {
   color: black;
 }
@@ -5,5 +20,15 @@
   color: black;
 }
 .footer > .container > .row-fluid > .span5 > a {
-  color: white;
+  color: black;
+}
+
+.center{
+	margin:0 auto;
+	float:none;
+}
+.msudenver_logo{
+	width: 320px; 
+	padding-top: 1em;
+	padding-bottom: 2em;
 }
