@@ -1,7 +1,5 @@
 /*  Inherited 2011 Styles www.msudenver.edu main style MGW 092112 */
 
-
-
 h1 {font-size:28px; margin-bottom:10px; color:#c50f3c;}
 h2 {font-size:24px; margin-bottom:10px; line-height: 1.25; color:#002F5F;}
 h3 {font-size:18px; margin-bottom:8px; color:#365F91;}
@@ -14,8 +12,6 @@ h1 a, h2 a, h3 a, h4 a {
 	color:black;
 }
 
-p {line-height:1.4em;}
-
 
 .hidden {
 	position:absolute;
@@ -27,13 +23,12 @@ p {line-height:1.4em;}
 .ac { text-align: center;}
 .clearing {clear:both;}
 
-.sup {font-size:80%; vertical-align:top;}
-.sub {font-size:80%; vertical-align:bottom;}
 
 .image_caption {font-size: 12px;
 		line-height: 19px;
 		color: rgb(115, 120, 126);
 }
+
 .bordered {
 
 	padding: 9px; border: 1px solid #ececec;
@@ -89,22 +84,10 @@ a:hover {
 
 
 
-
-
-
-
 #breadcrumbs {
 	display:block;
 }
 
-#leftColumn {
-	width:250px;
-	float:left;
-}
-
-#leftColumn img {
-	padding: 5px; border: 1px solid #ececec;
-}
 
 #secondaryNav {
 	background:url(/media/styleassets/images/secondaryNavDividerBg.gif) 0px 27px repeat-x #0C1F3F;
@@ -178,8 +161,6 @@ a:hover {
 }
 
 /*------------------------------ Header -------------------------*/
-
-
 
 
 /* Main Navigation */
@@ -256,24 +237,3 @@ a:hover {
 
 
 
-/***************Galleria Beggining*********************/
-
-#galleria{ width: 100%; height: 500px; background: #000 }
-
-/*************** Galleria End*********************/
-
-/***************Zebra Stripe*********************/
-.story_preview {
-   border: solid silver 1px ;
-}
-.story_preview{
-  padding: 15px;
-}
-.story_preview:nth-child(odd) {
-  background-color: #f0f0f0;
- }
-.story_preview:nth-child(even) {
-  background-color: white;
-}
-
-/*************** Zebra Stripe End*********************/

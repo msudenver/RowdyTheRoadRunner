@@ -1,8 +1,17 @@
 /*!
  * Custom Style for MSU Denver
  * Copyright 2013 MSU Denver
- * http://www.msudenver.org
+ * http://www.msudenver.edu
  */
+.input-medium {
+  width: 150px;
+}
+.input-xxlarge {
+  width: 530px;
+}
+.input-mini {
+  width: 60px;
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .flexwrapper > section {
@@ -19,9 +28,63 @@
     font-size: 0.2em;
     background-color: #2980B9;
   }
+  input.search-query {
+    width: 530px;
+  }
 }
-@media only screen and (min-width: 800px) {
-  
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  input.search-query {
+    width: 150px;
+  }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  input.search-query {
+    width: 60px;
+  }
+}
+/*
+						   *
+
+					FROM CSS TRICKS
+					---------------
+*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
 }
 .actionHeader {
   vertical-align: top;
@@ -136,6 +199,7 @@ p.actionHeader {
   padding-left: 12px;
   margin-right: 2px;
   line-height: 14px;
+  color: black;
 }
 .actionHeader.news {
   background-color: #3498DB;

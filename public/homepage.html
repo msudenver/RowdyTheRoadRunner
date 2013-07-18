@@ -13,9 +13,10 @@
 		<link rel="stylesheet" href="css/vendor/bootstrap.css">
 		<link rel="stylesheet" href="css/vendor/bootstrap-responsive.css">
 		
-		<link rel="stylesheet" href="css/accordion.css">
+		
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/homepage.css">
+		<link rel="stylesheet" href="css/accordion.css">
 		<!-- js -->
 		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
@@ -30,12 +31,17 @@
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
 		<link rel="shortcut icon" href="../assets/ico/favicon.png">
+
 	</head>
 	<body>
+
+  	</head>
+	<body background="assets/img/background.jpg">
+
 		<div class="container">
 			<div class="mainNavigation containerfluid">
 				<div class="masthead">
-					<div class=" pull-right ">
+					<div class="pull-right ">
 						<ul class="nav nav-tabs navbar-inner">
 							  <li><a href="/a_to_z/">A-Z</a></li>
 							  <li><a href="/connectu/">ConnectU</a></li>
@@ -57,6 +63,13 @@
 	  		<div class="navbar navbar-inverse">  <!-- begins main container -->
 			  <div class="navbar-inner">
 				<div class="container">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+					</button>
+				</div>
 				  <div class="nav-collapse collapse navbar-inverse-collapse">
 					<ul class="nav">
 					  <li class="dropdown">
@@ -126,7 +139,6 @@
 							<li><a href="#">Student Media</a></li>
 						  </ul>
 					  </li>
-
 					  <li class="dropdown">
 						<a href="/alumni" class="dropdown-toggle" data-toggle="dropdown">ALUMNI &amp; FRIENDS <b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -137,17 +149,18 @@
 					  </li>
 					 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">ATHLETICS <b class="caret"></b></a></li>
 					</ul>
-					<form class="navbar-search pull-right">
-					  <input type="text" class="search-query span2" placeholder="Search">
+					<form class="navbar-search pull-right ">
+					  <input type="text" class="search-query" placeholder="Search">
 					</form>
 				  </div><!-- /.nav-collapse -->
 				</div>
 			  </div><!-- /navbar-inner -->
 			</div>
+	
 			<div class="row-fluid">
 				<div class="span12 well">
 				<!-- accordion -->
-					<div class="accordion">
+					<div class="home_accordion">
 						<ul>
 							<li>
 								<div class="image_title">
@@ -178,25 +191,13 @@
 				</div>
 			</div>
 
-<!-- 			<div class="flexwrapper">
-				<section>
-					<h1>NEWS</h1>
-					<section>
-						
-					</section>
-						<p>Donece id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-						<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis sit amet fermentum.</p>
-						<p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-				</section>
-				<section class="flexwrapper-inner">
-					<section><span>APPLY NOW</span></section>
-					<section><span>GIVE TO MSU DENVER</span></section>
-				</section>
-				<section>
-					<span>EVENTS</span>
-				</section>
-			</div> -->
-			
+		<!-- /home_accordion -->
+
+<!-- *********************************  -->
+<!-- SITEMANAGER START FOOTER -->
+<!-- *********************************  -->
+
+
 			<div class="row-fluid">
 				<div class="span4 well">
 					<h3 class="actionHeader news">News</h3>
@@ -243,7 +244,7 @@
 				<footer class="footer">
 					<div class="container">
 						<div class="row-fluid span12 wellsmoke" >
-							<div class="span3 center" >
+							<div class="span3" >
 								<img src="assets/webicons/images/fc-webicon-facebook.png" alt="Facebook Logo">
 								<img src="assets/webicons/images/fc-webicon-twitter.png" alt="Twitter Logo">
 								<img src="assets/webicons/images/fc-webicon-youtube.png" alt="YouTube Logo">
