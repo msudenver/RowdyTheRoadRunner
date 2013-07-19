@@ -3,32 +3,18 @@
  * Copyright 2013 MSU Denver
  * http://www.msudenver.edu
  */
-.input-medium {
-  width: 150px;
-}
-.input-xxlarge {
-  width: 100%;
-}
-.input-mini {
-  width: 60px;
-}
 @media only screen and (max-device-width: 1024px) {
-  .msudenver_logo img {
-    width: 50%;
-    padding-left: 18em;
-    padding-bottom: 2em;
-  }
+  
 }
 @media only screen and (min-device-width: 1025px) {
   .msudenver_logo img {
-    width: 100%;
-    padding: 2em;
+    width: 80%;
   }
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .msudenver_logo {
-    width: 30%;
+  .msudenver_logo img {
+    width: 80%;
     padding: 2em;
   }
   .flexwrapper > section {

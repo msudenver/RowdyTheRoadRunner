@@ -31,3 +31,5 @@ casperjs_server/screenshots
 
 # bower refs
 components/
+# and 
+bower_components/
