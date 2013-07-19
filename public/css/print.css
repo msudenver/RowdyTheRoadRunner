@@ -6,8 +6,8 @@
 		  border:none;
 		  box-shadow: none !important;
 	}
-	.magazine-logo, .magazine-logo-change{
-		  position:absolute;
+.msudenver_logo {
+		position:absolute;
 		width: 200px;
 		padding:0;
 		margin:0;
