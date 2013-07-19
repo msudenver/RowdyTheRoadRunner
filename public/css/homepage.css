@@ -6,12 +6,12 @@
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
   /* Styles */
-  .actionHeader.applynow {
+  .applynow {
     font-size: 90%;
     font-size: 1.700em;
     background-color: #1ABC9C;
   }
-  .actionHeader.give {
+  .give {
     font-size: 1.1111em;
     background-color: #2980B9;
   }
@@ -22,6 +22,7 @@
 @media only screen and (min-device-width: 1025px) {
   .msudenver_logo img {
     width: 80%;
+    padding: 2em;
   }
 }
 /* Smartphones (portrait and landscape) ----------- */
@@ -41,53 +42,26 @@
     margin: 0;
   }
   .actionHeader.applynow {
-    font-size: 1.700em;
     background-color: #1ABC9C;
   }
   .actionHeader.give {
-    font-size: 1.1111em;
-    font-size: 90%;
     background-color: #2980B9;
   }
   input.search-query {
     width: 100%;
   }
 }
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* Styles */
-}
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 321px) {
-  /* Styles */
-}
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 320px) {
-  /* Styles */
-}
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Styles */
-}
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   /* Styles */
-}
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* Styles */
-}
-/* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
-  /* Styles */
-}
-/* Large screens ----------- */
-@media only screen and (min-width: 1824px) {
-  /* Styles */
-}
-/* iPhone 4 ----------- */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /* Styles */
+  .actionHeader.applynow {
+    font-size: 100% !important;
+    background-color: #1ABC9C;
+  }
+  .actionHeader.give {
+    font-size: 100% !important;
+    background-color: #2980B9;
+  }
 }
 .actionHeader {
   vertical-align: top;
@@ -160,6 +134,12 @@ p.actionHeader {
 .homepage-caption img {
   width: 100%;
 }
+* {
+  -webkit-transition: all 0.55s ease-in-out;
+  -moz-transition: all 0.55s ease-in-out;
+  -o-transition: all 0.55s ease-in-out;
+  transition: all 0.55s ease-in-out;
+}
 .mainNavigation {
   margin-right: auto;
   margin-left: auto;
@@ -183,6 +163,9 @@ p.actionHeader {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.apply_and_giving_well {
+  min-height: 7em;
 }
 .siteheader h1 {
   margin-bottom: 10;
@@ -234,12 +217,11 @@ p.actionHeader {
   background-color: #3498DB;
 }
 .actionHeader.applynow {
-  font-size: 1.700em;
+  font-size: 1.5em;
   background-color: #1ABC9C;
 }
 .actionHeader.give {
-  font-size: 1.1111em;
-  font-size: 90%;
+  font-size: 1.111em;
   background-color: #2980B9;
 }
 .actionHeader.events {
@@ -247,8 +229,6 @@ p.actionHeader {
 }
 .testimonial img {
   width: 100%;
-  text-align: center;
-  margin: 0 auto ;
 }
 .hero-unit {
   padding: 20px;
