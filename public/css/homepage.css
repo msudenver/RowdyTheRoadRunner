@@ -92,7 +92,6 @@
 p.actionHeader {
   padding: 10%;
   line-height: 1.25em;
-  width: 100%;
   font-height: 2em;
   color: white;
   text-align: center;
@@ -138,7 +137,7 @@ p.actionHeader {
   bottom: 0;
   padding: 0;
   background: #333333;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.45);
   margin-bottom: 0;
   padding: 10% 33% 10% 10%;
   max-width: 70%;
