@@ -1,11 +1,10 @@
 /* 2Column Layout Specific CSS */
 
 #bannerImage {
-	width: 648px;
+	max-width: 100%;
 	padding:5px;
 	overflow:hidden;
 	margin-bottom:20px;
-	border: 1px solid #ececec;
 }
 
 #bannerImage img { overflow: hidden;}
