@@ -1,9 +1,11 @@
 /* 2Column Layout Specific CSS */
 
-#rightColumn {
-	width: 630px;
-	margin-left:20px;
-	float:left;
+#bannerImage {
+	width: 648px;
+	padding:5px;
+	overflow:hidden;
+	margin-bottom:20px;
+	border: 1px solid #ececec;
 }
-#bannerImage { width: 648px; padding:5px; overflow:hidden; margin-bottom:20px; border: 1px solid #ececec; }
+
 #bannerImage img { overflow: hidden;}

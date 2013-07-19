@@ -1,14 +1,16 @@
 /* Inherited Print Style */
 
 
-
 #toolsMenu, #headerSearch, #primaryNav, #megaMenu, #footer { display: none;}
 #leftColumn, #pageLinks { display: none;}
 #logo a { display: none; }
 #logoprint { color: #000; text-decoration: none;}
 
-body {line-height: 1.4em; font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size:13px;}
+body {
+	line-height: 1.4em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+}
 
 .left {float:left; margin-right:5px; margin-bottom:5px;}
 .right{float:right; margin-left:5px; margin-bottom:5px;}
