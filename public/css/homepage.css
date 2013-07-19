@@ -114,6 +114,26 @@ p.actionHeader {
 .actionHeader.events {
   background-color: #F39C12;
 }
+.homepage-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  background: #333333;
+  background: rgba(0, 0, 0, 0.75);
+}
+.homepage-caption h4,
+.homepage-caption p {
+  color: #ffffff;
+  line-height: 20px;
+}
+.homepage-caption h4 {
+  margin: 0 0 5px;
+}
+.homepage-caption p {
+  margin-bottom: 0;
+}
 .mainNavigation {
   margin-right: auto;
   margin-left: auto;
@@ -209,7 +229,7 @@ p.actionHeader {
   font-weight: 200;
   line-height: 30px;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: white;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
