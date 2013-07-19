@@ -1,7 +1,4 @@
-
-/* Styling for 2 column pages ----------------------------------------*/
-/* MGW 060812 
-Modified the width from 660px to 630px----------------------------------------*/
+/* 2Column Layout Specific CSS */
 
 #rightColumn {
 	width: 630px;
