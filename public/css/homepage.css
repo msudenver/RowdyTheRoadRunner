@@ -3,8 +3,21 @@
  * Copyright 2013 MSU Denver
  * http://www.msudenver.edu
  */
-@media only screen and (max-device-width: 1024px) {
-  
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+  .actionHeader.applynow {
+    font-size: 90%;
+    font-size: 1.700em;
+    background-color: #1ABC9C;
+  }
+  .actionHeader.give {
+    font-size: 1.1111em;
+    background-color: #2980B9;
+  }
+  input.search-query {
+    width: 250px;
+  }
 }
 @media only screen and (min-device-width: 1025px) {
   .msudenver_logo img {
@@ -27,18 +40,17 @@
   .navbar-inverse {
     margin: 0;
   }
+  .actionHeader.applynow {
+    font-size: 1.700em;
+    background-color: #1ABC9C;
+  }
   .actionHeader.give {
-    font-size: 0.2em;
+    font-size: 1.1111em;
+    font-size: 90%;
     background-color: #2980B9;
   }
   input.search-query {
     width: 100%;
-  }
-}
-/* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
-  input.search-query {
-    width: 250px;
   }
 }
 /* Smartphones (portrait and landscape) ----------- */
@@ -137,7 +149,7 @@ p.actionHeader {
   bottom: 0;
   padding: 0;
   background: #333333;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.55);
   margin-bottom: 0;
   padding: 10% 33% 10% 10%;
   max-width: 70%;
@@ -147,7 +159,6 @@ p.actionHeader {
 }
 .homepage-caption img {
   width: 100%;
-  max-height: 450px;
 }
 .mainNavigation {
   margin-right: auto;
@@ -223,10 +234,12 @@ p.actionHeader {
   background-color: #3498DB;
 }
 .actionHeader.applynow {
+  font-size: 1.700em;
   background-color: #1ABC9C;
 }
 .actionHeader.give {
-  font-size: 1.2em;
+  font-size: 1.1111em;
+  font-size: 90%;
   background-color: #2980B9;
 }
 .actionHeader.events {
