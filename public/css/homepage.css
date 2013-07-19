@@ -12,8 +12,9 @@
 .input-mini {
   width: 60px;
 }
-@media only screen and (max-devide-width: 1024px) {
+@media only screen and (max-device-width: 1024px) {
   .msudenver_logo {
+    width: 50%;
     padding-left: 18em;
     padding-bottom: 2em;
   }
@@ -21,9 +22,8 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .msudenver_logo {
-    max-width: 150px;
-    padding-left: 0;
-    padding-bottom: 2em;
+    width: 30%;
+    padding: 2em;
   }
   .flexwrapper > section {
     width: 100%;
@@ -46,21 +46,9 @@
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
   input.search-query {
-    width: 150px;
+    width: 250px;
   }
 }
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  input.search-query {
-    width: 60px;
-  }
-}
-/*
-						   *
-
-					FROM CSS TRICKS
-					---------------
-*/
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* Styles */
