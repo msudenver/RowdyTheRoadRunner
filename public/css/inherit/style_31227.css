@@ -37,25 +37,7 @@ h1 a, h2 a, h3 a, h4 a {
 
 
 
-/* Info Box */
-#content .infoBox { background: #E0E0E7; position: relative; margin: 20px 0px; zoom:1; min-height: 70px;
--moz-border-radius-bottomright: 10px;
-border-bottom-right-radius: 10px;
--moz-border-radius-topleft: 10px;
-border-top-left-radius: 10px;
--moz-border-radius-bottomleft: 10px;
-border-bottom-left-radius: 10px;
 
-}
-#content .infoBox .infoBox-title { background: #A1131B; width: 150px; min-height: 70px; display: table-cell;
--moz-border-radius-topleft: 10px;
-border-top-left-radius: 10px;
--moz-border-radius-bottomleft: 10px;
-border-bottom-left-radius: 10px; }
-#content .infoBox .infoBox-title h3 { color: #fff; font-size: 1.4em; padding: 15px;}
-
-#content .infoBox .infoBox-content { padding:5px 40px 5px 10px; display: table-cell;}
-#content .infoBox .infoBox-content a { color: #002F5F;}
 
 .pageLinks {
 	float:right;

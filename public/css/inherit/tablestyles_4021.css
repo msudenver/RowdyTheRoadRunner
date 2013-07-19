@@ -10,14 +10,14 @@ table.datatable {
 }
 table.datatable th {
 	border-width: 1px;
-	padding: 8px;
+	padding: 10px;
 	border-style: solid;
 	border-color: #666666;
 	background-color: #dedede;
 }
 table.datatable td {
 	border-width: 1px;
-	padding: 8px;
+	padding: 10px;
 	border-style: solid;
 	border-color: #666666;
 	background-color: #ffffff;
@@ -27,11 +27,11 @@ table.datatable td {
 
 /* BEGIN table Background Table */
 table.backgroundtable {
-	color:#333333;
-        padding: 10px;	
-        border-width: 1px;
-	border-color: #999999;
-	border-collapse: collapse;
+    color:#333333;
+    padding: 10px;	
+    border-width: 1px;
+    border-color: #999999;
+    border-collapse: collapse;
 }
 table.backgroundtable th {
 	background-color:#c3dde0;
@@ -53,42 +53,41 @@ table.backgroundtable td {
 
 /* BEGIN table Meetings Table */
 table.meetingstable {
-        padding: 10px;
-	color:#333333;
-	border-width: 1px;
-	border-color: #999999;
-	border-collapse: collapse;
+    padding: 10px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #999999;
+    border-collapse: collapse;
 
 }
 
 table.meetingstable th {
 	background-color:#0C1F3F;
 	color: #ffffff;
-        text-align: left;
 	border-width: 1px;
 	padding: 10px;
 	border-style: solid;
 	border-color: #a9c6c9;
 }
 table.meetingstable tr {
-        padding: 8px;
+    padding: 10px;
 }
 
 table.meetingstable td {
 	padding: 10px;
-        border-bottom: 0.1em solid #E7E7E6;
+    border-bottom: 0.1em solid #E7E7E6;
 	
 }
 /* END table Meetings Table */
 
 /* BEGIN table Staff Directory */
 table.staffdirectory {
-        padding: 10px;
-	color:#333333;
-	border-width: 1px;
-        border-style: solid;
-	border-color: #999999;
-	border-collapse: collapse;
+    padding: 10px;
+    color:#333333;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #999999;
+    border-collapse: collapse;
 
 }
 
@@ -103,19 +102,19 @@ table.staffdirectory th {
 	border-collapse: collapse;
 }
 table.staffdirectory tr {
-        padding: 10px;
-	border-width: 1px;
-        border-style: solid;
-	border-color: #999999;
-	border-collapse: collapse;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #999999;
+    border-collapse: collapse;
 }
 
 table.staffdirectory td {
-	padding: 10px;
-	border-width: 1px;
-        border-style: solid;
-	border-color: #999999;
-	border-collapse: collapse;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #999999;
+    border-collapse: collapse;
 }
 /* END table Staff Directory */
 
@@ -127,10 +126,8 @@ table.cvatable {
 	background-color: #008DA9;
 	border:5px solid white;
 	margin-bottom:20px;
-	box-shadow:0 0 2px #AAAAAA;
 }
 
-}
 table.cvatable th {
 	color: #FFF;
 	font-size: 26px;
@@ -144,9 +141,10 @@ table.cvatable th {
 /* BEGIN table Caption */
 
 table.caption {
-  margin: 20px;
-  max-width: 100%;
-  background-color: transparent;
-  border-collapse: collapse;
-  border-spacing: 0;
+    margin: 20px;
+    padding: 10px;
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
