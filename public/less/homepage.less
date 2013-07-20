@@ -7,7 +7,11 @@
 @import "mediaQueries.less" ;
 @import "actionSection.less" ;
 @import "captions.less" ;
+@import "utils.less" ;
 
+*{
+  .animate-all(0.55s);
+}
 .mainNavigation{
   margin-right: auto;
   margin-left: auto;
@@ -21,7 +25,7 @@
 }
 
 .well {
-	min-height: 7em;
+  min-height: 7em;
 	padding: 1.2575em;
 	margin-bottom: 20px;
 	background-color: #ffffff;
@@ -33,7 +37,9 @@
 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-
+.apply_and_giving_well{
+  min-height: 7em;  
+}
 // .siteheader {
 // 	padding: 20px;
 // 	background-color: #3498DB;
@@ -99,23 +105,27 @@
   background-color:#3498DB;
 }
 .actionHeader.applynow{
+  // font-size: 140%;
+  font-size: 1.5em;
+  // font-size: 100%;
   background-color:#1ABC9C;
-}
+} 
 .actionHeader.give{
-  font-size: 1.2em;
+  // font-size: 100%;
+  font-size: 1.111em;
   background-color:#2980B9;
-}
+} 
 .actionHeader.events{
   background-color:#F39C12;
-}
+} 
 .testimonial img{
 	width: 100%;
 	// padding: 5em;
-	text-align: center;
-	margin: 0 auto ;
+	// text-align: center;
+	// margin: 0 auto ;
 }
 
-//  hero unit overwrite
+//  hero unit overwrite 
 .hero-unit {
   padding: 20px;
   margin-bottom: 30px;
@@ -129,3 +139,4 @@
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
+
