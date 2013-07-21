@@ -72,6 +72,10 @@ a:focus {
   max-width: 350px;
   padding: 2em;
 }
+.breadcrumbs {
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
 .siteheader {
   min-height: 7em;
   padding: 1.2575em;
@@ -85,8 +89,10 @@ a:focus {
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-.siteheader h1 {
-  color: #333333;
+.siteheader,
+.h1 {
+  color: #7f8c8d;
+  font-size: 1.5em;
 }
 .well {
   min-height: 7em;
