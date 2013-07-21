@@ -1,9 +1,9 @@
 /* 1Column Layout Specific CSS */
-
 #bannerImage {
-    padding: 5px; 
-    overflow:hidden; 
-    margin-bottom:20px;
+  padding: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
-
-#bannerImage img { overflow: hidden;}
+#bannerImage img {
+  overflow: hidden;
+}

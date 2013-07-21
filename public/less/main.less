@@ -1,3 +1,9 @@
+/*!
+ * Custom Style for MSU Denver
+ * Copyright 2013 MSU Denver
+ * http://www.msudenver.edu
+ */
+ 
 // Custom Style for MSU Denver Copyright 2013 MSU Denver http://www.msudenver.org
 
 //Flat UI Colors
@@ -10,6 +16,8 @@
 @darkgray: #333333;
 @white: #ffffff;
 @black: #000000;
+@contentlink: #1b557a;
+@contenthlink: #20648f;
 
 
 h1 {
@@ -55,12 +63,13 @@ body {
 }
 
 a {
-  color: #1b557a;
+  color: @contentlink;
   text-decoration: none;
 }
+
 a:hover,
 a:focus {
-  color: #20648f;
+  color: @contenthlink;
   text-decoration: underline;
 }
 
@@ -93,10 +102,12 @@ a:focus {
   padding: 2em;
 }
 
+
+
 .siteheader {
   padding: 20px;
-  margin: 20px;
-  background-color: #3498DB;
+  margin-bottom: 20px;
+  background-color: @white;
   border: 1px solid #e3e3e3;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -106,14 +117,14 @@ a:focus {
 
 .siteheader h1 {
   margin-bottom: 10px;
-  color: #ffffff;
+  color: @darkgray;
 }
 
 .well {
   min-height: 7em;
   padding: 1.2575em;
   margin-bottom: 20px;
-  background-color: #ffffff;
+  background-color: @white;
   border: 1px solid #e3e3e3;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -122,6 +133,8 @@ a:focus {
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
+
+
 
 
 .wellsmoke {
