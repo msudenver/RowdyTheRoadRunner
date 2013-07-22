@@ -7,42 +7,35 @@
  
 // Custom Style for MSU Denver Copyright 2013 MSU Denver http://www.msudenver.org
 
-
-
-.clickable{
-  cursor: pointer;
-}
-
 //Flat UI Colors
 
+@turquoise:#1ABC9C;
+@greensea:#16A085;
+@emerald: #2ECC71;
+@nephritis: #27AE60;
+@peterriver: #3498DB;
+@belizehole: #2980B9;
+@amethyst: #9B59B6;
+@wisteria: #8E44AD;
+@webasphalt: #34495E;
+@midnightblue: #2C3E50;
+@sunflower: #F1C40F;
+@orange: #F39C12;
+@carrot: #E67E22;
+@pumpkin: #D35400;
+@alizarin: #E74C3C;
+@pomegranate: #C0392B;
+@clouds: #ECF0F1;
+@silver: #BDC3C7;
+@asbestos: #7F8C8D;
+@concrete: #95A5A6;
 
-@turquoise : #1ABC9C;
-@greensea : #16A085;
-@emerald : #2ECC71;
-@nephritis : #27AE60;
-@peterriver : #3498DB;
-@belizehole : #2980B9;
-@amethyst : #9B59B6;
-@wisteria : #8E44AD;
-@webasphalt : #34495E;
-@midnightblue : #2C3E50;
-@sunflower : #F1C40F;
-@orange : #F39C12;
-@carrot : #E67E22;
-@pumpkin : #D35400;
-@alizarin : #E74C3C;
-@pomegranate : #C0392B;
-@clouds : #ECF0F1;
-@silver : #BDC3C7;
-@asbestos : #7F8C8D;
-@concrete : #95A5A6;
-
- //Custom  Colors
-@darkgray : #333333;
-@white : #ffffff;
-@black : #000000;
-@contentlink : #1b557a;
-@contenthlink : #20648f;
+//Custom Colors
+@darkgray: #333333;
+@white: #ffffff;
+@black: #000000;
+@contentlink: #1b557a;
+@contenthlink: #20648f;
 
 
 h1 {
@@ -81,8 +74,7 @@ h5 {
 h6 {
   color: @alizarin;
   font-size: 13px;
-  font-weight: 500;
-}
+  font-weight: 500;}
 
 
 body {
@@ -105,36 +97,28 @@ a:focus {
   text-decoration: underline;
 }
 
-.nav-tabs > li > a,
-.nav-pills > li > a {
-  padding-right: 12px;
-  padding-left: 12px;
-  margin-right: 2px;
-  line-height: 14px;
-  color:black;
-}
 
+
+
+
+.clickable{
+  cursor: pointer;
+}
 .footer > .container > .row-fluid > .span3  {
-  color: black;
   color: @black;
 }
 
 .footer > .container > .row-fluid > .span5 {
-  color: black;
   color: @black;
 }
 
 .footer > .container > .row-fluid > .span5 {
-  color: black;
   color: @black;
 }
-
 .readmore {
 	text-align:right; margin-top:10px;
 }
 
-.sup {font-size:80%; vertical-align:top;}
-.sub {font-size:80%; vertical-align:bottom;}
 
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
@@ -142,19 +126,24 @@ a:focus {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
-
+<<<<<<< HEAD
+.well {
+  min-height: 6.5em;
+=======
 .msudenver_logo img{
   max-width: 350px;
   padding: 2em;
 }
 
 .breadcrumbs {
-   color: @asbestos;
-   margin-bottom: 20px;
-   font-weight: 700;
+    color: @asbestos;
+    margin-bottom: 20px;
+    font-weight: 700;
+    
 }
 
 .siteheader {
+>>>>>>> temp
   padding: 1em;
   margin-bottom: 20px;
   background-color: @white;
@@ -166,14 +155,12 @@ a:focus {
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-.msudenver_logo img{
-  max-width: 350px;
-  padding: 2em;
-}
+
 .siteheader, .h1 {
-	color: @asbestos;
-	font-size: 1.5em;
+    color: @asbestos;
+    font-size: 1.5em;
 }
+
 .well {
   min-height: 7em;
   padding: 1.2575em;
@@ -186,15 +173,11 @@ a:focus {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-
 }
 
-.wellfooter {
-  padding: 10px;
-  background-color: #ffffff;
-  border: 1px solid #e3e3e3;
 
-}
+
+
 .wellsmoke {
   min-height: 20px;
   padding: 20px;
@@ -208,6 +191,7 @@ a:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
+<<<<<<< HEAD
 .wellsmoke {
 	min-height: 20px;
 	padding: 20px;
@@ -221,12 +205,31 @@ a:focus {
 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
+=======
+>>>>>>> temp
 .wellsmoke .span3, .wellsmoke .span4, .wellsmoke .span5   {
 	margin-bottom: 1.5em;
 	text-align:center;
-  color:black;
-	color:black;
+  	color:black;
 }
+
+/* Newsroom Formatting */
+
+.story_preview {
+	border: solid silver 1px ;
+}
+.story_preview {
+  	padding: 15px;
+}
+.story_preview:nth-child(odd) {
+  	background-color: #f0f0f0;
+}
+.story_preview:nth-child(even) {
+  	background-color: white;
+}
+
+
+
 
 .content {
   min-height: 7em;
@@ -242,35 +245,24 @@ a:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
+<<<<<<< HEAD
+// ************** Galleria End********************
 
-#content a { 
-  text-decoration: none; color:#2980B9;
+.content {
+  padding: 20px;
+  margin-bottom:20px;
+  background-color: #fff;
+  border: 1px solid #2ecbe8;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
+=======
+>>>>>>> temp
 
-#content a:hover { 
-  border-bottom: 1px solid;
-}
-
-#content img.border { 
-  padding: 10px; 
-  border: 1px solid #ececec; 
-  background: #fff;
-}
-
-#content description { 
-  font-size: 10px;
-}
-
-#content div.pageLinks img { 
-  padding: 0px !important;
-  border: 0px!important;
-  background: none !important;
-}
-
-#content img.noborder{ 
-  padding: 0px !important; 
-  border: 0px !important; 
-  background: none !important;
-}
-
-
+#content a { text-decoration: none; color:#2980B9;}
+#content a:hover { border-bottom: 1px solid;}
+#content img.border { padding: 10px; border: 1px solid #ececec; background: #fff;}
+#content description { font-size: 10px;}
+#content div.pageLinks img { padding: 0px !important; border: 0px!important; background: none!important;}
+#content img.noborder{ padding: 0px!important; border: 0px!important; background: none!important;}

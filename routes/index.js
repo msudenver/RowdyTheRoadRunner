@@ -5,4 +5,8 @@
     return res.render("index");
   };
 
+  exports.twocol = function(req, res) {
+    return res.render("twocol");
+  };
+
 }).call(this);

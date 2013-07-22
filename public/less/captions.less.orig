@@ -25,6 +25,10 @@
   left: 0;
   right: 0;
   bottom: 0;
+<<<<<<< HEAD
+  padding: 0;
+=======
+>>>>>>> temp
   background: #333333;
   background: rgba(0, 0, 0, 0.55);
   margin-bottom: 0;
@@ -38,4 +42,8 @@
 .homepage-caption img{
   width: 100%;
   // max-height: 600px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> temp

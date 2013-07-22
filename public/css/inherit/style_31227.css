@@ -1,28 +1,12 @@
 /*  Inherited 2011 Styles www.msudenver.edu main style MGW 092112 */
 
-h1 {font-size:28px; margin-bottom:10px; color:#c50f3c;}
-h2 {font-size:24px; margin-bottom:10px; line-height: 1.25; color:#002F5F;}
-h3 {font-size:18px; margin-bottom:8px; color:#365F91;}
-h4 {font-size:14px; color:#365F91;}
-h4.promo_date{font-size:14px; color:#365F91; text-transform: uppercase;}
-h4.EventLinkDescription {font-size:16px}
-h5 {font-size:14px;}
-h6 {font-size:12px; font-style:italic;}
-h1 a, h2 a, h3 a, h4 a {
-	color:black;
-}
+
 
 
 .hidden {
 	position:absolute;
 	left:-9999px;
 }
-
-.ar { text-align: right;}
-.al { text-align: left;}
-.ac { text-align: center;}
-.clearing {clear:both;}
-
 
 .image_caption {font-size: 12px;
 		line-height: 19px;
@@ -34,28 +18,6 @@ h1 a, h2 a, h3 a, h4 a {
 	padding: 9px; border: 1px solid #ececec;
 }
 
-
-
-
-/* Info Box */
-#content .infoBox { background: #E0E0E7; position: relative; margin: 20px 0px; zoom:1; min-height: 70px;
--moz-border-radius-bottomright: 10px;
-border-bottom-right-radius: 10px;
--moz-border-radius-topleft: 10px;
-border-top-left-radius: 10px;
--moz-border-radius-bottomleft: 10px;
-border-bottom-left-radius: 10px;
-
-}
-#content .infoBox .infoBox-title { background: #A1131B; width: 150px; min-height: 70px; display: table-cell;
--moz-border-radius-topleft: 10px;
-border-top-left-radius: 10px;
--moz-border-radius-bottomleft: 10px;
-border-bottom-left-radius: 10px; }
-#content .infoBox .infoBox-title h3 { color: #fff; font-size: 1.4em; padding: 15px;}
-
-#content .infoBox .infoBox-content { padding:5px 40px 5px 10px; display: table-cell;}
-#content .infoBox .infoBox-content a { color: #002F5F;}
 
 .pageLinks {
 	float:right;
@@ -73,20 +35,8 @@ border-bottom-left-radius: 10px; }
 
 /*------------------------------ Links ------------------------------*/
 
-a {
-	text-decoration:none;
-	color:#4F639F;
-}
-
-a:hover {
-	border-bottom: 1px solid;
-}
 
 
-
-#breadcrumbs {
-	display:block;
-}
 
 
 #secondaryNav {
@@ -173,6 +123,7 @@ a:hover {
 	height:50px;
 }
 
+
 	#primaryNav ul {margin-left:26px; margin-top:25px;}
 
 	#primaryNav li {
@@ -186,54 +137,29 @@ a:hover {
 	#primaryNav li:nth-child(2) { width: 120px; }
 	#primaryNav li:nth-child(5) { width: 125px; }
 	#primaryNav li:nth-child(7) { width: 115px; }
-
 	#primaryNav li a { font-weight: bold; color: #F1F1F1; font-size: 12px;}
 
 
 
-/* Department Info   //  position: relative; top: -6px; left: -10px; width: 950px;  */
-#department-info { display: block; }
-	#department-info .dept-image { background: #FFFFFF; display: block;}
-
-	#department-info .dept-links { background: #0C1F3F; }
-	#department-info .dept-links ul { margin: 0px; padding: 5px 0 5px 0px;}
-	#department-info .dept-links ul li { margin: 0px; padding: 5px 10px; display: inline;}
-	#department-info .dept-links ul li a { color: #fff;}
-
-	/* Department Left Navigation Colours */
-	.department-red { background: #64000F !important;}
+/* Department Left Navigation Colours */
+		.department-red { background: #64000F !important;}
 		.department-red  .currentSection { color:#fff !important; border-bottom: 1px solid #8F2334;}
 
-	.department-darkgreen { background: #175F2F !important;}
+		.department-darkgreen { background: #175F2F !important;}
 		.department-darkgreen  .currentSection { color:#fff !important; border-bottom: 1px solid #175F2F;}
 
-        .department-orange { background: #F47521 !important;}
+
+		.department-orange { background: #F47521 !important;}
 		.department-orange  .currentSection { color:#fff !important; border-bottom: 1px solid #F47521;}
 
         .department-purple { background: #6C276A !important;}
 		.department-purple  .currentSection { color:#fff !important; border-bottom: 1px solid #6C276A;}
 
-	.department-brown { background: #954013 !important;}
+		.department-brown { background: #954013 !important;}
 		.department-brown  .currentSection { color:#fff !important; border-bottom: 1px solid #954013;}
 
 
-/* Content Formatting */
-#content ul,#content ol {  margin: 1.12em 0; }
-#content ul { list-style-type: disc; margin-left: 40px; }
-#content ol { list-style-type: decimal; margin-left: 40px; }
-#content strong { font-weight: bold;}
-#content a { color:#4F639F; }
-#content p { margin: 0 0 10px 0;}
 
-
-
-#content img { }
-#content img.border { padding: 7px; border: 1px solid #ececec; background: #fff;}
-#content description { font-size: 10px;}
-#content div.pageLinks img { padding: 0px !important; border: 0px!important; background: none!important;}
-#content div.infoBox img { padding: 0px!important; border: 0px!important; background: none!important;}
-#content img.noborder{ padding: 0px!important; border: 0px!important; background: none!important;}
-#content noborder{ padding: 0px!important; border: 0px!important; background: none!important;}
 
 
 

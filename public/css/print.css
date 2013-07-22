@@ -6,14 +6,14 @@
 		  border:none;
 		  box-shadow: none !important;
 	}
-	.magazine-logo, .magazine-logo-change{
-		  position:absolute;
+.msudenver_logo {
+		position:absolute;
 		width: 200px;
 		padding:0;
 		margin:0;
 	}
 	.navbar, .navbar-inverse, .navbar-fixed-top{
-		display:none;  
+		display:none;
 	}
 
 	body {
@@ -26,16 +26,16 @@
 	h2  {font-size:20px;}
 	h3  {font-size:18px;}
 	h4  {font-size:16px;}
-	
+
 	.container-fluid, button.btn >  span.icon-bar{
-		display:none;   
+		display:none;
 	}
-	
+
 	a,
 	a:visited {
 	  text-decoration: inherit;
 	}
-	
+
 	a[href]:after {
 	  content: " (" attr(href) ")";
 	}
@@ -102,4 +102,3 @@
 		padding-top:0;
 	}
 }
-
