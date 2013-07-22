@@ -1,7 +1,7 @@
 /***************HighlightBox *********************/
 .HighlightBox {
-  text-color: #ffffff;
-  padding: 15px;
+  color: #ffffff;
+  padding: 1.5em;
   margin: 20px;
   background: #16A085;
   position: relative;
@@ -15,16 +15,16 @@
   color: #ffffff;
   width: 100%;
 }
-.HighlightBox .HighlightBox-title {
+.HighlightBox-title {
   color: #ffffff;
   font-size: 1.5em;
   text-align: center;
 }
-.HighlightBox .HighlightBox-content {
+.HighlightBox-content {
   color: #ffffff;
   font-size: 1em;
 }
-.HighlightBox .HighlightBox-content a {
+.HighlightBox-content a {
   color: #ffffff;
 }
 /***************Zebra Stripe For Newsroom*********************/

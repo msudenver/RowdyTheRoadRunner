@@ -4,10 +4,9 @@
  * http://www.msudenver.edu
  */
 .linkcolumn .HighlightBox {
-  text-color: #ffffff;
-  padding: 15px;
-  margin: 20px;
+  margin: 0 0 1em 0;
   background: #e74c3c;
-  position: relative;
+  /* orange */
+
   zoom: 1;
 }
