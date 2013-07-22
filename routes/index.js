@@ -2,11 +2,13 @@
 (function() {
 
   exports.index = function(req, res) {
-    return res.render("index");
-  };
-
-  exports.twocol = function(req, res) {
-    return res.render("twocol");
+    console.log(req.url);
+    switch (req.url) {
+      case "/":
+        return res.render("index");
+      case "/2col":
+        return res.render("twocol");
+    }
   };
 
 }).call(this);
