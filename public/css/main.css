@@ -145,7 +145,6 @@ a:focus {
 .story_preview:nth-child(even) {
   background-color: white;
 }
-/* Content Formatting */
 .content {
   min-height: 7em;
   padding: 1.2575em;
