@@ -5,14 +5,26 @@
  * http://www.msudenver.edu
  */
  
-// Custom Style for MSU Denver Copyright 2013 MSU Denver http://www.msudenver.org
-
 @import "theme.less" ;
+
+/*
+
+  data-href
+  pointer-
+  --------
+
+*/ 
 
 .clickable{
   cursor: pointer;
 }
 
+/*
+
+  HEADERS
+  --------
+
+*/ 
 
 
 h1 {
@@ -32,11 +44,12 @@ h2 {
 }
 
 h3 {
-  color: @pomegranate;
-  font-size: 24px;
-  font-weight: 700;
+  color: @belizehole;
+  font-size: 1.8em;
+  font-weight: 400;
   margin-bottom: 4px;
-  margin-top: 2px; }
+  margin-top: 2px; 
+}
 
 h4 { 
   color: @peterriver;
@@ -56,6 +69,13 @@ h6 {
 }
 
 
+
+/*
+  
+  BODY AND LINK COLORS
+  -------- * ---------
+
+*/ 
 body {
   margin: 0;
   font-family: cabin, source-sans-pro, muli, josefin-sans, open-sans, sans-serif;
@@ -77,6 +97,53 @@ a:focus {
   text-decoration: underline;
 }
 
+
+
+/*
+	
+  HEADER
+  ------
+
+*/ 
+
+.siteheader {
+  padding: 1em;
+  margin-bottom: 20px;
+  background-color: @white;
+  border: 1px solid @asbestos;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.siteheader .h1 {
+	color: @asbestos;
+	font-size: 1.5em;
+}
+
+.msudenver_logo img{
+  max-width: 350px;
+  padding: 2em;
+}
+
+.breadcrumbs {
+   color: @midnightblue;
+   margin-bottom: 20px;
+   margin-left: 20px;
+   font-weight: 500;
+}
+
+
+/*
+	
+  NAVIGATION
+  ----------
+
+*/ 
+
 .nav-tabs > li > a,
 .nav-pills > li > a {
   padding-right: 12px;
@@ -85,6 +152,19 @@ a:focus {
   line-height: 14px;
   color:black;
 }
+
+.navbar-inverse .brand,
+.navbar-inverse .nav > li > a {
+  color: @concrete;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/*
+	
+  FOOTER
+  ------
+
+*/ 
 
 .footer {
   min-height: 20px;
@@ -111,33 +191,43 @@ a:focus {
   color: @black;
 }
 
+
+/*
+	
+  DEFINE!!!
+  ---------
+
+*/ 
+
 .readmore {
 	text-align:right; margin-top:10px;
 }
 
-.sup {font-size:80%; vertical-align:top;}
-.sub {font-size:80%; vertical-align:bottom;}
+.sup {
+    font-size:80%; 
+    vertical-align:top;
+}
+.sub {
+    font-size:80%; 
+    vertical-align:bottom;
+}
 
-.navbar-inverse .brand,
-.navbar-inverse .nav > li > a {
-  color: #bcbaba;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+hr{
+	border-width: 0.112em;
 }
 
 
-.msudenver_logo img{
-  max-width: 350px;
-  padding: 2em;
-}
 
-.breadcrumbs {
-   color: @asbestos;
-   margin-bottom: 20px;
-   font-weight: 700;
-}
+/*
+  
+  CONTENT STYLES
+  ----- * ------
 
-.siteheader {
-  padding: 1em;
+*/ 
+
+.content {
+  min-height: 7em;
+  padding: 1.2575em;
   margin-bottom: 20px;
   background-color: @white;
   border: 1px solid #e3e3e3;
@@ -148,14 +238,92 @@ a:focus {
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-.msudenver_logo img{
-  max-width: 350px;
-  padding: 2em;
+
+#content a {
+  color: @contentlink;
+  text-decoration: none;
 }
-.siteheader, .h1 {
-	color: @asbestos;
-	font-size: 1.5em;
+
+#content a:hover {
+  color: @contenthlink;
+  border-bottom: 1px solid;
 }
+
+#content img.border {
+  padding: 10px;
+  border: 1px solid #ececec;
+  background: #fff;
+}
+
+#content description {
+  font-size: 10px;
+}
+
+/*
+	
+  FOOTER
+  ------
+
+*/ 
+
+.footer {
+  min-height: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(42, 42, 42, 0.26);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.footer > .container > .row-fluid > .span3  {
+  color: @black;
+}
+
+.footer > .container > .row-fluid > .span5 {
+  color: @black;
+}
+
+.footer > .container > .row-fluid > .span5 {
+  color: @black;
+}
+
+.wellsmoke {
+	min-height: 20px;
+	padding: 20px;
+	margin-bottom: 20px;
+  	background-color: #BDC3C7; /* fallback color for ie 8 */
+	background-color: rgba(42, 42, 42, 0.26);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.wellsmoke .span3, .wellsmoke .span4, .wellsmoke .span5   {
+	margin-bottom: 1.5em;
+	text-align: center;
+  	color:@black;
+
+}
+
+// 
+/*
+	
+  BOOTSTRAP OVER-WRITES
+  --------- * ---------
+
+*/ 
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  *zoom: 1;
+}
+
 .well {
   min-height: 7em;
   padding: 1.2575em;
@@ -168,81 +336,4 @@ a:focus {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-
-}
-
-
-
-
-.wellsmoke {
-	min-height: 20px;
-	padding: 20px;
-	margin-bottom: 20px;
-  background-color: #BDC3C7; /* fallback color for ie 8 */
-	background-color: rgba(42, 42, 42, 0.26);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-.wellsmoke .span3, .wellsmoke .span4, .wellsmoke .span5   {
-	margin-bottom: 1.5em;
-	text-align:center;
-  color:black;
-	color:black;
-}
-
-.content {
-  min-height: 7em;
-  padding: 1.2575em;
-  margin-bottom: 20px;
-  background-color: #ffffff;
-  border: 1px solid #e3e3e3;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-
-
-#content a { 
-  text-decoration: none; color:#2980B9;
-}
-
-#content a:hover { 
-  border-bottom: 1px solid;
-}
-
-#content img.border { 
-  padding: 10px; 
-  border: 1px solid #ececec; 
-  background: #fff;
-}
-
-#content description { 
-  font-size: 10px;
-}
-
-#content div.pageLinks img { 
-  padding: 0px !important;
-  border: 0px!important;
-  background: none !important;
-}
-
-#content img.noborder{ 
-  padding: 0px !important; 
-  border: 0px !important; 
-  background: none !important;
-}
-
-// bootstrap over-writes 
-
-.container-fluid {
-  padding-right: 0;
-  padding-left: 0;
-  *zoom: 1;
 }
