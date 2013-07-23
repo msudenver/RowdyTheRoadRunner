@@ -16,7 +16,16 @@
         level
          .1.
 
-*/.lnav1 {
+*//* indent all except first level by [x] */
+.lnav2 li,
+.lnav3 li,
+.lnav4 li,
+.lnav5 li,
+.lnav6 li,
+.lnav7 {
+  margin-left: 1em;
+}
+.lnav1 {
   background-color: #1b557a;
 }
 /* nav-headings */
@@ -101,6 +110,126 @@ a:after {
 }
 /*
     
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .4.
+
+*/.lnav4 {
+  background-color: #2980b9;
+}
+/* nav-headings */
+.lnav4 li {
+  color: #ffffff;
+}
+/* nav link color */
+.lnav4 li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.lnav4 li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.lnav4 li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .5.
+
+*/.lnav5 {
+  background-color: #2e8ece;
+}
+/* nav-headings */
+.lnav5 li {
+  color: #ffffff;
+}
+/* nav link color */
+.lnav5 li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.lnav5 li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.lnav5 li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .6.
+
+*/.lnav6 {
+  background-color: #409ad5;
+}
+/* nav-headings */
+.lnav6 li {
+  color: #ffffff;
+}
+/* nav link color */
+.lnav6 li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.lnav6 li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.lnav6 li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .7.
+
+*/.lnav7 {
+  background-color: #55a5d9;
+}
+/* nav-headings */
+.lnav7 li {
+  color: #ffffff;
+}
+/* nav link color */
+.lnav7 li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.lnav7 li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.lnav7 li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/*
+    
   BOOTSTRAP OVER-WRITES
   --------- * ---------
 
@@ -108,7 +237,8 @@ a:after {
   color: #ffffff;
 }
 li.active > a {
-  background-color: #e74c3c !important;
+  background-color: #ecf0f1 !important;
+  color: black !important;
 }
 /*
     

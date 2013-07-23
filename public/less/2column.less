@@ -13,6 +13,7 @@
 // @lnav6 
 // @lnav7
 
+
 /*
     
   NESTED NAVIGATION
@@ -21,6 +22,17 @@
          .1.
 
 */ 
+
+/* indent all except first level by [x] */
+
+.lnav2 li ,
+.lnav3 li ,
+.lnav4 li ,
+.lnav5 li ,
+.lnav6 li ,
+.lnav7{
+    margin-left: 1em;
+}
 
 .lnav1{
     background-color: @lnav1;
@@ -110,7 +122,129 @@
 }
 
 
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .4.
 
+*/ 
+
+.lnav4{
+    background-color: @lnav4;
+   
+}
+/* nav-headings */
+.lnav4 li{
+     color: @white;
+}
+/* nav link color */
+.lnav4 li a{
+    color: @white;
+}
+/* nav link color :hover */
+.lnav4 li a:hover{
+    background-color: @asbestos;
+    
+}
+/* nav link color on mouse over, mouse leave */
+.lnav4 li a, a:after{
+    .animate-all(0.5s);
+}
+
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .5.
+
+*/ 
+
+.lnav5{
+    background-color: @lnav5;
+   
+}
+/* nav-headings */
+.lnav5 li{
+     color: @white;
+}
+/* nav link color */
+.lnav5 li a{
+    color: @white;
+}
+/* nav link color :hover */
+.lnav5 li a:hover{
+    background-color: @asbestos;
+    
+}
+/* nav link color on mouse over, mouse leave */
+.lnav5 li a, a:after{
+    .animate-all(0.5s);
+}
+
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .6.
+
+*/ 
+
+.lnav6{
+    background-color: @lnav6;
+   
+}
+/* nav-headings */
+.lnav6 li{
+     color: @white;
+}
+/* nav link color */
+.lnav6 li a{
+    color: @white;
+}
+/* nav link color :hover */
+.lnav6 li a:hover{
+    background-color: @asbestos;
+    
+}
+/* nav link color on mouse over, mouse leave */
+.lnav6 li a, a:after{
+    .animate-all(0.5s);
+}
+
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .7.
+
+*/ 
+
+.lnav7{
+    background-color: @lnav7;
+   
+}
+/* nav-headings */
+.lnav7 li{
+     color: @white;
+}
+/* nav link color */
+.lnav7 li a{
+    color: @white;
+}
+/* nav link color :hover */
+.lnav7 li a:hover{
+    background-color: @asbestos;
+    
+}
+/* nav link color on mouse over, mouse leave */
+.lnav7 li a, a:after{
+    .animate-all(0.5s);
+}
 
 
 /*
@@ -124,7 +258,8 @@
     color: @white;
 }
 li.active > a{
-    background-color: @alizarin !important;
+    background-color: @clouds !important;
+    color: black !important;
 }
 /*
     
