@@ -8,6 +8,8 @@
         return res.render("index");
       case "/2col":
         return res.render("twocol");
+      case "/3col":
+        return res.render("threecol");
     }
   };
 

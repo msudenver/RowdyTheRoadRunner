@@ -6,6 +6,7 @@ exports.index = (req, res) ->
 	switch req.url
 		when "/" then res.render("index")
 		when "/2col" then res.render("twocol")
+		when "/3col" then res.render("threecol")
 
 # exports.twocol = (req, res) ->
 # 	# res.render("index", {title : "it works"})
