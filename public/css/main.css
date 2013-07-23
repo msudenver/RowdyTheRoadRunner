@@ -7,46 +7,45 @@
   cursor: pointer;
 }
 h1 {
-  color: #7f8c8d;
-  font-size: 2.2em;
-  font-weight: 200;
-  margin-left: 10px;
+  color: #f39c12;
+  font-size: 32px;
+  font-weight: 900;
   text-transform: uppercase;
 }
 h2 {
-  color: #2c3e50;
-  font-size: 2em;
-  font-weight: 400;
+  color: #e67e22;
+  font-size: 26px;
+  font-weight: 700;
   margin-bottom: 2px;
   text-transform: uppercase;
 }
 h3 {
-  color: #2980b9;
-  font-size: 1.8em;
-  font-weight: 400;
+  color: #c0392b;
+  font-size: 24px;
+  font-weight: 700;
   margin-bottom: 4px;
   margin-top: 2px;
 }
 h4 {
-  color: #c0392b;
-  font-size: 1.6em;
-  font-weight: 400;
+  color: #3498db;
+  font-size: 18px;
+  font-weight: 500;
   margin-top: 4px;
 }
 h5 {
   color: #2c3e50;
-  font-size: 1.4em;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
 }
 h6 {
   color: #e74c3c;
-  font-size: 1.2em;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
 }
 body {
   margin: 0;
   font-family: cabin, source-sans-pro, muli, josefin-sans, open-sans, sans-serif;
-  font-size: 1em;
+  font-size: 14px;
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
@@ -104,7 +103,7 @@ a:focus {
 }
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
-  color: #95a5a6;
+  color: #bcbaba;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 .msudenver_logo img {
@@ -112,16 +111,15 @@ a:focus {
   padding: 2em;
 }
 .breadcrumbs {
-  color: #2c3e50;
+  color: #7f8c8d;
   margin-bottom: 20px;
-  margin-left: 20px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .siteheader {
   padding: 1em;
   margin-bottom: 20px;
   background-color: #ffffff;
-  border: 1px solid #7f8c8d;
+  border: 1px solid #e3e3e3;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -132,6 +130,11 @@ a:focus {
 .msudenver_logo img {
   max-width: 350px;
   padding: 2em;
+}
+.siteheader,
+.h1 {
+  color: #7f8c8d;
+  font-size: 1.5em;
 }
 .well {
   min-height: 7em;
@@ -145,35 +148,6 @@ a:focus {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-.content {
-  min-height: 7em;
-  padding: 1.2575em;
-  margin-bottom: 20px;
-  background-color: #ffffff;
-  border: 1px solid #e3e3e3;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-#content a {
-  color: #1b557a;
-  text-decoration: none;
-}
-#content a:hover {
-  color: #20648f;
-  border-bottom: 1px solid;
-}
-#content img.border {
-  padding: 10px;
-  border: 1px solid #ececec;
-  background: #fff;
-}
-#content description {
-  font-size: 10px;
 }
 .wellsmoke {
   min-height: 20px;
@@ -197,6 +171,44 @@ a:focus {
   text-align: center;
   color: black;
   color: black;
+}
+.content {
+  min-height: 7em;
+  padding: 1.2575em;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+#content a {
+  text-decoration: none;
+  color: #2980B9;
+}
+#content a:hover {
+  border-bottom: 1px solid;
+}
+#content img.border {
+  padding: 10px;
+  border: 1px solid #ececec;
+  background: #fff;
+}
+#content description {
+  font-size: 10px;
+}
+#content div.pageLinks img {
+  padding: 0px !important;
+  border: 0px!important;
+  background: none !important;
+}
+#content img.noborder {
+  padding: 0px !important;
+  border: 0px !important;
+  background: none !important;
 }
 .container-fluid {
   padding-right: 0;

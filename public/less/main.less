@@ -4,10 +4,8 @@
  * Copyright 2013 MSU Denver
  * http://www.msudenver.edu
  */
-
-
+ 
 // Custom Style for MSU Denver Copyright 2013 MSU Denver http://www.msudenver.org
-
 
 @import "theme.less" ;
 
@@ -16,53 +14,53 @@
 }
 
 
+
 h1 {
-  color: @asbestos;
-  font-size: 2.2em;
-  font-weight: 200;
-  margin-left: 10px;
+  color: @orange;
+  font-size: 32px;
+  font-weight: 900; 
   text-transform: uppercase;
 }
 
 h2 {
-  color: @midnightblue;
-  font-size: 2em;
-  font-weight: 400;
+  color: @carrot;
+  font-size: 26px;
+  font-weight: 700;
   margin-bottom: 2px;
   text-transform: uppercase;
 }
 
 h3 {
-  color: @belizehole;
-  font-size: 1.8em;
-  font-weight: 400;
+  color: @pomegranate;
+  font-size: 24px;
+  font-weight: 700;
   margin-bottom: 4px;
   margin-top: 2px; }
 
-h4 {
-  color: @pomegranate;
-  font-size: 1.6em;
-  font-weight: 400;
+h4 { 
+  color: @peterriver;
+  font-size: 18px;
+  font-weight: 500;
   margin-top: 4px; }
 
 h5 {
   color: @midnightblue;
-  font-size: 1.4em;
-  font-weight: 400;}
+  font-size: 16px;
+  font-weight: 500;}
 
 h6 {
   color: @alizarin;
-  font-size: 1.2em;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 
 body {
   margin: 0;
   font-family: cabin, source-sans-pro, muli, josefin-sans, open-sans, sans-serif;
-  font-size: 1em;
+  font-size: 14px;
   line-height: 20px;
-  color: @darkgray;
+  color: #333333;
   background-color: @white;
   background-image: url(/assets/img/background.jpg);
 }
@@ -116,18 +114,12 @@ a:focus {
 	text-align:right; margin-top:10px;
 }
 
-.sup {
-    font-size:80%; 
-    vertical-align:top;
-}
-.sub {
-    font-size:80%; 
-    vertical-align:bottom;
-}
+.sup {font-size:80%; vertical-align:top;}
+.sub {font-size:80%; vertical-align:bottom;}
 
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
-  color: @concrete;
+  color: #bcbaba;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -138,17 +130,16 @@ a:focus {
 }
 
 .breadcrumbs {
-   color: @midnightblue;
+   color: @asbestos;
    margin-bottom: 20px;
-   margin-left: 20px;
-   font-weight: 500;
+   font-weight: 700;
 }
 
 .siteheader {
   padding: 1em;
   margin-bottom: 20px;
   background-color: @white;
-  border: 1px solid @asbestos;
+  border: 1px solid #e3e3e3;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -156,13 +147,14 @@ a:focus {
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-
 .msudenver_logo img{
   max-width: 350px;
   padding: 2em;
 }
-
-
+.siteheader, .h1 {
+	color: @asbestos;
+	font-size: 1.5em;
+}
 .well {
   min-height: 7em;
   padding: 1.2575em;
@@ -179,50 +171,13 @@ a:focus {
 }
 
 
-//Content Styles
 
-.content {
-  min-height: 7em;
-  padding: 1.2575em;
-  margin-bottom: 20px;
-  background-color: @white;
-  border: 1px solid #e3e3e3;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-
-
-#content a {
-  color: @contentlink;
-  text-decoration: none;
-}
-
-#content a:hover {
-  color: @contenthlink;
-  border-bottom: 1px solid;
-}
-
-#content img.border {
-  padding: 10px;
-  border: 1px solid #ececec;
-  background: #fff;
-}
-
-#content description {
-  font-size: 10px;
-}
-
-//Footer Styles
 
 .wellsmoke {
 	min-height: 20px;
 	padding: 20px;
 	margin-bottom: 20px;
-    background-color: #BDC3C7; /* fallback color for ie 8 */
+  background-color: #BDC3C7; /* fallback color for ie 8 */
 	background-color: rgba(42, 42, 42, 0.26);
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -234,14 +189,59 @@ a:focus {
 .wellsmoke .span3, .wellsmoke .span4, .wellsmoke .span5   {
 	margin-bottom: 1.5em;
 	text-align:center;
-  	color:black;
+  color:black;
 	color:black;
 }
 
+.content {
+  min-height: 7em;
+  padding: 1.2575em;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+
+#content a { 
+  text-decoration: none; color:#2980B9;
+}
+
+#content a:hover { 
+  border-bottom: 1px solid;
+}
+
+#content img.border { 
+  padding: 10px; 
+  border: 1px solid #ececec; 
+  background: #fff;
+}
+
+#content description { 
+  font-size: 10px;
+}
+
+#content div.pageLinks img { 
+  padding: 0px !important;
+  border: 0px!important;
+  background: none !important;
+}
+
+#content img.noborder{ 
+  padding: 0px !important; 
+  border: 0px !important; 
+  background: none !important;
+}
+
 // bootstrap over-writes 
+
 .container-fluid {
   padding-right: 0;
   padding-left: 0;
   *zoom: 1;
 }
-
