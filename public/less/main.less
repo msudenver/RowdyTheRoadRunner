@@ -6,7 +6,7 @@
  */
  
 @import "theme.less" ;
-
+@import "utils.less" ;
 /*
 
   data-href
@@ -157,6 +157,10 @@ a:focus {
 .navbar-inverse .nav > li > a {
   color: @concrete;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+// navitation tab animation on mouse over, mouse leave
+.nav , .nav-tabs, .navbar-inner li a, a:hover{
+  // .animate-all(0.5s);
 }
 
 /*
@@ -319,13 +323,14 @@ hr {
 
 }
 
-// 
+
 /*
 	
   BOOTSTRAP OVER-WRITES
   --------- * ---------
 
 */ 
+
 .container-fluid {
   padding-right: 0;
   padding-left: 0;

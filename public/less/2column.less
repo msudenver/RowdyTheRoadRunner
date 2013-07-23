@@ -4,6 +4,7 @@
  * http://www.msudenver.edu
  */
 @import 'theme.less';
+@import 'utils.less';
 // @lnav1 
 // @lnav2 
 // @lnav3 
@@ -20,6 +21,7 @@
          .1.
 
 */ 
+
 .lnav1{
     background-color: @lnav1;
    
@@ -35,30 +37,122 @@
 /* nav link color :hover */
 .lnav1 li a:hover{
     background-color: @asbestos;
+    
+}
+/* nav link color on mouse over, mouse leave */
+.lnav1 li a, a:after{
+    .animate-all(0.5s);
 }
 
 
-#bannerImage {
-    max-width: 100%;
-    padding: 5px;
-    overflow:hidden;
-    margin-bottom:20px;
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .2.
+
+*/ 
+
+.lnav2{
+    background-color: @lnav2;
+   
+}
+/* nav-headings */
+.lnav2 li{
+     color: @white;
+}
+/* nav link color */
+.lnav2 li a{
+    color: @white;
+}
+/* nav link color :hover */
+.lnav2 li a:hover{
+    background-color: @asbestos;
+    
+}
+/* nav link color on mouse over, mouse leave */
+.lnav2 li a, a:after{
+    .animate-all(0.5s);
 }
 
-#bannerImage img {
-    overflow: hidden;
+
+
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .3.
+
+*/ 
+
+.lnav3{
+    background-color: @lnav3;
+   
+}
+/* nav-headings */
+.lnav3 li{
+     color: @white;
+}
+/* nav link color */
+.lnav3 li a{
+    color: @white;
+}
+/* nav link color :hover */
+.lnav3 li a:hover{
+    background-color: @asbestos;
+    
+}
+/* nav link color on mouse over, mouse leave */
+.lnav3 li a, a:after{
+    .animate-all(0.5s);
 }
 
-.sidebar-nav {
-    // padding: 9px 0;
-}
 
+
+
+
+/*
+    
+  BOOTSTRAP OVER-WRITES
+  --------- * ---------
+
+*/ 
+
+.nav-header{
+    color: @white;
+}
+li.active > a{
+    background-color: @alizarin !important;
+}
+/*
+    
+  MEDIA @ QUERIES
+  ----- * -------
+
+*/ 
 
 @media (max-width: 980px) {
 /* Enable use of floated navbar text */
-	.navbar-text.pull-right {
-	  float: none;
-	  padding-left: 5px;
-	  padding-right: 5px;
-	}
+    .navbar-text.pull-right {
+      float: none;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
 }
+
+
+
+// extras ???
+
+// #bannerImage {
+//     max-width: 100%;
+//     padding: 5px;
+//     overflow:hidden;
+//     margin-bottom:20px;
+// }
+
+// #bannerImage img {
+//     overflow: hidden;
+// }

@@ -15,11 +15,11 @@
 
 		<!-- styles -->
 		<link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/2column.css">
         <link rel="stylesheet" href="css/linkcolumn.css">
         <link rel="stylesheet" href="css/contentTypes.css">
         <link rel="stylesheet" href="css/tablestyles.css">
 		<link rel="stylesheet" href="css/print.css">
+		<link rel="stylesheet" href="css/2column.css">
 
 		<!-- js -->
 		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -79,25 +79,34 @@
 								<li class="nav-header">Sidebar</li>
 								<li class="active"><a href="#">Link</a></li>
 								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
 								<li class="nav-header">Sidebar</li>
 								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li class="nav-header nav-collapse"><a href="#">INNER</a>
-										<ul class="nav nav-list ">
-										<li><a href="#">Link</a></li>
-										<li><a href="#">Link</a></li>
-										<li><a href="#">Link</a></li>
-										<li><a href="#">Link</a></li>
-										<li><a href="#">Link</a></li>
+								<li>
+									<a href="#" class="nav-header" data-toggle="collapse" data-target="#lnav2">
+										LEVEL 2
+									</a>
+									<ul id="lnav2" class="nav nav-list nav-header collapse lnav2"> 
+											<li><a href="#">next level</a></li>
+											<li><a href="#">next level</a></li>
+											<li><a href="#">next level</a></li>
+											<li><a href="#">next level</a></li>
+											<li>
+												<a href="#" class="nav-header" data-toggle="collapse" data-target="#lnav3">
+													LEVEL 3
+												</a>
+												<ul id="lnav3" class="nav nav-list nav-header collapse lnav3">
+													<li><a href="#">next level</a></li>
+													<li><a href="#">next level</a></li>
+													<li><a href="#">next level</a></li>
+													<li><a href="#">next level</a></li>
+												</ul>
+											</li>
 									</ul>
 								</li>
 								<li><a href="#">Link</a></li>
 								<li><a href="#">Link</a></li>
 								<li><a href="#">Link</a></li>
-								<li class="nav-header">Sidebar</li>
+								<li class="nav-header">more sidebar</li>
 								<li><a href="#">Link</a></li>
 								<li><a href="#">Link</a></li>
 								<li><a href="#">Link</a></li>
