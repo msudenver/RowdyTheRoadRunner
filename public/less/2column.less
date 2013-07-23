@@ -3,6 +3,39 @@
  * Copyright 2013 MSU Denver
  * http://www.msudenver.edu
  */
+@import 'theme.less';
+// @lnav1 
+// @lnav2 
+// @lnav3 
+// @lnav4 
+// @lnav5 
+// @lnav6 
+// @lnav7
+
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .1.
+
+*/ 
+.lnav1{
+    background-color: @lnav1;
+   
+}
+/* nav-headings */
+.lnav1 li{
+     color: @white;
+}
+/* nav link color */
+.lnav1 li a{
+    color: @white;
+}
+/* nav link color :hover */
+.lnav1 li a:hover{
+    background-color: @asbestos;
+}
 
 
 #bannerImage {
@@ -12,10 +45,13 @@
     margin-bottom:20px;
 }
 
-#bannerImage img {overflow: hidden;}
+#bannerImage img {
+    overflow: hidden;
+}
+
 .sidebar-nav {
     // padding: 9px 0;
-  }
+}
 
 
 @media (max-width: 980px) {

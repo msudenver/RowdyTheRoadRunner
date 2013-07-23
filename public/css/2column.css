@@ -3,6 +3,28 @@
  * Copyright 2013 MSU Denver
  * http://www.msudenver.edu
  */
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .1.
+
+*/.lnav1 {
+  background-color: #1b557a;
+}
+/* nav-headings */
+.lnav1 li {
+  color: #ffffff;
+}
+/* nav link color */
+.lnav1 li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.lnav1 li a:hover {
+  background-color: #7f8c8d;
+}
 #bannerImage {
   max-width: 100%;
   padding: 5px;
