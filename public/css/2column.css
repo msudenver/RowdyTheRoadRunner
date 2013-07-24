@@ -16,14 +16,17 @@
         level
          .1.
 
-*//* indent all except first level by [x] */
+*//* sidebar nav */.sidebar-nav {
+  margin-bottom: 2em;
+}
+/* indent all except first level by [x] */
 .lnav2 li,
 .lnav3 li,
 .lnav4 li,
 .lnav5 li,
 .lnav6 li,
 .lnav7 {
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 .lnav1 {
   background-color: #1b557a;

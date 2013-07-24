@@ -177,9 +177,10 @@ a:focus {
 }
 hr {
   border: 0;
-  height: 0.1099999215em;
-  background-color: white;
-  margin: 0.75em 0;
+  height: 0.059em;
+  background-color: #ffffff;
+  color: #ffffff;
+  margin: 0.65em 0;
 }
 /*
   

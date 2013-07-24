@@ -74,52 +74,48 @@
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="span3"><!-- LEFT SIDE COLUMN -->
-						<div class="well sidebar-nav">
+						<div class="sidebar-nav">
 							<ul class="nav nav-list lnav1">
-								<li class="nav-header">Sidebar</li>
+								<li class="nav-header">LEVEL 1</li>
 								<li class="active"><a href="#">Link</a></li>
 								<li><a href="#">Link</a></li>
-								<li class="nav-header">Sidebar</li>
-								<li><a href="#">Link</a></li>
+								
 								<li>
-									<a href="#" class="nav-header" data-toggle="collapse" data-target="#lnav2">
+									<span href="#" class="nav-header" data-toggle="collapse" data-target=".lnav2">
 										LEVEL 2
-									</a>
-									<ul id="lnav2" class="nav nav-list nav-header collapse lnav2"> 
-										<li><a href="#">next level</a></li>
-										<li><a href="#">next level</a></li>
-										<li><a href="#">next level</a></li>
+									</span>
+									<ul class="nav nav-list nav-header collapse lnav2"> 
 										<li><a href="#">next level</a></li>
 										<li>
-											<a href="#" class="nav-header" data-toggle="collapse" data-target="#lnav3">
+											<a href="#" class="nav-header" data-toggle="collapse" data-target=".lnav3">
 												LEVEL 3
 											</a>
-											<ul id="lnav3" class="nav nav-list nav-header collapse lnav3">
+											<ul class="nav nav-list nav-header collapse lnav3">
 												<li><a href="#">next level</a></li>
 												<li><a href="#">next level</a></li>
 												<li><a href="#">next level</a></li>
 												<li>
-													<a href="#" class="nav-header" data-toggle="collapse" data-target="#lnav4">
+													<a href="#" class="nav-header" data-toggle="collapse" data-target=".lnav4">
 													LEVEL 4
 													</a>
-													<ul id="lnav4" class="nav nav-list nav-header collapse lnav4">
+													<ul class="nav nav-list nav-header collapse lnav4">
 														<li><a href="#">next level</a></li>
 														<li><a href="#">next level</a></li>
 														<li><a href="#">next level</a></li>
-														<li><a href="#">next level</a></li>
+														<li><a href="#" class="nav-header" data-toggle="collapse" data-target=".lnav5">LEVEL 5</a>
+														<ul class="nav nav-list nav-header collapse lnav5">
+															<li><a href="#">next level</a></li>
+															<li><a href="#">next level</a></li>
+															<li><a href="#">next level</a></li>
+															<li><a href="#">next level</a></li>
+														</ul></li>
+
 													</ul>
 												</li>
 											</ul>
 										</li>
 									</ul>
 								</li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li class="nav-header">more sidebarc</li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
 							</ul>
 						</div><!--/.well -->
 						<div class="linkcolumn">
@@ -261,6 +257,7 @@
 		<script src="js/vendor/bootstrap-button.js"></script>
 		<script src="js/vendor/bootstrap-collapse.js"></script>
 		<script src="js/vendor/bootstrap-carousel.js"></script>
+		<script src="js/main.js"></script>
 		<!-- utils -->
 		<script src="js/vendor/plugins.js"></script>
 		<!-- missing console in IE -->
