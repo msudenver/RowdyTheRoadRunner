@@ -1,48 +1,270 @@
 /*!
- * Custom Style for MSU Denver 3 Column Pages
+ * Custom Style for MSU Denver 2 Column Pages
  * Copyright 2013 MSU Denver
  * http://www.msudenver.edu
  */
-#bannerImage {
-  max-width: 100%;
-  padding: 5px;
-  overflow: hidden;
-  margin-bottom: 20px;
+/**{
+  	-webkit-transition: all 0.5s ease-in-out;
+  	-moz-transition: all 0.5s ease-in-out;
+  	-o-transition: all 0.5s ease-in-out;
+  	transition: all 0.5s ease-in-out;
 }
-#bannerImage img {
-  overflow: hidden;
+*//*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .1.
+
+*//* sidebar nav */.sidebar-nav {
+  margin-bottom: 2em;
 }
-#threeColumnRight {
-  float: right;
-}
-#threeColumnRight .HighlightBox {
-  text-color: #ffffff;
-  padding: 15px;
-  margin: 20px;
-  background: #068b58;
-  position: relative;
-  zoom: 1;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-#threeColumnRight .HighlightBox hr {
-  size: .5em;
-  color: #ffffff;
+/* indent all except first level by [x] */
+.lnav2 ul,
+.lnav3 ul,
+.lnav4 ul,
+.lnav5 ul,
+.lnav6 ul,
+.lnav7 ul {
+  margin-left: 0.5em;
   width: 100%;
 }
-#threeColumnRight .HighlightBox .HighlightBox-title {
-  color: #ffffff;
-  font-size: 1.5em;
-  text-align: center;
+.lnav1 {
+  background-color: #1b557a;
 }
-#threeColumnRight .HighlightBox .HighlightBox-content {
+/* nav-headings */
+.lnav1 li {
   color: #ffffff;
-  font-size: 1em;
 }
-#threeColumnRight .HighlightBox .HighlightBox-content a {
-  color: #fffff;
+/* nav link color */
+.lnav1 li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.lnav1 li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.lnav1 li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .2.
+
+*/.lnav2 {
+  background-color: #20638f;
+}
+/* nav-headings */
+.lnav2 li {
+  color: #ffffff;
+}
+/* nav link color */
+.lnav2 li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.lnav2 li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.lnav2 li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .3.
+
+*/.lnav3 {
+  background-color: #2472a4;
+}
+/* nav-headings */
+.lnav3 li {
+  color: #ffffff;
+}
+/* nav link color */
+.lnav3 li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.lnav3 li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.lnav3 li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .4.
+
+*/.lnav4 {
+  background-color: #2980b9;
+}
+/* nav-headings */
+.lnav4 li {
+  color: #ffffff;
+}
+/* nav link color */
+.lnav4 li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.lnav4 li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.lnav4 li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .5.
+
+*/.lnav5 {
+  background-color: #2e8ece;
+}
+/* nav-headings */
+.lnav5 li {
+  color: #ffffff;
+}
+/* nav link color */
+.lnav5 li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.lnav5 li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.lnav5 li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .6.
+
+*/.lnav6 {
+  background-color: #409ad5;
+}
+/* nav-headings */
+.lnav6 li {
+  color: #ffffff;
+}
+/* nav link color */
+.lnav6 li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.lnav6 li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.lnav6 li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/*
+    
+  NESTED NAVIGATION
+  ------- * -------
+        level
+         .7.
+
+*/.lnav7 {
+  background-color: #55a5d9;
+}
+/* nav-headings */
+.lnav7 li {
+  color: #ffffff;
+}
+/* nav link color */
+.lnav7 li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.lnav7 li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.lnav7 li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/*
+    
+  BOOTSTRAP OVER-WRITES
+  --------- * ---------
+
+*/.active {
+  padding-right: 15px;
+}
+.nav-list {
+  padding-right: 0;
+}
+/*
+    
+  BOOTSTRAP OVER-WRITES
+  --------- * ---------
+
+*/.nav-header {
+  color: #ffffff;
+}
+li.active > a {
+  background-color: #ecf0f1 !important;
+  color: black !important;
+}
+/*
+    
+  MEDIA @ QUERIES
+  ----- * -------
+
+*/@media (max-width: 980px) {
+  /* Enable use of floated navbar text */
+  .navbar-text.pull-right {
+    float: none;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
