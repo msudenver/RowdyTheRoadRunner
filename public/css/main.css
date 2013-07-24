@@ -175,6 +175,17 @@ a:focus {
   font-size: 80%;
   vertical-align: bottom;
 }
+.image_caption {
+  font-size: 12px;
+  line-height: 19px;
+  color: #73787e;
+}
+.bordered {
+  /* border:5px solid white; box-shadow:0 0 2px #AAAAAA; */
+
+  padding: 9px;
+  border: 1px solid #ececec;
+}
 hr {
   border: 0;
   height: 0.059em;

@@ -20,13 +20,14 @@
   margin-bottom: 2em;
 }
 /* indent all except first level by [x] */
-.lnav2 li,
-.lnav3 li,
-.lnav4 li,
-.lnav5 li,
-.lnav6 li,
-.lnav7 {
+.lnav2 ul,
+.lnav3 ul,
+.lnav4 ul,
+.lnav5 ul,
+.lnav6 ul,
+.lnav7 ul {
   margin-left: 0.5em;
+  width: 100%;
 }
 .lnav1 {
   background-color: #1b557a;
@@ -230,6 +231,17 @@ a:after {
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+/*
+    
+  BOOTSTRAP OVER-WRITES
+  --------- * ---------
+
+*/.active {
+  padding-right: 15px;
+}
+.nav-list {
+  padding-right: 0;
 }
 /*
     
