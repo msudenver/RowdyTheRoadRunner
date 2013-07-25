@@ -10,230 +10,40 @@
   	transition: all 0.5s ease-in-out;
 }
 *//*
-    
+	
   NESTED NAVIGATION
   ------- * -------
-        level
-         .1.
+		level
+		 .1.
 
 *//* sidebar nav */.sidebar-nav {
   margin-bottom: 2em;
+  background-color: #1b557a;
+  color: #ffffff;
+}
+/* nav-headings */
+.sidebar-nav li {
+  color: #ffffff;
+}
+/* nav link color */
+.sidebar-nav li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.sidebar-nav li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.sidebar-nav li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 /* indent all except first level by [x] */
-.currentbranch1 ul,
-.currentbranch2 ul,
-.currentbranch3 ul,
-.currentbranch4 ul,
-.currentbranch5 ul,
-.currentbranch6 ul {
-  margin-left: 0.5em;
-  width: 100%;
-}
-.currentbranch0 {
-  background-color: #1b557a;
-}
-/* nav-headings */
-.currentbranch0 li {
-  color: #ffffff;
-}
-/* nav link color */
-.currentbranch0 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.currentbranch0 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.currentbranch0 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
 /*
-    
-  NESTED NAVIGATION
-  ------- * -------
-        level
-         .2.
-
-*/.currentbranch1 {
-  background-color: #20638f;
-}
-/* nav-headings */
-.currentbranch1 li {
-  color: #ffffff;
-}
-/* nav link color */
-.currentbranch1 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.currentbranch1 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.currentbranch1 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-/*
-    
-  NESTED NAVIGATION
-  ------- * -------
-        level
-         .3.
-
-*/.currentbranch2 {
-  background-color: #2472a4;
-}
-/* nav-headings */
-.currentbranch2 li {
-  color: #ffffff;
-}
-/* nav link color */
-.currentbranch2 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.currentbranch2 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.currentbranch2 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-/*
-    
-  NESTED NAVIGATION
-  ------- * -------
-        level
-         .4.
-
-*/.currentbranch3 {
-  background-color: #2980b9;
-}
-/* nav-headings */
-.currentbranch3 li {
-  color: #ffffff;
-}
-/* nav link color */
-.currentbranch3 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.currentbranch3 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.currentbranch3 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-/*
-    
-  NESTED NAVIGATION
-  ------- * -------
-        level
-         .5.
-
-*/.currentbranch4 {
-  background-color: #2e8ece;
-}
-/* nav-headings */
-.currentbranch4 li {
-  color: #ffffff;
-}
-/* nav link color */
-.currentbranch4 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.currentbranch4 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.currentbranch4 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-/*
-    
-  NESTED NAVIGATION
-  ------- * -------
-        level
-         .6.
-
-*/.currentbranch5 {
-  background-color: #409ad5;
-}
-/* nav-headings */
-.currentbranch5 li {
-  color: #ffffff;
-}
-/* nav link color */
-.currentbranch5 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.currentbranch5 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.currentbranch5 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-/*
-    
-  NESTED NAVIGATION
-  ------- * -------
-        level
-         .7.
-
-*/.currentbranch6 {
-  background-color: #55a5d9;
-}
-/* nav-headings */
-.currentbranch6 li {
-  color: #ffffff;
-}
-/* nav link color */
-.currentbranch6 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.currentbranch6 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.currentbranch6 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-/*
-    
+	
   BOOTSTRAP OVER-WRITES
   --------- * ---------
 
