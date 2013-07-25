@@ -33,7 +33,7 @@
   }
   .msudenver_logo img {
     width: 80%;
-    padding: 2em;
+    padding-left: 0;
   }
   .flexwrapper > section {
     width: 100%;
