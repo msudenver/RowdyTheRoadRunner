@@ -7,6 +7,7 @@ exports.index = (req, res) ->
 		when "/" then res.render("index")
 		when "/2col" then res.render("twocol")
 		when "/3col" then res.render("threecol")
+		when "/1col" then res.render("onecol")
 
 # exports.twocol = (req, res) ->
 # 	# res.render("index", {title : "it works"})

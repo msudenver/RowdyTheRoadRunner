@@ -10,6 +10,8 @@
         return res.render("twocol");
       case "/3col":
         return res.render("threecol");
+      case "/1col":
+        return res.render("onecol");
     }
   };
 
