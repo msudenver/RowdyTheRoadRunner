@@ -1,0 +1,54 @@
+.sidebar-nav {
+  border: 5px solid #ffffff;
+  margin-bottom: 20px;
+  box-shadow: 0 0 2px #AAAAAA;
+}
+.sidebar-nav li {
+  line-height: 27px;
+  padding-left: 10px;
+}
+.sidebar-nav a {
+  color: #ffffff;
+  display: block;
+}
+.sidebar-nav a:hover {
+  background: url(/media/styleassets/images/activeArrow_trans.gif) right center no-repeat;
+  border-bottom: none;
+}
+.sidebar-nav ul li ul li {
+  background-color: #DDDDDD;
+  margin-left: -10px;
+  padding-left: 20px;
+}
+.sidebar-nav ul li ul li ul li {
+  background-color: #EEEEEE;
+  margin-left: -20px;
+  padding-left: 30px;
+}
+.sidebar-nav ul li ul li ul li ul li {
+  background-color: #000000;
+  margin-left: -30px;
+  padding-left: 40px;
+}
+.sidebar-nav ul li ul li a {
+  color: black;
+}
+.currentbranch0 a {
+  display: block;
+}
+.currentbranch1 {
+  font-weight: bold;
+  display: block;
+}
+.currentbranch2 {
+  font-weight: bold;
+  display: block;
+}
+.currentbranch3 {
+  font-weight: bold;
+  display: block;
+}
+.currentbranch4 {
+  font-weight: bold;
+  display: block;
+}
