@@ -1,19 +1,18 @@
 .sidebar-nav {
-  border: 5px solid #ffffff;
-  margin-bottom: 20px;
-  box-shadow: 0 0 2px #AAAAAA;
+  margin-bottom: 2em;
+  background-color: #1b557a;
+  color: #ffffff;
 }
-.sidebar-nav li {
-  line-height: 27px;
-  padding-left: 10px;
-}
-.sidebar-nav a {
+.sidebar-nav li,
+a {
   color: #ffffff;
   display: block;
 }
-.sidebar-nav a:hover {
-  background: url(/media/styleassets/images/activeArrow_trans.gif) right center no-repeat;
-  border-bottom: none;
+.sidebar-nav a {
+  color: #ffffff;
+}
+.sidebar-nav li a:hover {
+  background-color: #7f8c8d;
 }
 .sidebar-nav ul li ul li {
   background-color: #DDDDDD;

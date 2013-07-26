@@ -5,6 +5,12 @@
  */
 /* Desktops and laptops ----------- */
 /* Smartphones (portrait and landscape) ----------- */
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  input.search-query {
+    width: 110px;
+  }
+}
 .actionHeader {
   vertical-align: top;
   box-sizing: border-box;
@@ -75,13 +81,16 @@ p.actionHeader {
 .homepage-caption img {
   width: 100%;
 }
-/**{
-  	-webkit-transition: all 0.5s ease-in-out;
-  	-moz-transition: all 0.5s ease-in-out;
-  	-o-transition: all 0.5s ease-in-out;
-  	transition: all 0.5s ease-in-out;
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
 }
-*/.mainNavigation {
+.mainNavigation {
   margin-right: auto;
   margin-left: auto;
   *zoom: 1;
