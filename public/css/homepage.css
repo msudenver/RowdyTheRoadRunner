@@ -4,66 +4,7 @@
  * http://www.msudenver.edu
  */
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
-  /* Styles */
-  .applynow {
-    font-size: 90%;
-    font-size: 1.700em;
-    background-color: #1ABC9C;
-  }
-  .give {
-    font-size: 1.1111em;
-    background-color: #2980B9;
-  }
-  input.search-query {
-    width: 250px;
-  }
-}
-@media only screen and (min-device-width: 1025px) {
-  .msudenver_logo img {
-    width: 80%;
-    padding: 2em;
-    padding-left: 18em;
-  }
-}
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .msudenver_logo img {
-    width: 80%;
-    padding: 2em;
-  }
-  .flexwrapper > section {
-    width: 100%;
-  }
-  .containerfluid {
-    position: relative;
-  }
-  .navbar,
-  .navbar-inverse {
-    margin: 0;
-  }
-  .actionHeader.applynow {
-    background-color: #1ABC9C;
-  }
-  .actionHeader.give {
-    background-color: #2980B9;
-  }
-  input.search-query {
-    width: 100%;
-  }
-}
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* Styles */
-  .actionHeader.applynow {
-    font-size: 100% !important;
-    background-color: #1ABC9C;
-  }
-  .actionHeader.give {
-    font-size: 100% !important;
-    background-color: #2980B9;
-  }
-}
 .actionHeader {
   vertical-align: top;
   box-sizing: border-box;

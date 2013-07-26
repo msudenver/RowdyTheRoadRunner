@@ -10,226 +10,48 @@
   	transition: all 0.5s ease-in-out;
 }
 *//*
-    
+	
   NESTED NAVIGATION
   ------- * -------
-        level
-         .1.
+		level
+		 .1.
 
 *//* sidebar nav */.sidebar-nav {
   margin-bottom: 2em;
+  background-color: #1b557a;
+  color: #ffffff;
+}
+/* nav-headings */
+.sidebar-nav li {
+  color: #ffffff;
+}
+/* nav link color */
+.sidebar-nav li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.sidebar-nav li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.sidebar-nav li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 /* indent all except first level by [x] */
-.lnav2 li,
-.lnav3 li,
-.lnav4 li,
-.lnav5 li,
-.lnav6 li,
-.lnav7 {
-  margin-left: 0.5em;
-}
-.lnav1 {
-  background-color: #1b557a;
-}
-/* nav-headings */
-.lnav1 li {
-  color: #ffffff;
-}
-/* nav link color */
-.lnav1 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.lnav1 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.lnav1 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
 /*
-    
-  NESTED NAVIGATION
-  ------- * -------
-        level
-         .2.
+	
+  BOOTSTRAP OVER-WRITES
+  --------- * ---------
 
-*/.lnav2 {
-  background-color: #20638f;
+*/.active {
+  padding-right: 15px;
 }
-/* nav-headings */
-.lnav2 li {
-  color: #ffffff;
-}
-/* nav link color */
-.lnav2 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.lnav2 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.lnav2 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-/*
-    
-  NESTED NAVIGATION
-  ------- * -------
-        level
-         .3.
-
-*/.lnav3 {
-  background-color: #2472a4;
-}
-/* nav-headings */
-.lnav3 li {
-  color: #ffffff;
-}
-/* nav link color */
-.lnav3 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.lnav3 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.lnav3 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-/*
-    
-  NESTED NAVIGATION
-  ------- * -------
-        level
-         .4.
-
-*/.lnav4 {
-  background-color: #2980b9;
-}
-/* nav-headings */
-.lnav4 li {
-  color: #ffffff;
-}
-/* nav link color */
-.lnav4 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.lnav4 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.lnav4 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-/*
-    
-  NESTED NAVIGATION
-  ------- * -------
-        level
-         .5.
-
-*/.lnav5 {
-  background-color: #2e8ece;
-}
-/* nav-headings */
-.lnav5 li {
-  color: #ffffff;
-}
-/* nav link color */
-.lnav5 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.lnav5 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.lnav5 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-/*
-    
-  NESTED NAVIGATION
-  ------- * -------
-        level
-         .6.
-
-*/.lnav6 {
-  background-color: #409ad5;
-}
-/* nav-headings */
-.lnav6 li {
-  color: #ffffff;
-}
-/* nav link color */
-.lnav6 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.lnav6 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.lnav6 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-/*
-    
-  NESTED NAVIGATION
-  ------- * -------
-        level
-         .7.
-
-*/.lnav7 {
-  background-color: #55a5d9;
-}
-/* nav-headings */
-.lnav7 li {
-  color: #ffffff;
-}
-/* nav link color */
-.lnav7 li a {
-  color: #ffffff;
-}
-/* nav link color :hover */
-.lnav7 li a:hover {
-  background-color: #7f8c8d;
-}
-/* nav link color on mouse over, mouse leave */
-.lnav7 li a,
-a:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+.nav-list {
+  padding-right: 0;
 }
 /*
     

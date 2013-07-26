@@ -5,8 +5,9 @@
  * http://www.msudenver.edu
  */
  
-@import "theme.less" ;
+@import 'colors.less';
 @import "utils.less" ;
+
 /*
 
   data-href
@@ -216,6 +217,15 @@ a:focus {
     vertical-align:bottom;
 }
 
+.image_caption {font-size: 12px;
+    line-height: 19px;
+    color: rgb(115, 120, 126); 
+}
+.bordered {
+  /* border:5px solid white; box-shadow:0 0 2px #AAAAAA; */
+  padding: 9px; border: 1px solid #ececec;
+}
+
 hr {
   border : 0;
   height : 0.059em;
@@ -298,26 +308,26 @@ hr {
   color: @black;
 }
 
-.wellsmoke {
-	min-height: 20px;
-	padding: 20px;
-	margin-bottom: 20px;
-  background-color: #BDC3C7; /* fallback color for ie 8 */
-  background: #BDC3C7; /* fallback color for ie 8 */
-	background-color: rgba(42, 42, 42, 0.26);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-.wellsmoke .span3, .wellsmoke .span4, .wellsmoke .span5   {
-	margin-bottom: 1.5em;
-	text-align: center;
-  	color:@black;
+// .wellsmoke {
+// 	min-height: 20px;
+// 	padding: 20px;
+// 	margin-bottom: 20px;
+//   background-color: #BDC3C7; /* fallback color for ie 8 */
+//   background: #BDC3C7; /* fallback color for ie 8 */
+// 	background-color: rgba(42, 42, 42, 0.26);
+// 	-webkit-border-radius: 4px;
+// 	-moz-border-radius: 4px;
+// 	border-radius: 4px;
+// 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+// 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+// 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+// }
+// .wellsmoke .span3, .wellsmoke .span4, .wellsmoke .span5   {
+// 	margin-bottom: 1.5em;
+// 	text-align: center;
+//   	color:@black;
 
-}
+// }
 
 
 /*

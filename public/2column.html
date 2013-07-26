@@ -15,6 +15,7 @@
 
 		<!-- styles -->
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/mediaQueries.css">
         <link rel="stylesheet" href="css/linkcolumn.css">
         <link rel="stylesheet" href="css/contentTypes.css">
         <link rel="stylesheet" href="css/tablestyles.css">
@@ -69,47 +70,48 @@
 		    	You are here: Sample Breadcrumbs / 2 Column Page<!-- <t4 type='navigation' id='89'/> Breadcrumbs -->
 		    </div>
 		</div>
-		
+
 		<div class="container">
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="span3"><!-- LEFT SIDE COLUMN -->
 						<div class="sidebar-nav">
-							<ul class="nav nav-list lnav1">
+							<ul class="nav nav-list currentbranch0">
 								<li class="nav-header">LEVEL 1</li>
 								<li class="active"><a href="#">Link</a></li>
 								<li><a href="#">Link</a></li>
-								
-								<li>
-									<span href="#" class="nav-header" data-toggle="collapse" data-target=".lnav2">
+								<li><span class="nav-header clickable" data-toggle="collapse" data-target=".currentbranch1">
 										LEVEL 2
 									</span>
-									<ul class="nav nav-list nav-header collapse lnav2"> 
+									<ul class="nav nav-list collapse currentbranch1">
 										<li><a href="#">next level</a></li>
-										<li>
-											<a href="#" class="nav-header" data-toggle="collapse" data-target=".lnav3">
-												LEVEL 3
-											</a>
-											<ul class="nav nav-list nav-header collapse lnav3">
+										<li><a href="#">next level</a></li>
+										<li><a href="#">next level</a></li>
+										<li><span class="nav-header" data-toggle="collapse" data-target=".currentbranch2">LEVEL 3</span>
+											<ul class="nav nav-list collapse currentbranch2">
 												<li><a href="#">next level</a></li>
 												<li><a href="#">next level</a></li>
 												<li><a href="#">next level</a></li>
-												<li>
-													<a href="#" class="nav-header" data-toggle="collapse" data-target=".lnav4">
-													LEVEL 4
-													</a>
-													<ul class="nav nav-list nav-header collapse lnav4">
+												<li><span class="nav-header" data-toggle="collapse" data-target=".currentbranch3">LEVEL 4</span>
+													<ul class="nav nav-list nav-header collapse currentbranch3">
 														<li><a href="#">next level</a></li>
 														<li><a href="#">next level</a></li>
 														<li><a href="#">next level</a></li>
-														<li><a href="#" class="nav-header" data-toggle="collapse" data-target=".lnav5">LEVEL 5</a>
-														<ul class="nav nav-list nav-header collapse lnav5">
-															<li><a href="#">next level</a></li>
-															<li><a href="#">next level</a></li>
-															<li><a href="#">next level</a></li>
-															<li><a href="#">next level</a></li>
-														</ul></li>
-
+														<li><span class="nav-header" data-toggle="collapse" data-target=".currentbranch4">LEVEL 5</span>
+															<ul class="nav nav-list collapse currentbranch4">
+																<li><a href="#">next level</a></li>
+																<li><a href="#">next level</a></li>
+																<li><a href="#">next level</a></li>
+																<li><span class="nav-header" data-toggle="collapse" data-target=".currentbranch5">LEVEL 6</span>
+																	<ul class="nav nav-list collapse currentbranch5">
+																		<li><a href="#">next level</a></li>
+																		<li><a href="#">next level</a></li>
+																		<li><a href="#">next level</a></li>
+																		<li><a href="#">next level</a></li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
 													</ul>
 												</li>
 											</ul>
@@ -127,7 +129,7 @@
 								</div>
 								<div class="HighlightBox-content">
 								    <p>
-								    	Donec non ligula mi, nec laoreet libero. Sed accumsan luctus vehicula. Suspendisse potenti. 
+								    	Donec non ligula mi, nec laoreet libero. Sed accumsan luctus vehicula. Suspendisse potenti.
 								    	<a href="google.com">Integer commodo massa quis dolor feugiat vulputate</a>
 								    </p>
 							    </div>
@@ -197,7 +199,7 @@
 								</div>
 							    <div class="HighlightBox-content">
 							        <p>
-							        	Donec non ligula mi, nec laoreet libero. Sed accumsan luctus vehicula. Suspendisse potenti. 
+							        	Donec non ligula mi, nec laoreet libero. Sed accumsan luctus vehicula. Suspendisse potenti.
 							        	<a href="google.com">Integer commodo massa quis dolor feugiat vulputate</a>
 							        </p>
 							   	</div>
@@ -257,7 +259,6 @@
 		<script src="js/vendor/bootstrap-button.js"></script>
 		<script src="js/vendor/bootstrap-collapse.js"></script>
 		<script src="js/vendor/bootstrap-carousel.js"></script>
-		<script src="js/main.js"></script>
 		<!-- utils -->
 		<script src="js/vendor/plugins.js"></script>
 		<!-- missing console in IE -->
@@ -269,5 +270,6 @@
 				});
 			})();
 		</script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
