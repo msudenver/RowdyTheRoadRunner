@@ -20,6 +20,7 @@
   margin-bottom: 2em;
   background-color: #1b557a;
   color: #ffffff;
+  width: 100%;
 }
 .sidebar-nav li,
 a {
@@ -29,8 +30,8 @@ a {
 .sidebar-nav li a:hover {
   background-color: #7f8c8d;
 }
-.sidebar-nav li a,
-a:after {
+.sidebar-nav li a:after {
+  color: #ffffff;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -39,28 +40,22 @@ a:after {
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-}
-ul[class^="multilevel-linkul-"] {
-  display: block;
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  -moz-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  -moz-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
-}
-ul[class^="multilevel-linkul-"] li a:hover {
-  text-decoration: none;
 }
 .multilevel-linkul-0 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
   background-color: #20638f;
 }
 /*

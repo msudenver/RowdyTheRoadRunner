@@ -6,6 +6,7 @@
 	margin-bottom: 2em;
 	background-color: @level-0;
 	color: @white;
+	width: 100%;
 }
 
 .sidebar-nav li, a {
@@ -18,9 +19,26 @@
 	background-color: @asbestos;	
 }
 
-.sidebar-nav li a, a:after{
+.sidebar-nav li a:after{
+	color: @white;
 	.animate-all(0.5s);
 }
+
+// ul[class^="multilevel-linkul-"]{
+// 	display: block;
+// 	.collapse;
+	
+// }
+
+// ul[class^="multilevel-linkul-"] li a:hover {
+// 	text-decoration: none;
+// }
+
+.multilevel-linkul-0{
+	.collapse;
+	background-color: @level-1;
+}
+
 
 // .sidebar-nav ul li ul li {
 // 	background-color:#DDDDDD;
@@ -59,18 +77,6 @@
 // }
 
 
-ul[class^="multilevel-linkul-"]{
-	display: block;
-	.collapse;
-	
-}
-
-ul[class^="multilevel-linkul-"] li a:hover {
-	text-decoration: none;
-}
-.multilevel-linkul-0{
-	background-color: @level-1;
-}
 
 
 // .currentbranch0 a {
