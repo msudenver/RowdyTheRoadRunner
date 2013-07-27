@@ -1,129 +1,179 @@
-$(function () {
+/* ========================================================================
+ * Bootstrap: collapse.js v3.0.0
+ * http://twbs.github.com/bootstrap/javascript.html#collapse
+ * ========================================================================
+ * Copyright 2012 Twitter, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ======================================================================== */
 
-    module("collapse")
 
-      test("should provide no conflict", function () {
-        var collapse = $.fn.collapse.noConflict()
-        ok(!$.fn.collapse, 'collapse was set back to undefined (org value)')
-        $.fn.collapse = collapse
-      })
++function ($) { "use strict";
 
-      test("should be defined on jquery object", function () {
-        ok($(document.body).collapse, 'collapse method is defined')
-      })
+  // COLLAPSE PUBLIC CLASS DEFINITION
+  // ================================
 
-      test("should return element", function () {
-        ok($(document.body).collapse()[0] == document.body, 'document.body returned')
-      })
+  var Collapse = function (element, options) {
+    this.$element      = $(element)
+    this.options       = $.extend({}, Collapse.DEFAULTS, options)
+    this.transitioning = null
 
-      test("should show a collapsed element", function () {
-        var el = $('<div class="collapse"></div>').collapse('show')
-        ok(el.hasClass('in'), 'has class in')
-        ok(/height/.test(el.attr('style')), 'has height set')
-      })
+    if (this.options.parent) this.$parent = $(this.options.parent)
+    if (this.options.toggle) this.toggle()
+  }
 
-      test("should hide a collapsed element", function () {
-        var el = $('<div class="collapse"></div>').collapse('hide')
-        ok(!el.hasClass('in'), 'does not have class in')
-        ok(/height/.test(el.attr('style')), 'has height set')
-      })
+  Collapse.DEFAULTS = {
+    toggle: true
+  }
 
-      test("should not fire shown when show is prevented", function () {
-        $.support.transition = false
-        stop()
-        $('<div class="collapse"/>')
-          .on('show.bs.collapse', function (e) {
-            e.preventDefault();
-            ok(true);
-            start();
-          })
-          .on('shown.bs.collapse', function () {
-            ok(false);
-          })
-          .collapse('show')
-      })
+  Collapse.prototype.dimension = function () {
+    var hasWidth = this.$element.hasClass('width')
+    return hasWidth ? 'width' : 'height'
+  }
 
-      test("should reset style to auto after finishing opening collapse", function () {
-        $.support.transition = false
-        stop()
-        $('<div class="collapse" style="height: 0px"/>')
-          .on('show.bs.collapse', function () {
-            ok(this.style.height == '0px')
-          })
-          .on('shown.bs.collapse', function () {
-            ok(this.style.height == 'auto')
-            start()
-          })
-          .collapse('show')
-      })
+  Collapse.prototype.show = function () {
+    if (this.transitioning || this.$element.hasClass('in')) return
 
-      test("should add active class to target when collapse shown", function () {
-        $.support.transition = false
-        stop()
+    var startEvent = $.Event('show.bs.collapse')
+    this.$element.trigger(startEvent)
+    if (startEvent.isDefaultPrevented()) return
 
-        var target = $('<a data-toggle="collapse" href="#test1"></a>')
-          .appendTo($('#qunit-fixture'))
+    var actives   = this.$parent && this.$parent.find('> .accordion-group > .in')
 
-        var collapsible = $('<div id="test1"></div>')
-          .appendTo($('#qunit-fixture'))
-          .on('show.bs.collapse', function () {
-            ok(!target.hasClass('collapsed'))
-            start()
-          })
+    if (actives && actives.length) {
+      var hasData = actives.data('bs.collapse')
+      if (hasData && hasData.transitioning) return
+      actives.collapse('hide')
+      hasData || actives.data('bs.collapse', null)
+    }
 
-        target.click()
-      })
+    var dimension = this.dimension()
 
-      test("should remove active class to target when collapse hidden", function () {
-        $.support.transition = false
-        stop()
+    this.$element
+      .removeClass('collapse')
+      .addClass('collapsing')
+      [dimension](0)
 
-        var target = $('<a data-toggle="collapse" href="#test1"></a>')
-          .appendTo($('#qunit-fixture'))
+    this.transitioning = 1
 
-        var collapsible = $('<div id="test1" class="in"></div>')
-          .appendTo($('#qunit-fixture'))
-          .on('hide.bs.collapse', function () {
-            ok(target.hasClass('collapsed'))
-            start()
-          })
+    var complete = function () {
+      this.$element
+        .removeClass('collapsing')
+        .addClass('in')
+        [dimension]('auto')
+      this.transitioning = 0
+      this.$element.trigger('shown.bs.collapse')
+    }
 
-        target.click()
-      })
+    if (!$.support.transition) return complete.call(this)
 
-      test("should remove active class from inactive accordion targets", function () {
-        $.support.transition = false
-        stop()
+    var scrollSize = $.camelCase(['scroll', dimension].join('-'))
 
-        var accordion = $('<div id="accordion"><div class="accordion-group"></div><div class="accordion-group"></div><div class="accordion-group"></div></div>')
-          .appendTo($('#qunit-fixture'))
+    this.$element
+      .one($.support.transition.end, $.proxy(complete, this))
+      .emulateTransitionEnd(350)
+      [dimension](this.$element[0][scrollSize])
+  }
 
-        var target1 = $('<a data-toggle="collapse" href="#body1" data-parent="#accordion"></a>')
-          .appendTo(accordion.find('.accordion-group').eq(0))
+  Collapse.prototype.hide = function () {
+    if (this.transitioning || !this.$element.hasClass('in')) return
 
-        var collapsible1 = $('<div id="body1" class="in"></div>')
-          .appendTo(accordion.find('.accordion-group').eq(0))
+    var startEvent = $.Event('hide.bs.collapse')
+    this.$element.trigger(startEvent)
+    if (startEvent.isDefaultPrevented()) return
 
-        var target2 = $('<a class="collapsed" data-toggle="collapse" href="#body2" data-parent="#accordion"></a>')
-          .appendTo(accordion.find('.accordion-group').eq(1))
+    var dimension = this.dimension()
 
-        var collapsible2 = $('<div id="body2"></div>')
-          .appendTo(accordion.find('.accordion-group').eq(1))
+    this.$element
+      [dimension](this.$element[dimension]())
+      [0].offsetHeight
 
-        var target3 = $('<a class="collapsed" data-toggle="collapse" href="#body3" data-parent="#accordion"></a>')
-          .appendTo(accordion.find('.accordion-group').eq(2))
+    this.$element
+      .addClass('collapsing')
+      .removeClass('collapse')
+      .removeClass('in')
 
-        var collapsible3 = $('<div id="body3"></div>')
-          .appendTo(accordion.find('.accordion-group').eq(2))
-          .on('show.bs.collapse', function () {
-            ok(target1.hasClass('collapsed'))
-            ok(target2.hasClass('collapsed'))
-            ok(!target3.hasClass('collapsed'))
+    this.transitioning = 1
 
-            start()
-          })
+    var complete = function () {
+      this.transitioning = 0
+      this.$element
+        .trigger('hidden.bs.collapse')
+        .removeClass('collapsing')
+        .addClass('collapse')
+    }
 
-        target3.click()
-      })
+    if (!$.support.transition) return complete.call(this)
 
-})
+    this.$element
+      [dimension](0)
+      .one($.support.transition.end, $.proxy(complete, this))
+      .emulateTransitionEnd(350)
+  }
+
+  Collapse.prototype.toggle = function () {
+    this[this.$element.hasClass('in') ? 'hide' : 'show']()
+  }
+
+
+  // COLLAPSE PLUGIN DEFINITION
+  // ==========================
+
+  var old = $.fn.collapse
+
+  $.fn.collapse = function (option) {
+    return this.each(function () {
+      var $this   = $(this)
+      var data    = $this.data('bs.collapse')
+      var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
+
+      if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
+      if (typeof option == 'string') data[option]()
+    })
+  }
+
+  $.fn.collapse.Constructor = Collapse
+
+
+  // COLLAPSE NO CONFLICT
+  // ====================
+
+  $.fn.collapse.noConflict = function () {
+    $.fn.collapse = old
+    return this
+  }
+
+
+  // COLLAPSE DATA-API
+  // =================
+
+  $(document).on('click.bs.collapse.data-api', '[data-toggle=collapse]', function (e) {
+    var $this   = $(this), href
+    var target  = $this.attr('data-target')
+        || e.preventDefault()
+        || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') //strip for ie7
+    var $target = $(target)
+    var data    = $target.data('bs.collapse')
+    var option  = data ? 'toggle' : $this.data()
+    var parent  = $this.attr('data-parent')
+    var $parent = parent && $(parent)
+
+    if (!data || !data.transitioning) {
+      if ($parent) $parent.find('[data-toggle=collapse][data-parent=' + parent + ']').not($this).addClass('collapsed')
+      $this[$target.hasClass('in') ? 'addClass' : 'removeClass']('collapsed')
+    }
+
+    $target.collapse(option)
+  })
+
+}(window.jQuery);
