@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="css/vendor/normalize.css">
 		<link rel="stylesheet" href="css/vendor/bootstrap.css">
 		<link rel="stylesheet" href="css/vendor/bootstrap-responsive.css">
+		<link rel="stylesheet" href="css/vendor/pygments-manni.css">
 
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/homepage.css">
@@ -39,17 +40,14 @@
 				<div class="masthead">
 					<div class="pull-right">
 						<div class="navbar ">
-                            <div class="navbar-inner">
-                                <ul class="nav">
-                                      <li><a href="/a_to_z/">A-Z</a></li>
-                                      <li><a href="/connectu/">ConnectU</a></li>
-                                      <li><a href="http://library.auraria.edu/">Library</a></li>
-                                      <li><a href="/maps/">Maps</a></li>
-                                      <li><a href="/student/"><strong>Current Students</strong></a>
-                                      </li>
-                                      <li><a href="/facstaff/"><strong>Faculty &amp; Staff</strong></a></li>
-                                </ul>
-                            </div>
+                            <ul class="nav navbar-nav">
+                              <li><a href="/a_to_z/">A-Z</a></li>
+                              <li><a href="/connectu/">ConnectU</a></li>
+                              <li><a href="http://library.auraria.edu/">Library</a></li>
+                              <li><a href="/maps/">Maps</a></li>
+                              <li><a href="/student/"><strong>Current Students</strong></a></li>
+                              <li><a href="/facstaff/"><strong>Faculty &amp; Staff</strong></a></li>
+                            </ul>
                         </div>    
 					</div>
 
@@ -62,76 +60,53 @@
 <!-- *********************************  -->
 <!-- SITEMANAGER HEADER ENDS HERE -->
 <!-- *********************************  -->
-	  		<div class="navbar navbar-inverse">  <!-- begins main container -->
-			  <div class="navbar-inner">
-				<div class="container">
-					<div class="container">
-						<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-						</button>
-					</div>
-				  <div class="nav-collapse collapse navbar-inverse-collapse">
-					<ul class="nav">
-					  <li><a href="/about">ABOUT</a></li>
-				        <li class="dropdown">
-						  <a class="dropdown-toggle" data-toggle="dropdown">
-							  <b class="caret"></b>
-						  </a>
-						  <ul class="dropdown-menu">
-							<li><a href="#">Board of Trustees</a></li>
-							<li><a href="#">Employment</a></li>
-							<li><a href="#">Events Calendar</a></li>
-							<li><a href="#">Graduation/Commencement</a></li>
-							<li><a href="#">MSU Denver at a Glance</a></li>
-							<li><a href="#">Newsroom</a></li>
-							<li><a href="#">President</a></li>
-							<li><a href="#">Questions/Comments</a></li>
-							<li><a href="#">Urban Impact</a></li>
-							<li><a href="#">Visit MSU Denver</a></li>
-						  </ul>
+	  			
+	  			<!-- Test Nav  -->
+	  			
+	  		<div class="navbar navbar-inverse">
+              <div class="container">
+                <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+            
+        
+                <!-- Place everything within .navbar-collapse to hide it until above 768px -->
+                <div class="nav-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+						<a href="/about" class="dropdown-toggle" data-toggle="dropdown">ABOUT <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Board of Trustees</a></li>
+								<li><a href="#">Employment</a></li>
+								<li><a href="#">Events Calendar</a></li>
+								<li><a href="#">Graduation/Commencement</a></li>
+								<li><a href="#">MSU Denver at a Glance</a></li>
+								<li><a href="#">Newsroom</a></li>
+								<li><a href="#">President</a></li>
+								<li><a href="#">Questions/Comments</a></li>
+								<li><a href="#">Urban Impact</a></li>
+								<li><a href="#">Visit MSU Denver</a></li>
+							</ul> 
+                         </li>
+						<li class="dropdown">
+							<a href="/academics" class="dropdown-toggle" data-toggle="dropdown">ACADEMICS <b class="caret"></b></a>
+							 <ul class="dropdown-menu">
+								<li><a href="#">Academic Resources</a></li>
+								<li><a href="#">Individualized Learning</a></li>
+								<li><a href="#">Center for Innovation</a></li>
+								<li><a href="#">Graduation/Commencement</a></li>
+								<li><a href="#">Majors &amp; Minors</a></li>
+								<li><a href="#">Master's Programs</a></li>
+								<li><a href="#">Schedules &amp; Calendars</a></li>
+								<li><a href="#">Special Programs</a></li>
+								<li><a href="#">Tuition &amp; Fees</a></li>
+							 </ul>
 						</li>
-
-					<li class="dropdown">
-						  <a href="/about" class="dropdown-toggle" data-toggle="dropdown">
-							  ACADEMICS <b class="caret"></b>
-						  </a>
-						  <ul class="dropdown-menu">
-							<li><a href="#">Academic Resources</a></li>
-							<li><a href="#">Individualized Learning</a></li>
-							<li><a href="#">Center for Innovation</a></li>
-							<li><a href="#">Graduation/Commencement</a></li>
-							<li><a href="#">Majors &amp; Minors</a></li>
-							<li><a href="#">Master's Programs</a></li>
-							<li><a href="#">Schedules &amp; Calendars</a></li>
-							<li><a href="#">Special Programs</a></li>
-							<li><a href="#">Tuition &amp; Fees</a></li>
-						  </ul>
-						</li>
-
-					  <li class="dropdown">
-						  <a href="/admissions" class="dropdown-toggle" data-toggle="dropdown">
-						  ADMISSIONS <b class="caret"></b>
-						  </a>
-						  <ul class="dropdown-menu">
-							<li><a href="#">First-Time College Students</a></li>
-							<li><a href="#">Transfer Students</a></li>
-							<li><a href="#">International Students</a></li>
-							<li><a href="#">Master's Students</a></li>
-							<li><a href="#">Veteran Students</a></li>
-							<li><a href="#">Other Students</a></li>
-							<li><a href="#">Request Information</a></li>
-							<li><a href="#">Visit US</a></li>
-							<li><a href="#">Admissions Forms</a></li>
-							<li><a href="#">Contact Us</a></li>
-						  	<li><a href="#">Apply Online</a></li>
-						  	<li><a href="#">Asset</a></li>
-						  </ul>
-					  </li>
-					  	<li class="dropdown">
-						  <a href="/student" class="dropdown-toggle" data-toggle="dropdown" >
-						  CURRENT STUDENTS <b class="caret"></b>
+                        <li class="dropdown">
+						  <a href="/student" class="dropdown-toggle" data-toggle="dropdown" >CURRENT STUDENTS <b class="caret"></b>
 						  </a>
 						  <ul class="dropdown-menu">
 							<li><a href="#">Academic Calendar</a></li>
@@ -146,9 +121,8 @@
 						  	<li><a href="#">Technology</a></li>
 						  </ul>
 					  </li>
-						<li class="dropdown">
-						  <a href="/futurestudents" class="dropdown-toggle" data-toggle="dropdown" >
-						  CAMPUS LIFE <b class="caret"></b>
+					  <li class="dropdown">
+						  <a href="/futurestudents" class="dropdown-toggle" data-toggle="dropdown" >CAMPUS LIFE <b class="caret"></b>
 						  </a>
 						  <ul class="dropdown-menu">
 							<li><a href="#">Academic and Student Affairs</a></li>
@@ -184,18 +158,19 @@
 						  <li><a href="#">Women's Sports</a></li>
 						</ul>
 					 	</li>
-					</ul>
-					<form class="navbar-search pull-right ">
-					  <input type="text" class="search-query input-mini" placeholder="Search">
-					</form>
-				  </div><!-- /.nav-collapse -->
-				</div>
-			  </div><!-- /navbar-inner -->
-			</div>
-
+				</ul>
+                        <form class="navbar-form pull-right" action="">
+                          <input type="text" class="form-control col-lg-8" placeholder="Search">
+                        </form>                   
+                </div><!-- /.nav-collapse -->
+              </div><!-- /.container -->
+           </div><!-- /.navbar -->
+	  		
+	  		
+	 	<!-- Test Nav  --> 		
+	  		
 			<div class="row-fluid">
 				<div class="span12  hero-unit container">
-					<!-- <img src="assets/img/MarketingPackageGrouping.jpg"> -->
 					<div class="span6">
 							<div class="homepage-caption">
 								<img src="assets/img/group_of_three_for_homepage/hickenlooper.jpg" alt="" class="">
@@ -293,17 +268,17 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 		<!-- bootstrap.js -->
-		<script src="js/vendor/bootstrap-transition.js"></script>
-		<script src="js/vendor/bootstrap-alert.js"></script>
-		<script src="js/vendor/bootstrap-modal.js"></script>
-		<script src="js/vendor/bootstrap-dropdown.js"></script>
-		<script src="js/vendor/bootstrap-scrollspy.js"></script>
-		<script src="js/vendor/bootstrap-tab.js"></script>
-		<script src="js/vendor/bootstrap-tooltip.js"></script>
-		<script src="js/vendor/bootstrap-popover.js"></script>
-		<script src="js/vendor/bootstrap-button.js"></script>
-		<script src="js/vendor/bootstrap-collapse.js"></script>
-		<script src="js/vendor/bootstrap-carousel.js"></script>
+		<script src="js/vendor/bootstrap/transition.js"></script>
+		<script src="js/vendor/bootstrap/alert.js"></script>
+		<script src="js/vendor/bootstrap/modal.js"></script>
+		<script src="js/vendor/bootstrap/dropdown.js"></script>
+		<script src="js/vendor/bootstrap/scrollspy.js"></script>
+		<script src="js/vendor/bootstrap/tab.js"></script>
+		<script src="js/vendor/bootstrap/tooltip.js"></script>
+		<script src="js/vendor/bootstrap/popover.js"></script>
+		<script src="js/vendor/bootstrap/button.js"></script>
+		<script src="js/vendor/bootstrap/collapse.js"></script>
+		<script src="js/vendor/bootstrap/carousel.js"></script>
 		<!-- utils -->
 		<script src="js/vendor/plugins.js"></script>
 		<!-- missing console in IE -->
