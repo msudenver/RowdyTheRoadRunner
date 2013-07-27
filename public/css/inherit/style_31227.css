@@ -1,8 +1,5 @@
 /*  Inherited 2011 Styles www.msudenver.edu main style MGW 092112 */
 
-
-
-
 .hidden {
 	position:absolute;
 	left:-9999px;
@@ -27,17 +24,8 @@
 
 .pageLinks a:hover { border:none;}
 
-#breadcrumbs {
-	margin-bottom:15px;
-	margin-top:5px;
-	padding-left:8px;
-}
 
 /*------------------------------ Links ------------------------------*/
-
-
-
-
 
 #secondaryNav {
 	background:url(/media/styleassets/images/secondaryNavDividerBg.gif) 0px 27px repeat-x #0C1F3F;
