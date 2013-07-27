@@ -110,35 +110,6 @@
 	display:block;
 }
 
-/*------------------------------ Header -------------------------*/
-
-
-/* Main Navigation */
-#primaryNav {
-	position:absolute;
-	top:104px;
-	left:-13px;
-	width: 1004px;
-	background:url(/media/styleassets/images/navBg.png) no-repeat;
-	height:50px;
-}
-
-
-	#primaryNav ul {margin-left:26px; margin-top:25px;}
-
-	#primaryNav li {
-		display:block;
-		width:135px;
-		float:left;
-		text-align:center;
-	}
-
-
-	#primaryNav li:nth-child(2) { width: 120px; }
-	#primaryNav li:nth-child(5) { width: 125px; }
-	#primaryNav li:nth-child(7) { width: 115px; }
-	#primaryNav li a { font-weight: bold; color: #F1F1F1; font-size: 12px;}
-
 
 
 /* Department Left Navigation Colours */
