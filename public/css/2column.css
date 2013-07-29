@@ -80,24 +80,14 @@ ul[class^="multilevel-linkul-"] {
 .multilevel-linkul-5 {
   background-color: #55a5d9;
 }
-/*
-    
-  BOOTSTRAP OVER-WRITES
-  --------- * ---------
-
-*/.nav-header {
+.nav-header {
   color: #ffffff;
 }
 li.active > a {
   background-color: #ecf0f1 !important;
   color: black !important;
 }
-/*
-    
-  MEDIA @ QUERIES
-  ----- * -------
-
-*/@media (max-width: 980px) {
+@media (max-width: 980px) {
   /* Enable use of floated navbar text */
   .navbar-text.pull-right {
     float: none;
