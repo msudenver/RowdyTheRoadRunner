@@ -7,21 +7,10 @@
   -o-transition: height 0.35s ease;
   transition: height 0.35s ease;
 }
-/*
-
-  data-href
-  pointer-
-  --------
-
-*/.clickable {
+.clickable {
   cursor: pointer;
 }
-/*
-
-  HEADERS
-  --------
-
-*/h1 {
+h1 {
   color: #7f8c8d;
   font-size: 2.2em;
   font-weight: 200;
@@ -58,19 +47,14 @@ h6 {
   font-size: 13px;
   font-weight: 500;
 }
-/*
-  
-  BODY AND LINK COLORS
-  -------- * ---------
-
-*/body {
+body {
   margin: 0;
   font-family: cabin, source-sans-pro, muli, josefin-sans, open-sans, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
-  background-image: url('<t4 type="media" id="60274"/>');
+  background-image: url(/assets/img/background.jpg);
 }
 a {
   color: #1b557a;
@@ -81,12 +65,7 @@ a:focus {
   color: #20648f;
   text-decoration: underline;
 }
-/*
-	
-  HEADER
-  ------
-
-*/.siteheader {
+.siteheader {
   padding: 1em;
   margin-bottom: 20px;
   background-color: #ffffff;
@@ -112,12 +91,7 @@ a:focus {
   margin-left: 20px;
   font-weight: 500;
 }
-/*
-	
-  NAVIGATION
-  ----------
-
-*/.nav-tabs > li > a,
+.nav-tabs > li > a,
 .nav-pills > li > a {
   padding-right: 12px;
   padding-left: 12px;
@@ -130,12 +104,7 @@ a:focus {
   color: #95a5a6;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
-/*
-	
-  FOOTER
-  ------
-
-*/.footer {
+.footer {
   min-height: 20px;
   padding: 20px;
   margin-bottom: 20px;
@@ -156,12 +125,7 @@ a:focus {
 .footer > .container > .row-fluid > .span5 {
   color: #000000;
 }
-/*
-	
-  DEFINE!!!
-  ---------
-
-*/.readmore {
+.readmore {
   text-align: right;
   margin-top: 10px;
 }
@@ -179,8 +143,8 @@ a:focus {
   color: #73787e;
 }
 .bordered {
-  /* border:5px solid white; box-shadow:0 0 2px #AAAAAA; */
-
+  border: 5px solid white;
+  box-shadow: 0 0 2px #AAAAAA;
   padding: 9px;
   border: 1px solid #ececec;
 }
@@ -191,12 +155,7 @@ hr {
   color: #ffffff;
   margin: 0.65em 0;
 }
-/*
-  
-  CONTENT STYLES
-  ----- * ------
-
-*/.content {
+.content {
   min-height: 7em;
   padding: 1.2575em;
   margin-bottom: 20px;
@@ -225,12 +184,7 @@ hr {
 #content description {
   font-size: 10px;
 }
-/*
-	
-  FOOTER
-  ------
-
-*/.footer {
+.footer {
   min-height: 20px;
   padding: 20px;
   margin-bottom: 20px;
@@ -254,12 +208,7 @@ hr {
 .footer > .container > .row-fluid > .span5 {
   color: #000000;
 }
-/*
-	
-  BOOTSTRAP OVER-WRITES
-  --------- * ---------
-
-*/.container-fluid {
+.container-fluid {
   padding-right: 0;
   padding-left: 0;
   *zoom: 1;
