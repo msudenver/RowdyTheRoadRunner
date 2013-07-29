@@ -11,7 +11,6 @@
 		<!-- vendor styles -->
 		<link rel="stylesheet" href="css/vendor/normalize.css">
 		<link rel="stylesheet" href="css/vendor/bootstrap.css">
-		<link rel="stylesheet" href="css/vendor/bootstrap-responsive.css">
 
 		<!-- styles -->
 		<link rel="stylesheet" href="css/main.css">
@@ -30,31 +29,30 @@
 		<![endif]-->
 
 		<!-- Fav and touch icons -->
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-		<link rel="shortcut icon" href="../assets/ico/favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="assets/ico/favicon.png">
 	</head>
 	<body>
 		<div class="container"> <!-- begins main container -->
-			<!-- quick tools -->
-			<div class="mainNavigation">
-				<div class="container">
+			<div class="mainNavigation containerfluid">
+				<div class="masthead">
 					<div class="pull-right">
-						<ul class="nav nav-tabs navbar-inner">
-							  <li><a href="/a_to_z/">A-Z</a></li>
-							  <li><a href="/connectu/">ConnectU</a></li>
-							  <li><a href="http://library.auraria.edu/">Library</a></li>
-							  <li><a href="/maps/">Maps</a></li>
-							  <li><a href="/student/"><strong>Current Students</strong></a></li>
-							  <li><a href="/facstaff/"><strong>Faculty &amp; Staff</strong></a></li>
-						</ul>
+						<div class="navbar ">
+                            <ul class="nav navbar-nav">
+                              <li><a href="/a_to_z/">A-Z</a></li>
+                              <li><a href="/connectu/">ConnectU</a></li>
+                              <li><a href="http://library.auraria.edu/">Library</a></li>
+                              <li><a href="/maps/">Maps</a></li>
+                              <li><a href="/student/"><strong>Current Students</strong></a></li>
+                              <li><a href="/facstaff/"><strong>Faculty &amp; Staff</strong></a></li>
+                            </ul>
+                        </div>    
 					</div>
-					<div class="container msudenver_logo">
-						<a href="http://msudenver.edu">
-							<img class="" src="assets/branding/MSUDenver_Formal.gif" alt="MSU Denver Formal Logo">
-						</a>
+					<div class="container msudenver_logo ">
+						<img class="clickable" src="assets/branding/MSUDenver_Formal.gif" alt="MSU Denver Formal Logo" data-href="http://msudenver.edu">
 					</div>
 				</div>
 			</div>
@@ -149,10 +147,10 @@
 				    </div>
 				 </div>
 			</div>
-			<div class="container-fluid">
-				<footer class="row-fluid">
-					<div class="span12 footer">
-						<div class="span4" >
+			<div class="footer">
+				<footer class="row">
+					<div class="col-lg-12">
+						<div class="col-lg-4 col-sm-12" >
 							<img class="clickable" src="assets/webicons/images/fc-webicon-facebook.png" alt="Facebook Logo" data-href="#">
 							<img class="clickable" src="assets/webicons/images/fc-webicon-twitter.png" alt="Twitter Logo" data-href="#">
 							<img class="clickable" src="assets/webicons/images/fc-webicon-youtube.png" alt="YouTube Logo" data-href="#">
@@ -160,14 +158,14 @@
 							<br>
 							<!-- <a href="/socialmedia">Social Media Directory</a> -->
 						</div>
-						<div class="span4">
+						<div class="col-lg-4 col-sm-6">
 							<p>
 								Telephone 303-556-2400
 								<br>Auraria Campus Police 303-556-5000
 								<br>Inclement Weather Line 303-556-2401
 							</p>
 						</div>
-						<div class="span4">
+						<div class="col-lg-4 col-sm-6">
 							<p>
 								<a href="/contact">CONTACT US</a>
 								|
@@ -176,7 +174,6 @@
 								<a href="/privacy">Privacy Statement</a>
 								<a href="/alumni">State of Colorado's Transparency Online Project (TOP)</a>
 							</p>
-
 						</div>
 					</div>
 				</footer>
@@ -186,21 +183,22 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 		<!-- bootstrap.js -->
-		<script src="js/vendor/bootstrap-transition.js"></script>
-		<script src="js/vendor/bootstrap-alert.js"></script>
-		<script src="js/vendor/bootstrap-modal.js"></script>
-		<script src="js/vendor/bootstrap-dropdown.js"></script>
-		<script src="js/vendor/bootstrap-scrollspy.js"></script>
-		<script src="js/vendor/bootstrap-tab.js"></script>
-		<script src="js/vendor/bootstrap-tooltip.js"></script>
-		<script src="js/vendor/bootstrap-popover.js"></script>
-		<script src="js/vendor/bootstrap-button.js"></script>
-		<script src="js/vendor/bootstrap-collapse.js"></script>
-		<script src="js/vendor/bootstrap-carousel.js"></script>
+		<script src="js/vendor/bootstrap/transition.js"></script>
+		<script src="js/vendor/bootstrap/alert.js"></script>
+		<script src="js/vendor/bootstrap/modal.js"></script>
+		<script src="js/vendor/bootstrap/dropdown.js"></script>
+		<script src="js/vendor/bootstrap/scrollspy.js"></script>
+		<script src="js/vendor/bootstrap/tab.js"></script>
+		<script src="js/vendor/bootstrap/tooltip.js"></script>
+		<script src="js/vendor/bootstrap/popover.js"></script>
+		<script src="js/vendor/bootstrap/button.js"></script>
+		<script src="js/vendor/bootstrap/collapse.js"></script>
+		<script src="js/vendor/bootstrap/carousel.js"></script>
 		<!-- utils -->
 		<script src="js/vendor/plugins.js"></script>
 		<!-- missing console in IE -->
 		<script src="js/vendor/log.js"></script>
+		<script src="js/main.js"></script>
 		<script>
 			(function(){
 				$(window).resize(function(){

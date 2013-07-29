@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>MSU Denver</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- vendor styles -->
+<t4 type="media" id="60200"/><!--<link rel="stylesheet" href="css/vendor/normalize.css">-->
+		<t4 type="media" id="60197"/><!--<link rel="stylesheet" href="css/vendor/bootstrap.css">-->
+		<t4 type="media" id="60196"/><!--<link rel="stylesheet" href="css/vendor/bootstrap-responsive.css">-->
+
+		<!-- styles -->
+		<t4 type="media" id="60187"/><!--<link rel="stylesheet" href="css/main.css">-->
+        <t4 type="media" id="60185"/><!--<link rel="stylesheet" href="css/linkcolumn.css">-->
+        <t4 type="media" id="60180"/><!--<link rel="stylesheet" href="css/contentTypes.css">-->
+        <t4 type="media" id="60193"/><!--<link rel="stylesheet" href="css/tablestyles.css">-->
+        <t4 type="media" id="60192"/><!--<link rel="stylesheet" href="css/print.css">-->
+        <t4 type="media" id="60175"/><!--<link rel="stylesheet" href="css/2column.css">-->
+
+		<!-- js -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		  <script src="js/vendor/html5shiv.js"></script>
+		<![endif]-->
+
+		<!-- Fav and touch icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="../assets/ico/favicon.png">
+	</head>
+	<body>
+		<div class="container"> <!-- begins main container -->
+			<!-- quick tools -->
+			<div class="mainNavigation">
+				<div class="container">
+					<div class="pull-right">
+						<ul class="nav nav-tabs navbar-inner">
+							  <li><a href="/a_to_z/">A-Z</a></li>
+							  <li><a href="/connectu/">ConnectU</a></li>
+							  <li><a href="http://library.auraria.edu/">Library</a></li>
+							  <li><a href="/maps/">Maps</a></li>
+							  <li><a href="/student/"><strong>Current Students</strong></a></li>
+							  <li><a href="/facstaff/"><strong>Faculty &amp; Staff</strong></a></li>
+						</ul>
+					</div>
+					<div class="container msudenver_logo">
+						<a href="http://msudenver.edu">
+							<img class="" src="<t4 type='media' id='60273' formatter='image/path' />" alt="MSU Denver Formal Logo">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<!-- SITE HEADER -->
+			<div class="siteheader">
+		    	<h1><t4 type='navigation' id='101'/> <!-- Department Title Navigation  --></h1>
+		    </div>
+			<!-- BREADCRUMBS -->
+		    <div class="breadcrumbs">
+		      <t4 type='navigation' id='89'/><!-- Breadcrumbs -->
+		    </div>
+		</div>
+
+		<div class="container">
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span3"><!-- LEFT SIDE COLUMN -->
+						<div class="sidebar-nav"><t4 type='navigation' id='784'/>
+<!--
+							<ul class="nav nav-list lnav1">
+								<li class="nav-header">LEVEL 1</li>
+								<li class="active"><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+
+								<li>
+									<span href="#" class="nav-header" data-toggle="collapse" data-target=".lnav2">
+										LEVEL 2
+									</span>
+									<ul class="nav nav-list nav-header collapse lnav2">
+										<li><a href="#">next level</a></li>
+										<li>
+											<a href="#" class="nav-header" data-toggle="collapse" data-target=".lnav3">
+												LEVEL 3
+											</a>
+											<ul class="nav nav-list nav-header collapse lnav3">
+												<li><a href="#">next level</a></li>
+												<li><a href="#">next level</a></li>
+												<li><a href="#">next level</a></li>
+												<li>
+													<a href="#" class="nav-header" data-toggle="collapse" data-target=".lnav4">
+													LEVEL 4
+													</a>
+													<ul class="nav nav-list nav-header collapse lnav4">
+														<li><a href="#">next level</a></li>
+														<li><a href="#">next level</a></li>
+														<li><a href="#">next level</a></li>
+														<li><a href="#" class="nav-header" data-toggle="collapse" data-target=".lnav5">LEVEL 5</a>
+														<ul class="nav nav-list nav-header collapse lnav5">
+															<li><a href="#">next level</a></li>
+															<li><a href="#">next level</a></li>
+															<li><a href="#">next level</a></li>
+															<li><a href="#">next level</a></li>
+														</ul></li>
+
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+-->
+						</div><!--/.well -->
+						<div class="linkcolumn">
+							<t4 type='navigation' id="104"/> <!-- Imports Content Link Column Section -->
+							<div class="HighlightBox">
+								<div class="HighlightBox-title">
+									Link Column InfoBox Title
+									<hr>
+								</div>
+								<div class="HighlightBox-content">
+								    <p>
+								    	Donec non ligula mi, nec laoreet libero. Sed accumsan luctus vehicula. Suspendisse potenti.
+								    	<a href="google.com">Integer commodo massa quis dolor feugiat vulputate</a>
+								    </p>
+							    </div>
+							</div>
+						</div>
+		    		</div><!--/span-->
+		    		<!-- begins span9 main content-->
+					<div class="span9">
+						<div class="content">
+							<div class="bannerImage">
+								<t4 type="navigation" id="106"/><!--  Page Image Content Template Example -->
+							</div>
+
+					<!-- *********************************  -->
+					<!-- SITEMANAGER HEADER ENDS HERE -->
+					<!-- *********************************  -->
+
+					        <h2>Headings</h2>
+
+					        <h1>This is the Header 1 or Department Header</h1>
+					        <h2>This is the Header 2 or page Title</h2>
+					       	<h3>This is the Header 3 or Page Sub-Title</h3>
+					       	<h4>This is the Header 4 </h4>
+					       	<h5>This is the Header 5 </h5>
+					       	<h6>This is the Header 6 </h6>
+
+					   		<br>
+					   		<p>Fusce sed nibh sed lacus tincidunt porttitor. Mauris rhoncus varius augue, vitae pharetra est placerat sit amet. Fusce vel erat mollis justo viverra bibendum.</p>
+							<p>Aliquam non libero lorem. Duis nec hendrerit elit. Curabitur feugiat, arcu et vulputate pulvinar, est lacus ultrices est, sed scelerisque urna nibh at orci. Ut sit amet erat felis. Nullam volutpat diam eu nunc dictum sit amet ultricies orci pellentesque. Proin at fringilla justo. Suspendisse ullamcorper, enim ut ultrices cursus, eros urna bibendum libero, vel consectetur quam nisi at velit. Suspendisse quis mattis libero. In vitae sem nulla, in molestie enim.</p>
+
+							<table align="center" class="meetingstable" style="width: 90%">
+								<tbody>
+									<tr>
+									    <th>Meeting Date</th>
+									    <th>Documents</th>
+									</tr>
+									<tr>
+										<td>Thursday Febuary 14, 2013</td>
+										<td>
+											<p><a href="#">Agenda</a></p>
+											<p><a href="#">Meeting Minutes</a></p>
+											<p><a href="#">Handouts</a></p>
+										</td>
+									</tr>
+									<tr>
+										<td>Thursday Febuary 21, 2013</td>
+										<td>
+											<p><a href="#">Agenda</a></p>
+											<p><a href="#">Meeting Minutes</a></p>
+											<p><a href="#">Handouts</a></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<p>Curabitur sit amet nisl risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas lectus mi, euismod non luctus a, dignissim non lacus. Cras lacinia adipiscing sem, in hendrerit enim gravida quis. Aliquam justo justo, tincidunt a congue sit amet, semper ut neque.
+							</p>
+					        <ol>
+						        <li>Nulla porttitor pulvinar hendrerit.</li>
+						        <li>Nulla dapibus, augue vel interdum sagittis, nisi lorem aliquet nisl, nec tincidunt est massa id massa.</li>
+						        <li>Morbi porttitor sem purus, in rhoncus tellus. Duis purus tellus, varius at sodales sed, tristique eget magna. Maecenas varius blandit arcu.</li>
+					        </ol>
+					    	<div class="HighlightBox">
+								<div class="HighlightBox-title">
+									InfoBox Title LoremIpsum dolor
+									<hr>
+								</div>
+							    <div class="HighlightBox-content">
+							        <p>
+							        	Donec non ligula mi, nec laoreet libero. Sed accumsan luctus vehicula. Suspendisse potenti.
+							        	<a href="google.com">Integer commodo massa quis dolor feugiat vulputate</a>
+							        </p>
+							   	</div>
+						   	</div>
+					<!-- *********************************  -->
+					<!-- SITEMANAGER START FOOTER -->
+					<!-- *********************************  -->
+						</div><!-- /content -->
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<footer class="row-fluid">
+					<div class="span12 footer">
+						<div class="span4" >
+							<img class="clickable" src="<t4 type='media' id='60295' formatter='image/path' />" alt="Facebook Logo" data-href="#">
+						<img class="clickable" src="<t4 type='media' id='60367' formatter='image/path' />" alt="Twitter Logo" data-href="#">
+						<img class="clickable" src="<t4 type='media' id='60379' formatter='image/path' />" alt="YouTube Logo" data-href="#">
+						<img class="clickable" src="<t4 type='media' id='60298' formatter='image/path' />" alt="Flickr Logo" data-href="#">
+							<br>
+							<!-- <a href="/socialmedia">Social Media Directory</a> -->
+						</div>
+						<div class="span4">
+							<p>
+								Telephone 303-556-2400
+								<br>Auraria Campus Police 303-556-5000
+								<br>Inclement Weather Line 303-556-2401
+							</p>
+						</div>
+						<div class="span4">
+							<p>
+								<a href="/contact">CONTACT US</a>
+								|
+								<a href="/sm">© Metropolitan State University of Denver</a>
+
+								<a href="/privacy">Privacy Statement</a>
+								<a href="/alumni">State of Colorado's Transparency Online Project (TOP)</a>
+							</p>
+
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div><!-- / container-->
+		<!-- conditional jQuery load -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		<!-- bootstrap.js -->
+	<t4 type="media" id="60215" /><!--<script src="js/vendor/bootstrap-transition.js"></script>-->
+		<t4 type="media" id="60205" /><!--<script src="js/vendor/bootstrap-alert.js"></script>-->
+		<t4 type="media" id="60210" /><!--<script src="js/vendor/bootstrap-modal.js"></script>-->
+		<t4 type="media" id="60209" /><!--<script src="js/vendor/bootstrap-dropdown.js"></script>-->
+		<t4 type="media" id="60212" /><!--<script src="js/vendor/bootstrap-scrollspy.js"></script>-->
+		<t4 type="media" id="60213" /><!--<script src="js/vendor/bootstrap-tab.js"></script>-->
+		<t4 type="media" id="60214" /><!--<script src="js/vendor/bootstrap-tooltip.js"></script>-->
+		<t4 type="media" id="60211" /><!--<script src="js/vendor/bootstrap-popover.js"></script>-->
+		<t4 type="media" id="60206" /><!--<script src="js/vendor/bootstrap-button.js"></script>-->
+		<t4 type="media" id="60208" /><!--<script src="js/vendor/bootstrap-collapse.js"></script>-->
+		<t4 type="media" id="60208" /><!--<script src="js/vendor/bootstrap-carousel.js"></script>-->
+		<!-- utils -->
+		<t4 type="media" id="60225" /><!--<script src="js/vendor/plugins.js"></script>-->
+		<!-- missing console in IE -->
+		<t4 type="media" id="60222" /><!--<script src="js/vendor/log.js"></script>-->
+		<script>
+			(function(){
+				$(window).resize(function(){
+					console.log("resize::"+ $(window).width());
+				});
+			})();
+		</script>
+<<<<<<< HEAD
+		<t4 type="media" id="60203" /><!--<script src="js/main.js"></script>-->
+=======
+		<t4 type="media" id="60223" /><!--<script src="js/main.js"></script>-->
+>>>>>>> bs3
+	</body>
+</html>

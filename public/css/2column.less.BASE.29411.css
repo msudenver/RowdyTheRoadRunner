@@ -1,0 +1,83 @@
+/*!
+ * Custom Style for MSU Denver 2 Column Pages
+ * Copyright 2013 MSU Denver
+ * http://www.msudenver.edu
+ */
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+/*
+	
+  NESTED NAVIGATION
+  ------- * -------
+		level
+		 .1.
+
+*//* sidebar nav */.sidebar-nav {
+  margin-bottom: 2em;
+  background-color: #20638f;
+  color: #ffffff;
+}
+/* nav-headings */
+.sidebar-nav li {
+  color: #ffffff;
+}
+/* nav link color */
+.sidebar-nav li a {
+  color: #ffffff;
+}
+/* nav link color :hover */
+.sidebar-nav li a:hover {
+  background-color: #7f8c8d;
+}
+/* nav link color on mouse over, mouse leave */
+.sidebar-nav li a,
+a:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/* indent all except first level by [x] */
+/*
+	
+  BOOTSTRAP OVER-WRITES
+  --------- * ---------
+
+*/.active {
+  padding-right: 15px;
+}
+.nav-list {
+  padding-right: 0;
+}
+/*
+    
+  BOOTSTRAP OVER-WRITES
+  --------- * ---------
+
+*/.nav-header {
+  color: #ffffff;
+}
+li.active > a {
+  background-color: #ecf0f1 !important;
+  color: black !important;
+}
+/*
+    
+  MEDIA @ QUERIES
+  ----- * -------
+
+*/@media (max-width: 980px) {
+  /* Enable use of floated navbar text */
+  .navbar-text.pull-right {
+    float: none;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}

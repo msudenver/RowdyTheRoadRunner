@@ -1,0 +1,107 @@
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+.sidebar-nav {
+  margin-bottom: 2em;
+  background-color: #1b557a;
+  color: #ffffff;
+  width: 100%;
+}
+.sidebar-nav li,
+.sidebar-nav a {
+  line-height: 1.5em;
+  padding-left: 0.33em;
+  color: #ffffff;
+  display: block;
+}
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #7f8c8d;
+  -webkit-transition: all 0.55s ease-in-out;
+  -moz-transition: all 0.55s ease-in-out;
+  -o-transition: all 0.55s ease-in-out;
+  transition: all 0.55s ease-in-out;
+  -webkit-transition: all 0.55s ease-in-out;
+  -moz-transition: all 0.55s ease-in-out;
+  -o-transition: all 0.55s ease-in-out;
+  transition: all 0.55s ease-in-out;
+}
+.sidebar-nav li a:after {
+  color: #ffffff;
+}
+ul[class^="multilevel-linkul-"] {
+  color: #ffffff;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+.multilevel-linkul-0 {
+  background-color: #20638f;
+}
+.multilevel-linkul-1 {
+  background-color: #2472a4;
+}
+.multilevel-linkul-2 {
+  background-color: #2980b9;
+}
+.multilevel-linkul-3 {
+  background-color: #2e8ece;
+}
+.multilevel-linkul-4 {
+  background-color: #409ad5;
+}
+.multilevel-linkul-5 {
+  background-color: #55a5d9;
+}
+/*
+    
+  BOOTSTRAP OVER-WRITES
+  --------- * ---------
+
+*/.nav-header {
+  color: #ffffff;
+}
+li.active > a {
+  background-color: #ecf0f1 !important;
+  color: black !important;
+}
+/*
+    
+  MEDIA @ QUERIES
+  ----- * -------
+
+*/@media (max-width: 980px) {
+  /* Enable use of floated navbar text */
+  .navbar-text.pull-right {
+    float: none;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
