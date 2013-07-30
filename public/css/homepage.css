@@ -1,8 +1,3 @@
-/*!
- * Custom Style for MSU Denver
- * Copyright 2013 MSU Denver
- * http://www.msudenver.edu
- */
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* Styles */
@@ -14,6 +9,9 @@
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 320px) {
   /* Styles */
+  .navbar-inverse .nav > li:first-child {
+    margin-top: 3.10em;
+  }
 }
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -119,9 +117,6 @@ p.actionHeader {
 }
 .toolbar {
   background-color: #ffffff;
-}
-.navbar-inverse .nav > li:first-child {
-  margin-top: 3.10em;
 }
 .mainNavigation {
   margin-right: auto;
