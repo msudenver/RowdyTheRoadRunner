@@ -45,3 +45,8 @@
   overflow: hidden;
   margin-bottom: 20px;
 }
+/***************Accordion Group*********************/
+.accordion-group {
+  margin-bottom: 20px;
+  border-radius: 0;
+}
