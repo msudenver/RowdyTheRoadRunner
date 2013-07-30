@@ -120,6 +120,9 @@ p.actionHeader {
 .toolbar {
   background-color: #ffffff;
 }
+.navbar-inverse .nav > li:first-child {
+  margin-top: 3.10em;
+}
 .mainNavigation {
   margin-right: auto;
   margin-left: auto;
