@@ -1,8 +1,7 @@
 
-@import 'colors.less';
-@import 'utils.less';
-@import 'navigation.less';
-
+@import "./utils/colors.less" ;
+@import "./utils/functions.less" ;
+@import "./utils/left-side-nav.less" ;
 
 // BOOTSTRAP OVER-WRITES
 // --------- * ---------
@@ -14,6 +13,10 @@
 li.active > a{
     background-color: @clouds !important;
     color: black !important;
+}
+
+.bannerImage{
+	width: 100%;
 }
   
 // MEDIA @ QUERIES

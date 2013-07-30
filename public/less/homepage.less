@@ -4,17 +4,18 @@
  * http://www.msudenver.edu
  */
 
-@import "mediaQueries.less" ;
-@import "actionSection.less" ;
-@import "captions.less" ;
-@import "utils.less" ;
-@import "colors.less" ;
+
+@import "./utils/mediaQueries.less" ;
+@import "./utils/functions.less" ;
+@import "./utils/actionSection.less" ;
+@import "./utils/captions.less" ;
+@import "./utils/colors.less" ;
 
 .toolbar{
   background-color: @white;
 }
-.navbar-nav{
-  
+.navbar-inverse .nav > li  a:first-child{
+  // margin-top: 1em;
 }
 .mainNavigation{
   margin-right: auto;
