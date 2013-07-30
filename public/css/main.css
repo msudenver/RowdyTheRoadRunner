@@ -56,7 +56,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  /* background image loaded via data url scheme */
+  /* !remark: body background image loaded via data url scheme */
 
 }
 a {
