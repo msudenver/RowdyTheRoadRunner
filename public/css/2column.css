@@ -1,0 +1,128 @@
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+.sidebar-nav {
+  margin-bottom: 2em;
+  background-color: #1b557a;
+  color: #ffffff;
+  width: 100%;
+}
+.sidebar-nav li,
+.sidebar-nav a {
+  line-height: 1.5em;
+  padding-left: 0.33em;
+  color: #ffffff;
+  display: block;
+}
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #7f8c8d;
+  -webkit-transition: all 0.55s ease-in-out;
+  -moz-transition: all 0.55s ease-in-out;
+  -o-transition: all 0.55s ease-in-out;
+  transition: all 0.55s ease-in-out;
+}
+.sidebar-nav li a:after {
+  color: #ffffff;
+}
+ul[class^="multilevel-linkul-"] {
+  color: #ffffff;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+.multilevel-linkul-0 {
+  background-color: #20638f;
+}
+.multilevel-linkul-1 {
+  background-color: #2472a4;
+}
+.multilevel-linkul-2 {
+  background-color: #2980b9;
+}
+.multilevel-linkul-3 {
+  background-color: #2e8ece;
+}
+.multilevel-linkul-4 {
+  background-color: #409ad5;
+}
+.multilevel-linkul-5 {
+  background-color: #55a5d9;
+}
+/***************HighlightBox *********************/
+.HighlightBox {
+  color: #ffffff;
+  padding: 1.5em;
+  background: #16A085;
+  position: relative;
+  zoom: 1;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.HighlightBox-title {
+  color: #ffffff;
+  font-size: 1.5em;
+  text-align: center;
+}
+.HighlightBox-content,
+.HighlightBox-content a {
+  color: #ffffff;
+  font-size: 1em;
+}
+/***************Zebra Stripe For Newsroom*********************/
+.story_preview {
+  border: solid silver 1px ;
+}
+.story_preview {
+  padding: 15px;
+}
+.story_preview:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+.story_preview:nth-child(even) {
+  background-color: white;
+}
+/***************Galleria Beggining*********************/
+#galleria {
+  width: 100%;
+  height: 500px;
+  background: #000;
+}
+/***************Banner Image*********************/
+.bannerImage {
+  max-width: 100%;
+  padding: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.nav-header {
+  color: #ffffff;
+}
+li.active > a {
+  background-color: #ecf0f1 !important;
+  color: black !important;
+}
+.bannerImage {
+  width: 100%;
+}

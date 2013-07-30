@@ -39,6 +39,15 @@
   /* Styles */
 }
 /* Large screens ----------- */
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
 .actionHeader {
   vertical-align: top;
   box-sizing: border-box;
