@@ -3,14 +3,43 @@
  * Copyright 2013 MSU Denver
  * http://www.msudenver.edu
  */
-/* Desktops and laptops ----------- */
 /* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
 /* Large screens ----------- */
 @media only screen and (min-width: 1824px) {
-  input.search-query {
-    width: 110px;
-  }
+  
 }
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}
+/* Large screens ----------- */
 .actionHeader {
   vertical-align: top;
   box-sizing: border-box;
@@ -103,6 +132,10 @@ p.actionHeader {
   color: #bcbaba;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
+.navbar-search-form {
+  padding-top: 0.5em;
+  padding-left: 4em;
+}
 .actionHeader.news {
   background-color: #3498DB;
 }
@@ -119,16 +152,4 @@ p.actionHeader {
 }
 .testimonial img {
   width: 100%;
-}
-.hero-unit {
-  padding: 20px;
-  margin-bottom: 30px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  color: inherit;
-  background-color: white;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
 }

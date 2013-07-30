@@ -1,7 +1,7 @@
  
 @import "colors.less";
 @import "utils.less" ;
-@import "background-img.less";
+// @import "background-img.less";
 
 // data-href
 // pointer-
@@ -117,6 +117,15 @@ a:focus {
 
 // NAVIGATION
 // ----------
+
+/* Everything but the jumbotron gets side spacing for mobile-first views */
+.masthead,
+.body-content,
+.footer {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 
 .nav-tabs > li > a,
 .nav-pills > li > a {
@@ -242,7 +251,9 @@ hr {
 	
 // FOOTER
 // ------
-
+.campus-info p{
+  padding-top: 1em;
+}
 
 .footer {
 	min-height: 20px;
