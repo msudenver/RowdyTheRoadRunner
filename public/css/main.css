@@ -92,12 +92,16 @@ a:focus {
   margin-left: 20px;
   font-weight: 500;
 }
-/* Everything but the jumbotron gets side spacing for mobile-first views */
-.masthead,
-.body-content,
-.footer {
-  padding-left: 0;
-  padding-right: 0;
+.toolbar ul li:hover {
+  background-color: #ecf0f1;
+  -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .nav-tabs > li > a,
 .nav-pills > li > a {
