@@ -7,6 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
+<<<<<<< HEAD:public/templates/2column.html
+=======
 
 		<!-- vendor styles -->
 		<link rel="stylesheet" href="css/vendor/normalize.css">
@@ -15,6 +17,7 @@
 		<link rel="stylesheet" href="css/bootstrap-glyphicons.css">
 		<script src="//use.edgefonts.net/cabin.js"></script>  <!-- Adobe web fonts -->
 
+>>>>>>> bs3rc1:public/2column.html
 		<!-- styles -->
 		<link rel="stylesheet" href="./css/vendor/normalize.css">
 		<link rel="stylesheet" href="./css/vendor/bootstrap.css">
@@ -58,6 +61,72 @@
 						<img class="clickable" src="./assets/branding/MSUDenver_Formal.gif" alt="MSU Denver Formal Logo" data-href="http://msudenver.edu">
 					</div>
 				</div>
+<<<<<<< HEAD:public/templates/2column.html
+			</div>
+			<div class="container">
+				<!-- SITE HEADER -->
+				<div class="siteheader">
+			    	<h1>Department of Web Developers <!-- <t4 type='navigation' id='101'/>  --></h1>
+			    </div>
+				<!-- BREADCRUMBS -->
+			    <div>
+			    	<ul class="breadcrumb">
+			    	You are here:
+			    	<li><a href="#">Sample Breadcrumbs</a></li> 
+			    	<li class="active">2 Column Page</li><!-- <t4 type='navigation' id='89'/> Breadcrumbs -->
+			    	</ul>
+			    </div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3"><!-- LEFT SIDE COLUMN -->
+						<div class="sidebar-nav">
+								<ul class="nav nav-list currentbranch0">
+									<li class="nav-header">LEVEL 1</li>
+									<li class="active"><a href="#">Link</a></li>
+									<li><a href="#">Link</a></li>
+									<li><span class="nav-header clickable" data-toggle="collapse" data-target=".currentbranch1">
+											LEVEL 2
+										</span>
+										<ul class="nav nav-list  currentbranch1">
+											<li><a href="#">next level</a></li>
+											<li><a href="#">next level</a></li>
+											<li><a href="#">next level</a></li>
+											<li><span class="nav-header" data-toggle="collapse" data-target=".currentbranch2">LEVEL 3</span>
+												<ul class="nav nav-list  currentbranch2">
+													<li><a href="#">next level</a></li>
+													<li><a href="#">next level</a></li>
+													<li><a href="#">next level</a></li>
+													<li><span class="nav-header" data-toggle="collapse" data-target=".currentbranch3">LEVEL 4</span>
+														<ul class="nav nav-list nav-header  currentbranch3">
+															<li><a href="#">next level</a></li>
+															<li><a href="#">next level</a></li>
+															<li><a href="#">next level</a></li>
+															<li><span class="nav-header" data-toggle="collapse" data-target=".currentbranch4">LEVEL 5</span>
+																<ul class="nav nav-list  currentbranch4">
+																	<li><a href="#">next level</a></li>
+																	<li><a href="#">next level</a></li>
+																	<li><a href="#">next level</a></li>
+																	<li><span class="nav-header" data-toggle="collapse" data-target=".currentbranch5">LEVEL 6</span>
+																		<ul class="nav nav-list  currentbranch5">
+																			<li><a href="#">next level</a></li>
+																			<li><a href="#">next level</a></li>
+																			<li><a href="#">next level</a></li>
+																			<li><a href="#">next level</a></li>
+																		</ul>
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						<div class="sidebar-nav">
+=======
 
 
 		<div class="container">
@@ -78,6 +147,7 @@
 				<div class="row">
 					<div class="col-lg-3"><!-- LEFT SIDE COLUMN -->
 						<div class="sidebar-nav">
+>>>>>>> bs3rc1:public/2column.html
 							<ul class="nav nav-list">
 								<li><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=17571&amp;chid=7&amp;lang=en">Dev Showcase Home</a></li>
 								<li>
@@ -210,7 +280,23 @@
 					</div>
 				</div>
 			</div>
+			<!-- *********************************  -->
+			<!-- SITEMANAGER START FOOTER -->
+			<!-- *********************************  -->
 			<div class="container">
+<<<<<<< HEAD:public/templates/2column.html
+				<div class="row footer">
+					<div class="col-lg-12">
+						<div class="col-lg-4 col-sm-12" >
+							<img class="clickable" src="./assets/webicons/images/fc-webicon-facebook.png" alt="Facebook Logo" data-href="#">
+							<img class="clickable" src="./assets/webicons/images/fc-webicon-twitter.png" alt="Twitter Logo" data-href="#">
+							<img class="clickable" src="./assets/webicons/images/fc-webicon-youtube.png" alt="YouTube Logo" data-href="#">
+							<img class="clickable" src="./assets/webicons/images/fc-webicon-flickr.png" alt="Flickr Logo" data-href="#">
+							<br>
+							<!-- <a href="/socialmedia">Social Media Directory</a> -->
+						</div>
+						<div class="col-lg-4 col-sm-6 campus-info">
+=======
 				<footer class="row footer">
 					<div class="col-lg-12">
 						<div class="col-12 col-lg-4">
@@ -223,14 +309,19 @@
 						</div>
 
 						<div class="col-6 col-lg-4">
+>>>>>>> bs3rc1:public/2column.html
 							<p>
 								Telephone 303-556-2400
 								<br>Auraria Campus Police 303-556-5000
 								<br>Inclement Weather Line 303-556-2401
 							</p>
 						</div>
+<<<<<<< HEAD:public/templates/2column.html
+						<div class="col-lg-4 col-sm-6">
+=======
 
 						<div class="col-6 col-lg-4">
+>>>>>>> bs3rc1:public/2column.html
 							<p>
 								<a href="/contact">CONTACT US</a>
 								|

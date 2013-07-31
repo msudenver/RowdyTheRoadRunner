@@ -69,53 +69,6 @@ ul[class^="multilevel-linkul-"] {
 .multilevel-linkul-5 {
   background-color: #55a5d9;
 }
-/***************HighlightBox *********************/
-.HighlightBox {
-  color: #ffffff;
-  padding: 1.5em;
-  background: #16A085;
-  position: relative;
-  zoom: 1;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-.HighlightBox-title {
-  color: #ffffff;
-  font-size: 1.5em;
-  text-align: center;
-}
-.HighlightBox-content,
-.HighlightBox-content a {
-  color: #ffffff;
-  font-size: 1em;
-}
-/***************Zebra Stripe For Newsroom*********************/
-.story_preview {
-  border: solid silver 1px ;
-}
-.story_preview {
-  padding: 15px;
-}
-.story_preview:nth-child(odd) {
-  background-color: #f0f0f0;
-}
-.story_preview:nth-child(even) {
-  background-color: white;
-}
-/***************Galleria Beggining*********************/
-#galleria {
-  width: 100%;
-  height: 500px;
-  background: #000;
-}
-/***************Banner Image*********************/
-.bannerImage {
-  max-width: 100%;
-  padding: 5px;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
 .nav-header {
   color: #ffffff;
 }
