@@ -83,7 +83,8 @@ a:focus {
 }
 .msudenver_logo img {
   max-width: 350px;
-  padding: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 .breadcrumbs {
   color: #2c3e50;
