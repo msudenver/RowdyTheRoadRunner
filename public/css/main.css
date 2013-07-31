@@ -223,8 +223,8 @@ hr {
 .footer > .container > .row-fluid > .span5 {
   color: #000000;
 }
-.img {
-  width: 100%;
+img {
+  max-width: 100%;
 }
 .container-fluid {
   padding-right: 0;
