@@ -213,15 +213,14 @@
 							</div>
 						</div>
 						<div class="col-lg-4 col-sm-6">
-							<div class="well ">
+							<div class="well">
 								<h3 class="actionHeader events clickable" data-href="#">Events</h3>
-								<div>
-									<h5>Event 1</h5>
-									<p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+								<div id="homepage_events" class="container">
+									 <noscript>
+									 Your browser must support JavaScript to view this content. 
+									Please enable JavaScript in your browser settings then try again.
+									</noscript>
 								</div>
-								<div>
-									<h5>Event 2</h5>
-									<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
 								</div>
 							</div>
 						</div>
@@ -279,6 +278,16 @@
 		<!-- utils -->
 		<script src="./js/vendor/plugins.js"></script>
 		<script src="./js/main.js"></script>
+		<!-- trumba spuds.js -->
+		<script src="http://www.trumba.com/scripts/spuds.js"></script>
+		<script>
+			$Trumba.addSpud({
+			webName: "msudenver-events-calendars",
+			spudType : "upcoming" ,
+			teaserBase : "http://www.trumba.com/calendars/msudenver-events-calendars",
+			spudId : "homepage_events"
+		});
+		</script>
 		<script>
 			(function(){
 				$(window).resize(function(){
