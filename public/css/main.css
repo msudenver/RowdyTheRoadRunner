@@ -92,6 +92,9 @@ a:focus {
   margin-left: 20px;
   font-weight: 500;
 }
+.toolbar {
+  background-color: #ffffff;
+}
 .toolbar ul li:hover {
   background-color: #ecf0f1;
   -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.6);
