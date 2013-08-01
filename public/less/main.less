@@ -126,7 +126,7 @@ a:focus {
 
 .toolbar ul li:hover {
   background-color: @clouds;
-  .box-shadow;
+  // .box-shadow;
   color: @white;
   .animate-all(0.5s);
 }
@@ -288,6 +288,27 @@ hr {
 
 // BOOTSTRAP OVER-WRITES
 // --------- * ---------
+
+.navbar-inverse {
+  background-color: @webasphalt;
+}
+
+.navbar-inverse .navbar-nav > .open  {
+  background-color: @midnightblue;
+}
+
+.dropdown-menu > li > a:hover{
+  background-color: @webasphalt;
+}
+
+.dropdown.open > ul {
+  
+}
+
+.dropdown.open > ul > li > a:hover{
+  .animate-all(0.25s);
+  background: @webasphalt;
+}
 
 img{
   max-width: 100%;
