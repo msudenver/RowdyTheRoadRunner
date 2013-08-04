@@ -1,0 +1,73 @@
+<!--text/shtml-->
+<h4>
+	<t4 date_format="MMMM d, yyyy" type="content" name="Release Date" output="normal" modifiers="" />
+</h4>
+<h3>
+	<a href="<t4 type=" content " name="Name " output="fulltext " modifiers=" " use-element="true " filename-element="Name " />">
+		<t4 type="content" name="Title" output="normal" modifiers="htmlentities" />
+	</a>
+</h3>
+<p>
+	<t4 type="content" name="Intro Text" output="normal" modifiers="htmlentities" />
+</p>
+<hr align="center" size=".4" color="silver" width="100%">
+</br>
+<!--text/list-->
+<h5>
+	<t4 date_format="MM/d/yy" type="content" name="Release Date" output="normal" modifiers="" />
+	<br />
+	<a href="<t4 type=" navigation " id="77 "/>#<t4 type="meta " meta="content_id " />">
+		<t4 type="content" name="Title" output="normal" modifiers="htmlentities" />
+	</a>
+</h5>
+<p>
+	<t4 type="content" name="Intro Text" output="normal" modifiers="" />....
+	<a href="<t4 type=" navigation " id="77 "/>#<t4 type="meta " meta="content_id " />">more</a>
+</p>
+<!--text/sfulltext-->
+<h3>
+	<strong>Press Release</strong>
+</h3>
+<t4 type="content" output="selective-output" modifiers="htmlentities" name="Title" format="<h2>$value</h2>" />
+<t4 type="content" output="selective-output" modifiers="htmlentities" name="Sub Title" format="<h3>$value</h3>" />
+<hr align="center" size=".4" color="silver" width="100%">
+<p>
+	<t4 type="content" output="selective-output" modifiers="htmlentities, nl2br" name="Contact" format="Contact: $value" />
+</p>
+<p>Posted:
+	<t4 type="content" output="normal" date_format="MMMM d, yyyy" name="Release Date" modifiers="" />
+</p>
+<hr align="center" size=".4" color="silver" width="100%">
+</br>
+<t4 type="content" name="Content" output="normal" modifiers="medialibrary, nav_sections" />
+<p align="center">
+	<strong>-30-</strong>
+</p>
+<t4 type="content" output="inline" modifiers="medialibrary, nav_sections" name="About" />
+<!--text/rss-->
+<item>
+	<title>
+		<![CDATA[<t4 type="content" name="Title" output="normal" modifiers="htmlentities" />]]></title>
+	<description>
+		<![CDATA[<t4 type="content" name="Intro Text" output="normal" modifiers="" />]]></description>
+	<link>http://www.mscd.edu
+	<t4 type="content" name="Name" output="fulltext" modifiers="" />
+	</link>
+	<guid isPermaLink="true">http://www.mscd.edu
+		<t4 type="content" name="Name" output="fulltext" modifiers="" />
+	</guid>
+	<pubDate>
+		<t4 type="content" name="Date" output="normal" modifiers="" date_format="EEE, dd MMM yyyy HH:mm:ss" />GMT</pubDate>
+</item>
+<!--text/homepagetop-->
+<div class="newsItem">
+	<h3>
+		<a href="<t4 type=" content " name="Name " output="fulltext " modifiers=" "  />">
+			<t4 type="content" name="Title" output="normal" modifiers="htmlentities" />
+		</a>
+	</h3>
+	<p>
+		<t4 date_format="MMMM d, yyyy" type="content" name="Release Date" output="normal" modifiers="" />-
+		<t4 type="content" name="Intro Text" output="normal" modifiers="htmlentities" />
+	</p>
+</div>
