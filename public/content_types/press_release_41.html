@@ -1,0 +1,36 @@
+<!--text/shtml-->
+<div>
+	<div class="clickable" data-href="<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' />">
+		<h3>
+			<t4 type="content" name="Title" output="normal" modifiers="htmlentities" />
+		</h3>
+		<h4>
+			<t4 date_format="MMMM d, yyyy" type="content" name="Release Date" output="normal" modifiers="" />
+		</h4>
+		<p>
+			<t4 type="content" name="Intro Text" output="normal" modifiers="htmlentities" />
+		</p>
+	</div>
+</div>
+<!--text/sfulltext-->
+<h3>
+	<strong>Press Release</strong>
+</h3>
+<h2>
+	<t4 type="content" output="normal" modifiers="htmlentities" name="Title" format="$value" />
+</h2>
+<t4 type="content" output="selective-output" modifiers="htmlentities" name="Sub Title" format="<h3>$value</h3>" />
+<hr align="center" size=".4" color="silver" width="100%">
+<p>
+	<t4 type="content" output="selective-output" modifiers="htmlentities, nl2br" name="Contact" format="Contact: $value" />
+</p>
+<p>Posted:
+	<t4 type="content" name="Release Date" output="normal" date_format="MMMM d, yyyy" modifiers="" />
+</p>
+<hr align="center" size=".4" color="silver" width="100%">
+<br>
+<t4 type="content" name="Content" output="normal" modifiers=""  />
+<p align="center">
+	<strong>-30-</strong>
+</p>
+<t4 type="content" name="About" output="normal" modifiers="" />
