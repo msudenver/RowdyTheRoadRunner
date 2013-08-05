@@ -1,11 +1,9 @@
-// modified carousel captions for homepage
-.homepage-caption{
+// modified carousel captions for homepage//
+.homepage-caption {
   font-size: 4em;
 }
-
-.homepage-caption h1{
+.homepage-caption h1 {
   color:white;
-  
 }
 .homepage-caption {
   position: relative;
@@ -13,11 +11,12 @@
   right: 0;
   bottom: 0;
   padding: 0;
+  overflow: hidden;
+  max-height: 600px;
   // background: #333333;
   // background: rgba(0, 0, 0, 0.75);
 }
-.homepage-caption h4,
-.homepage-caption p {
+.homepage-caption h4, .homepage-caption p {
   color: #ffffff;
   position: absolute;
   padding: 0.555em;
@@ -35,7 +34,22 @@
 .homepage-caption h4 {
   margin: 0 0 5px;
 }
-.homepage-caption img{
+.homepage-caption img {
   width: 100%;
   // max-height: 600px;
+}
+.homepage-caption p {
+  .lead;
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 16.099999999999998px;
+  font-weight: 200;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .lead {
+    font-size: 21px;
+  }
 }
