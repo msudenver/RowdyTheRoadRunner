@@ -7,12 +7,16 @@
         return window.open($(this).data().href, "_self");
       }
     });
-    return $Trumba.addSpud({
+    $Trumba.addSpud({
       webName: "msudenver-events-calendars",
       spudType: "upcoming",
       teaserBase: "http://www.trumba.com/calendars/msudenver-events-calendars",
       spudId: "homepage_events"
     });
+    $(window).resize(function() {
+      return console.log("resize::" + $(window).width());
+    });
+    return $('div#top3').load("/newsroom/top3/");
   });
 
 }).call(this);

@@ -54,6 +54,7 @@
 					</div>
 				</div>
 			</div>
+
 	  		<div class="navbar navbar-inverse">
 	          	<div class="container">
 		            <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
@@ -157,10 +158,10 @@
 		            </div><!-- /.nav-collapse -->
 				</div><!-- /.container -->
 			</div><!-- /.navbar -->
-			<!-- *********************************  -->
-			<!-- SITEMANAGER HEADER ENDS HERE -->
-			<!-- *********************************  -->		
-			<div class="container">
+	<!-- *********************************  -->
+	<!-- SITEMANAGER HEADER ENDS HERE -->
+	<!-- *********************************  -->			
+		   	<div class="container">
 		   		<div class="row  ">
 					<div class="clickable col-12" data-href="#">
 						<div class="col-12 col-lg-6 well">
@@ -188,14 +189,19 @@
 					</div>
 				</div>
 			</div>
-			<!-- *********************************  -->
-			<!-- SITEMANAGER START FOOTER -->
-			<!-- *********************************  -->
+		<!-- *********************************  -->
+		<!-- SITEMANAGER START FOOTER -->
+		<!-- *********************************  -->
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4">
 						<div class="well">
 							<h3 class="actionHeader news clickable" data-href="/newsroom">News</h3>
+							       <script>
+	                                  $(document).ready(function(){
+		            			$('div#top3').load("/newsroom/top3/");
+					});
+					</script>
 							<div id="top3">Top 3 Stories</div>
 						</div>
 					</div>
@@ -232,6 +238,7 @@
 				</div>
 			</div>
 		</div><!-- / end of main container-->
+
 		<div class="container">
 			<div class="row footer">
 				<div class="col-lg-12">
@@ -264,7 +271,7 @@
 		</div>
 		<!-- conditional jQuery load -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script>window.jQuery || document.write("<script src='<t4 type="media" id="60221"/>'><\/script>")</script>
+		<script>window.jQuery || document.write('<script src="<t4 type='media' id='60221'/>"><\/script>')</script>
 
 		<!-- bootstrap.js -->
 		<!-- <script src="./js/vendor/bootstrap/transition.js"> --></script> <t4 type="media" id="60215"/>
@@ -282,5 +289,12 @@
 		<!-- <script src="./js/vendor/plugins.js"></script>--><t4 type="media" id="60225"/>
 		<!-- <script src="./js/main.js"></script> --><t4 type="media" id="60203"/>
 		<!-- trumba spuds.js -->
+		<script>
+			(function(){
+				$(window).resize(function(){
+					console.log("resize::"+ $(window).width());
+				});
+			})();
+		</script>
 	</body>
 </html>
