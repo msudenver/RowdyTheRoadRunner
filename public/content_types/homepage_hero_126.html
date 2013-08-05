@@ -1,32 +1,23 @@
 <!--Site Manager Content Type-->
 <div class="container">
 	<div class="row  ">
-		<div class="clickable col-12" data-href="<t4 type=" content " name="Large Image Link" output="linkurl " modifiers=" "  />">
+		<div class="clickable col-12" data-href="<t4 type='content' name='Large Image Link' output='linkurl' modifiers=''/>">
 			<div class="col-12 col-lg-6 well">
 				<div class="homepage-caption">
-					<!-- <img src="./assets/img/group_of_three_for_homepage/hickenlooper.jpg" alt="" class=""> -->
 					<t4 type="content" name="Large Image" output="normal" modifiers="" />
-					<p class="lead">
-						<t4 type="content" name="Large Image Caption" output="normal" modifiers="" />
-					</p>
+					<t4 type="content" output="selective-output" modifiers="htmlentities" name="Large Image Caption" format="<p class="lead"> $value</p>"/>
 				</div>
 			</div>
-			<div class="clickable col-6 col-lg-3 well" data-href="<t4 type=" content " name="Small Image 1 Link" output="linkurl " modifiers=" "  />">
+			<div class="clickable col-6 col-lg-3 well" data-href="<t4 type='content' name='Small Image 1 Link' output='linkurl' modifiers=''  />">
 				<div class="homepage-caption">
-					<!-- <img src="./assets/img/group_of_three_for_homepage/marketingGraphic.png" alt="" class=""> -->
 					<t4 type="content" name="Small Image 1" output="normal" modifiers="" />
-					<p class="lead">
-						<t4 type="content" name="Small Image 1 Caption" output="normal" modifiers="" />
-					</p>
+					<t4 type="content" output="selective-output" modifiers="htmlentities" name="Small Image 1 Caption" format="<p class="lead"> $value</p>"/>
 				</div>
 			</div>
-			<div class="clickable col-6 col-lg-3 well" data-href="<t4 type=" content " name="Small Image 2 Link" output="linkurl " modifiers=" "  />">
+			<div class="clickable col-6 col-lg-3 well" data-href="<t4 type='content' name='Small Image 2 Link' output='linkurl' modifiers=''/>">
 				<div class="homepage-caption">
-					<!-- <img src="./assets/img/group_of_three_for_homepage/sotomayerGraphic.png" alt="" class=""> -->
 					<t4 type="content" name="Small Image 2" output="normal" modifiers="" />
-					<p class="lead">
-						<t4 type="content" name="Small Image 2 Caption" output="normal" modifiers="" />
-					</p>
+					<t4 type="content" output="selective-output" modifiers="htmlentities" name="Small Image 2 Caption" format="<p class="lead"> $value</p>"/>
 				</div>
 			</div>
 		</div>
