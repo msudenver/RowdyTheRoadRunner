@@ -1,14 +1,6 @@
-
-
-/*!
- * Custom Style for MSU Denver 2 Column Pages
- * Copyright 2013 MSU Denver
- * http://www.msudenver.edu
- */
-
-@import 'colors.less';
-@import 'utils.less';
-@import 'left-side-nav.less';
+@import "./utils/colors.less" ;
+@import "./utils/functions.less" ;
+@import "./utils/left-side-nav.less" ;
 
 /*
     
@@ -24,21 +16,6 @@
 li.active > a{
     background-color: @clouds !important;
     color: black !important;
-}
-/*
-    
-  MEDIA @ QUERIES
-  ----- * -------
-
-*/ 
-
-@media (max-width: 980px) {
-/* Enable use of floated navbar text */
-    .navbar-text.pull-right {
-      float: none;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
 }
 
 

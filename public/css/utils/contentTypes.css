@@ -1,4 +1,9 @@
 /***************HighlightBox *********************/
+.linkcolumn .HighlightBox {
+  margin: 0 0 1em 0;
+  background: #c0392b;
+  zoom: 1;
+}
 .HighlightBox {
   color: #ffffff;
   padding: 1.5em;
