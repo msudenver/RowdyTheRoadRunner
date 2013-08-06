@@ -96,6 +96,30 @@ p.actionHeader {
 .toolbar {
   background-color: #ffffff;
 }
+.toolbar ul li:hover {
+  background-color: #ecf0f1;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.nav-tabs > li > a,
+.nav-pills > li > a {
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: 2px;
+  line-height: 14px;
+  color: black;
+}
+.navbar-inverse .brand,
+.navbar-inverse .nav > li > a {
+  color: #95a5a6;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.toolbar {
+  background-color: #ffffff;
+}
 .mainNavigation {
   margin-right: auto;
   margin-left: auto;
@@ -105,11 +129,25 @@ p.actionHeader {
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
   color: #bcbaba;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.input-group-btn a {
+  color: #bcbaba;
+}
+button.btn.btn-default.dropdown-toggle,
+.open > a,
+button.btn.btn-default.dropdown-toggle,
+.open > a:hover,
+button.btn.btn-default.dropdown-toggle,
+.open > a:focus {
+  color: #ffffff;
+  background-color: #080808;
+}
+button.btn.btn-default.dropdown-toggle {
+  background: none;
 }
 .navbar-search-form {
   padding-top: 0.5em;
-  padding-left: 4em;
+  padding-left: 10em;
 }
 .actionHeader.news {
   background-color: #3498DB;

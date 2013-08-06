@@ -3,6 +3,40 @@
 @import "./utils/captions.less" ;
 @import "./utils/colors.less" ;
 
+// NAVIGATION
+// ----------
+
+.toolbar{
+  background-color: @white;
+}
+
+.toolbar ul li:hover {
+  background-color: @clouds;
+  // .box-shadow;
+  color: @white;
+  .animate-all(0.5s);
+}
+
+.nav-tabs > li > a,
+.nav-pills > li > a {
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: 2px;
+  line-height: 14px;
+  color:black;
+}
+
+.navbar-inverse .brand,
+.navbar-inverse .nav > li > a {
+  color: @concrete;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+// navitation tab animation on mouse over, mouse leave
+.nav , .nav-tabs, .navbar-inner li a, a:hover{
+  // .animate-all(0.5s);
+}
+
 .toolbar{
   background-color: @white;
 }
@@ -16,15 +50,40 @@
 
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
-	color: #bcbaba;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #bcbaba;
+	// text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+// ******************************
+// two part buttom top banivation
+// 
+
+.input-group-btn a{
+  color: #bcbaba;
+  // display: block;s
+  // clear: both;
+  // font-weight: normal;
+  // line-height: 1.428571429;
+  // white-space: nowrap;
+}
+
+button.btn.btn-default.dropdown-toggle, .open > a,
+button.btn.btn-default.dropdown-toggle, .open > a:hover,
+button.btn.btn-default.dropdown-toggle, .open > a:focus {
+  color: #ffffff;
+  background-color: #080808;
+}
+
+button.btn.btn-default.dropdown-toggle{
+  background: none;
 }
 
 // search form field
 
 .navbar-search-form{
   padding-top: 0.5em;
-  padding-left: 4em;  
+  padding-left: 10em;  
 }
 
 
