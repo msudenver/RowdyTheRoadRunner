@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="./css/vendor/normalize.css">
 		<link rel="stylesheet" href="./css/vendor/bootstrap.css">
 		<link rel="stylesheet" href="./css/vendor/pygments-manni.css">
+		<link rel="stylesheet" href="css/bootstrap-glyphicons.css">
 		<!-- MSU Denver styles -->
 		<link rel="stylesheet" href="./css/background-img.css"> 
 		<link rel="stylesheet" href="./css/main.css">
@@ -35,6 +36,7 @@
 			<div class="container"> 
 				<div class="row">
 					<!-- toolbar -->
+<!--
 					<div class="navbar col-lg-6 col-sm-6 col-push-6 toolbar col-12">
 	                    <ul class="nav navbar-nav">
 	                      <li><a href="/a_to_z/">A-Z</a></li>
@@ -45,8 +47,46 @@
 	                      <li><a href="/facstaff/"><strong>Faculty &amp; Staff</strong></a></li>
 	                    </ul>
 	                </div>
+-->
+		<div class="navbar toolbar col-12 col-sm-6 col-lg-7  col-push-5">
+		        <div class="container">
+		            <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".quick-navbar-responsive-collapse">
+		              <span class="icon-bar"></span>
+		              <span class="icon-bar"></span>
+		              <span class="icon-bar"></span>
+		            </button>
+			        <!-- Place everything within .navbar-collapse to hide it until above 768px -->
+					<a class="navbar-brand visible-sm" >Quick Links</a>
+					<div class="container nav-collapse collapse quick-navbar-responsive-collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="/a_to_z" >A-Z</a></li>
+	                        <li><a class="btn" href="/connectu">ConnectU</a></li>
+	                        <li><a class="btn" href="http://library.auraria.edu">Library</a></li>
+	                        <li><a class="btn" href="/maps">Maps</a></li>
+							<li>
+								<a class="btn" href="/student/" ><strong>Current Students</strong></a>	
+							</li>
+	                      	<li>
+								<a class="btn" href="/facstaff/"><strong>Faculty &amp; Staff</strong></a>
+							</li>
+							<li>
+							  	<a class="btn" data-toggle="collapse" href="#quicksearch"><strong><em>Search </em>
+							  	<span class="glyphicon glyphicon-search"></span></strong></a>
+							</li>
+	                      </ul> 
+						<div id="quicksearch" class="collapse">
+							<form class="form-inline">
+								<input type="search" class="form-control" placeholder="Search MSU Denver">
+								<button type="submit" class="btn btn-default">Search</button> 
+							</form> 
+						</div>
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</div><!-- /.navbar -->
+					
 	                <!-- logo -->
-	                <div class="msudenver_logo col-lg-3 col-12 col-sm-6 col-pull-6">
+	                <div class="msudenver_logo col-lg-3 col-12 col-sm-6 col-pull-7">
 						<img class="clickable" src="./assets/branding/MSUDenver_Formal.gif" alt="MSU Denver Formal Logo" data-href="http://msudenver.edu">
 					</div>
 				</div>
@@ -56,12 +96,12 @@
 	<!-- *********************************  -->
 		  	<div class="navbar navbar-inverse">
 		        <div class="container">
-		            <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
 		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
 		              <span class="icon-bar"></span>
 		              <span class="icon-bar"></span>
 		              <span class="icon-bar"></span>
 		            </button>
+					<a class="navbar-brand visible-sm" >Main Navigation</a>
 			        <!-- Place everything within .navbar-collapse to hide it until above 768px -->
 					<div class="container nav-collapse collapse navbar-responsive-collapse">
 						<ul class="nav navbar-nav">
@@ -177,11 +217,6 @@
 									</ul>
 	                        	</div>
 	                        </li>
-							<li class="col-push-1">
-								<form class="navbar-search-form" action="action">
-									<input type="text" class="form-control col-lg-8" placeholder="Search">
-                				</form>   
-							</li>
 						</ul>
 					</div><!-- /.nav-collapse -->
 				</div><!-- /.container -->
