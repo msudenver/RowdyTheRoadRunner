@@ -1,0 +1,48 @@
+body {
+  padding: 250px;
+  color: white;
+}
+p {
+  padding: 1em;
+}
+.rectangle {
+  position: absolute;
+  background: #ff0000;
+  background-color: #ff0000;
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  width: 10em;
+  height: 10em;
+  border-radius: 4px;
+}
+.triangle {
+  /* Safari */
+
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+
+  -moz-transform: rotate(-90deg);
+  /* IE */
+
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */
+
+  /*accepts 0, 1, 2, or 3 which will 
+      rotate the element 0, 90, 180 or 
+      270 degrees respectively.*/
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-);
+  position: absolute;
+  border-left: 4em solid transparent;
+  border-right: 4em solid transparent;
+  border-bottom: 8em solid #ff0000;
+  transform-origin: 10% 105%;
+  -ms-transform-origin: 10% 105%;
+  -webkit-transform-origin: 10% 105%;
+  border-radius: 4px;
+}

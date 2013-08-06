@@ -1,0 +1,101 @@
+body {
+  padding: 250px;
+  color:white;
+}
+
+p{
+  padding: 1em;;
+}
+
+// global vars
+
+@scale: 8.25;
+@rotate:-90deg;
+@color: red;
+@roundiness : 4px;
+
+// a + b = c
+
+@a:4em;
+@b:4em;
+@c:4em;
+
+//  box 
+//  _ _
+// |   |
+// |_ _|
+
+.rectangle{
+  position: absolute;
+  background:@color; // ie fail
+  background-color: @color;
+  .scale(2);
+  width: 10em;
+  height: 10em;
+  border-radius: @roundiness;
+}
+
+
+//    /\
+//   /  \
+//  /    \
+// TRIANGLE 
+
+
+.triangle{
+  // left tip
+  @x: 10%  ; @y: 105%;
+  .rotate(@rotate);
+  
+  // right tip
+  //@x: 100%  ; @y: 115%;
+  //.rotate(-@rotate);
+  
+  // bottom tip
+  //@x: 0%  ; @y: 115%;
+  //.rotate(-@rotate);
+  
+  position: absolute;
+  border-left: @a solid transparent;
+  border-right: @b solid transparent;
+  border-bottom:  (@c * 2) solid @color;
+  transform-origin: @x @y;
+  -ms-transform-origin:  @x @y;
+  -webkit-transform-origin: @x @y;
+  border-radius: @roundiness;
+}
+
+// rotate functions
+
+.rotate(@deg:180deg){
+    /* Safari */
+    -webkit-transform: rotate(@deg);
+    /* Firefox */
+    -moz-transform: rotate(@deg);
+    /* IE */
+    -ms-transform: rotate(@deg);
+    /* Opera */
+    -o-transform: rotate(@deg);
+    /* Internet Explorer */
+    /*accepts 0, 1, 2, or 3 which will 
+      rotate the element 0, 90, 180 or 
+      270 degrees respectively.*/         
+   filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=-);
+  
+}
+
+// scale function
+
+.scale(@scale){
+  -moz-transform: scale(@scale);
+  -ms-transform: scale(@scale);
+  -o-transform: scale(@scale);
+  -webkit-transform: scale(@scale);
+  transform: scale(@scale);
+}
+
+// translate function
+
+.translate(@x,@y){
+  transform:translate(@x, @y);
+}
