@@ -1,25 +1,4 @@
 @media only screen and (min-width: 320px) and (max-width: 776px) {
-  .navbar-inverse .nav > li:first-child {
-    margin-top: 3.10em;
-  }
-  .navbar-search-form {
-    padding-left: 0;
-    width: 100%;
-  }
-  .toolbar ul li {
-    float: left;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    padding-top: 0.5em;
-    padding-right: 1em;
-    padding-left: 1em;
-    padding-bottom: 0.5em;
-  }
-  .toolbar ul li a {
-    padding: 0;
-    font-size: 1.25em;
-  }
   .input-group-btn {
     padding-top: 0.555em;
     float: none;
@@ -29,10 +8,5 @@
   }
 }
 @media only screen and (min-width: 981px) and (max-width: 1200px) {
-  .navbar-search-form {
-    margin: 0;
-    padding-left: 20em;
-    padding-top: 0;
-    width: 100%;
-  }
+  
 }
