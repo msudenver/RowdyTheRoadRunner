@@ -5,6 +5,16 @@
 
 // NAVIGATION
 // ----------
+.navbar-nav li{
+  // float: left;
+  
+}
+
+
+.input-group-btn.open > ul > li > a:hover{
+  .animate-all(0.25s);
+  background: @webasphalt;
+}
 
 .toolbar{
   background-color: @white;
@@ -14,23 +24,27 @@
   background-color: @clouds;
   // .box-shadow;
   color: @white;
-  .animate-all(0.5s);
+  // .animate-all(0.5s);
 }
 
-.nav-tabs > li > a,
-.nav-pills > li > a {
-  padding-right: 12px;
-  padding-left: 12px;
-  margin-right: 2px;
-  line-height: 14px;
-  color:black;
+.input-group-btn {
+  padding-top:0.355em;
+  float: left;
 }
+// .nav-tabs > li > a,
+// .nav-pills > li > a {
+//   padding-right: 12px;
+//   padding-left: 12px;
+//   margin-right: 2px;
+//   line-height: 14px;
+//   color:black;
+// }
 
-.navbar-inverse .brand,
-.navbar-inverse .nav > li > a {
-  color: @concrete;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
+// .navbar-inverse .brand,
+// .navbar-inverse .nav > li > a {
+//   color: @concrete;
+//   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+// }
 
 // navitation tab animation on mouse over, mouse leave
 .nav , .nav-tabs, .navbar-inner li a, a:hover{
@@ -83,7 +97,7 @@ button.btn.btn-default.dropdown-toggle{
 
 .navbar-search-form{
   padding-top: 0.5em;
-  padding-left: 10em;  
+  // padding-left: 10em;  
 }
 
 
