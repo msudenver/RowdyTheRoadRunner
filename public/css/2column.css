@@ -7,15 +7,6 @@
   -o-transition: height 0.35s ease;
   transition: height 0.35s ease;
 }
-.collapse {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  -moz-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
-}
 .sidebar-nav {
   margin-bottom: 2em;
   background-color: #1b557a;
@@ -69,6 +60,7 @@ ul[class^="multilevel-linkul-"] {
 .multilevel-linkul-5 {
   background-color: #55a5d9;
 }
+/* BOOTSTRAP OVER-WRITES */
 .nav-header {
   color: #ffffff;
 }
@@ -79,3 +71,4 @@ li.active > a {
 .bannerImage {
   width: 100%;
 }
+/* MEDIA @ QUERIES */

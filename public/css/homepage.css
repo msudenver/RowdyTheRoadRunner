@@ -79,19 +79,11 @@ p.actionHeader {
   width: 100%;
 }
 .homepage-caption p {
-<<<<<<< HEAD
-  margin-bottom: 20px;
-=======
->>>>>>> 088d38087f7a71885c54ca756fd88837db90ee66
   font-size: 16.099999999999998px;
   font-weight: 200;
   line-height: 1.4;
 }
 .lead {
-<<<<<<< HEAD
-  margin-bottom: 20px;
-=======
->>>>>>> 088d38087f7a71885c54ca756fd88837db90ee66
   font-size: 16.099999999999998px;
   font-weight: 200;
   line-height: 1.4;
@@ -101,16 +93,6 @@ p.actionHeader {
     font-size: 21px;
   }
 }
-<<<<<<< HEAD
-.collapse {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  -moz-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
-=======
 .input-group-btn.open > ul > li > a:hover {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -128,7 +110,6 @@ p.actionHeader {
 .input-group-btn {
   padding-top: 0.355em;
   float: left;
->>>>>>> 088d38087f7a71885c54ca756fd88837db90ee66
 }
 .toolbar {
   background-color: #ffffff;
