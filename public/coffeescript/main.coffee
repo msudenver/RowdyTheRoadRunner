@@ -26,6 +26,6 @@ $ ->
 	
 	$(window).on 'HTMLImportsLoaded', (e) ->
 		console.log("templates loaded!!!!!")
-		console.log(e)
+		console.dir(e)
 		# $(".quicktool_and_logo").load(e.target.body.innerHTML)
 	

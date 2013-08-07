@@ -19,7 +19,7 @@
     $('div#top3').load("/newsroom/top3/");
     return $(window).on('HTMLImportsLoaded', function(e) {
       console.log("templates loaded!!!!!");
-      return console.log(e);
+      return console.dir(e);
     });
   });
 
