@@ -10,9 +10,9 @@
 		<meta name="author" content="">
 		<!-- styles -->
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.min.css">
-		<link rel="stylesheet" href="./css/vendor/bootstrap.css">
-		<link rel="stylesheet" href="./css/vendor/pygments-manni.css">
-		<link rel="stylesheet" href="css/bootstrap-glyphicons.css">
+		<link rel="stylesheet" href="./css/vendor/bootstrap.css"> <!-- <t4 type="media" id="60197"/> -->
+		<link rel="stylesheet" href="./css/vendor/pygments-manni.css"><!-- <t4 type="media" id="60662"/> -->
+		<link rel="stylesheet" href="css/bootstrap-glyphicons.css"><!-- <t4 type="media" id="60487"/> -->
 		<!-- MSU Denver styles -->
 		<link rel="stylesheet" href="./css/background-img.css"> 
 		<link rel="stylesheet" href="./css/main.css">
@@ -22,19 +22,22 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script><![endif]-->
-		<!-- html imports via polymer lib -->
-		<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.0.20130711/platform.min.js"></script>
-		<link rel="import" href="templates/quicktool_and_logo.html">
 		<!-- Fav and touch icons -->
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png">
 		<link rel="shortcut icon" href="./assets/ico/favicon.png">
+
+		<!-- html imports via polymer lib -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.0.20130711/platform.min.js"></script>
+		<link rel="import" href="templates/quicktool_and_logo.html">
+		<link rel="import" href="templates/footer.html">
 	</head>
 	<body>
 		<div class="container"><!-- begins main container -->
-			<div class="quicktool_and_logo"></div>
+			<div class="quicktool_and_logo_template"></div>
+			
 	<!-- *********************************  -->
 	<!-- SITEMANAGER HEADER ENDS HERE -->
 	<!-- *********************************  -->
@@ -243,42 +246,15 @@
 		<!-- *********************************  -->
 		<!-- SITEMANAGER START FOOTER -->
 		<!-- *********************************  -->
-		<div class="container">
-			<div class="row footer">
-				<div class="col-lg-12">
-					<div class="col-lg-4 col-sm-12" >
-						<img class="clickable" src="./assets/webicons/images/fc-webicon-facebook.png" alt="Facebook Logo" data-href="#">
-						<img class="clickable" src="./assets/webicons/images/fc-webicon-twitter.png" alt="Twitter Logo" data-href="#">
-						<img class="clickable" src="./assets/webicons/images/fc-webicon-youtube.png" alt="YouTube Logo" data-href="#">
-						<img class="clickable" src="./assets/webicons/images/fc-webicon-flickr.png" alt="Flickr Logo" data-href="#">
-						<br>
-						<!-- <a href="/socialmedia">Social Media Directory</a> -->
-					</div>
-					<div class="col-lg-4 col-sm-6 campus-info">
-						<p>
-							Telephone 303-556-2400
-							<br>Auraria Campus Police 303-556-5000
-							<br>Inclement Weather Line 303-556-2401
-						</p>
-					</div>
-					<div class="col-lg-4 col-sm-6">
-						<p>
-							<a href="/contact">CONTACT US</a>
-							| 
-							<a href="/sm">© Metropolitan State University of Denver</a>
-							<a href="/privacy">Privacy Statement</a>
-							<a href="/alumni">State of Colorado's Transparency Online Project (TOP)</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div class="footer_template"></div>
 		<!-- conditional jQuery load -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<!-- trumba spuds.js -->
 		<script src="http://www.trumba.com/scripts/spuds.js"></script>
-		<!-- bootstrap.js -->
+		<!-- bootstrap.js from cdn -->
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+		<!-- local bootstrap.js fallback -->
+		<script> $.fn.modal || document.write('<script src="js/vendor/bootstrap/min/bootstrap.min.js">\x3C/script>')</script>
 		<!-- utils -->
 		<script src="./js/vendor/plugins.js"></script>
 		<script src="./js/main.js"></script>

@@ -1,6 +1,31 @@
 $ ->
-	# conditionally load jquery method
-	# if window.jQuery  document.write('<script src="<t4 type='media' id='60221'/>"><\/script>');
+
+								###	REMOVE FOR PRODUCTION, DEV ONLY	###
+
+	# notify if html imports have been loaded
+	$(window).on 'HTMLImportsLoaded', (e) ->
+
+		console.log("templates loaded!!!!!")
+
+		# cache reference to imported documents
+		templates = window.HTMLImports.importer.documents
+
+		localUrl = "http://localhost:3000/templates/" 
+
+		quickTools_template = templates[localUrl + 'quicktool_and_logo.html']
+			.body
+			.querySelectorAll("div.container");
+
+		footer_template = templates[localUrl + 'footer.html']
+			.body
+			.querySelectorAll("div.container");
+		
+		# insert html template into window 
+		$(".quicktool_and_logo_template").html(quickTools_template)
+		$(".footer_template").html(footer_template)
+ 
+
+	
 
 	# Turns elements with class .clickable into links
 	$(".clickable").click (event) ->
@@ -20,12 +45,7 @@ $ ->
 		console.log("resize::"+ $(window).width());
 
 	# loads top 3 stories from the newsroom
+	# TODO: include check for homepage only 
+	# navigator.location === '/'
 	$('div#top3').load("/newsroom/top3/");
 
-	# notify if html imports have been loaded
-	
-	$(window).on 'HTMLImportsLoaded', (e) ->
-		console.log("templates loaded!!!!!")
-		console.dir(e)
-		# $(".quicktool_and_logo").load(e.target.body.innerHTML)
-	
