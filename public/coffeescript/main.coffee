@@ -21,3 +21,11 @@ $ ->
 
 	# loads top 3 stories from the newsroom
 	$('div#top3').load("/newsroom/top3/");
+
+	# notify if html imports have been loaded
+	
+	$(window).on 'HTMLImportsLoaded', (e) ->
+		console.log("templates loaded!!!!!")
+		console.log(e)
+		# $(".quicktool_and_logo").load(e.target.body.innerHTML)
+	
