@@ -93,7 +93,7 @@ p.actionHeader {
     font-size: 21px;
   }
 }
-.navbar-nav {
+.navbar-inverse {
   padding-left: 10%;
   padding-right: 10%;
 }

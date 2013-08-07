@@ -1,6 +1,8 @@
+'use strict';
+
 $ ->
 
-								###	REMOVE FOR PRODUCTION, DEV ONLY	###
+	###	REMOVE FOR PRODUCTION, DEV ONLY	###
 
 	# notify if html imports have been loaded
 	$(window).on 'HTMLImportsLoaded', (e) ->
@@ -24,8 +26,6 @@ $ ->
 		$(".quicktool_and_logo_template").html(quickTools_template)
 		$(".footer_template").html(footer_template)
  
-
-	
 
 	# Turns elements with class .clickable into links
 	$(".clickable").click (event) ->
