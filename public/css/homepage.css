@@ -93,6 +93,10 @@ p.actionHeader {
     font-size: 21px;
   }
 }
+.navbar-inverse {
+  padding-left: 10%;
+  padding-right: 10%;
+}
 .input-group-btn.open > ul > li > a:hover {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
