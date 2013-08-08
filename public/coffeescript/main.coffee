@@ -13,6 +13,7 @@ $ ->
 		templates = window.HTMLImports.importer.documents
 
 		localUrl = "http://localhost:3000/templates/" 
+		# localUrl = "/templates/" 
 
 		quickTools_template = templates[localUrl + 'quicktool_and_logo.html']
 			.body

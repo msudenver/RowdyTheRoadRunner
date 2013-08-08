@@ -1,4 +1,5 @@
 @import 'colors.less';
+@import '../utils/shapes.less';
 
 /***************HighlightBox *********************/
 
@@ -6,6 +7,16 @@
   margin: 0 0 1em 0;
   background: @pomegranate; 
   zoom: 1;
+}
+
+// 
+// TRIANGLE COLOR RULE
+.HighlightBox .triangle{
+  border-bottom: 3em solid #16A085;;
+}
+
+.linkcolumn .HighlightBox .triangle {
+  border-bottom: 3em solid @pomegranate;
 }
 
 
@@ -61,7 +72,7 @@
 
 /***************Accordion Group*********************/
 .accordion-group {
-  	margin-bottom: 20px;
+	margin-bottom: 20px;
 	border-radius: 0;
 }
 
@@ -102,8 +113,8 @@
 //	height: 500px;
 	max-height: 400px;
 //	max-width: 100%;
-  	line-height: 1;
-  	margin-left: auto;
+	line-height: 1;
+	margin-left: auto;
 	margin-right: auto;
 //	margin-bottom: 10px;
 //	margin: auto;
@@ -120,6 +131,6 @@
 	padding-bottom: 10px;
 	color: #ffffff;
 	background-color: rgba(42, 42, 42, 0.26);
-  	text-align: center;
-  	text-shadow: 0;
+	text-align: center;
+	text-shadow: 0;
 }
