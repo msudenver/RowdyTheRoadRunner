@@ -93,6 +93,12 @@ p.actionHeader {
     font-size: 21px;
   }
 }
+.testimonial img {
+  width: 100%;
+  max-width: 100%;
+  /*  ie */
+
+}
 .navbar-inverse {
   padding-left: 10%;
   padding-right: 10%;
@@ -166,11 +172,15 @@ button.btn.btn-default.dropdown-toggle {
   height: 150px;
 }
 .actionHeader.applynow {
-  padding-top: 20%;
+  padding-top: 15%;
+  font-size: 2.8em;
 }
 .actionHeader.give {
   background-color: #2980B9;
 }
 .actionHeader.events {
   background-color: #F39C12;
+}
+.apply_and_giving_well {
+  padding-bottom: 0.5em;
 }

@@ -7,7 +7,7 @@ $ ->
 	# notify if html imports have been loaded
 	$(window).on 'HTMLImportsLoaded', (e) ->
 
-		console.log("templates loaded!!!!!")
+		console.log("templates loaded!!!")
 
 		# cache reference to imported documents
 		templates = window.HTMLImports.importer.documents
@@ -16,7 +16,7 @@ $ ->
 
 		quickTools_template = templates[localUrl + 'quicktool_and_logo.html']
 			.body
-			.querySelectorAll("div.container");
+			.querySelectorAll("div.container:first-child");
 
 		footer_template = templates[localUrl + 'footer.html']
 			.body
