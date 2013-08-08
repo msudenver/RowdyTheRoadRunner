@@ -10,6 +10,14 @@
 .clickable {
   cursor: pointer;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Open Sans;
+}
 h1 {
   color: #7f8c8d;
   font-size: 2.2em;
@@ -22,7 +30,6 @@ h2 {
   font-size: 2em;
   font-weight: 400;
   margin-bottom: 2px;
-  text-transform: uppercase;
 }
 h3 {
   color: #2980b9;
@@ -49,7 +56,7 @@ h6 {
 }
 body {
   margin: 0;
-  font-family: cabin, source-sans-pro, muli, josefin-sans, open-sans, sans-serif;
+  font-family: Open Sans, helvetica, arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
