@@ -7,12 +7,23 @@
   margin: 0 0 1em 0;
   background: @pomegranate; 
   zoom: 1;
+  
 }
 
 // 
 // TRIANGLE COLOR RULE
 .HighlightBox .triangle{
-  border-bottom: 3em solid #16A085;;
+	left: 50%;
+	bottom: 0;
+	top: 105%;
+	border-bottom: 3em solid #16A085;
+  	@x: 25%  ; @y: 5%;
+  	transform-origin: @x @y;
+	-ms-transform-origin:  @x @y;
+	-webkit-transform-origin: @x @y;
+  	z-index: -1;
+	.rotate(180deg);
+	
 }
 
 .linkcolumn .HighlightBox .triangle {
@@ -28,6 +39,7 @@
 	background: #16A085;
 	position: relative;
 	zoom: 1;
+	z-index: 2; /*  see .triangle index , this one has to be greater than triangle*/
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);

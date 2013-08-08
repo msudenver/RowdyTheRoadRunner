@@ -1,10 +1,10 @@
-
+@import 'functions.less';
 // global vars
 
-@scale: 8.25;
+@scale: 1.25;
 @rotate: 180deg;
 @color: red;
-@roundiness : 4px;
+@roundiness : 0px;
 
 // a + b = c
 
@@ -12,9 +12,9 @@
 // @b:@a;
 // @c:@b;
 
-@a:2.5em;
-@b:2.25em;
-@c:1.25em;
+@a:5em;
+@b:1em;
+@c:5em;
 
 //  box 
 //  _ _
@@ -40,35 +40,21 @@
 
 .triangle{
   position: absolute;
-   
-  // left tip
-  // @x: 10%  ; @y: 105%;
-  // .rotate(@rotate);
-  // right tip
-  @x: 100%  ; @y: 115%;
-  
-  
+
   // bottom tip
-  @x: 25%  ; @y: 99%;
+  // @x: 0%  ; @y: 310%;
   
-  bottom: 0;
-  left: 50%;
   
-  // -webkit-transform: perspective(1em);
-  //    -moz-transform: perspective(1em);
-  //     -ms-transform: perspective(1em);
-  //      -o-transform: perspective(1em);
-  //         transform: perspective(1em);
- 
+  // transform-origin: @x @y;
+  // -ms-transform-origin:  @x @y;
+  // -webkit-transform-origin: @x @y;
+  
   border-left: @a / 2 solid transparent;
-  border-right: @b / 2 solid transparent;
-  border-bottom: @c * 4 solid @color;
-  
-  transform-origin: @x @y;
-  -ms-transform-origin:  @x @y;
-  -webkit-transform-origin: @x @y;
+  border-right: @c / 2 solid transparent;
+  border-bottom: @b * 2 solid @color;
+ 
   border-radius: @roundiness;
-  .rotate(180deg);
+
 }
 
 // rotate functions
@@ -103,5 +89,5 @@
 // translate function
 
 .translate(@x,@y){
-  transform:translate(@x, @y);
+  transform: translate(@x, @y);
 }
