@@ -3,14 +3,17 @@
   'use strict';  $(function() {
     /*	REMOVE FOR PRODUCTION, DEV ONLY
     */
+
+    var localUrl;
+
+    localUrl = document.location.origin + "/templates/";
     $(window).on('HTMLImportsLoaded', function(e) {
-      var footer_template, localUrl, quickTools_template, templates;
+      var footer_template, quickTools_template, templates;
 
       console.log("templates loaded!!!");
       templates = window.HTMLImports.importer.documents;
-      localUrl = "http://localhost:3000/templates/";
       quickTools_template = templates[localUrl + 'quicktool_and_logo.html'].body.querySelectorAll("div.container:first-child");
-      footer_template = templates[localUrl + 'footer.html'].body.querySelectorAll("div.container");
+      footer_template = templates[localUrl + 'footer.html'].body.querySelectorAll("div.container:first-child");
       $(".quicktool_and_logo_template").html(quickTools_template);
       return $(".footer_template").html(footer_template);
     });
