@@ -27,6 +27,11 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// The below 2 lines are required for Cross Domain Communication(Allowing the methods that come as Cross           
+// Domain Request
+// res.header("Access-Control-Allow-Origin", "http://localhost");
+// res.header("Access-Control-Allow-Methods", "GET, POST");
+        
 app.get('/', routes.index);
 app.get('/1col', routes.index);
 app.get('/2col', routes.index);

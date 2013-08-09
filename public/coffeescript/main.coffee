@@ -3,6 +3,9 @@
 $ ->
 
 	###	REMOVE FOR PRODUCTION, DEV ONLY	###
+	# get document's origin and append path to templates for window.HTMLImport obj lookup
+
+	localUrl = document.location.href + "templates/" 
 
 	# notify if html imports have been loaded
 	$(window).on 'HTMLImportsLoaded', (e) ->
@@ -12,8 +15,7 @@ $ ->
 		# cache reference to imported documents
 		templates = window.HTMLImports.importer.documents
 
-		localUrl = "http://localhost:3000/templates/" 
-
+		
 		quickTools_template = templates[localUrl + 'quicktool_and_logo.html']
 			.body
 			.querySelectorAll("div.container");
