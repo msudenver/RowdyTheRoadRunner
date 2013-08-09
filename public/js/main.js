@@ -36,7 +36,9 @@
     $(window).resize(function() {
       return console.log("resize::" + $(window).width());
     });
-    return $('div#top3').load("/newsroom/top3/");
+    if (document.location.href === "http://localhost:3000/" || document.location.href === "http://msudenver.edu/") {
+      return $('div#top3').load("/newsroom/top3/");
+    }
   });
 
 }).call(this);

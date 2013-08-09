@@ -220,3 +220,10 @@ img {
 .firefox .triangle {
   display: none;
 }
+.toolbar {
+  background-color: #ffffff;
+}
+.toolbar ul li:hover {
+  background-color: #ecf0f1;
+  color: #ffffff;
+}

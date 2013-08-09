@@ -55,5 +55,5 @@ $ ->
 	# loads top 3 stories from the newsroom
 	# TODO: include check for homepage only 
 	# navigator.location === '/'
-	$('div#top3').load("/newsroom/top3/");
+	if document.location.href is "http://localhost:3000/" or document.location.href is "http://msudenver.edu/" then $('div#top3').load "/newsroom/top3/"
 
