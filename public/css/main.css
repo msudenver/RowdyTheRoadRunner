@@ -216,6 +216,7 @@ img {
 }
 .no-csstransforms .triangle,
 .no-csstransforms3d .triangle,
-.no-csstransitoins .triangle {
+.no-csstransitoins .triangle,
+.firefox .triangle {
   display: none;
 }

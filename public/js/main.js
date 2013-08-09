@@ -30,6 +30,9 @@
       teaserBase: "http://www.trumba.com/calendars/msudenver-events-calendars",
       spudId: "homepage_events"
     });
+    Modernizr.addTest('firefox', function() {
+      return !!navigator.userAgent.match(/firefox/i);
+    });
     $(window).resize(function() {
       return console.log("resize::" + $(window).width());
     });

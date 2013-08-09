@@ -7,6 +7,7 @@ $ ->
 
 	localUrl = document.location.protocol + "//" + document.location.host + "/templates/" 
 	console.warn("template loading from : #{localUrl}")
+
 	# notify if html imports have been loaded
 	$(window).on 'HTMLImportsLoaded', (e) ->
 
@@ -41,6 +42,11 @@ $ ->
 				teaserBase : "http://www.trumba.com/calendars/msudenver-events-calendars",
 				spudId : "homepage_events"
 	})
+
+	# detect firefox and add .firefox class to document
+	Modernizr.addTest 'firefox', ->
+		!!navigator.userAgent.match(/firefox/i);
+
 
 	# resize function remove for pruction
 	$(window).resize ->
