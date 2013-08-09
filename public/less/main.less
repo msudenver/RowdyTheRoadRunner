@@ -1,6 +1,7 @@
 @import "./utils/colors.less";
 @import "./utils/functions.less" ;
 
+
 // data-href
 // pointer-
 // --------
@@ -11,6 +12,10 @@
 
 // HEADERS
 // --------
+
+h1, h2, h3, h4, h5, h6 {
+font-family: Open Sans;
+}
 
 h1 {
   color: @asbestos;
@@ -25,7 +30,6 @@ h2 {
   font-size: 2em;
   font-weight: 400;
   margin-bottom: 2px;
-  text-transform: uppercase;
 }
 
 h3 {
@@ -54,19 +58,20 @@ h6 {
 }
 
 
-
 // BODY AND LINK COLORS
 // -------- * ---------
 
 body {
   margin: 0;
-  font-family: cabin, source-sans-pro, muli, josefin-sans, open-sans, sans-serif;
+  font-family: Open Sans, helvetica, arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
   // background-image: url(/assets/img/background.jpg);
   /* !remark: body background image loaded via data url scheme */
 }
+
+
 
 a {
   color: @contentlink;
@@ -103,6 +108,7 @@ a:focus {
 	color: @asbestos;
 	font-size: 1.5em;
 }
+
 
 .msudenver_logo img{
   	width: 350px;
@@ -173,7 +179,7 @@ a:focus {
   padding: 9px; border: 1px solid #ececec;
 }
 
-hr {
+.HighlightBox hr {
   border : 0;
   height : 0.059em;
   background-color: @white;
@@ -221,6 +227,16 @@ hr {
 }
 
 
+// TRUMBA CALENDAR STYLES
+// --------- * ----------
+
+.trumba .twDescription{
+
+  text-align: center;
+  
+}
+
+
 // BOOTSTRAP OVER-WRITES
 // --------- * ---------
 .form-control{
@@ -263,14 +279,15 @@ img{
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-// @media queries
-// --------------
+// 
+// MODERNIZR*
+// ----------
 
-// /* Smartphones (portrait) ----------- */
-// @media only screen 
-// and (max-width : 320px) {
-//     /* Styles */
-//   .navbar-inverse .nav > li:first-child{
-//       margin-top: 3.10em;
-//   }
-// }
+.no-csstransforms, .no-csstransforms3d,
+.no-csstransitoins{
+  .triangle{
+    display:none;
+  }
+}
+
+

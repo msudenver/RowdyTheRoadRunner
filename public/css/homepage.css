@@ -93,6 +93,12 @@ p.actionHeader {
     font-size: 21px;
   }
 }
+.testimonial img {
+  width: 100%;
+  max-width: 100%;
+  /*  ie */
+
+}
 .navbar-inverse {
   padding-left: 10%;
   padding-right: 10%;
@@ -114,9 +120,6 @@ p.actionHeader {
 .input-group-btn {
   padding-top: 0.355em;
   float: left;
-}
-.toolbar {
-  background-color: #ffffff;
 }
 .mainNavigation {
   margin-right: auto;
@@ -145,21 +148,37 @@ button.btn.btn-default.dropdown-toggle {
 }
 .navbar-search-form {
   padding-top: 0.5em;
+  padding-left: 3.5em;
 }
 .actionHeader.news {
   background-color: #3498DB;
 }
+@font-face {
+  
+}
+.actionHeader.applynow,
+.actionHeader.give {
+  font-size: 3.15em;
+  text-transform: uppercase;
+  letter-spacing: 0.0398885em;
+  font-stretch: condensed;
+  vertical-align: top;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  color: white;
+  padding-top: 10%;
+  height: 150px;
+}
 .actionHeader.applynow {
-  font-size: 1.5em;
-  background-color: #1ABC9C;
+  padding-top: 25%;
+  font-size: 3.8em;
 }
 .actionHeader.give {
-  font-size: 1.111em;
   background-color: #2980B9;
 }
 .actionHeader.events {
   background-color: #F39C12;
 }
-.testimonial img {
-  width: 100%;
+.apply_and_giving_well {
+  padding-bottom: 0.5em;
 }

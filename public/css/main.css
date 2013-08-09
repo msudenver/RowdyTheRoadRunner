@@ -10,6 +10,14 @@
 .clickable {
   cursor: pointer;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Open Sans;
+}
 h1 {
   color: #7f8c8d;
   font-size: 2.2em;
@@ -22,7 +30,6 @@ h2 {
   font-size: 2em;
   font-weight: 400;
   margin-bottom: 2px;
-  text-transform: uppercase;
 }
 h3 {
   color: #2980b9;
@@ -49,7 +56,7 @@ h6 {
 }
 body {
   margin: 0;
-  font-family: cabin, source-sans-pro, muli, josefin-sans, open-sans, sans-serif;
+  font-family: Open Sans, helvetica, arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
@@ -135,7 +142,7 @@ a:focus {
   padding: 9px;
   border: 1px solid #ececec;
 }
-hr {
+.HighlightBox hr {
   border: 0;
   height: 0.059em;
   background-color: #ffffff;
@@ -171,6 +178,9 @@ hr {
 #content description {
   font-size: 10px;
 }
+.trumba .twDescription {
+  text-align: center;
+}
 .form-control {
   width: 80%;
 }
@@ -203,4 +213,9 @@ img {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.no-csstransforms .triangle,
+.no-csstransforms3d .triangle,
+.no-csstransitoins .triangle {
+  display: none;
 }
