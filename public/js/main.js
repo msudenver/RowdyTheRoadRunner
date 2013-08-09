@@ -6,7 +6,8 @@
 
     var localUrl;
 
-    localUrl = document.location.origin + "/templates/";
+    localUrl = document.location.protocol + "//" + document.location.host + "/templates/";
+    console.warn("template loading from : " + localUrl);
     $(window).on('HTMLImportsLoaded', function(e) {
       var footer_template, quickTools_template, templates;
 

@@ -5,8 +5,8 @@ $ ->
 	###	REMOVE FOR PRODUCTION, DEV ONLY	###
 	# get document's origin and append path to templates for window.HTMLImport obj lookup
 
-	localUrl = document.location.origin + "/templates/" 
-
+	localUrl = document.location.protocol + "//" + document.location.host + "/templates/" 
+	console.warn("template loading from : #{localUrl}")
 	# notify if html imports have been loaded
 	$(window).on 'HTMLImportsLoaded', (e) ->
 
