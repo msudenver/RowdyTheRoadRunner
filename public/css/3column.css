@@ -86,4 +86,10 @@ li.active > a {
   THREECOLUMNRIGHT OVER-WRITES
   ----------- * --------------
 
-*/
+*/.threeColumnRight .HighlightBox {
+  margin: 0 0 1em 0;
+  background: #f39c12;
+  /* orange */
+
+  zoom: 1;
+}
