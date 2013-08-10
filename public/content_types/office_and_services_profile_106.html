@@ -1,20 +1,53 @@
 <!-- Edited by MGW 08-09-13 UPDATED FOR 2013 Re-Design -->
-<div>
-	<div class="col-6">
-		<p><strong><t4 type="content" name="Internal Site" output="normal" modifiers="nav_sections" /></strong></p>
-	</div>
-	<div class="col-3">
-		<p>
-			<t4 type="content" name="Campus Building" output="normal" modifiers="htmlentities" />-
-			<t4 type="content" name="Office Location" output="normal" modifiers="htmlentities" />
-		</p>
-		<p>
-			Box <t4 type="content" name="Campus Box Number" output="normal" modifiers="htmlentities" />
-		</p>
-	</div>
-	<div class="col-3">
-		<p>Phone: <t4 type="content" name="Phone" output="normal" modifiers="htmlentities" /></p>
-		<p>Fax: <t4 type="content" name="Fax" output="normal" modifiers="htmlentities" /></p>
-	</div>
-	<hr align="center" size=".4" color="gray" width="100%">
-</div>
+<div id="results">
+<table class="table table-hover atoz">
+			<thead>
+				<tr>
+					<th class="department">Department</th>
+					<th>Box Number,
+						Office Location</th>
+					<th>Phone/Fax</th>
+				</tr>
+			</thead>
+		<tbody>
+			
+			
+<!--Letters-->				
+			<tr>
+				<td class="letter">
+					<a name="A"></a>
+					<h2>A</h2>
+					<a href="#top"><p>back to top</p></a>	
+				</td>
+			</tr>			
+<!--Office-->			
+			
+			<tr>
+				<td>
+					<strong>
+						<t4 type="content" name="Internal Site" output="normal" modifiers="nav_sections" />
+					</strong>
+				</td>
+				<td>
+					<p>
+						<t4 type="content" name="Campus Building" output="normal" modifiers="htmlentities" />-
+						<t4 type="content" name="Office Location" output="normal" modifiers="htmlentities" />
+					</p>
+					<p>Box
+						<t4 type="content" name="Campus Box Number" output="normal" modifiers="htmlentities" />
+					</p>
+				</td>
+				<td>
+					<p>Phone:
+						<t4 type="content" name="Phone" output="normal" modifiers="htmlentities" />
+					</p>
+					<p>Fax:
+						<t4 type="content" name="Fax" output="normal" modifiers="htmlentities" />
+					</p>
+				</td>
+			</tr>
+			
+<!--Innsert to close table-->
+	</tbody>
+</table>
+	</div><!--id.results closing div-->
