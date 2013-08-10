@@ -37,16 +37,19 @@ $ ->
 
 	# adds Trumba spud to Homepage events <div>	
 	$Trumba.addSpud({
-				webName: "msudenver-events-calendars",
-				spudType : "upcoming" ,
-				teaserBase : "http://www.trumba.com/calendars/msudenver-events-calendars",
-				spudId : "homepage_events"
+		webName: "msudenver-events-calendars",
+		spudType : "upcoming" ,
+		teaserBase : "http://www.trumba.com/calendars/msudenver-events-calendars",
+		spudId : "homepage_events"
 	})
 
 	# detect firefox and add .firefox class to document
 	Modernizr.addTest 'firefox', ->
 		!!navigator.userAgent.match(/firefox/i);
 
+	if !!navigator.userAgent.match(/firefox/i) is true 
+		$('.triangle').css "display", "none"
+		
 
 	# resize function remove for pruction
 	$(window).resize ->
