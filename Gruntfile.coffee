@@ -5,6 +5,7 @@ module.exports = (grunt) ->
 
 	# css files to be minified and combined
 	# ignore background-img.css
+
 	cssFiles = ['public/css/*.css', 'public/css/utils/*.css','!public/css/background-img.css','public/css/vendor/*.css']
 
 	grunt.initConfig({
@@ -12,6 +13,7 @@ module.exports = (grunt) ->
 			  
 		cssmin : {
 			options : {
+				expand: true,
 				# banner + timestapmt
 				banner : '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy")%> */\n'
 			},
@@ -23,12 +25,17 @@ module.exports = (grunt) ->
 			}
 		}
 
+
 	})
 	# load uglify plugin
 	grunt.loadNpmTasks('grunt-contrib-cssmin')
+	grunt.loadNpmTasks('grunt-contrib-uglify')
+
+
+    # cssmin task
+	grunt.registerTask('buildcss', ['cssmin']);
+	grunt.registerTask('buildjs',  ['uglify']);
 
 	# default task(s)
 	grunt.registerTask('default',  ['cssmin']);
-    # cssmin task
-	grunt.registerTask('buildcss', ['cssmin']);
-
+	

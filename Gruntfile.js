@@ -8,6 +8,7 @@
       pkg: grunt.file.readJSON('package.json'),
       cssmin: {
         options: {
+          expand: true,
           banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy")%> */\n'
         },
         combine: {
@@ -18,8 +19,10 @@
       }
     });
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.registerTask('default', ['cssmin']);
-    return grunt.registerTask('buildcss', ['cssmin']);
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.registerTask('buildcss', ['cssmin']);
+    grunt.registerTask('buildjs', ['uglify']);
+    return grunt.registerTask('default', ['cssmin']);
   };
 
 }).call(this);

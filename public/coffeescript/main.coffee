@@ -48,7 +48,7 @@ $ ->
 		!!navigator.userAgent.match(/firefox/i);
 
 	if !!navigator.userAgent.match(/firefox/i) is true 
-		$('.triangle').css "display", "none"
+	then $('.triangle').css "display", "none"
 		
 
 	# resize function remove for pruction
