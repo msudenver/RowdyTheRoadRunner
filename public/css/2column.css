@@ -69,7 +69,12 @@ ul[class^="multilevel-linkul-"] {
 .multilevel-linkul-5 {
   background-color: #55a5d9;
 }
-.nav-header {
+/*
+    
+  BOOTSTRAP OVER-WRITES
+  --------- * ---------
+
+*/.nav-header {
   color: #ffffff;
 }
 li.active > a {
@@ -79,3 +84,4 @@ li.active > a {
 .bannerImage {
   width: 100%;
 }
+/* MEDIA @ QUERIES */
