@@ -93,7 +93,7 @@
   max-width: 100%;
   padding: 5px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 1.5em;
 }
 /***************Accordion Group*********************/
 .accordion-group {
@@ -113,6 +113,10 @@
 }
 /***************Facebook Like*********************/
 .fb-like-box {
+  margin-bottom: 1.5em;
+}
+/***************Department Social Links*********************/
+.depsocial {
   margin-bottom: 1.5em;
 }
 /***************Carousel *********************/
