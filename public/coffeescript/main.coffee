@@ -33,7 +33,7 @@ $ ->
 	# Turns elements with class .clickable into links
 	$(".clickable").click (event) ->
 		event.preventDefault()
-		if $(this).data().href then window.open( $(this).data().href ,"_self")
+		if $(this).data().href then window.open($(this).data().href ,"_self")
 
 	# adds Trumba spud to Homepage events <div>	
 	$Trumba.addSpud({
@@ -47,10 +47,9 @@ $ ->
 	Modernizr.addTest 'firefox', ->
 		!!navigator.userAgent.match(/firefox/i);
 
-	if !!navigator.userAgent.match(/firefox/i) is true 
-	then $('.triangle').css "display", "none"
-		
-
+	# console.log "some other funciton context"
+	# if $('.firefox').length then $('div.triangle').css "display", "none"
+	
 	# resize function remove for pruction
 	$(window).resize ->
 		console.log("resize::"+ $(window).width());
