@@ -1,16 +1,9 @@
 module.exports = (grunt) ->
-	# grunt things...
+	# grunt things... 
+	# automation rules...
+	T4TAGS = grunt.file.readJSON('t4tags_list.json');
 	grunt.initConfig {
-		pkg : grunt.file.readJSON('package.json'),
-		uglify : {
-			options : {
-				banner : '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-			},
-			build : {
-				src : '<%= banner %>src/<%= pkg.name %>.js',
-				dest: 'build/<%= pkg.name %>.min.js'
-			}
-		}
+		pkg : grunt.file.readJSON('package.json')
 	}
 	# load uglify plugin
 	grunt.loadNpmTasks('grunt-contrib-uglify');
