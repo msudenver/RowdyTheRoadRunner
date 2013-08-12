@@ -1,46 +1,32 @@
 <!--text/shtml-->
-<h4><t4 type="content" name="Publish Date" output="normal" modifiers="" date_format="MMMM d, yyyy"  /></h4>
-<h3><a href="<t4 type="content" name="Name" output="fulltext" modifiers="" use-element="true" filename-element="Name" />"><t4 type="content" name="Headline" output="normal" modifiers="htmlentities"  /></a></h3>
+<h4><t4 type="content" name="Publish Date" output="normal" modifiers="" date_format="MMMM d, yyyy" /></h4>
+<h3><a href="<t4 type='content' name='Name' output='fulltext' modifiers="" use-element='true' filename-element='Name' />"><t4 type="content" name="Headline" output="normal" modifiers="htmlentities"  /></a></h3>
 <t4 type="content" output="selective-output" modifiers="htmlentities" name="Subhead" format="<h4>$value</h4>" />
-<p><t4 type="content" name="Intro Text" output="normal" modifiers="htmlentities"  /></p>
+<p><t4 type="content" name="Intro Text" output="normal" modifiers="htmlentities" /></p>
 <hr align="center" size=".4"  color="silver" width="100%"/>
 
 
-<!--text/list-->
-<h4><t4 type="content" name="Publish Date" output="normal" modifiers="" date_format="MMMM d, yyyy"  /></h4>
-<h3><a href="<t4 type="content" name="Name" output="shtml" modifiers="" use-element="true" filename-element="Name" />"><t4 type="content" name="Headline" output="normal" modifiers="htmlentities"  /></a></h3>
-<p><t4 type="content" name="Intro Text" output="normal" modifiers="htmlentities"  /></p>
-<hr align="center" size=".4"  color="silver" width="100%">
-<br>
-
-
 <!--text/sfulltext-->
-<style>
-div > img.border {max-width: 300px}
-</style>
 <!--
   <PageMap>
     <DataObject type="publication">
-      <Attribute name="releasedate" value="<t4 date_format="MMMM d, yyyy" type="content" name="Release Date" output="normal" modifiers="" />"/>
-      <Attribute name="category" value="<t4 type="content" output="selective-output" modifiers="htmlentities, nl2br" name="Category" format="$value" />"/>
+      <Attribute name="releasedate" value="<t4 type="content" date_format="MMMM d, yyyy" name="Release Date" output="normal" modifiers="" />"/>
+      <Attribute name="category" value="<t4 type="content" output="normal" modifiers="htmlentities, nl2br" name="Category"/>"/>
     </DataObject>
   </PageMap>
 -->
-
-
-
-<h4><t4 type="content" name="Publish Date" output="normal" modifiers="" date_format="MMMM d, yyyy"  /></h4>
+<h4><t4 type="content" name="Publish Date" output="normal" modifiers="" date_format="MMMM d, yyyy" /></h4>
 <t4 type="content" output="selective-output" modifiers="htmlentities" name="Headline" format="<h2>$value</h2>" />
 <t4 type="content" output="selective-output" modifiers="htmlentities" name="Subhead" format="<h3>$value</h3>" />
 <p><a href="mailto:<t4 type="content" name="Authors Email Address" output="normal" modifiers="encode_emails"  />"><t4 type="content" output="selective-output" modifiers="htmlentities, nl2br" name="Author" format="By $value" /></a></p> 
 
-<div style="float: right; padding: 15px; max-width: 300px">
-<t4 type="content" name="Image" output="normal" modifiers=""/>
+<div class="newsimage">
+<t4 type="content" name="Image" modifiers=""/>
 </div>
 
 <t4 type="content" output="inline" modifiers="medialibrary, nav_sections" name="Content" />
 
-<div id="Pagination">
+<div class="Pagination">
 <t4 type="navigation" id="665"/>
 </div>
 
@@ -53,11 +39,9 @@ div > img.border {max-width: 300px}
 
 
 <!--text/homepagelist-->
-<div class="newsItem">
-<h4><a href="<t4 type="content" name="Name" output="fulltext" modifiers="" use-element="true" filename-element="Name" />"><t4 type="content" name="Headline" output="normal" modifiers="htmlentities"  /></a></h4>
-<br>  
+<div>
+<h5><a href="<t4 type="content" name="Name" output="fulltext" modifiers="" use-element="true" filename-element="Name" />"><t4 type="content" name="Headline" output="normal" modifiers="htmlentities"  /></a></h5> 
 <p><t4 type="content" name="Publish Date" output="normal" modifiers="" date_format="MMMM d, yyyy"  /> - <t4 type="content" name="Intro Text" output="normal" modifiers="htmlentities"/></p>
-<br>
 <hr align="center" size=".4" color="silver" width="90%"/>
 </div>
 
@@ -69,57 +53,21 @@ div > img.border {max-width: 300px}
 </a>
 </div>
 
-
-<!--text/email-->
-<h4><t4 type="meta" meta="publish_date" date_format="MMMM d, yyyy" /></h4>
-<a href="<t4 type="content" name="Name" output="fulltext" modifiers="" use-element="true" filename-element="Name" />"><h3><t4 type="content" name="Headline" output="normal" modifiers="htmlentities"  /></h3></a>
-<t4 type="content" output="selective-output" modifiers="htmlentities" name="Subhead" format="<h4>$value</h4>" />
-<p><t4 type="content" name="Intro Text" output="normal" modifiers="htmlentities"  /></p>
-<hr align="center" size=".4"  color="silver" width="100%">  
-
-
-<!--text/feature-->
-<div class="contents">
-<a href='<t4 type="content" name="Name" output="fulltext" modifiers="" use-element="true" filename-element="Name" />'> 
-<t4 type="content" name="Image" output="normal" modifiers=""/>  
-<h4 class="promo_date"><t4 type="content" name="Publish Date" output="normal" modifiers="" date_format="MMMM d, yyyy"  /></h4.promo_date>
-<h2><t4 type="content" name="Headline" output="normal" modifiers="htmlentities"/></h2>
-<h4><t4 type="content" name="Intro Text" output="normal"/></h4>  
-  </a>
-</div>
-
-
-
-
-<!--text/connectu-->
-<h4><t4 type="content" name="Publish Date" output="normal" modifiers="" date_format="MMMM d, yyyy"  /></h4>
-<h3><a href="<t4 type="content" name="Name" output="fulltext" modifiers="" use-element="true" filename-element="Name" />" target="_blank"><t4 type="content" name="Headline" output="normal" modifiers="htmlentities"  /></a></h3>
-<t4 type="content" output="selective-output" modifiers="htmlentities" name="Subhead" format="<h4>$value</h4>" />
-<p><t4 type="content" name="Intro Text" output="normal" modifiers="htmlentities"  /></p>
-<hr align="center" size=".4"  color="silver" width="100%"/>
-
-
-
-
-
 <!--text/Slider-->
-
 <div class="item">
 	<a href='<t4 type="content" name="Name" output="fulltext" modifiers="" use-element="true" filename-element="Name" />'> 
 	<t4 type="content" name="Image" output="normal" modifiers=""/>
 	</a>
 	<div class="container">
 		<div class="carousel-caption">
-			<!-- INSERT T4 TAG FOR DATE HERE -->
 			<h4 class="promo_date">
 				<t4 type="content" name="Publish Date" output="normal" modifiers="" date_format="MMMM d, yyyy"  />
 			</h4>
-			<!-- INSERT T4 TAG FOR HEADLINE HERE -->
-		            <h2><a href='<t4 type="content" name="Name" output="fulltext" modifiers="" use-element="true" filename-element="Name" />'>
+		         <h2>
+           			<a href='<t4 type="content" name="Name" output="fulltext" modifiers="" use-element="true" filename-element="Name" />'>
            				<t4 type="content" name="Headline" output="normal" modifiers="htmlentities"/>
-                              </a>
+                         </a>
 		            </h2>
-		            <!-- INSERT T4 TAG FOR TEASER HERE -->
 			<h4 class="lead"><a href='<t4 type="content" name="Name" output="fulltext" modifiers="" use-element="true" filename-element="Name" />'>
 				<t4 type="content" name="Intro Text" output="normal"/>
                           </a>
