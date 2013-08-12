@@ -62,6 +62,9 @@ body {
   color: #333333;
   /* !remark: body background image loaded via data url scheme */
 
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 1;
 }
 a {
   color: #1b557a;

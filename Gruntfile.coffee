@@ -11,8 +11,7 @@ module.exports = (grunt) ->
 	# css files to be minified and combined
 	# ignore background-img.css
 
-	cssFiles = ['public/css/*.css', 'public/css/utils/*.css',
-	'!public/css/background-img.css','public/css/vendor/*.css'];
+	cssFiles = ['public/css/*.css', 'public/css/utils/*.css','public/css/vendor/*.css'];
 
 	htmlTemplateFiles = ['public/homepage.html','public/onecolumn.html'
 	,'public/twocolumn.html', 'public/threecolumn.html'];

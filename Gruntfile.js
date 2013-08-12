@@ -4,7 +4,7 @@
     var cssFiles, dateFormat, htmlTemplateFiles;
 
     dateFormat = require('dateformat');
-    cssFiles = ['public/css/*.css', 'public/css/utils/*.css', '!public/css/background-img.css', 'public/css/vendor/*.css'];
+    cssFiles = ['public/css/*.css', 'public/css/utils/*.css', 'public/css/vendor/*.css'];
     htmlTemplateFiles = ['public/homepage.html', 'public/onecolumn.html', 'public/twocolumn.html', 'public/threecolumn.html'];
     grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
