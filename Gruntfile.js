@@ -19,10 +19,17 @@
           }
         }
       },
+      uglify: {
+        my_target: {
+          files: {
+            'sm_build/js/main.min.js': ['public/js/main.js']
+          }
+        }
+      },
       watch: {
         scripts: {
           files: cssFiles,
-          tasks: ['cssmin']
+          tasks: ['cssmin', 'uglify']
         }
       },
       "regex-replace": {
@@ -41,7 +48,9 @@
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-regex-replace');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.registerTask('buildcss', ['cssmin']);
+    grunt.registerTask('buildjs', ['uglify']);
     grunt.registerTask('watch-build', ['watch']);
     grunt.registerTask('buildt4tags', ['regex-replace']);
     return grunt.registerTask('default', ['cssmin']);

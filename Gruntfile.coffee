@@ -34,11 +34,20 @@ module.exports = (grunt) ->
 			}
 		},
 
+		# minify js files
+		uglify : {
+			my_target : {
+				files : {
+					'sm_build/js/main.min.js' : ['public/js/main.js']
+				}
+			}
+		}
+
 		# watch routinely for css changes
 		watch : {
 			scripts : {
 				files : cssFiles,
-				tasks : ['cssmin']
+				tasks : ['cssmin', 'uglify']
 			}
 		}
 		# replace- t4 tags task 
@@ -62,9 +71,11 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks('grunt-contrib-cssmin')
 	grunt.loadNpmTasks('grunt-regex-replace')
 	grunt.loadNpmTasks('grunt-contrib-watch')
+	grunt.loadNpmTasks('grunt-contrib-uglify')
 
     # cssmin task
 	grunt.registerTask('buildcss', ['cssmin']);
+	grunt.registerTask('buildjs', ['uglify']);
 	grunt.registerTask('watch-build', ['watch']);
 	grunt.registerTask('buildt4tags', ['regex-replace']);
 
