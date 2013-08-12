@@ -14,6 +14,8 @@ module.exports = (grunt) ->
 	cssFiles = ['public/css/*.css', '!public/css/utils/*.css','!public/css/vendor/*.css',
 	'!public/css/inherit/*.css', 'public/css/utils/contentTypes.css','public/css/utils/tables.css'];
 
+	jsFiles = ['public/js/main.js']
+
 	htmlTemplateFiles = ['public/homepage.html','public/onecolumn.html'
 	,'public/twocolumn.html', 'public/threecolumn.html'];
 
@@ -36,9 +38,12 @@ module.exports = (grunt) ->
 
 		# minify js files
 		uglify : {
+			options : {
+				banner : '/*! <%= pkg.name %> \n JS Baked on <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> */\n\n'
+			}
 			my_target : {
 				files : {
-					'sm_build/js/main.min.js' : ['public/js/main.js']
+					'sm_build/js/main.min.js' : jsFiles
 				}
 			}
 		}
@@ -46,7 +51,7 @@ module.exports = (grunt) ->
 		# watch routinely for css changes
 		watch : {
 			scripts : {
-				files : cssFiles,
+				files : [cssFiles, jsFiles],
 				tasks : ['cssmin', 'uglify']
 			}
 		}
