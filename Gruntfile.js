@@ -4,7 +4,7 @@
     var cssFiles, dateFormat, htmlTemplateFiles;
 
     dateFormat = require('dateformat');
-    cssFiles = ['public/css/*.css', '!public/css/utils/*.css', '!public/css/vendor/*.css'];
+    cssFiles = ['public/css/*.css', '!public/css/utils/*.css', '!public/css/vendor/*.css', '!public/css/inherit/*.css'];
     htmlTemplateFiles = ['public/homepage.html', 'public/onecolumn.html', 'public/twocolumn.html', 'public/threecolumn.html'];
     grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
@@ -36,7 +36,7 @@
       }
     });
     grunt.event.on('watch', function(action, path, target) {
-      return grunt.log.writeln('{#target} : #{path} has been {#action}-ed');
+      return grunt.log.writeln(target + ' : ' + path + ' has been ' + action);
     });
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-regex-replace');

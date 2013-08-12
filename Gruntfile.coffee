@@ -11,7 +11,8 @@ module.exports = (grunt) ->
 	# css files to be minified and combined
 	# ignore background-img.css
 
-	cssFiles = ['public/css/*.css', '!public/css/utils/*.css','!public/css/vendor/*.css'];
+	cssFiles = ['public/css/*.css', '!public/css/utils/*.css','!public/css/vendor/*.css',
+	'!public/css/inherit/*.css'];
 
 	htmlTemplateFiles = ['public/homepage.html','public/onecolumn.html'
 	,'public/twocolumn.html', 'public/threecolumn.html'];
@@ -55,7 +56,7 @@ module.exports = (grunt) ->
 
 	# watch event notifier
 	grunt.event.on 'watch', (action, path, target)  ->
-		grunt.log.writeln('{#target} : #{path} has been {#action}-ed')
+		grunt.log.writeln(target + ' : ' + path + ' has been ' + action)
 
 	# load plug-ins
 	grunt.loadNpmTasks('grunt-contrib-cssmin')
