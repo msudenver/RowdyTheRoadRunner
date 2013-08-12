@@ -92,6 +92,12 @@ a:focus {
   padding-top: 2em;
   padding-bottom: 2em;
 }
+.quick-navbar-responsive-collapse ul li {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
 .breadcrumbs {
   color: #2c3e50;
   margin-bottom: 20px;
@@ -196,6 +202,9 @@ a:focus {
 img {
   max-width: 100%;
 }
+.bannerImage img {
+  width: 100%;
+}
 .container-fluid {
   padding-right: 0;
   padding-left: 0;
@@ -216,6 +225,14 @@ img {
 }
 .no-csstransforms .triangle,
 .no-csstransforms3d .triangle,
-.no-csstransitoins .triangle {
+.no-csstransitoins .triangle,
+.firefox .triangle {
   display: none;
+}
+.toolbar {
+  background-color: #ffffff;
+}
+.toolbar ul li:hover {
+  background-color: #ecf0f1;
+  color: #ffffff;
 }

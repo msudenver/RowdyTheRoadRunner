@@ -3,8 +3,8 @@ exports.index = (req, res) ->
 	# The below 2 lines are required for Cross Domain Communication(Allowing the methods that come as Cross           
 	# Domain Request
 
-	res.header("Access-Control-Allow-Origin", "http://localhost");
-	res.header("Access-Control-Allow-Methods", "GET, POST");
+	# res.header("Access-Control-Allow-Origin", "http://localhost");
+	# res.header("Access-Control-Allow-Methods", "GET, POST");
 	
 
 	console.log(req.url)

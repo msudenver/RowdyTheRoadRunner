@@ -7,6 +7,7 @@ $ ->
 
 	localUrl = document.location.protocol + "//" + document.location.host + "/templates/" 
 	console.warn("template loading from : #{localUrl}")
+
 	# notify if html imports have been loaded
 	$(window).on 'HTMLImportsLoaded', (e) ->
 
@@ -32,16 +33,23 @@ $ ->
 	# Turns elements with class .clickable into links
 	$(".clickable").click (event) ->
 		event.preventDefault()
-		if $(this).data().href then window.open( $(this).data().href ,"_self")
+		if $(this).data().href then window.open($(this).data().href ,"_self")
 
 	# adds Trumba spud to Homepage events <div>	
 	$Trumba.addSpud({
-				webName: "msudenver-events-calendars",
-				spudType : "upcoming" ,
-				teaserBase : "http://www.trumba.com/calendars/msudenver-events-calendars",
-				spudId : "homepage_events"
+		webName: "msudenver-events-calendars",
+		spudType : "upcoming" ,
+		teaserBase : "http://www.trumba.com/calendars/msudenver-events-calendars",
+		spudId : "homepage_events"
 	})
 
+	# detect firefox and add .firefox class to document
+	Modernizr.addTest 'firefox', ->
+		!!navigator.userAgent.match(/firefox/i);
+
+	# console.log "some other funciton context"
+	# if $('.firefox').length then $('div.triangle').css "display", "none"
+	
 	# resize function remove for pruction
 	$(window).resize ->
 		console.log("resize::"+ $(window).width());
@@ -49,5 +57,5 @@ $ ->
 	# loads top 3 stories from the newsroom
 	# TODO: include check for homepage only 
 	# navigator.location === '/'
-	$('div#top3').load("/newsroom/top3/");
+	if document.location.href is "http://localhost:3000/" or document.location.href is "http://msudenver.edu/" then $('div#top3').load "/newsroom/top3/"
 

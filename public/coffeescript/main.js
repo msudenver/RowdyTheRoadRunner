@@ -33,6 +33,9 @@
     Modernizr.addTest('firefox', function() {
       return !!navigator.userAgent.match(/firefox/i);
     });
+    if (!!navigator.userAgent.match(/firefox/i) === true) {
+      $('.triangle').css("display", "none");
+    }
     $(window).resize(function() {
       return console.log("resize::" + $(window).width());
     });

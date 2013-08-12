@@ -117,7 +117,9 @@ a:focus {
 }
 
 
-
+.quick-navbar-responsive-collapse ul li {
+  .animate-all(0.25s);
+}
 
 .breadcrumbs {
    color: @midnightblue;
@@ -258,6 +260,9 @@ a:focus {
 img{
   max-width: 100%;
 }
+.bannerImage img{
+  width: 100%;
+}
 
 .container-fluid {
   padding-right: 0;
@@ -284,10 +289,23 @@ img{
 // ----------
 
 .no-csstransforms, .no-csstransforms3d,
-.no-csstransitoins{
+.no-csstransitoins, .firefox{
   .triangle{
-    display:none;
+    display: none;
   }
 }
 
+// TOOLBAR (quicktools)
+// --------------------
+
+.toolbar{
+  background-color: @white;
+}
+
+.toolbar ul li:hover {
+  background-color: @clouds;
+  // .box-shadow;
+  color: @white;
+  // .animate-all(0.5s);
+}
 
