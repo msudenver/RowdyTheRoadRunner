@@ -15,7 +15,7 @@
         },
         combine: {
           files: {
-            'build/css/main.min.css': cssFiles
+            'sm_build/css/main.min.css': cssFiles
           }
         }
       },
