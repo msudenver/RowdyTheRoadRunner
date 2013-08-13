@@ -189,6 +189,13 @@ a:focus {
 .trumba .twDescription {
   text-align: center;
 }
+.nav-header {
+  color: #ffffff;
+}
+li.active > a {
+  background-color: #ecf0f1 !important;
+  color: black !important;
+}
 .form-control {
   width: 80%;
 }

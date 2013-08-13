@@ -1,6 +1,15 @@
 'use strict';
 
 $ ->
+	# UTILS
+	# -----
+	locate = (url) ->
+		location1 = "http://localhost:3000/"
+		location2 = "http://localhost:8080/"
+		location3 = "http://msudenver.edu/"
+		!!document.location.href.match(/https:\/\/githubo.com/i)
+
+	
 
 	###	REMOVE FOR PRODUCTION, DEV ONLY	###
 	# get document's origin and append path to templates for window.HTMLImport obj lookup
@@ -64,7 +73,7 @@ $ ->
 	# loads top 3 stories from the newsroom
 	# TODO: include check for homepage only 
 	# navigator.location === '/'
-	# if document.location.href is "http://localhost:3000/" or document.location.href is "http://msudenver.edu/" then $('div#top3').load "/newsroom/top3/"
+	# if document.location.href is "http://localhost:3000/" or document.location.url is "http://msudenver.edu/" then $('div#top3').load "/newsroom/top3/"
 	$('div#top3').load "/newsroom/top3/"
 
 
