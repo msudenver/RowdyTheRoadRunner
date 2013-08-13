@@ -15,11 +15,6 @@
   border-radius: 0px;
 }
 /***************HighlightBox *********************/
-.linkcolumn .HighlightBox {
-  margin: 0 0 1em 0;
-  background: #c0392b;
-  zoom: 1;
-}
 .HighlightBox .triangle {
   left: 50%;
   bottom: 0;
@@ -74,6 +69,16 @@
 .HighlightBox-content a {
   color: #ffffff;
   font-size: 1em;
+}
+.linkcolumn .HighlightBox {
+  margin: 0 0 1em 0;
+  background: #c0392b;
+  zoom: 1;
+}
+.threeColumnRight .HighlightBox {
+  margin: 0 0 1em 0;
+  background: #f39c12;
+  zoom: 1;
 }
 /***************Zebra Stripe For Newsroom*********************/
 .story_preview {
