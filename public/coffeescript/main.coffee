@@ -64,7 +64,6 @@ $ ->
 
 
 # Google analytics tracking code 
-	
 `
 	var _gaq = _gaq || []; 
 	_gaq.push(['_setAccount', 'UA-505529-1']); 
