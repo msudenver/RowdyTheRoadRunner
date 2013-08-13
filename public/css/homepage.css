@@ -96,7 +96,7 @@ p.actionHeader {
 .testimonial img {
   width: 100%;
   max-width: 100%;
-  /*  ie */
+  /* ie */
 
 }
 .navbar-inverse {
@@ -153,7 +153,6 @@ button.btn.btn-default.dropdown-toggle {
 .actionHeader.news {
   background-color: #3498DB;
 }
-
 .actionHeader.applynow,
 .actionHeader.give {
   font-size: 3.15em;

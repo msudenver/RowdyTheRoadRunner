@@ -14,6 +14,8 @@ module.exports = (grunt) ->
 	cssFiles = ['public/css/*.css', '!public/css/utils/*.css','!public/css/vendor/*.css',
 	'!public/css/inherit/*.css', 'public/css/utils/contentTypes.css','public/css/utils/tables.css'];
 
+	jsFiles = ['public/js/main.js']
+
 	htmlTemplateFiles = ['public/homepage.html','public/onecolumn.html'
 	,'public/twocolumn.html', 'public/threecolumn.html'];
 
@@ -34,11 +36,23 @@ module.exports = (grunt) ->
 			}
 		},
 
+		# minify js files
+		uglify : {
+			options : {
+				banner : '/*! <%= pkg.name %> \n JS Baked on <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> */\n\n'
+			}
+			my_target : {
+				files : {
+					'sm_build/js/main.min.js' : jsFiles
+				}
+			}
+		}
+
 		# watch routinely for css changes
 		watch : {
 			scripts : {
-				files : cssFiles,
-				tasks : ['cssmin']
+				files : [cssFiles, jsFiles],
+				tasks : ['cssmin', 'uglify']
 			}
 		}
 		# replace- t4 tags task 
@@ -62,9 +76,11 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks('grunt-contrib-cssmin')
 	grunt.loadNpmTasks('grunt-regex-replace')
 	grunt.loadNpmTasks('grunt-contrib-watch')
+	grunt.loadNpmTasks('grunt-contrib-uglify')
 
     # cssmin task
 	grunt.registerTask('buildcss', ['cssmin']);
+	grunt.registerTask('buildjs', ['uglify']);
 	grunt.registerTask('watch-build', ['watch']);
 	grunt.registerTask('buildt4tags', ['regex-replace']);
 
