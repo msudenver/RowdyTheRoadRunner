@@ -36,6 +36,9 @@
     Modernizr.addTest('firefox', function() {
       return !!navigator.userAgent.match(/firefox/i);
     });
+    Modernizr.addTest('sitemager', function() {
+      return document.location.url === "http://localhost:3000" || document.location.url === "http://localhost:8080";
+    });
     $(window).resize(function() {
       return console.log("resize::" + $(window).width());
     });

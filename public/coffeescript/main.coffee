@@ -48,6 +48,12 @@ $ ->
 	Modernizr.addTest 'firefox', ->
 		!!navigator.userAgent.match(/firefox/i);
 
+	Modernizr.addTest 'sitemager' , ->
+		# adds check for sitemanager build 
+		document.location.url is "http://localhost:3000" or 
+		document.location.url is "http://localhost:8080"
+				
+
 	# console.log "some other funciton context"
 	# if $('.firefox').length then $('div.triangle').css "display", "none"
 	
