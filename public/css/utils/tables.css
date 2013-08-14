@@ -1,8 +1,38 @@
+/* BEGIN table A to Z*/
+table.atoz {
+  color: #333333;
+  border-width: 1px;
+  border-color: #bdc3c7;
+}
+table.atoz th {
+  padding: 1em;
+  background-color: #2980b9;
+  color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  font-size: 16px;
+}
+table.atoz th.department {
+  width: 40%;
+}
+table.atoz th.phone {
+  width: 30%;
+}
+table.atoz td {
+  padding: 10px;
+  border-bottom: 0.1em;
+  border-color: #95a5a6;
+}
+table.atoz td.letter {
+  width: 100%;
+  border-bottom: none;
+}
 /* BEGIN table Data Table */
 table.datatable {
   color: #333333;
   border-width: 1px;
-  border-color: #666666;
+  border-color: #95a5a6;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
@@ -10,14 +40,14 @@ table.datatable th {
   border-width: 1px;
   padding: 10px;
   border-style: solid;
-  border-color: #666666;
-  background-color: #dedede;
+  border-color: #95a5a6;
+  background-color: #bdc3c7;
 }
 table.datatable td {
   border-width: 1px;
   padding: 10px;
   border-style: solid;
-  border-color: #666666;
+  border-color: #95a5a6;
   background-color: #ffffff;
 }
 /* END table Data Table */
@@ -26,51 +56,47 @@ table.backgroundtable {
   color: #333333;
   padding: 10px;
   border-width: 1px;
-  border-color: #999999;
+  border-color: #bdc3c7;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
 table.backgroundtable th {
-  background-color: #c3dde0;
+  background-color: #ecf0f1;
   border-width: 1px;
   padding: 10px;
   border-style: solid;
-  border-color: #a9c6c9;
+  border-color: #bdc3c7;
 }
 table.backgroundtable tr {
-  background-color: #d4e3e5;
+  background-color: #ecf0f1;
 }
 table.backgroundtable td {
   border-width: 1px;
   padding: 10px;
   border-style: solid;
-  border-color: #a9c6c9;
+  border-color: #ecf0f1;
 }
 /* END table Background Table */
 /* BEGIN table Meetings Table */
 table.meetingstable {
-  padding: 10px;
   color: #333333;
   border-width: 1px;
-  border-color: #999999;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-  width: 90%;
+  border-color: #95a5a6;
 }
 table.meetingstable th {
-  background-color: #0C1F3F;
+  background-color: #2980b9;
   color: #ffffff;
   border-width: 1px;
   padding: 10px;
   border-style: solid;
-  border-color: #a9c6c9;
+  border-color: #95a5a6;
 }
 table.meetingstable tr {
   padding: 10px;
 }
 table.meetingstable td {
   padding: 10px;
-  border-bottom: 0.1em solid #E7E7E6;
+  border-bottom: 0.1em solid #ecf0f1;
 }
 /* END table Meetings Table */
 /* BEGIN table Staff Directory */
@@ -97,14 +123,14 @@ table.staffdirectory tr {
   padding: 10px;
   border-width: 1px;
   border-style: solid;
-  border-color: #999999;
+  border-color: #bdc3c7;
   border-collapse: collapse;
 }
 table.staffdirectory td {
   padding: 10px;
   border-width: 1px;
   border-style: solid;
-  border-color: #999999;
+  border-color: #bdc3c7;
   border-collapse: collapse;
 }
 /* END table Staff Directory */

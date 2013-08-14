@@ -19,7 +19,11 @@
 // --------
 
 h1, h2, h3, h4, h5, h6 {
+<<<<<<< HEAD
+	font-family: Open Sans, helvetica, arial, sans-serif;
+=======
 font-family: Open Sans, helvetica, arial, sans-serif;
+>>>>>>> f01217efae1094cfceba3a7a448e6e8903f6bf9d
 }
 
 h1 {
