@@ -15,6 +15,8 @@ module.exports = (grunt) ->
 	'!public/css/inherit/*.css', 'public/css/utils/contentTypes.css','public/css/utils/tables.css'];
 
 	jsFiles = ['public/js/main.js']
+	csFiles = ['public/coffeescript/*', '/Gruntfile.coffee', 'casperjs_server/app.coffee']
+	lessFiles = ['public/less/*.css', 'public/less/utils/*.less', '!public/less/vendor' ]
 
 	htmlTemplateFiles = ['public/homepage.html','public/onecolumn.html'
 	,'public/twocolumn.html', 'public/threecolumn.html'];
@@ -46,18 +48,37 @@ module.exports = (grunt) ->
 					'sm_build/js/main.min.js' : jsFiles
 				}
 			}
-		}
+		},
+
+		# coffeescript compile task 
+		coffee_build : {
+			options	 : {
+				wrap : true
+			},
+			files : csFiles
+		},
+
+		# less task
+
+		less : {
+			dev : {
+				files : lessFiles		
+			}
+		},
+
 
 		# watch routinely for css changes
 		watch : {
-			scripts : {
-				files : [cssFiles, jsFiles],
-				tasks : ['cssmin', 'uglify']
-			},
-			options :{
-				livereload: true
+			all : {
+				files : [cssFiles, jsFiles, csFiles],
+				tasks : ['cssmin', 'uglify', 'coffee_build', 'less'],
+				options :{
+					# default port 35729, uses livereload chrome browser plug-in
+					livereload: true
+				}
 			}
-		}
+		},
+
 		# replace- t4 tags task 
 		"regex-replace" : {
 			t4tags : {
@@ -80,10 +101,14 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks('grunt-regex-replace')
 	grunt.loadNpmTasks('grunt-contrib-watch')
 	grunt.loadNpmTasks('grunt-contrib-uglify')
+	grunt.loadNpmTasks('grunt-coffee-build')
+	grunt.loadNpmTasks('grunt-contrib-less')
 
     # cssmin task
 	grunt.registerTask('buildcss', ['cssmin']);
 	grunt.registerTask('buildjs', ['uglify']);
+	grunt.registerTask('buildcs', ['coffee_build']);
+	grunt.registerTask('buildless', ['less']);  ####
 	grunt.registerTask('watch-build', ['watch']);
 	grunt.registerTask('buildt4tags', ['regex-replace']);
 

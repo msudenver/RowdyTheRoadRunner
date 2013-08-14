@@ -35,6 +35,7 @@
           files: [cssFiles, jsFiles],
           tasks: ['cssmin', 'uglify']
         },
+        files: ['sm_build/'],
         options: {
           livereload: true
         }
