@@ -3,18 +3,21 @@
 $ ->
 	# UTILS
 	# -----
-	locate = (url) ->
-		location1 = "http://localhost:3000/"
-		location2 = "http://localhost:8080/"
-		location3 = "http://msudenver.edu/"
-		!!document.location.href.match(/https:\/\/githubo.com/i)
+	
+	# location1 = "http://localhost:3000/"
+	# location2 = "http://localhost:8080/"
+	# location3 = "http://msudenver.edu/"
+	# location4 = "http://msudenver.edu/"
 
+	# locate = (url) ->
+	# 	!!url.match(/https:\/\/location3/i)
+
+	# console.log "locate function returns :: #{locate(location2)}"
 	
 
 	###	REMOVE FOR PRODUCTION, DEV ONLY	###
 	# get document's origin and append path to templates for window.HTMLImport obj lookup
 	if document.location.origin is "http://localhost:3000"
-		console.log "localhost"
 		localUrl = document.location.protocol + "//" + document.location.host + "/templates/" 
 		console.warn("template loading from : #{localUrl}")
 
@@ -57,10 +60,10 @@ $ ->
 	Modernizr.addTest 'firefox', ->
 		!!navigator.userAgent.match(/firefox/i);
 
-	Modernizr.addTest 'sitemager' , ->
+	Modernizr.addTest 'sitemanager' , ->
 		# adds check for sitemanager build 
-		document.location.url is "http://localhost:3000" or 
-		document.location.url is "http://localhost:8080"
+		document.location.host is not "localhost:3000" or 
+		document.location.host is not "localhost:8080"
 				
 
 	# console.log "some other funciton context"
@@ -71,9 +74,6 @@ $ ->
 		console.log("resize::"+ $(window).width());
 
 	# loads top 3 stories from the newsroom
-	# TODO: include check for homepage only 
-	# navigator.location === '/'
-	# if document.location.href is "http://localhost:3000/" or document.location.url is "http://msudenver.edu/" then $('div#top3').load "/newsroom/top3/"
 	$('div#top3').load "/newsroom/top3/"
 
 
