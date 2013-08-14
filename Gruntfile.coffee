@@ -14,6 +14,7 @@ module.exports = (grunt) ->
 	cssFiles = ['public/css/*.css', '!public/css/utils/*.css','!public/css/vendor/*.css',
 	'!public/css/inherit/*.css', 'public/css/utils/contentTypes.css','public/css/utils/tables.css'];
 
+	htmlFiles = ['sm_build/*.html']
 	jsFiles = ['public/js/main.js']
 	csFiles = ['public/coffeescript/*', '/Gruntfile.coffee', 'casperjs_server/app.coffee']
 	lessFiles = ['public/less/*.css', 'public/less/utils/*.less', '!public/less/vendor' ]
@@ -70,7 +71,7 @@ module.exports = (grunt) ->
 		# watch routinely for css changes
 		watch : {
 			all : {
-				files : [cssFiles, jsFiles, csFiles],
+				files : [cssFiles, jsFiles, csFiles, htmlFiles],
 				tasks : ['cssmin', 'uglify', 'coffee_build', 'less'],
 				options :{
 					# default port 35729, uses livereload chrome browser plug-in
