@@ -34,6 +34,9 @@
         scripts: {
           files: [cssFiles, jsFiles],
           tasks: ['cssmin', 'uglify']
+        },
+        options: {
+          livereload: true
         }
       },
       "regex-replace": {

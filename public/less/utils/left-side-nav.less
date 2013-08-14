@@ -5,41 +5,63 @@
 	margin-bottom: 2em;
 	background-color: @level-0;
 	color: @white;
-	width: 100%;
-}
 
-.sidebar-nav li, .sidebar-nav a {
-	line-height:1.5em;
-	padding-left:0.33em;
-	color: @white;
-	display:block;
 }
+.sidebar-nav ul li{
+	list-style-type: none;
+}
+.sidebar-nav ul li{
+	list-style-type: none;
+}
+.currentbranch0{
+	// padding: 10px 15px;
+	
+}
+.sidebar-nav > li > a {
+	// position: relative;
+	
 
-.sidebar-nav li a{
+}
+.sidebar-nav li a:hover{
+	position: relative;
 	padding: 10px 15px;
+	color: @level-1;
+
+}
+.sidebar-nav li:after{
+	// position: block;
+	.animate-all(0.25s);
+}
+.sidebar-nav li a{
+	display:block;
+	line-height:1em;
+	color: @white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	text-decoration: none;
+}
+.sidebar-nav li{
 	height: 100%;
 	width: 100%;
+	padding-top: 0;
+	padding-bottom: 0;
 
 }
 .sidebar-nav li a:hover {
-	margin: 0 auto;
-	background-color: red;
-	height: 100%;
-	width: 100%;
-	text-decoration: none;
-	color: @white;
-	padding: 10px 15px;
-	.animate-all(0.55s);
+	background-color: @white;	
+	.animate-all(0.25s);
 	
 }
 
-.sidebar-nav li a:after{
+.sidebar-nav li a:after, a:hover{
 	color: @white;
-	
 }
 
-ul[class^="multilevel-linkul-"] li{
-	padding: 10px 10px;
+
+ul[class^="multilevel-linkul-"] li,a{
+	// line-height:1em;
+
 }
 
 .multilevel-linkul-0{

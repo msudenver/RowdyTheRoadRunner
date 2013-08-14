@@ -36,7 +36,7 @@
       return !!navigator.userAgent.match(/firefox/i);
     });
     Modernizr.addTest('sitemanager', function() {
-      return document.location.host === !"localhost:3000" || document.location.host === !"localhost:8080";
+      return !!document.location.host.match(/sitemanager.msudenver.edu/i) || !!document.location.host.match(/msudenver.edu/i);
     });
     $(window).resize(function() {
       return console.log("resize::" + $(window).width());

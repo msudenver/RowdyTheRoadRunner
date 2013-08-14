@@ -53,6 +53,9 @@ module.exports = (grunt) ->
 			scripts : {
 				files : [cssFiles, jsFiles],
 				tasks : ['cssmin', 'uglify']
+			},
+			options :{
+				livereload: true
 			}
 		}
 		# replace- t4 tags task 

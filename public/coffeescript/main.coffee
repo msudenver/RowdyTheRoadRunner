@@ -62,8 +62,7 @@ $ ->
 
 	Modernizr.addTest 'sitemanager' , ->
 		# adds check for sitemanager build 
-		document.location.host is not "localhost:3000" or 
-		document.location.host is not "localhost:8080"
+		!!document.location.host.match(/sitemanager.msudenver.edu/i) or !!document.location.host.match(/msudenver.edu/i)
 				
 
 	# console.log "some other funciton context"
