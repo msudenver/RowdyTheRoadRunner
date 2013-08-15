@@ -33,9 +33,13 @@
         options: {
           wrap: true
         },
+<<<<<<< HEAD
         files: coffeeFiles
       },
       less: {
+=======
+        files: ['sm_build/'],
+>>>>>>> remotes/upstream/tables
         options: {
           paths: ['public/less']
         },

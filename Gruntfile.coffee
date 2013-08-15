@@ -75,14 +75,21 @@ module.exports = (grunt) ->
 
 		# watch routinely for css changes
 		watch : {
-			all : {
-				# files : [cssFiles, jsFiles, coffeeFiles, htmlFiles, lessFiles],
-				files : [cssFiles, jsFiles, coffeeFiles],
-				# tasks : ['cssmin', 'uglify', 'coffee_build', 'less'],
-				tasks : ['cssmin', 'uglify', 'coffee_build'],
-				options :{
-					# default port 35729, uses livereload chrome browser plug-in
-					livereload: false
+			scripts : {
+				files : [cssFiles, jsFiles],
+				tasks : ['cssmin', 'uglify']
+			},
+			options :{
+				livereload: 8080
+			}
+		}
+		# replace- t4 tags task 
+		"regex-replace" : {
+			t4tags : {
+				src : htmlTemplateFiles,
+				actions : {
+					name : "t4media", 
+					search : new RegExp()
 				}
 			}
 		}
