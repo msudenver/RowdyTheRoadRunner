@@ -23,6 +23,8 @@
     "grunt-contrib-cssmin": "~0.6.1",
     "grunt-regex-replace": "~0.2.5",
     "grunt-contrib-watch": "~0.5.1",
-    "dateformat": "~1.0.6-1.2.3"
+    "dateformat": "~1.0.6-1.2.3",
+    "grunt-coffee-build": "0.0.6",
+    "grunt-contrib-less": "~0.7.0"
   }
 }

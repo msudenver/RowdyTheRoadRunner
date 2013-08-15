@@ -15,6 +15,8 @@ exports.index = (req, res) ->
 		when "/2col" then res.render("twocol")
 		when "/3col" then res.render("threecol")
 		when "/1col" then res.render("onecol")
+		# when "/sm_build" then res.send("test")
+		when "/sm_build" then res.send("test")
 
 # exports.twocol = (req, res) ->
 # 	# res.render("index", {title : "it works"})
