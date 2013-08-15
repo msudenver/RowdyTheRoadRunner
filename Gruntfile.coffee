@@ -17,7 +17,7 @@ module.exports = (grunt) ->
 	htmlFiles = ['sm_build/*.html']
 	jsFiles = ['public/js/main.js']
 	csFiles = ['public/coffeescript/*', '/Gruntfile.coffee', 'casperjs_server/app.coffee']
-	lessFiles = ['public/less/*.css', 'public/less/utils/*.less', '!public/less/vendor' ]
+	lessFiles = ['public/less/*.less', 'public/less/utils/*.less', '!public/less/vendor' ]
 
 	htmlTemplateFiles = ['public/homepage.html','public/onecolumn.html'
 	,'public/twocolumn.html', 'public/threecolumn.html'];
@@ -78,18 +78,19 @@ module.exports = (grunt) ->
 					livereload: true
 				}
 			}
-		},
-
-		# replace- t4 tags task 
-		"regex-replace" : {
-			t4tags : {
-				src : htmlTemplateFiles,
-				actions : {
-					name : "t4media", 
-					search : new RegExp()
-				}
-			}
 		}
+		# ,
+
+		# # replace- t4 tags task 
+		# "regex-replace" : {
+		# 	t4tags : {
+		# 		src : htmlTemplateFiles,
+		# 		actions : {
+		# 			name : "t4media", 
+		# 			search : new RegExp()
+		# 		}
+		# 	}
+		# }
 
 	})
 
@@ -99,11 +100,11 @@ module.exports = (grunt) ->
 
 	# load plug-ins
 	grunt.loadNpmTasks('grunt-contrib-cssmin')
-	grunt.loadNpmTasks('grunt-regex-replace')
 	grunt.loadNpmTasks('grunt-contrib-watch')
 	grunt.loadNpmTasks('grunt-contrib-uglify')
 	grunt.loadNpmTasks('grunt-coffee-build')
 	grunt.loadNpmTasks('grunt-contrib-less')
+	# grunt.loadNpmTasks('grunt-regex-replace')
 
     # cssmin task
 	grunt.registerTask('buildcss', ['cssmin']);
@@ -111,7 +112,7 @@ module.exports = (grunt) ->
 	grunt.registerTask('buildcs', ['coffee_build']);
 	grunt.registerTask('buildless', ['less']);  ####
 	grunt.registerTask('watch-build', ['watch']);
-	grunt.registerTask('buildt4tags', ['regex-replace']);
+	# grunt.registerTask('buildt4tags', ['regex-replace']);
 
 	# default task(s)
 	grunt.registerTask('default',  ['watch']);
