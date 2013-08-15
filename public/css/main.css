@@ -344,8 +344,12 @@ p.actionHeader {
   /* ie */
 
 }
+.navbar-inverse {
+  padding-left: 0.55em;
+  padding-right: 0.55em;
+}
 .nav.navbar-nav .input-group-btn {
-  padding-left: 17%;
+  padding-left: 15%;
 }
 .input-group-btn.open > ul > li > a:hover {
   -webkit-transition: all 0.25s ease-in-out;
@@ -405,11 +409,14 @@ button.btn.btn-default.dropdown-toggle {
 .actionHeader.news {
   background-color: #3498db;
 }
-.homepage-caption .lead {
-  font-size: x-large;
-}
 .lead {
   padding: 2em;
+}
+#firstLead {
+  font-size: x-large;
+}
+#secondLead {
+  font-size: 14px;
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width: 320px) and (max-width: 480px) {

@@ -13,7 +13,7 @@ module.exports = (grunt) ->
 
 	# lessFiles = ['public/less/*.less', 'public/less/utils/*.less', '!public/less/vendor' ]
 
-	htmlFiles = ['sm_build/*.html']
+	# htmlFiles = ['sm_build/*.html']
 	jsFiles = ['public/js/main.js']
 	coffeeFiles = ['public/coffeescript/*', '/Gruntfile.coffee', 'casperjs_server/app.coffee']
 
@@ -77,7 +77,7 @@ module.exports = (grunt) ->
 		watch : {
 			all : {
 				# files : [cssFiles, jsFiles, coffeeFiles, htmlFiles, lessFiles],
-				files : [cssFiles, jsFiles, coffeeFiles, htmlFiles],
+				files : [cssFiles, jsFiles, coffeeFiles],
 				# tasks : ['cssmin', 'uglify', 'coffee_build', 'less'],
 				tasks : ['cssmin', 'uglify', 'coffee_build'],
 				options :{
