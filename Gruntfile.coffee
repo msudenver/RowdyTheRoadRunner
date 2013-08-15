@@ -6,14 +6,14 @@ module.exports = (grunt) ->
 	# T4TAGS = grunt.file.readJSON('t4tags_list.json');
 
 	# css files to be minified and combined
-	# ignore background-img.css
+	# ignore example : !background-img.css
 
 	cssFiles = ['public/css/*.css', '!public/css/utils/*.css','!public/css/vendor/*.css',
-	'!public/css/inherit/*.css', 'public/css/utils/contentTypes.css','public/css/utils/tables.css'];
+	'!public/css/inherit/*.css'];
 
-	# lessFiles = ['public/less/*.less', 'public/less/utils/*.less', '!public/less/vendor' ]
+	lessFiles = ['public/less/*.less', 'public/less/utils/*.less', '!public/less/vendor' ]
 
-	# htmlFiles = ['sm_build/*.html']
+	htmlFiles = ['sm_build/*.html']
 	jsFiles = ['public/js/main.js']
 	coffeeFiles = ['public/coffeescript/*', '/Gruntfile.coffee', 'casperjs_server/app.coffee']
 
@@ -21,6 +21,7 @@ module.exports = (grunt) ->
 	# '!node_modules/*', '!public/*','!routes/*','!sm_build/*', '!views/*']
 
 	grunt.initConfig({
+
 		pkg : grunt.file.readJSON('package.json'),
 			  
 		cssmin : {
@@ -60,40 +61,34 @@ module.exports = (grunt) ->
 		# less task
 		less : {
 			options : {
-					paths : ['public/less']
+					paths : ['public/css']
+					# report : 'gzip'
 			},
-			local : {
-				files : [{ 
-					expand: true, 
-					cwd: 'public/less', 
-					src: '*.less', 
-					dest: 'public/css/', 
-					ext: '.css' 
-				}]
-			}
+			files : lessFiles
 		},
 
 		# watch routinely for css changes
 		watch : {
-			scripts : {
-				files : [cssFiles, jsFiles],
-				tasks : ['cssmin', 'uglify']
+			cssChanges : {
+				files  : [cssFiles, lessFiles],
+				tasks  : ['cssmin','less'],
+				options: {
+					# default port 35729, uses livereload chrome browser plug-in
+					livereload: true
+				}
 			},
-			options :{
-				livereload: 8080
-			}
-		}
-		# replace- t4 tags task 
-		"regex-replace" : {
-			t4tags : {
-				src : htmlTemplateFiles,
-				actions : {
-					name : "t4media", 
-					search : new RegExp()
+			jsChanges : {
+				files : [jsFiles, coffeeFiles],
+				tasks : ['uglify', 'coffee_build']
+			},
+			markupChanges : {
+				files : [htmlFiles],
+				options: {
+					# default port 35729, uses livereload chrome browser plug-in
+					livereload: true
 				}
 			}
 		}
-		# ,
 
 		# # replace- t4 tags task 
 		# "regex-replace" : {
@@ -121,13 +116,13 @@ module.exports = (grunt) ->
 	# grunt.loadNpmTasks('grunt-regex-replace')
 
     # cssmin task
-	grunt.registerTask('buildcss', ['cssmin']);
-	grunt.registerTask('buildjs', ['uglify']);
-	grunt.registerTask('buildCoffee', ['coffee_build']);
-	grunt.registerTask('buildless', ['less']);  ####
-	grunt.registerTask('buildWatch', ['watch']);
-	# grunt.registerTask('buildt4tags', ['regex-replace']);
+	grunt.registerTask('buildcss', ['cssmin'])
+	grunt.registerTask('buildjs', ['uglify'])
+	grunt.registerTask('buildcoffee', ['coffee_build'])
+	grunt.registerTask('buildless', ['less'])
+	grunt.registerTask('buildwatch', ['watch'])
+	# grunt.registerTask('buildt4tags', ['regex-replace'])
 
 	# default task(s)
-	grunt.registerTask('default',  ['watch']);
+	grunt.registerTask('default',  ['watch'])
 	
