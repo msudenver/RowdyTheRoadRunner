@@ -11,7 +11,7 @@ module.exports = (grunt) ->
 	cssFiles = ['public/css/*.css', '!public/css/utils/*.css','!public/css/vendor/*.css',
 	'!public/css/inherit/*.css', 'public/css/utils/contentTypes.css','public/css/utils/tables.css'];
 
-	lessFiles = ['public/less/*.less', 'public/less/utils/*.less', '!public/less/vendor' ]
+	# lessFiles = ['public/less/*.less', 'public/less/utils/*.less', '!public/less/vendor' ]
 
 	htmlFiles = ['sm_build/*.html']
 	jsFiles = ['public/js/main.js']
@@ -76,11 +76,13 @@ module.exports = (grunt) ->
 		# watch routinely for css changes
 		watch : {
 			all : {
-				files : [cssFiles, jsFiles, coffeeFiles, htmlFiles, lessFiles],
-				tasks : ['cssmin', 'uglify', 'coffee_build', 'less'],
+				# files : [cssFiles, jsFiles, coffeeFiles, htmlFiles, lessFiles],
+				files : [cssFiles, jsFiles, coffeeFiles, htmlFiles],
+				# tasks : ['cssmin', 'uglify', 'coffee_build', 'less'],
+				tasks : ['cssmin', 'uglify', 'coffee_build'],
 				options :{
 					# default port 35729, uses livereload chrome browser plug-in
-					livereload: true
+					livereload: false
 				}
 			}
 		}

@@ -100,8 +100,9 @@ p.actionHeader {
   /* ie */
 
 }
-.navbar-inverse {
-  width: 100%;
+.nav.navbar-nav .input-group-btn {
+  padding-left: 17%;
+  padding-right: 5%;
 }
 .input-group-btn.open > ul > li > a:hover {
   -webkit-transition: all 0.25s ease-in-out;
