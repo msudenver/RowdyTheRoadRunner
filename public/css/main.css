@@ -349,7 +349,7 @@ p.actionHeader {
   padding-right: 0.55em;
 }
 .nav.navbar-nav .input-group-btn {
-  padding-left: 15%;
+  padding-left: 20%;
 }
 .input-group-btn.open > ul > li > a:hover {
   -webkit-transition: all 0.25s ease-in-out;
@@ -397,10 +397,25 @@ button.btn.btn-default.dropdown-toggle {
   padding-top: 0.5em;
   padding-left: 3.5em;
 }
+.actionHeader.applynow,
+.actionHeader.give {
+  text-transform: uppercase;
+  font-stretch: condensed;
+  color: white;
+  height: 150px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 .actionHeader.applynow {
+  font-size: 3em;
+  font-weight: lighter;
+  letter-spacing: 0.15px;
   background-color: #1abc9c;
 }
 .actionHeader.give {
+  font-size: 2em;
+  font-weight: lighter;
+  letter-spacing: 0.15px;
   background-color: #2980b9;
 }
 .actionHeader.events {
@@ -423,6 +438,10 @@ button.btn.btn-default.dropdown-toggle {
   /* Styles */
   .nav.navbar-nav .input-group-btn {
     padding-left: 5%;
+  }
+  .actionHeader.applynow,
+  .actionHeader.give {
+    padding-top: 0;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 776px) {
@@ -448,12 +467,6 @@ button.btn.btn-default.dropdown-toggle {
     margin: 0;
     padding: 0;
   }
-  .actionHeader.applynow {
-    padding-top: 1.3em;
-  }
-  .actionHeader.give {
-    padding-top: 1.1em;
-  }
   .input-group-btn {
     padding-top: 0.555em;
     float: none;
@@ -471,34 +484,13 @@ button.btn.btn-default.dropdown-toggle {
 }
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 480px) and (max-width: 650px) {
-  .actionHeader.applynow {
-    padding-top: 1.1em;
-    font-size: 300%;
-  }
-  .actionHeader.give {
-    padding-top: 1.3em;
-    font-size: 260%;
-  }
+  
 }
 @media only screen and (min-width: 600px) and (max-width: 768px) {
-  .actionHeader.applynow {
-    font-size: 300%;
-  }
-  .actionHeader.give {
-    padding: 1.1em;
-    font-size: 300%;
-  }
+  
 }
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
-  .actionHeader.applynow,
-  .actionHeader.give {
-    font-size: 200%;
-    padding-top: 16%;
-  }
-  .actionHeader.give {
-    font-size: 150%;
-    padding-top: 20%;
-  }
+  
 }
 body {
   background: url(data:image/jpeg;base64,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);
