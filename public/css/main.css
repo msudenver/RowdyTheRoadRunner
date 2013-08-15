@@ -233,15 +233,6 @@ table.caption {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.collapse {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  -moz-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
-}
 .actionHeader {
   vertical-align: top;
   box-sizing: border-box;
@@ -336,8 +327,7 @@ p.actionHeader {
 
 }
 .navbar-inverse {
-  padding-left: 10%;
-  padding-right: 10%;
+  width: 100%;
 }
 .input-group-btn.open > ul > li > a:hover {
   -webkit-transition: all 0.25s ease-in-out;
@@ -398,7 +388,7 @@ button.btn.btn-default.dropdown-toggle {
 .actionHeader.news {
   background-color: #3498db;
 }
-.homepage-caption ~ .lead {
+.homepage-caption .lead {
   font-size: x-large;
 }
 .lead {

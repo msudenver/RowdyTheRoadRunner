@@ -1,8 +1,5 @@
 
 module.exports = (grunt) ->
-	dateFormat = require('dateformat');
-	# date format helper
-	# format = dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT")
 
 	# grunt things... 
 	# automation rules...
@@ -14,13 +11,14 @@ module.exports = (grunt) ->
 	cssFiles = ['public/css/*.css', '!public/css/utils/*.css','!public/css/vendor/*.css',
 	'!public/css/inherit/*.css', 'public/css/utils/contentTypes.css','public/css/utils/tables.css'];
 
-	htmlFiles = ['sm_build/*.html']
-	jsFiles = ['public/js/main.js']
-	csFiles = ['public/coffeescript/*', '/Gruntfile.coffee', 'casperjs_server/app.coffee']
 	lessFiles = ['public/less/*.less', 'public/less/utils/*.less', '!public/less/vendor' ]
 
-	htmlTemplateFiles = ['public/homepage.html','public/onecolumn.html'
-	,'public/twocolumn.html', 'public/threecolumn.html'];
+	htmlFiles = ['sm_build/*.html']
+	jsFiles = ['public/js/main.js']
+	coffeeFiles = ['public/coffeescript/*', '/Gruntfile.coffee', 'casperjs_server/app.coffee']
+
+	# watchYourSelf = ['Gruntfile.coffee', '!/.git', '!2011_Styles/*', '!casperjs_server/*', 
+	# '!node_modules/*', '!public/*','!routes/*','!sm_build/*', '!views/*']
 
 	grunt.initConfig({
 		pkg : grunt.file.readJSON('package.json'),
@@ -56,22 +54,29 @@ module.exports = (grunt) ->
 			options	 : {
 				wrap : true
 			},
-			files : csFiles
+			files : coffeeFiles
 		},
 
 		# less task
-
 		less : {
-			dev : {
-				files : lessFiles		
+			options : {
+					paths : ['public/less']
+			},
+			local : {
+				files : [{ 
+					expand: true, 
+					cwd: 'public/less', 
+					src: '*.less', 
+					dest: 'public/css/', 
+					ext: '.css' 
+				}]
 			}
 		},
-
 
 		# watch routinely for css changes
 		watch : {
 			all : {
-				files : [cssFiles, jsFiles, csFiles, htmlFiles],
+				files : [cssFiles, jsFiles, coffeeFiles, htmlFiles, lessFiles],
 				tasks : ['cssmin', 'uglify', 'coffee_build', 'less'],
 				options :{
 					# default port 35729, uses livereload chrome browser plug-in
@@ -109,9 +114,9 @@ module.exports = (grunt) ->
     # cssmin task
 	grunt.registerTask('buildcss', ['cssmin']);
 	grunt.registerTask('buildjs', ['uglify']);
-	grunt.registerTask('buildcs', ['coffee_build']);
+	grunt.registerTask('buildCoffee', ['coffee_build']);
 	grunt.registerTask('buildless', ['less']);  ####
-	grunt.registerTask('watch-build', ['watch']);
+	grunt.registerTask('buildWatch', ['watch']);
 	# grunt.registerTask('buildt4tags', ['regex-replace']);
 
 	# default task(s)
