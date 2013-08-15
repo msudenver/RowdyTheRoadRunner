@@ -114,5 +114,5 @@ module.exports = (grunt) ->
 	grunt.registerTask('buildt4tags', ['regex-replace']);
 
 	# default task(s)
-	grunt.registerTask('default',  ['cssmin']);
+	grunt.registerTask('default',  ['watch']);
 	
