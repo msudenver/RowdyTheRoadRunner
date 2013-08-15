@@ -25,6 +25,7 @@
     "grunt-contrib-watch": "~0.5.1",
     "dateformat": "~1.0.6-1.2.3",
     "grunt-coffee-build": "0.0.6",
-    "grunt-contrib-less": "~0.7.0"
+    "grunt-contrib-less": "~0.7.0",
+    "http-server": "~0.5.5"
   }
 }
