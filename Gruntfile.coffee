@@ -11,6 +11,8 @@ module.exports = (grunt) ->
 	cssFiles = ['public/css/*.css', '!public/css/utils/*.css','!public/css/vendor/*.css',
 	'!public/css/inherit/*.css'];
 
+	# cssFiles = ['public/css/main.css']
+
 	lessFiles = ['public/less/*.less', 'public/less/utils/*.less', '!public/less/vendor' ]
 
 	htmlFiles = ['sm_build/*.html']
@@ -61,21 +63,25 @@ module.exports = (grunt) ->
 		# less task
 		less : {
 			options : {
-					paths : ['public/css']
+					paths : ['public/less']
 					# report : 'gzip'
 			},
-			files : lessFiles
+			'public/css/main.css' : lessFiles
 		},
 
 		# watch routinely for css changes
 		watch : {
 			cssChanges : {
-				files  : [cssFiles, lessFiles],
-				tasks  : ['cssmin','less'],
+				files  : [cssFiles],
+				tasks  : ['cssmin'],
 				options: {
 					# default port 35729, uses livereload chrome browser plug-in
 					livereload: true
 				}
+			},
+			lessChanges : {
+				files  : [lessFiles],
+				tasks  : ['less']
 			},
 			jsChanges : {
 				files : [jsFiles, coffeeFiles],
