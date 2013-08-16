@@ -1,9 +1,4 @@
-/* /\/\/\/\/\/\/\/\/ bootstrap-editable     /\/\/\/\/\/\/\/\/ */
-/*! X-editable - v1.4.5 
-* In-place editing with Twitter Bootstrap, jQuery UI or pure jQuery
-* http://github.com/vitalets/x-editable
-* Copyright (c) 2013 Vitaliy Potapov; Licensed MIT */
- 
+<style>
  .editableform {
 	margin-bottom: 0;
 	/* overwrites bootstrap margin */
@@ -534,7 +529,7 @@ body, #bodyTable, #bodyCell {
 			*/
  body, #bodyTable {
 	/*@editable*/
-	background-color:#DEE0E2;
+	background-color:#ffffff;
 }
 /**
 			* @tab Page
@@ -1161,3 +1156,4 @@ body, #bodyTable, #bodyCell {
 	}
 	/* Place footer social and utility links on their own lines, for easier access */
 }
+ </style>
