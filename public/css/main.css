@@ -326,7 +326,7 @@ p.actionHeader {
   font-size: 16.099999999999998px;
   font-weight: 200;
   line-height: 1.4;
-  padding: 2em;
+  padding: 1.5em;
 }
 .lead {
   font-size: 16.099999999999998px;
@@ -424,30 +424,34 @@ button.btn.btn-default.dropdown-toggle {
 .actionHeader.news {
   background-color: #3498db;
 }
-.homepage-caption .lead {
-  font-size: x-large;
+.homepage-hero {
+  padding: 0 1.2575em 0 1.2575em;
+  margin: 0 auto;
+}
+.homepage-caption .clickable {
+  padding: 0 !important;
+  margin: 0 auto;
+}
+.homepage-hero .clickable.col-12.col-lg-6,
+.clickable.col-lg-3.visible-lg {
+  padding: 0 0.25em 0 0.25em;
 }
 .lead {
-  padding: 2em;
+  padding: 1.5em;
 }
-#firstLead {
-  font-size: x-large;
+.firstLead {
+  font-size: 16.099999999999998px;
+  font-weight: 200;
+  line-height: 1.4;
+  padding: 1.5em;
+  font-size: x-large !important;
 }
-#secondLead {
-  font-size: 14px;
-}
-.homepage-hero .well:first-child {
-  margin-left: 0;
-  padding: 1.2575em 0 1.2575em 0;
-  border-left: none 0;
-}
-.homepage-hero .well:nth-child(2) {
-  padding: 1.2575em 0 1.2575em 0;
-  border-left: 0;
-}
-.homepage-hero .well:nth-child(3) {
-  padding: 1.2575em 0 1.2575em 0;
-  border-left: 0;
+.secondLead {
+  font-size: 16.099999999999998px;
+  font-weight: 200;
+  line-height: 1.4;
+  padding: 1.5em;
+  font-size: 14px !important;
 }
 .homepage_events.iframe.twDescription a {
   color: blue;

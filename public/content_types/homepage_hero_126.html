@@ -26,7 +26,7 @@
 <!--Original html-->
 <div class="container homepage-hero">
 	<div class="row  ">
-		<div class="clickable col-12" data-href="#">
+		<div class="clickable col-12" data-href="<t4 type='content' name='Small Image 2 Link' output='linkurl' modifiers=''/>">
 			<div class="col-12 col-lg-6 well">
 				<div class="homepage-caption">
 					<!-- <img src="./assets/img/group_of_three_for_homepage/hickenlooper.jpg" alt="" class=""> -->
@@ -124,3 +124,50 @@
 		</div>
 	</div>
 </div>
+
+<!-- new content template 08.16.13 (sitemanager version)-->
+
+<div class="container homepage-hero">
+	<div class="row">
+		<!-- 1 -->
+		<div class="col-12 well">
+			<div class="clickable col-12 col-lg-6 " data-href="<t4 type='content' name='Large Image Link' output='linkurl' modifiers=''/>">
+				<div class="homepage-caption">
+					<t4 type="content" name="Large Image" output="normal" modifiers="" />
+					<t4 type="content" output="selective-output" modifiers="htmlentities" name="Large Image Caption" format="<p class='firstLead'> $value </p>"/>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div class="middleHero clickable col-6 col-lg-3 visible-lg" data-href="<t4 type='content' name='Small Image 1 Link' output='linkurl' modifiers=''/>">
+				<div class="homepage-caption">
+					<t4 type="content" name="Small Image 1" output="normal" modifiers="" />
+					<t4 type="content" output="selective-output" modifiers="htmlentities" name="Small Image 1 Caption" format="<p class='secondLead'> $value </p>"/>
+				</div>
+			</div>
+			<!-- 3 -->
+			<div class="clickable col-lg-3 visible-lg" data-href="<t4 type='content' name='Small Image 2 Link' output='linkurl' modifiers=''/>">
+				<div class="homepage-caption">
+					<t4 type="content" name="Small Image 2" output="normal" modifiers="" />
+					<t4 type="content" output="selective-output" modifiers="htmlentities" name="Small Image 2 Caption" format="<p class='secondLead'> $value </p>"/>
+				</div>
+			</div>
+		</div>
+		<div class="hidden-lg col-12 well">
+			<!-- 2 -->
+			<div class="clickable col-6 col-lg-3" data-href="<t4 type='content' name='Small Image 1 Link' output='linkurl' modifiers=''/>">
+				<div class="homepage-caption">
+					<t4 type="content" name="Small Image 1" output="normal" modifiers="" />
+					<t4 type="content" output="selective-output" modifiers="htmlentities" name="Small Image 1 Caption" format="<p class='secondLead'> $value </p>"/>
+				</div>
+			</div>
+			<!-- 3 -->
+			<div class="clickable col-6 col-lg-3" data-href="<t4 type='content' name='Small Image 2 Link' output='linkurl' modifiers=''/>">
+				<div class="homepage-caption">
+					<t4 type="content" name="Small Image 2" output="normal" modifiers="" />
+					<t4 type="content" output="selective-output" modifiers="htmlentities" name="Small Image 2 Caption" format="<p class='secondLead'> $value </p>"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
