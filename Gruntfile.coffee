@@ -13,7 +13,7 @@ module.exports = (grunt) ->
 
 	# cssFiles = ['public/css/main.css']
 
-	lessFiles = ['public/less/*.less', 'public/less/utils/*.less', '!public/less/vendor' ]
+	lessFiles = ['public/less/*.less', '!public/less/utils/*.less', '!public/less/vendor' ]
 
 	htmlFiles = ['sm_build/*.html']
 	jsFiles = ['public/js/main.js']
@@ -76,24 +76,23 @@ module.exports = (grunt) ->
 				tasks  : ['cssmin'],
 				options: {
 					# default port 35729, uses livereload chrome browser plug-in
-					livereload: true
+					livereload: false
 				}
 			},
-			lessChanges : {
-				files  : [lessFiles],
-				tasks  : ['less']
-			},
+			# lessChanges : {
+			# 	files  : [lessFiles],
+			# 	tasks  : ['less']
+			# },
 			jsChanges : {
 				files : [jsFiles, coffeeFiles],
 				tasks : ['uglify', 'coffee_build']
 			},
-			markupChanges : {
-				files : [htmlFiles],
-				options: {
-					# default port 35729, uses livereload chrome browser plug-in
-					livereload: true
-				}
-			}
+			# markupChanges : {
+			# 	files : [htmlFiles],
+			# 	options: {
+			# 		livereload: false
+			# 	}
+			# }
 		}
 
 		# # replace- t4 tags task 

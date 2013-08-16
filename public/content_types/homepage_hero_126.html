@@ -24,7 +24,7 @@
 	</div>
 </div>
 <!--Original html-->
-<div class="container">
+<div class="container homepage-hero">
 	<div class="row  ">
 		<div class="clickable col-12" data-href="#">
 			<div class="col-12 col-lg-6 well">
@@ -45,6 +45,80 @@
 					<!-- <img src="./assets/img/group_of_three_for_homepage/sotomayerGraphic.png" alt="" class=""> -->
 					<img src="<t4 type='media' id='60281' formatter='image/path'/>" alt="Picture of" class="">
 					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- b4 replacing current -->
+
+<!--Site Manager Content Type-->
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<div class="clickable col-12 col-lg-6 well" data-href="<t4 type='content' name='Large Image Link' output='linkurl' modifiers=''/>">
+				<div class="homepage-caption">
+					<t4 type="content" name="Large Image" output="normal" modifiers="" />
+					<t4 type="content" output="selective-output" modifiers="htmlentities" name="Large Image Caption" format="<p> $value</p>"/>
+				</div>
+			</div>
+			<div class="clickable col-6 col-lg-3 well" data-href="<t4 type='content' name='Small Image 1 Link' output='linkurl' modifiers=''/>">
+				<div class="homepage-caption">
+					<t4 type="content" name="Small Image 1" output="normal" modifiers="" />
+					<t4 type="content" output="selective-output" modifiers="htmlentities" name="Small Image 1 Caption" format="<p> $value</p>"/>
+				</div>
+			</div>
+			<div class="clickable col-6 col-lg-3 well" data-href="<t4 type='content' name='Small Image 2 Link' output='linkurl' modifiers=''/>">
+				<div class="homepage-caption">
+					<t4 type="content" name="Small Image 2" output="normal" modifiers="" />
+					<t4 type="content" output="selective-output" modifiers="htmlentities" name="Small Image 2 Caption" format="<p> $value</p>"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- new content template 08.16.13-->
+
+<div class="container homepage-hero">
+	<div class="row">
+			<!-- 1 -->
+		<div class="clickable col-12 well" data-href="#">
+			<div class="col-12 col-lg-6 ">
+				<div class="homepage-caption">
+					<img src="./assets/img/group_of_three_for_homepage/1.jpg" alt="" class="">
+					<p id="firstLead" class="lead">
+						Welcome students. Time to get rowdy!
+					</p>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div class="clickable col-6 col-lg-3 visible-lg" data-href="#">
+				<div class="homepage-caption">
+					<img src="./assets/img/group_of_three_for_homepage/2.jpg" alt="" class="">
+					<!-- <p class="lead"></p> -->
+				</div>
+			</div>
+			<!-- 3 -->
+			<div class="clickable col-lg-3 visible-lg" data-href="#">
+				<div class="homepage-caption">
+					<img src="assets/img/group_of_three_for_homepage/3.jpg" alt="" class="">
+					<p id="secondLead" class="lead">Alumna Hollynd Hoskins' biggest case made national headlines. </p>
+				</div>
+			</div>
+		</div>
+		<div class="hidden-lg col-12 well">
+			<div class="clickable col-6 col-lg-3" data-href="#">
+				<div class="homepage-caption">
+					<img src="./assets/img/group_of_three_for_homepage/2.jpg" alt="" class="">
+					<!-- <p class="lead"></p> -->
+				</div>
+			</div>
+			<div class="clickable col-6 col-lg-3" data-href="#">
+				<div class="homepage-caption">
+					<img src="assets/img/group_of_three_for_homepage/3.jpg" alt="" class="">
+					<p id="secondLead" class="lead">Alumna Hollynd Hoskins' biggest case made national headlines. </p>
 				</div>
 			</div>
 		</div>
