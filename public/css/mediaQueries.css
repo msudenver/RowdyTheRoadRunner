@@ -1,0 +1,78 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
+  .nav.navbar-nav .input-group-btn {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 776px) {
+  .navbar-inverse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .input-group-btn {
+    padding-top: 0.555em;
+    float: none;
+  }
+  .campus-info p {
+    padding-top: 1em;
+  }
+  .navbar-search-form {
+    float: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .actionHeader.applynow {
+    padding-top: 1.3em;
+  }
+  .actionHeader.give {
+    padding-top: 1.1em;
+  }
+  .input-group-btn {
+    padding-top: 0.555em;
+    float: none;
+  }
+  .campus-info p {
+    padding-top: 1em;
+  }
+  .msudenver_logo img {
+    max-width: 320px;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 480px) and (max-width: 650px) {
+  .actionHeader.applynow {
+    padding-top: 1.1em;
+    font-size: 300%;
+  }
+  .actionHeader.give {
+    padding-top: 1.3em;
+    font-size: 260%;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .actionHeader.applynow {
+    font-size: 300%;
+  }
+  .actionHeader.give {
+    padding: 1.1em;
+    font-size: 300%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  .actionHeader.applynow,
+  .actionHeader.give {
+    font-size: 200%;
+    padding-top: 16%;
+  }
+  .actionHeader.give {
+    font-size: 150%;
+    padding-top: 20%;
+  }
+}

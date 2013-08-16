@@ -1,25 +1,29 @@
 
 module.exports = (grunt) ->
-	dateFormat = require('dateformat');
-	# date format helper
-	# format = dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT")
 
 	# grunt things... 
 	# automation rules...
 	# T4TAGS = grunt.file.readJSON('t4tags_list.json');
 
 	# css files to be minified and combined
-	# ignore background-img.css
+	# ignore example : !background-img.css
 
 	cssFiles = ['public/css/*.css', '!public/css/utils/*.css','!public/css/vendor/*.css',
-	'!public/css/inherit/*.css', 'public/css/utils/contentTypes.css','public/css/utils/tables.css'];
+	'!public/css/inherit/*.css'];
 
+	# cssFiles = ['public/css/main.css']
+
+	lessFiles = ['public/less/*.less', '!public/less/utils/*.less', '!public/less/vendor' ]
+
+	htmlFiles = ['sm_build/*.html']
 	jsFiles = ['public/js/main.js']
+	coffeeFiles = ['public/coffeescript/*', '/Gruntfile.coffee', 'casperjs_server/app.coffee']
 
-	htmlTemplateFiles = ['public/homepage.html','public/onecolumn.html'
-	,'public/twocolumn.html', 'public/threecolumn.html'];
+	# watchYourSelf = ['Gruntfile.coffee', '!/.git', '!2011_Styles/*', '!casperjs_server/*', 
+	# '!node_modules/*', '!public/*','!routes/*','!sm_build/*', '!views/*']
 
 	grunt.initConfig({
+
 		pkg : grunt.file.readJSON('package.json'),
 			  
 		cssmin : {
@@ -46,25 +50,61 @@ module.exports = (grunt) ->
 					'sm_build/js/main.min.js' : jsFiles
 				}
 			}
-		}
+		},
+
+		# coffeescript compile task 
+		coffee_build : {
+			options	 : {
+				wrap : true
+			},
+			files : coffeeFiles
+		},
+
+		# less task
+		less : {
+			options : {
+					paths : ['public/less']
+					# report : 'gzip'
+			},
+			'public/css/main.css' : lessFiles
+		},
 
 		# watch routinely for css changes
 		watch : {
-			scripts : {
-				files : [cssFiles, jsFiles],
-				tasks : ['cssmin', 'uglify']
-			}
-		}
-		# replace- t4 tags task 
-		"regex-replace" : {
-			t4tags : {
-				src : htmlTemplateFiles,
-				actions : {
-					name : "t4media", 
-					search : new RegExp()
+			cssChanges : {
+				files  : [cssFiles],
+				tasks  : ['cssmin'],
+				options: {
+					# default port 35729, uses livereload chrome browser plug-in
+					livereload: false
 				}
-			}
+			},
+			# lessChanges : {
+			# 	files  : [lessFiles],
+			# 	tasks  : ['less']
+			# },
+			jsChanges : {
+				files : [jsFiles, coffeeFiles],
+				tasks : ['uglify', 'coffee_build']
+			},
+			# markupChanges : {
+			# 	files : [htmlFiles],
+			# 	options: {
+			# 		livereload: false
+			# 	}
+			# }
 		}
+
+		# # replace- t4 tags task 
+		# "regex-replace" : {
+		# 	t4tags : {
+		# 		src : htmlTemplateFiles,
+		# 		actions : {
+		# 			name : "t4media", 
+		# 			search : new RegExp()
+		# 		}
+		# 	}
+		# }
 
 	})
 
@@ -74,16 +114,20 @@ module.exports = (grunt) ->
 
 	# load plug-ins
 	grunt.loadNpmTasks('grunt-contrib-cssmin')
-	grunt.loadNpmTasks('grunt-regex-replace')
 	grunt.loadNpmTasks('grunt-contrib-watch')
 	grunt.loadNpmTasks('grunt-contrib-uglify')
+	grunt.loadNpmTasks('grunt-coffee-build')
+	grunt.loadNpmTasks('grunt-contrib-less')
+	# grunt.loadNpmTasks('grunt-regex-replace')
 
     # cssmin task
-	grunt.registerTask('buildcss', ['cssmin']);
-	grunt.registerTask('buildjs', ['uglify']);
-	grunt.registerTask('watch-build', ['watch']);
-	grunt.registerTask('buildt4tags', ['regex-replace']);
+	grunt.registerTask('buildcss', ['cssmin'])
+	grunt.registerTask('buildjs', ['uglify'])
+	grunt.registerTask('buildcoffee', ['coffee_build'])
+	grunt.registerTask('buildless', ['less'])
+	grunt.registerTask('buildwatch', ['watch'])
+	# grunt.registerTask('buildt4tags', ['regex-replace'])
 
 	# default task(s)
-	grunt.registerTask('default',  ['cssmin']);
+	grunt.registerTask('default',  ['watch'])
 	

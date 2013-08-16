@@ -33,3 +33,6 @@ casperjs_server/screenshots
 components/
 # and 
 bower_components/
+
+# Project files
+project/

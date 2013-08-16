@@ -31,6 +31,7 @@ app.get('/',     routes.index);
 app.get('/1col', routes.index);
 app.get('/2col', routes.index);
 app.get('/3col', routes.index);
+app.get('/sm_build', routes.index);
 
 
 http.createServer(app).listen(app.get('port'), function(){
