@@ -403,19 +403,21 @@ button.btn.btn-default.dropdown-toggle {
   font-stretch: condensed;
   color: white;
   height: 150px;
-  padding-bottom: 0;
   margin-bottom: 0;
+  word-spacing: normal;
 }
 .actionHeader.applynow {
-  font-size: 3em;
+  font-size: 3.5em;
   font-weight: lighter;
+  padding-top: 0.25em;
   letter-spacing: 0.15px;
   background-color: #1abc9c;
 }
 .actionHeader.give {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: lighter;
-  letter-spacing: 0.15px;
+  padding-top: 0.35em;
+  letter-spacing: 0.45px;
   background-color: #2980b9;
 }
 .actionHeader.events {
@@ -453,9 +455,6 @@ button.btn.btn-default.dropdown-toggle {
   padding: 1.5em;
   font-size: 14px !important;
 }
-.homepage_events.iframe.twDescription a {
-  color: blue;
-}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   /* Styles */
@@ -465,6 +464,7 @@ button.btn.btn-default.dropdown-toggle {
   .actionHeader.applynow,
   .actionHeader.give {
     padding-top: 0;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 776px) {
@@ -708,7 +708,7 @@ a:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 img {
-  max-width: 100%;
+  max-width: 100% !important;
 }
 .nav-header {
   color: #ffffff;
