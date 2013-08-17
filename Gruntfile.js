@@ -4,8 +4,7 @@
     var coffeeFiles, cssFiles, htmlFiles, jsFiles, lessFiles;
 
     cssFiles = ['public/css/*.css', '!public/css/utils/*.css', '!public/css/vendor/*.css', '!public/css/inherit/*.css'];
-    cssFiles = ['public/css/main.css'];
-    lessFiles = ['public/less/*.less', 'public/less/utils/*.less', '!public/less/vendor'];
+    lessFiles = ['public/less/*.less', 'public/less/utils/*.less', 'public/less/vendor/*.less'];
     htmlFiles = ['sm_build/*.html'];
     jsFiles = ['public/js/main.js'];
     coffeeFiles = ['public/coffeescript/*', '/Gruntfile.coffee', 'casperjs_server/app.coffee'];
@@ -13,7 +12,6 @@
       pkg: grunt.file.readJSON('package.json'),
       cssmin: {
         options: {
-          expand: true,
           banner: '/*! <%= pkg.name %> \n CSS Baked on <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> */\n'
         },
         combine: {
@@ -40,31 +38,21 @@
       },
       less: {
         options: {
-          paths: ['public/css']
+          paths: ['public/less']
         },
-        'public/css/main.css': lessFiles
+        'public/css/main-style.css': lessFiles
       },
       watch: {
         cssChanges: {
           files: [cssFiles],
           tasks: ['cssmin'],
           options: {
-            livereload: true
+            livereload: false
           }
-        },
-        lessChanges: {
-          files: [lessFiles],
-          tasks: ['less']
         },
         jsChanges: {
           files: [jsFiles, coffeeFiles],
           tasks: ['uglify', 'coffee_build']
-        },
-        markupChanges: {
-          files: [htmlFiles],
-          options: {
-            livereload: true
-          }
         }
       }
     });

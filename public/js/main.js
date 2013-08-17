@@ -19,9 +19,6 @@
     Modernizr.addTest('sitemanager', function() {
       return !!document.location.host.match(/sitemanager.msudenver.edu/i) || !!document.location.host.match(/msudenver.edu/i);
     });
-    $(window).resize(function() {
-      return console.log("resize::" + $(window).width());
-    });
     return $('div#top3').load("/newsroom/top3/");
   });
 

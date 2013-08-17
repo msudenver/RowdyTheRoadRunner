@@ -126,6 +126,15 @@
 .fb-like-box {
   margin-bottom: 1.5em;
 }
+#fb-root {
+  display: none;
+}
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
+  width: 100% !important;
+  height: 450px;
+}
 /***************Department Social Links*********************/
 .depsocial {
   margin-bottom: 1.5em;

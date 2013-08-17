@@ -13,14 +13,11 @@ module.exports = (grunt) ->
 
 	# cssFiles = ['public/css/main.css']
 
-	lessFiles = ['public/less/*.less', '!public/less/utils/*.less', '!public/less/vendor' ]
+	lessFiles = ['public/less/*.less', 'public/less/utils/*.less', 'public/less/vendor/*.less' ]
 
 	htmlFiles = ['sm_build/*.html']
 	jsFiles = ['public/js/main.js']
 	coffeeFiles = ['public/coffeescript/*', '/Gruntfile.coffee', 'casperjs_server/app.coffee']
-
-	# watchYourSelf = ['Gruntfile.coffee', '!/.git', '!2011_Styles/*', '!casperjs_server/*', 
-	# '!node_modules/*', '!public/*','!routes/*','!sm_build/*', '!views/*']
 
 	grunt.initConfig({
 
@@ -28,7 +25,7 @@ module.exports = (grunt) ->
 			  
 		cssmin : {
 			options : {
-				expand: true,
+				# expand: true, 
 				# banner + timestapmt
 				banner : '/*! <%= pkg.name %> \n CSS Baked on <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> */\n'
 			},
@@ -66,7 +63,7 @@ module.exports = (grunt) ->
 					paths : ['public/less']
 					# report : 'gzip'
 			},
-			'public/css/main.css' : lessFiles
+			'public/css/main-style.css' : lessFiles
 		},
 
 		# watch routinely for css changes

@@ -247,9 +247,17 @@
 					</div>
 					<div class="col-lg-4 col-sm-6">
 						<p>
+<<<<<<< HEAD
 							<a href="/contact"> CONTACT US</a> <br>
 							© Metropolitan State University of Denver <br>
 							<a href="/privacy">Privacy Statement</a> | <a href="http://tops.state.co.us/">Colorado TOPS</a> <br>
+=======
+							<a href="/questionscomments">CONTACT US</a>
+							| 
+							<a href="/sm">© Metropolitan State University of Denver</a>
+							<a href="/privacy">Privacy Statement</a>
+							<a href="/alumni">State of Colorado's Transparency Online Project (TOP)</a>
+>>>>>>> remotes/upstream/email
 						</p>
 					</div>
 				</div>

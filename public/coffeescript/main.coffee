@@ -31,8 +31,8 @@ $ ->
 	Modernizr.addTest 'firefox', ->
 		!!navigator.userAgent.match(/firefox/i);
 
-	Modernizr.addTest 'sitemanager' , ->
-		# adds check for sitemanager build 
+	# adds check for sitemanager build 
+	Modernizr.addTest 'sitemanager' , ->		
 		!!document.location.host.match(/sitemanager.msudenver.edu/i) or !!document.location.host.match(/msudenver.edu/i)
 				
 
@@ -40,8 +40,8 @@ $ ->
 	# if $('.firefox').length then $('div.triangle').css "display", "none"
 	
 	# resize function remove for pruction
-	$(window).resize ->
-		console.log("resize::"+ $(window).width());
+	# $(window).resize ->
+	# 	console.log("resize::"+ $(window).width());
 
 	# loads top 3 stories from the newsroom
 	$('div#top3').load "/newsroom/top3/"
