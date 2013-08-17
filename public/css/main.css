@@ -517,6 +517,173 @@ button.btn.btn-default.dropdown-toggle {
 body {
   background: url(data:image/jpeg;base64,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);
 }
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+.triangle {
+  position: absolute;
+  border-left: 2.5em solid transparent;
+  border-right: 2.5em solid transparent;
+  border-bottom: 2em solid #ff0000;
+  border-radius: 0px;
+}
+/***************HighlightBox *********************/
+.HighlightBox .triangle {
+  left: 50%;
+  bottom: 0;
+  top: 105%;
+  border-bottom: 3em solid #16A085;
+  transform-origin: 25% 5%;
+  -ms-transform-origin: 25% 5%;
+  -webkit-transform-origin: 25% 5%;
+  z-index: -1;
+  /* Safari */
+
+  -webkit-transform: rotate(180deg);
+  /* Firefox */
+
+  -moz-transform: rotate(180deg);
+  /* IE */
+
+  -ms-transform: rotate(180deg);
+  /* Opera */
+
+  -o-transform: rotate(180deg);
+  /* Internet Explorer */
+
+  /*accepts 0, 1, 2, or 3 which will 
+      rotate the element 0, 90, 180 or 
+      270 degrees respectively.*/
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-);
+}
+.linkcolumn .HighlightBox .triangle {
+  border-bottom: 3em solid #c0392b;
+}
+.HighlightBox {
+  color: #ffffff;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  background: #16A085;
+  position: relative;
+  zoom: 1;
+  z-index: 2;
+  /*  see .triangle index , this one has to be greater than triangle*/
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.HighlightBox-title {
+  color: #ffffff;
+  font-size: 1.5em;
+  text-align: center;
+}
+.HighlightBox-content,
+.HighlightBox-content a {
+  color: #ffffff;
+  font-size: 1em;
+}
+.linkcolumn .HighlightBox {
+  margin: 0 0 1em 0;
+  background: #c0392b;
+  zoom: 1;
+}
+.3ColumnRight .HighlightBox {
+  margin: 0 0 1em 0;
+  background: #f39c12;
+  zoom: 1;
+}
+/***************Zebra Stripe For Newsroom*********************/
+.story_preview {
+  border: solid silver 1px ;
+}
+.story_preview {
+  padding: 15px;
+}
+.story_preview:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+.story_preview:nth-child(even) {
+  background-color: #ffffff;
+}
+/***************Banner Image*********************/
+.bannerImage {
+  max-width: 100%;
+  padding: 5px;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+}
+/***************Accordion Group*********************/
+.accordion-group {
+  margin-bottom: 20px;
+  border-radius: 0;
+}
+/***************Expert Profile Class*********************/
+.expert {
+  padding: 1.5em;
+  margin-bottom: 20px;
+  position: relative;
+  zoom: 1;
+  border: 1px solid #e3e3e3;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+/***************Newsroom Story*********************/
+.newsimage {
+  padding: 1.5em;
+  max-width: 300px;
+  float: right;
+}
+/***************Facebook Like*********************/
+.fb-like-box {
+  margin-bottom: 1.5em;
+}
+#fb-root {
+  display: none;
+}
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
+  width: 100% !important;
+  height: 450px;
+}
+/***************Department Social Links*********************/
+.depsocial {
+  margin-bottom: 1.5em;
+}
+/***************Carousel *********************/
+.carousel-inner {
+  background: #000000;
+  height: 400px;
+  vertical-align: bottom;
+  bottom: 0;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  max-height: 400px;
+  line-height: 1;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.carousel-caption {
+  right: 0%;
+  bottom: 0;
+  left: 0%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #ffffff;
+  background-color: rgba(42, 42, 42, 0.26);
+  text-align: center;
+  text-shadow: 0;
+}
 .clickable {
   cursor: pointer;
 }
@@ -707,7 +874,13 @@ a:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 img {
-  max-width: 100% !important;
+  max-width: 100%;
+  /* just in case, to force correct aspet ratio */
+
+  height: auto !important;
+  -ms-interpolation-mode: bicubic;
+  /* ie7 */
+
 }
 .nav-header {
   color: #ffffff;

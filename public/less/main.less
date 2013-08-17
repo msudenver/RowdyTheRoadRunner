@@ -5,6 +5,8 @@
 @import "homepage.less" ;
 @import "mediaQueries.less" ;
 @import "./utils/background-img.less" ;
+@import "./utils/contentTypes.less" ;
+
 // @import "./vendor/bootstrap-glyphicons.css" ; # this causes an error on sitemanager
 
 
@@ -245,7 +247,14 @@ a:focus {
 }
 
 img{
-  max-width: 100% !important;
+  // max-width: 100% !important;
+  // display: block;
+  // width: 100%;
+  max-width: 100%;
+
+  /* just in case, to force correct aspet ratio */
+  height: auto !important;
+   -ms-interpolation-mode: bicubic; /* ie7 */
   
 }
 
