@@ -13,7 +13,7 @@
       url: {
         filterview: "HomePageFeed"
       },
-      teaserBase: "http://msudenver.edu/events",
+      teaserBase: "http://sitemanager.msudenver.edu/events",
       spudId: "homepage_events"
     });
     Modernizr.addTest('firefox', function() {
