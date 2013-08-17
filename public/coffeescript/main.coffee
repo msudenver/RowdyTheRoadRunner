@@ -14,7 +14,7 @@ $ ->
 		webName: "msudenver-events-calendars",
 		spudType : "upcoming" ,
 		url : { filterview : "HomePageFeed" } ,
-		teaserBase : "http://sitemanager.msudenver.edu/events",
+		teaserBase : "http://msudenver.edu/events",
 		spudId : "homepage_events"
 	})
 
