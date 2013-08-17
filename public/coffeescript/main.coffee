@@ -2,25 +2,6 @@
 'use strict';
 
 $ ->
-	
-	# Modernizr.load {
-	# 	test : Modernizr.mq("only all"),
-	# 	yep	 : console.log("mq supports"),
-	# 	nope : 'css/utils/mediaAllForIE8.css'
-	# }
-
-	# UTILS
-	# -----
-	
-	# location1 = "http://localhost:3000/"
-	# location2 = "http://localhost:8080/"
-	# location3 = "http://msudenver.edu/"
-	# location4 = "http://msudenver.edu/"
-
-	# locate = (url) ->
-	# 	!!url.match(/https:\/\/location3/i)
-
-	# console.log "locate function returns :: #{locate(location2)}"
 
 	# Turns elements with class .clickable into links
 	$(".clickable").click (event) ->
@@ -45,29 +26,10 @@ $ ->
 	# adds check for sitemanager build 
 	Modernizr.addTest 'sitemanager' , ->		
 		!!document.location.host.match(/sitemanager.msudenver.edu/i) or !!document.location.host.match(/msudenver.edu/i)
-				
-
-	# console.log "some other funciton context"
-	# if $('.firefox').length then $('div.triangle').css "display", "none"
-	
-	# resize function remove for pruction
-	# $(window).resize ->
-	# 	console.log("resize::"+ $(window).width());
+			
 
 	# loads top 3 stories from the newsroom
 	$('div#top3').load "/newsroom/home/"
 
 
 
-# Google analytics tracking code 
-`
-	var _gaq = _gaq || []; 
-	_gaq.push(['_setAccount', 'UA-505529-1']); 
-	_gaq.push(['_trackPageview']); 
-
-	(function() { 
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; 
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
-	})(); 
-`

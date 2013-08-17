@@ -12,7 +12,7 @@
       case "/1col":
         return res.render("onecol");
       case "/sm_build":
-        return res.send("onecol");
+        return res.send("test");
     }
   };
 
