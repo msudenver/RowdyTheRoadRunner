@@ -668,6 +668,7 @@ body {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   max-height: 400px;
+  max-width: 100%;
   line-height: 1;
   margin-left: auto;
   margin-right: auto;
@@ -707,7 +708,7 @@ h2 {
   color: #2c3e50;
   font-size: 2em;
   font-weight: 400;
-  margin-bottom: 2px;
+  margin-bottom: 0.5em;
 }
 h3 {
   color: #2980b9;
@@ -787,6 +788,9 @@ a:focus {
   min-height: 20px;
   padding: 20px;
   margin-bottom: 20px;
+  background: #ecf0f1;
+  /* ie fallback */
+
   background-color: rgba(42, 42, 42, 0.26);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -874,13 +878,22 @@ a:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 img {
-  max-width: 100%;
   /* just in case, to force correct aspet ratio */
 
-  height: auto !important;
-  -ms-interpolation-mode: bicubic;
-  /* ie7 */
+  /* Responsive images (ensure images don't scale beyond their parents) */
 
+  max-width: 100%;
+  /* Part 1: Set a maxium relative to the parent */
+
+  width: auto\9;
+  /* IE7-8 need help adjusting responsive images */
+
+  height: auto;
+  /* Part 2: Scale the height according to the width, otherwise you get stretching */
+
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
 }
 .nav-header {
   color: #ffffff;
