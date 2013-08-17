@@ -7,7 +7,7 @@
     lessFiles = ['public/less/*.less', 'public/less/utils/*.less', 'public/less/vendor/*.less'];
     htmlFiles = ['sm_build/*.html'];
     jsFiles = ['public/js/main.js'];
-    coffeeFiles = ['public/coffeescript/*', '/Gruntfile.coffee', 'casperjs_server/app.coffee'];
+    coffeeFiles = ['public/coffeescript/*.coffee'];
     grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
       cssmin: {
@@ -32,9 +32,9 @@
       },
       coffee_build: {
         options: {
-          wrap: true
+          wrap: false
         },
-        files: coffeeFiles
+        'public/js/main.js': coffeeFiles
       },
       less: {
         options: {
@@ -51,8 +51,8 @@
           }
         },
         jsChanges: {
-          files: [jsFiles, coffeeFiles],
-          tasks: ['uglify', 'coffee_build']
+          files: [jsFiles],
+          tasks: ['uglify']
         }
       }
     });

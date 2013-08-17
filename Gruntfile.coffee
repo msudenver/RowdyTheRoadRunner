@@ -17,7 +17,7 @@ module.exports = (grunt) ->
 
 	htmlFiles = ['sm_build/*.html']
 	jsFiles = ['public/js/main.js']
-	coffeeFiles = ['public/coffeescript/*', '/Gruntfile.coffee', 'casperjs_server/app.coffee']
+	coffeeFiles = ['public/coffeescript/*.coffee']
 
 	grunt.initConfig({
 
@@ -52,9 +52,9 @@ module.exports = (grunt) ->
 		# coffeescript compile task 
 		coffee_build : {
 			options	 : {
-				wrap : true
+				wrap : false
 			},
-			files : coffeeFiles
+			'public/js/main.js' : coffeeFiles
 		},
 
 		# less task
@@ -81,8 +81,8 @@ module.exports = (grunt) ->
 			# 	tasks  : ['less']
 			# },
 			jsChanges : {
-				files : [jsFiles, coffeeFiles],
-				tasks : ['uglify', 'coffee_build']
+				files : [jsFiles],
+				tasks : ['uglify']
 			},
 			# markupChanges : {
 			# 	files : [htmlFiles],

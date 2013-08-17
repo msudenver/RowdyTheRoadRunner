@@ -1,6 +1,14 @@
+
 'use strict';
 
 $ ->
+	
+	Modernizr.load {
+		test : Modernizr.mq("only all"),
+		yep	 : console.log("mq supports"),
+		nope : 'css/utils/mediaAllForIE8.css'
+	}
+
 	# UTILS
 	# -----
 	
@@ -20,11 +28,12 @@ $ ->
 		if $(this).data().href then window.open($(this).data().href ,"_self")
 
 	# adds Trumba spud to Homepage events <div>	
+
 	$Trumba.addSpud({
 		webName: "msudenver-events-calendars",
 		spudType : "upcoming" ,
-		teaserBase : "http://sitemanager.msudenver.edu/events",
 		url : { filterview : "HomePageFeed" } ,
+		teaserBase : "http://msudenver.edu/events",
 		spudId : "homepage_events"
 	})
 
@@ -46,7 +55,7 @@ $ ->
 	# 	console.log("resize::"+ $(window).width());
 
 	# loads top 3 stories from the newsroom
-	$('div#top3').load "/newsroom/top3/"
+	$('div#top3').load "/newsroom/home/"
 
 
 
