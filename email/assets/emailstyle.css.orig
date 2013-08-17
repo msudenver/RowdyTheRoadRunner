@@ -1,4 +1,13 @@
+<<<<<<< HEAD
+/* /\/\/\/\/\/\/\/\/ bootstrap-editable     /\/\/\/\/\/\/\/\/ */
+/*! X-editable - v1.4.5 
+* In-place editing with Twitter Bootstrap, jQuery UI or pure jQuery
+* http://github.com/vitalets/x-editable
+* Copyright (c) 2013 Vitaliy Potapov; Licensed MIT */
+ 
+=======
 <style>
+>>>>>>> remotes/upstream/email
  .editableform {
 	margin-bottom: 0;
 	/* overwrites bootstrap margin */
@@ -529,7 +538,11 @@ body, #bodyTable, #bodyCell {
 			*/
  body, #bodyTable {
 	/*@editable*/
+<<<<<<< HEAD
+	background-color:#DEE0E2;
+=======
 	background-color:#ffffff;
+>>>>>>> remotes/upstream/email
 }
 /**
 			* @tab Page
@@ -1155,5 +1168,9 @@ body, #bodyTable, #bodyCell {
 		display:block !important;
 	}
 	/* Place footer social and utility links on their own lines, for easier access */
+<<<<<<< HEAD
+}
+=======
 }
  </style>
+>>>>>>> remotes/upstream/email
