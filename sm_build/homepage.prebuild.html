@@ -34,36 +34,27 @@
 		
 			<link rel="stylesheet" href="css/main.min.css">
 			<!-- <t4 type="media" id="61047"/> -->
-			<!-- <t4 type="media" id="61238"/> -->
 
 			<!-- JS -->
+		
+			<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
 			<script>
-				Modernizr.load {
+				Modernizr.load({
 					test : Modernizr.mq("only all"),
-					yep	 : console.log("mq supports"),
-					nope : 'css/utils/mediaAllForIE8.css'
-				}
+					nope : "<t4 type='media' id='61238'/>"
+				})
 			</script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-			
-			<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-			<!--[if lt IE 9]>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script>
-			
-			<![endif]-->
 
 			<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 			<!--[if lt IE 9]>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script>
-			<link rel="stylesheet" href="<t4 type='media' id='61238'/>">
 			<![endif]-->
-			
+
 			<!-- Fav and touch icons -->
 			<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
-			<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touche-icon-114-precomposed.png">
+			<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touche-icon-114-precomposed.png">-
 			<link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png">
 			<link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png">
 			<link rel="shortcut icon" href="./assets/ico/favicon.png">

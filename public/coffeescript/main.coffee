@@ -3,11 +3,11 @@
 
 $ ->
 	
-	Modernizr.load {
-		test : Modernizr.mq("only all"),
-		yep	 : console.log("mq supports"),
-		nope : 'css/utils/mediaAllForIE8.css'
-	}
+	# Modernizr.load {
+	# 	test : Modernizr.mq("only all"),
+	# 	yep	 : console.log("mq supports"),
+	# 	nope : 'css/utils/mediaAllForIE8.css'
+	# }
 
 	# UTILS
 	# -----
