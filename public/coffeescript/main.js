@@ -10,7 +10,10 @@
     $Trumba.addSpud({
       webName: "msudenver-events-calendars",
       spudType: "upcoming",
-      teaserBase: "http://www.trumba.com/calendars/msudenver-events-calendars",
+      teaserBase: "http://sitemanager.msudenver.edu/events",
+      url: {
+        filterview: "HomePageFeed"
+      },
       spudId: "homepage_events"
     });
     Modernizr.addTest('firefox', function() {
