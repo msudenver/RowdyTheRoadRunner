@@ -1,6 +1,14 @@
+
 'use strict';
 
 $ ->
+	
+	# Modernizr.load {
+	# 	test : Modernizr.mq("only all"),
+	# 	yep	 : console.log("mq supports"),
+	# 	nope : 'css/utils/mediaAllForIE8.css'
+	# }
+
 	# UTILS
 	# -----
 	
@@ -13,35 +21,6 @@ $ ->
 	# 	!!url.match(/https:\/\/location3/i)
 
 	# console.log "locate function returns :: #{locate(location2)}"
-	
-
-	###	REMOVE FOR PRODUCTION, DEV ONLY	###
-	# get document's origin and append path to templates for window.HTMLImport obj lookup
-	if document.location.origin is "http://localhost:3000"
-		localUrl = document.location.protocol + "//" + document.location.host + "/templates/" 
-		console.warn("template loading from : #{localUrl}")
-
-		# notify if html imports have been loaded
-		$(window).on 'HTMLImportsLoaded', (e) ->
-
-			console.log("templates loaded!!!")
-
-			# cache reference to imported documents
-			templates = window.HTMLImports.importer.documents
-
-			
-			quickTools_template = templates[localUrl + 'quicktool_and_logo.html']
-				.body
-				.querySelectorAll("div.container:first-child");
-
-			footer_template = templates[localUrl + 'footer.html']
-				.body
-				.querySelectorAll("div.container:first-child");
-			
-			# insert html template into window 
-			$(".quicktool_and_logo_template").html(quickTools_template)
-			$(".footer_template").html(footer_template)
- 
 
 	# Turns elements with class .clickable into links
 	$(".clickable").click (event) ->
@@ -49,19 +28,22 @@ $ ->
 		if $(this).data().href then window.open($(this).data().href ,"_self")
 
 	# adds Trumba spud to Homepage events <div>	
+
 	$Trumba.addSpud({
 		webName: "msudenver-events-calendars",
 		spudType : "upcoming" ,
-		teaserBase : "http://www.trumba.com/calendars/msudenver-events-calendars",
+		url : { filterview : "HomePageFeed" } ,
+		teaserBase : "http://sitemanager.msudenver.edu/events",
 		spudId : "homepage_events"
 	})
+
 
 	# detect firefox and add .firefox class to document
 	Modernizr.addTest 'firefox', ->
 		!!navigator.userAgent.match(/firefox/i);
 
-	Modernizr.addTest 'sitemanager' , ->
-		# adds check for sitemanager build 
+	# adds check for sitemanager build 
+	Modernizr.addTest 'sitemanager' , ->		
 		!!document.location.host.match(/sitemanager.msudenver.edu/i) or !!document.location.host.match(/msudenver.edu/i)
 				
 
@@ -69,11 +51,11 @@ $ ->
 	# if $('.firefox').length then $('div.triangle').css "display", "none"
 	
 	# resize function remove for pruction
-	$(window).resize ->
-		console.log("resize::"+ $(window).width());
+	# $(window).resize ->
+	# 	console.log("resize::"+ $(window).width());
 
 	# loads top 3 stories from the newsroom
-	$('div#top3').load "/newsroom/top3/"
+	$('div#top3').load "/newsroom/home/"
 
 
 

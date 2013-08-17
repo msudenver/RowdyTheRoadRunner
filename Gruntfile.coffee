@@ -6,26 +6,26 @@ module.exports = (grunt) ->
 	# T4TAGS = grunt.file.readJSON('t4tags_list.json');
 
 	# css files to be minified and combined
-	# ignore background-img.css
+	# ignore example : !background-img.css
 
 	cssFiles = ['public/css/*.css', '!public/css/utils/*.css','!public/css/vendor/*.css',
-	'!public/css/inherit/*.css', 'public/css/utils/contentTypes.css','public/css/utils/tables.css'];
+	'!public/css/inherit/*.css'];
 
-	# lessFiles = ['public/less/*.less', 'public/less/utils/*.less', '!public/less/vendor' ]
+	# cssFiles = ['public/css/main.css']
 
-	# htmlFiles = ['sm_build/*.html']
+	lessFiles = ['public/less/*.less', 'public/less/utils/*.less', 'public/less/vendor/*.less' ]
+
+	htmlFiles = ['sm_build/*.html']
 	jsFiles = ['public/js/main.js']
-	coffeeFiles = ['public/coffeescript/*', '/Gruntfile.coffee', 'casperjs_server/app.coffee']
-
-	# watchYourSelf = ['Gruntfile.coffee', '!/.git', '!2011_Styles/*', '!casperjs_server/*', 
-	# '!node_modules/*', '!public/*','!routes/*','!sm_build/*', '!views/*']
+	coffeeFiles = ['public/coffeescript/*.coffee']
 
 	grunt.initConfig({
+
 		pkg : grunt.file.readJSON('package.json'),
 			  
 		cssmin : {
 			options : {
-				expand: true,
+				# expand: true, 
 				# banner + timestapmt
 				banner : '/*! <%= pkg.name %> \n CSS Baked on <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> */\n'
 			},
@@ -52,41 +52,45 @@ module.exports = (grunt) ->
 		# coffeescript compile task 
 		coffee_build : {
 			options	 : {
-				wrap : true
+				wrap : false
 			},
-			files : coffeeFiles
+			'public/js/main.js' : coffeeFiles
 		},
 
 		# less task
 		less : {
 			options : {
 					paths : ['public/less']
+					# report : 'gzip'
 			},
-			local : {
-				files : [{ 
-					expand: true, 
-					cwd: 'public/less', 
-					src: '*.less', 
-					dest: 'public/css/', 
-					ext: '.css' 
-				}]
-			}
+			'public/css/main-style.css' : lessFiles
 		},
 
 		# watch routinely for css changes
 		watch : {
-			all : {
-				# files : [cssFiles, jsFiles, coffeeFiles, htmlFiles, lessFiles],
-				files : [cssFiles, jsFiles, coffeeFiles],
-				# tasks : ['cssmin', 'uglify', 'coffee_build', 'less'],
-				tasks : ['cssmin', 'uglify', 'coffee_build'],
-				options :{
+			cssChanges : {
+				files  : [cssFiles],
+				tasks  : ['cssmin'],
+				options: {
 					# default port 35729, uses livereload chrome browser plug-in
 					livereload: false
 				}
-			}
+			},
+			# lessChanges : {
+			# 	files  : [lessFiles],
+			# 	tasks  : ['less']
+			# },
+			jsChanges : {
+				files : [jsFiles],
+				tasks : ['uglify']
+			},
+			# markupChanges : {
+			# 	files : [htmlFiles],
+			# 	options: {
+			# 		livereload: false
+			# 	}
+			# }
 		}
-		# ,
 
 		# # replace- t4 tags task 
 		# "regex-replace" : {
@@ -114,13 +118,13 @@ module.exports = (grunt) ->
 	# grunt.loadNpmTasks('grunt-regex-replace')
 
     # cssmin task
-	grunt.registerTask('buildcss', ['cssmin']);
-	grunt.registerTask('buildjs', ['uglify']);
-	grunt.registerTask('buildCoffee', ['coffee_build']);
-	grunt.registerTask('buildless', ['less']);  ####
-	grunt.registerTask('buildWatch', ['watch']);
-	# grunt.registerTask('buildt4tags', ['regex-replace']);
+	grunt.registerTask('buildcss', ['cssmin'])
+	grunt.registerTask('buildjs', ['uglify'])
+	grunt.registerTask('buildcoffee', ['coffee_build'])
+	grunt.registerTask('buildless', ['less'])
+	grunt.registerTask('buildwatch', ['watch'])
+	# grunt.registerTask('buildt4tags', ['regex-replace'])
 
 	# default task(s)
-	grunt.registerTask('default',  ['watch']);
+	grunt.registerTask('default',  ['watch'])
 	

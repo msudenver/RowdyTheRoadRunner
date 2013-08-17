@@ -5,7 +5,9 @@
 @import "homepage.less" ;
 @import "mediaQueries.less" ;
 @import "./utils/background-img.less" ;
-@import "./vendor/bootstrap-glyphicons.css" ;
+@import "./utils/contentTypes.less" ;
+
+// @import "./vendor/bootstrap-glyphicons.css" ; # this causes an error on sitemanager
 
 
 // data-href
@@ -20,7 +22,7 @@
 // --------
 
 h1, h2, h3, h4, h5, h6 {
-font-family: Open Sans, helvetica, arial, sans-serif;
+  font-family: Open Sans, helvetica, arial, sans-serif;
 }
 
 h1 {
@@ -37,7 +39,7 @@ h2 {
   color: @midnightblue;
   font-size: 2em;
   font-weight: 400;
-  margin-bottom: 2px;
+  margin-bottom: 0.5em;
 }
 
 h3 {
@@ -70,8 +72,8 @@ h6 {
 // -------- * ---------
 
 body {
-  margin: 0;
   font-family: Open Sans, helvetica, arial, sans-serif;
+  margin: 0;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
@@ -123,6 +125,9 @@ a:focus {
   .animate-all(0.25s);
 }
 
+// BREADCRUMBS 
+// -----------
+
 .breadcrumbs {
    color: @midnightblue;
    margin-bottom: 20px;
@@ -137,6 +142,8 @@ a:focus {
   min-height: 20px;
   padding: 20px;
   margin-bottom: 20px;
+
+  background: @clouds; /* ie fallback */
   background-color: rgba(42, 42, 42, 0.26);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -145,17 +152,11 @@ a:focus {
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-
-.footer > .container > .row-fluid > .span3  {
-  color: @black;
+.footer p{
+  color : @rowdyblue;
 }
-
-.footer > .container > .row-fluid > .span5 {
-  color: @black;
-}
-
-.footer > .container > .row-fluid > .span5 {
-  color: @black;
+.col-lg-4.col-sm-6.campus-info {
+    color: red;
 }
 
 // DEFINE!!!
@@ -230,21 +231,48 @@ a:focus {
   font-size: 10px;
 }
 
-
-// TRUMBA CALENDAR STYLES
-// --------- * ----------
-
-.trumba .twDescription{
-  text-align: center;
-}
-
-
 // BOOTSTRAP OVER-WRITES
 // --------- * ---------
 
+.well {
+  min-height: 7em;
+  padding: 1.2575em;
+  margin-bottom: 20px;
+  background-color: @white;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
 
 img{
+  // max-width: 100% !important;
+  // display: block;
+  // width: 100%;
+  // max-width: 100%;
+
+  /* just in case, to force correct aspet ratio */
+  // height: auto !important;
+  //  -ms-interpolation-mode: bicubic; /* ie7 */
+  
+  /* Responsive images (ensure images don't scale beyond their parents) */
+
   max-width: 100%;
+  /* Part 1: Set a maxium relative to the parent */
+
+  width: auto\9;
+  /* IE7-8 need help adjusting responsive images */
+
+  height: auto;
+  /* Part 2: Scale the height according to the width, otherwise you get stretching */
+
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  
 }
 
 .nav-header{
@@ -276,20 +304,6 @@ li.active > a{
   padding-right: 0;
   padding-left: 0;
   *zoom: 1;
-}
-
-.well {
-  min-height: 7em;
-  padding: 1.2575em;
-  margin-bottom: 20px;
-  background-color: @white;
-  border: 1px solid #e3e3e3;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 // MODERNIZR*
