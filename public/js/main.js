@@ -22,7 +22,14 @@
     Modernizr.addTest('sitemanager', function() {
       return !!document.location.host.match(/sitemanager.msudenver.edu/i) || !!document.location.host.match(/msudenver.edu/i);
     });
-    return $('div#top3').load("/newsroom/home/");
+    if ($("html").hasClass('sitemanager')) {
+      return (function() {
+        console.warn("running on sitemanager");
+        return $('div#top3').load("/newsroom/home/");
+      })();
+    } else {
+      return console.warn("running on localhost");
+    }
   });
 
 }).call(this);

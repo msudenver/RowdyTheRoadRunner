@@ -3,7 +3,7 @@
   module.exports = function(grunt) {
     var coffeeFiles, cssFiles, htmlFiles, jsFiles, lessFiles;
 
-    cssFiles = ['public/css/*.css', '!public/css/utils/mediaAllForIE8.css', '!public/css/vendor/*.css', '!public/css/inherit/*.css'];
+    cssFiles = ['public/css/*.css', '!public/css/utils/mediaAllForIE8.css', '!public/css/vendor/*.css', '!public/css/inherit/*.css', 'public/css/utils/print.css'];
     lessFiles = ['public/less/*.less', 'public/less/utils/*.less', 'public/less/vendor/*.less'];
     htmlFiles = ['sm_build/*.html'];
     jsFiles = ['public/js/main.js'];
