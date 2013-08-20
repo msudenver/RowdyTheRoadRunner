@@ -101,4 +101,7 @@
 	.span12{
 		padding-top:0;
 	}
+	.footer{
+		display:none;
+	}
 }
