@@ -8,7 +8,7 @@ module.exports = (grunt) ->
 	# css files to be minified and combined
 	# ignore example : !background-img.css
 
-	cssFiles = ['public/css/*.css', '!public/css/utils/*.css','!public/css/vendor/*.css',
+	cssFiles = ['public/css/*.css', '!public/css/utils/mediaAllForIE8.css','!public/css/vendor/*.css',
 	'!public/css/inherit/*.css'];
 
 	# cssFiles = ['public/css/main.css']
