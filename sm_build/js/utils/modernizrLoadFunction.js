@@ -1,4 +1,4 @@
-// 
+// 08.20.13 @ 1:40pm
 Modernizr.load({
 	test : Modernizr.mq("only all"),
 	yep  : console.info('!!!@media support!!!'),
