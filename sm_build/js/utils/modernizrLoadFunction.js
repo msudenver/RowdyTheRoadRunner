@@ -1,6 +1,7 @@
-// 08.20.13 @ 1:40pm
-Modernizr.load({
-	test : Modernizr.mq("only all"),
-	yep  : console.info('!!!@media support!!!'),
-	nope : ["css/utils/mediaAllForIE8.css", "//cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"]
-});
+// 08.20.13 @ 10:40pm
+
+// Modernizr.load({
+// 	test : Modernizr.mq("only all"),
+// 	nope : ["css/utils/mediaAllForIE8.css","http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"]
+// });
+
