@@ -9,15 +9,13 @@ $ ->
 		if $(this).data().href then window.open($(this).data().href ,"_self")
 
 	# adds Trumba spud to Homepage events <div>	
-
-	$Trumba.addSpud({
+	spud = $Trumba.addSpud({
 		webName: "msudenver-events-calendars",
 		spudType : "upcoming" ,
 		url : { filterview : "HomePageFeed" } ,
 		teaserBase : "http://msudenver.edu/events",
 		spudId : "homepage_events"
 	})
-
 
 	# detect firefox and add .firefox class to document
 	Modernizr.addTest 'firefox', ->
@@ -31,6 +29,7 @@ $ ->
 	# loads top 3 stories from the newsroom
 	if($("html").hasClass('sitemanager')) then do ->
 		console.warn("running on sitemanager")
+		spud()
 		$('div#top3').load("/newsroom/home/")
 	else console.warn "running on localhost"
 
