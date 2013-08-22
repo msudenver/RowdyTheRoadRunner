@@ -2,11 +2,11 @@
 # in templates use templates-heard
 
 appModule = angular.module('app',[]);
-angular.module 'test', ->
+appModule.directive 'template', ->
 	{
-		restrict : 'E', # restrict directive to Element | attribute | class | comment | combination
-		template : '<div>TEST HELLO WORLD</div>',
-		replate: true			
+		restrict : 'E', 
+        # restrict directive to 
+        # Element | attribute | class | comment | combination
+		templateUrl : 'prebuildHeader.html',
+		replace: false			
 	}
-
-

@@ -5,6 +5,16 @@ module.exports = (grunt) ->
 	# automation rules...
 	# T4TAGS = grunt.file.readJSON('t4tags_list.json');
 
+
+	# load plug-ins
+	grunt.loadNpmTasks('grunt-contrib-cssmin')
+	grunt.loadNpmTasks('grunt-contrib-watch')
+	grunt.loadNpmTasks('grunt-contrib-uglify')
+	grunt.loadNpmTasks('grunt-coffee-build')
+	grunt.loadNpmTasks('grunt-contrib-less')
+	grunt.loadNpmTasks('grunt-open')
+	# grunt.loadNpmTasks('grunt-regex-replace')
+
 	# css files to be minified and combined
 	# ignore example : !background-img.css
 
@@ -22,6 +32,12 @@ module.exports = (grunt) ->
 	grunt.initConfig({
 
 		pkg : grunt.file.readJSON('package.json'),
+
+		# open : {
+		# 	sm_build : {
+					
+		# 	}
+		# },
 			  
 		cssmin : {
 			options : {
@@ -109,21 +125,14 @@ module.exports = (grunt) ->
 	grunt.event.on 'watch', (action, path, target)  ->
 		grunt.log.writeln(target + ' : ' + path + ' has been ' + action)
 
-	# load plug-ins
-	grunt.loadNpmTasks('grunt-contrib-cssmin')
-	grunt.loadNpmTasks('grunt-contrib-watch')
-	grunt.loadNpmTasks('grunt-contrib-uglify')
-	grunt.loadNpmTasks('grunt-coffee-build')
-	grunt.loadNpmTasks('grunt-contrib-less')
-	# grunt.loadNpmTasks('grunt-regex-replace')
 
-    # cssmin task
+    # Register tasks
 	grunt.registerTask('buildcss', ['cssmin'])
 	grunt.registerTask('buildjs', ['uglify'])
 	grunt.registerTask('buildcoffee', ['coffee_build'])
 	grunt.registerTask('buildless', ['less'])
 	grunt.registerTask('buildwatch', ['watch'])
-	# grunt.registerTask('buildt4tags', ['regex-replace'])
+	# grunt.registerTask('open', ['regex-replace'])
 
 	# default task(s)
 	grunt.registerTask('default',  ['watch'])

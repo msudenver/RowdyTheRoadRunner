@@ -4,11 +4,11 @@
 
   appModule = angular.module('app', []);
 
-  angular.module('test', function() {
+  appModule.directive('template', function() {
     return {
       restrict: 'E',
-      template: '<div>TEST HELLO WORLD</div>',
-      replate: true
+      templateUrl: 'prebuildHeader.html',
+      replace: false
     };
   });
 

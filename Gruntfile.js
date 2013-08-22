@@ -3,6 +3,12 @@
   module.exports = function(grunt) {
     var coffeeFiles, cssFiles, htmlFiles, jsFiles, lessFiles;
 
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-coffee-build');
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-open');
     cssFiles = ['public/css/*.css', '!public/css/utils/mediaAllForIE8.css', '!public/css/vendor/*.css', '!public/css/inherit/*.css', 'public/css/utils/print.css'];
     lessFiles = ['public/less/*.less', 'public/less/utils/*.less', 'public/less/vendor/*.less'];
     htmlFiles = ['sm_build/*.html'];
@@ -59,11 +65,6 @@
     grunt.event.on('watch', function(action, path, target) {
       return grunt.log.writeln(target + ' : ' + path + ' has been ' + action);
     });
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-coffee-build');
-    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.registerTask('buildcss', ['cssmin']);
     grunt.registerTask('buildjs', ['uglify']);
     grunt.registerTask('buildcoffee', ['coffee_build']);
