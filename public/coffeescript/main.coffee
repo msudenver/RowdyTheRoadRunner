@@ -25,11 +25,14 @@ $ ->
 
 	# adds check for sitemanager build 
 	Modernizr.addTest 'sitemanager' , ->		
-		!!document.location.host.match(/sitemanager.msudenver.edu/i) or !!document.location.host.match(/msudenver.edu/i)
-			
+		!!document.location.host.match(/sitemanager.msudenver.edu/i) or
+		!!document.location.host.match(/msudenver.edu/i)
 
 	# loads top 3 stories from the newsroom
-	$('div#top3').load "/newsroom/home/"
+	if($("html").hasClass('sitemanager')) then do ->
+		console.warn("running on sitemanager")
+		$('div#top3').load("/newsroom/home/")
+	else console.warn "running on localhost"
 
 
 

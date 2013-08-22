@@ -9,7 +9,7 @@ module.exports = (grunt) ->
 	# ignore example : !background-img.css
 
 	cssFiles = ['public/css/*.css', '!public/css/utils/mediaAllForIE8.css','!public/css/vendor/*.css',
-	'!public/css/inherit/*.css'];
+	'!public/css/inherit/*.css', 'public/css/utils/print.css'];
 
 	# cssFiles = ['public/css/main.css']
 
