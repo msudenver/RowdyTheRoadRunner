@@ -2,8 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
-		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title><t4 type="title" /> | <t4 type="navigation" id="524"/> | MSU Denver</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<t4 type="navigation" id="504"/> <!-- Meta Data -->
@@ -18,38 +17,38 @@
 		<t4 type="meta" id="9"/> <!-- meta DC.format -->
 		<t4 type="meta" id="10"/> <!-- meta DC.date -->
 		<t4 type="meta" id="11"/> <!-- meta DC.contributor -->
-
 		<!-- google open sans -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,300,700,600' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-
+	
 		<!-- CSS -->
+
 		<!-- normalize reset -->
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.min.css">
 		<!-- twitter bt3rc1 -->
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet">
 		
 		<!-- MSU Denver CSS -->
+<<<<<<< HEAD
+		<link rel="stylesheet" href="css/main.min.css"><!-- <t4 type="media" id="61047"/> -->
+=======
 		
-		<link rel="stylesheet" href="css/main.min.css">
+		<!-- <link rel="stylesheet" href="css/main.min.css"> -->
 		<!-- <t4 type="media" id="61047"/> -->
+>>>>>>> remotes/origin/email
 
 		<!-- JS -->
-		
-		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-
-		<script>
-			Modernizr.load({
-				test : Modernizr.mq("only all"),
-				nope : "<t4 type='media' id='61238'/>"
-			})
-		</script>
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script>
 		<![endif]-->
+
+		<!-- Modernizr CDN -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js">
+		</script>
+		<!-- modernizr load function -->
+		<script src="js/utils/modernizrLoadFunction.js"></script><!-- <t4 type="media" id="61333"/> -->
 		
 		<!-- Fav and touch icons -->
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
@@ -172,10 +171,10 @@
 									</ul>
 								</li>
 							</ul>
-						</div>
+						</div><!--/end of sidenav span 3 well -->
 						<!--/.well -->
-						<!--<t4 type='navigation' id="104"/> Imports Content Link Column Section -->
 						<div class="linkcolumn visible-md visible-lg">
+							<!--<t4 type='navigation' id="104"/> Imports Content Link Column Section -->
 							<div class="HighlightBox">
 								<div class="HighlightBox-title">
 									<div class="triangle"></div>
@@ -190,9 +189,9 @@
 							    </div>
 							</div>
 						</div>
-		    	</div><!--/end of sidenav-->
-				<div class="col-lg-6">
-					<div class="content">			
+		    	</div><!--/span-->
+				<div class="col-lg-9">
+					<div class="content">
 							<img class="hero" src="assets/img/bannerimagesample.jpg" alt="Banner Sample Image">
 							<!-- <t4 type="navigation" id="106"/> Page Image Content Template Example -->
 						<!-- *********************************  -->
@@ -257,26 +256,8 @@
 						</div>
 		<!-- *********************************  -->
 		<!-- SITEMANAGER START FOOTER -->
-		<!-- *********************************  -->										
+		<!-- *********************************  -->			
 					</div><!-- /content -->
-				</div>
-				<div class="col-lg-3">
-				<div id="3ColumnRight">
-					<t4 type="navigation" id="105"/>
-					<div class="HighlightBox">
-						<div class="HighlightBox-title">
-							<div class="triangle"></div>
-								Link Column InfoBox Title
-								<hr>
-							</div>
-							<div class="HighlightBox-content">
-								<p>
-									Donec non ligula mi, nec laoreet libero. Sed accumsan luctus vehicula. Suspendisse potenti.
-									<a href="google.com">Integer commodo massa quis dolor feugiat vulputate</a>
-								</p>
-							 </div>
-						</div>
-					</div>	
 				</div>
 			</div>
 		</div>
@@ -286,7 +267,7 @@
 					<div class="col-lg-4 col-sm-12" >
 						<img class="clickable" src="assets/webicons/images/fc-webicon-facebook.png" alt="Facebook Logo" data-href="https://www.facebook.com/msudenver">
 						<img class="clickable" src="assets/webicons/images/fc-webicon-twitter.png" alt="Twitter Logo" data-href="http://twitter.com/msudenver">
-						<img class="clickable" src="assets/webicons/images/fc-webicon-youtube.png" alt="YouTube Logo" data-href="http://www.youtube.com/user/metrostatecollege">
+						<img class="clickable" src="assets/webicons/images/fc-webicon-youtube.png" alt="YouTube Logo" data-href="http://www.youtube.com/user/msudenver">
 						<img class="clickable" src="assets/webicons/images/fc-webicon-flickr.png" alt="Flickr Logo" data-href="http://www.flickr.com/photos/msudenver/sets/">
 						<!-- <img class="clickable" src="<t4 type='media' id='60295' formatter='image/path'/>" alt="Facebook Logo" data-href="#">
 						<img class="clickable" src="<t4 type='media' id='60367' formatter='image/path'/>" alt="Twitter Logo" data-href="#">
@@ -318,14 +299,11 @@
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
 		<!-- local bootstrap.js fallback -->
 		<script> $.fn.modal || document.write('<script src="js/vendor/bootstrap/min/bootstrap.min.js">\x3C/script>')</script>
-		<!-- 
-		// <script> $.fn.modal || document.write('<script src="<t4 type='media' id='60914'/>" />')</script>
-		 -->
-
+		<!--<script> $.fn.modal || document.write('<script src="<t4 type='media' id='60914'/>" />')</script>-->
 		<script src="js/vendor/plugins.js"></script> 
 		<!-- <t4 type="media" id="60225"/> -->
 		<script src="js/main.min.js"></script> 
-		<!-- <t4 type="media" id="61046"/> -->
+		<!-- <t4 type="media" id="61156"/> -->
 		<!--<t4 type="navigation" id="103"/>-->
 	</body>
 </html>

@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title><t4 type="title" /> | <t4 type="navigation" id="524"/> | MSU Denver</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<t4 type="navigation" id="504"/> <!-- Meta Data -->
 		<t4 type="meta" id="1"/> <!-- meta DC.keywords -->
 		<t4 type="meta" id="2"/> <!-- meta DC.abstract -->
@@ -41,6 +41,7 @@
 		<!--[if lt IE 9]>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
 		<![endif]-->
+
 		<!-- Modernizr CDN -->
 		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js">
 		</script>
@@ -48,7 +49,7 @@
 		<t4 type="media" id="61333"/>
 		
 		<!-- Fav and touch icons -->
-
+		
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<t4 type='media' id='60992' formatter='image/path'/>">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<t4 type='media' id='60991' formatter='image/path'/>">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<t4 type='media' id='60990' formatter='image/path'/>">
@@ -98,7 +99,7 @@
 			            </div><!-- /.nav-collapse -->
 	        		</div><!-- /.container -->
 			        <!-- logo -->
-			       	<div class="msudenver_logo col-12 col-sm-5 col-lg-5 col-pull-7">
+			        <div class="msudenver_logo col-12 col-sm-5 col-lg-5 col-pull-7">
             			<img class="clickable" src="<t4 type='media' id='60273' formatter='image/path'/>" alt="MSU Denver Formal Logo" data-href="/">
         			</div>
 			    </div><!-- /.row -->
@@ -119,24 +120,28 @@
 				<div class="col-lg-3"><!-- LEFT SIDE COLUMN -->
 						<div class="sidebar-nav">
 							<t4 type='navigation' id='784' />
-						</div>
+						</div>					
 						<div class="linkcolumn visible-md visible-lg">
-							<t4 type='navigation' id='104' />
-						</div>
+							<t4 type='navigation' id="104"/>
+						</div><!--/end of sidenav span 3 well -->
 		    	</div><!--/span-->
-				<div class="col-lg-9">
+				<div class="col-lg-6">
 					<div class="content">
-							<t4 type="navigation" id="106"/> 
+						<t4 type="navigation" id="106"/>					
 <!-- *********************************  -->
 <!-- SITEMANAGER HEADER ENDS HERE -->
 <!-- *********************************  -->
 
 <!-- *********************************  -->
 <!-- SITEMANAGER START FOOTER -->
-<!-- *********************************  -->
-
+<!-- *********************************  -->										
 					</div>
 				</div>
+				<div class="col-lg-3">
+					<div id="3ColumnRight">
+						<t4 type="navigation" id="105"/>
+					</div>
+				</div>	
 			</div>
 		</div><!-- / end of main container-->
 		<div class="container">
@@ -158,7 +163,11 @@
 					<div class="col-lg-4 col-sm-6">
 						<p>
 							<a href="/contact"> CONTACT US</a> <br>
+<<<<<<< HEAD
+							© Metropolitan State University of Denver <br>
+=======
 							<t4 type="edit-page" action="direct-edit" text="&copy;"/> Metropolitan State University of Denver <br>
+>>>>>>> remotes/origin/email
 							<a href="/privacy">Privacy Statement</a> | <a href="http://tops.state.co.us/">Colorado TOPS</a> <br>
 						</p>
 					</div>
@@ -174,8 +183,12 @@
 		<!-- local bootstrap.js fallback -->
 		<script> $.fn.modal || document.write('<script src="<t4 type='media' id='60914'/>" />')</script>
 		<t4 type="media" id="60225"/>
+<<<<<<< HEAD
 		<t4 type="media" id="61156"/>
 		<!-- google analytics -->
+=======
+		<t4 type="media" id="61046"/>
+>>>>>>> remotes/origin/email
 		<t4 type="navigation" id="103"/>
 	</body>
 </html>
