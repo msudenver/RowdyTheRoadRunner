@@ -78,6 +78,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
+  // opacity: 0;
   /* !!!remark: body background image loaded via data url scheme */
 }
 
@@ -328,4 +329,29 @@ li.active > a{
   background-color: @clouds;
   color: @white;
 }
+
+// angular.js cloak func
+// prevents FOUC of <body>
+// ---------------------
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  // display: none !important; 
+  // opacity: 0 !important;
+}
+
+body {
+  
+  -webkit-transition: opacity 1.2s ease-in;
+  -moz-transition: opacity 1.2s ease-in;
+  -o-transition: opacity 1.2s ease-in;
+  -ms-transition: opacity 1.2s ease-in;
+  transition: opacity 1.2s ease-in;
+
+}
+.preload * {
+  // opacity: 0; 
+}
+
+
+
+
 

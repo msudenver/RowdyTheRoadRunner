@@ -1055,3 +1055,10 @@ li.active > a {
   background-color: #ecf0f1;
   color: #ffffff;
 }
+body {
+  -webkit-transition: opacity 1.2s ease-in;
+  -moz-transition: opacity 1.2s ease-in;
+  -o-transition: opacity 1.2s ease-in;
+  -ms-transition: opacity 1.2s ease-in;
+  transition: opacity 1.2s ease-in;
+}

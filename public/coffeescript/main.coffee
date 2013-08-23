@@ -1,7 +1,10 @@
+$(window).onload ->
+	$('body').removeClass("preload")
 
 'use strict';
 
 $ ->
+
 
 	# Turns elements with class .clickable into links
 	$(".clickable").click (event) ->
