@@ -82,6 +82,9 @@ a:hover {
 .multilevel-linkul-5 {
   background-color: #55a5d9;
 }
+table {
+  float: none !important;
+}
 table .table {
   width: 100%;
   margin-bottom: 20px;
