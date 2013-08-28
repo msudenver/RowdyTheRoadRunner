@@ -424,7 +424,8 @@ h1 a, h2 a, h3 a, h4 a {
 
 
 
-</style><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 /* 
 	jquery feature load
@@ -445,11 +446,12 @@ var container= '<div class="container"><div id="slider" class="carousel slide"><
 
 $(document).ready(function(){
 
-	$('.col-lg-3').after('<div id="promo"></div>');
+	$('.content').prepend('<div id="promo" class="col-12"></div>');
 
 	$("#promo").css({
-		"width":"72%",
-		"margin-left": "20px",
+		"width":"100%",
+		"margin-left": "0px",
+		"margin-bottom": "40px",
 		"float": "left",
 		"border" : "none"
 	});
@@ -470,8 +472,9 @@ $(document).ready(function(){
 });
 
 
-</script><script>
+</script>
 
+<script>
 
 /* ===================================================
  * bootstrap-transition.js v2.3.1
@@ -786,9 +789,9 @@ $(document).ready(function(){
 		<!-- local bootstrap.js fallback -->
 		<script> $.fn.modal || document.write('<script src="../assets/js/vendor/bootstrap/min/bootstrap.min.js" />')</script>
 		<!-- plug-ins.js -->
-		<script type="text/javascript" src="../assets/js/vendor/plugins.js"></script>
+		<script type="text/javascript" src="../js/vendor/plugins.js"></script>
 		<!-- main.min.js -->
-		<script type="text/javascript" src="../assets/js/main.min.js"></script>
+		<script type="text/javascript" src="../js/main.min.js"></script>
 		<!-- google analytics -->
 		<script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
