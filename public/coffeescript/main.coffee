@@ -1,24 +1,12 @@
-$(window).onload ->
-	$('body').removeClass("preload")
-
 'use strict';
 
 $ ->
-
+	# $('body').removeClass("preload")
 
 	# Turns elements with class .clickable into links
 	$(".clickable").click (event) ->
 		event.preventDefault()
 		if $(this).data().href then window.open($(this).data().href ,"_self")
-
-	# adds Trumba spud to Homepage events <div>	
-	spud = $Trumba.addSpud({
-		webName: "msudenver-events-calendars",
-		spudType : "upcoming" ,
-		url : { filterview : "HomePageFeed" } ,
-		teaserBase : "http://msudenver.edu/events",
-		spudId : "homepage_events"
-	})
 
 	# detect firefox and add .firefox class to document
 	Modernizr.addTest 'firefox', ->
@@ -30,10 +18,21 @@ $ ->
 		!!document.location.host.match(/msudenver.edu/i)
 
 	# loads top 3 stories from the newsroom
-	if($("html").hasClass('sitemanager')) then do ->
-		console.warn("running on sitemanager")
-		spud()
+	if $("html").hasClass('sitemanager') 
+
+		# adds Trumba spud to Homepage events <div>	
+		$Trumba.addSpud({
+			webName: "msudenver-events-calendars",
+			spudType : "upcoming" ,
+			url : { filterview : "HomePageFeed" } ,
+			teaserBase : "http://msudenver.edu/events",
+			spudId : "homepage_events"
+		});
+		# load top 3 stories on the homepage
 		$('div#top3').load("/newsroom/home/")
+		
+		console.warn("running on sitemanager")
+
 	else console.warn "running on localhost"
 
 

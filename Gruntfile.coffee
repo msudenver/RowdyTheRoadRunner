@@ -1,25 +1,34 @@
+'use strict';
+
+LIVERELOAD_PORT = 35729;
+# lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
+# mountFolder =  (connect, dir) ->
+#     connect.static(require('path').resolve(dir));
 
 module.exports = (grunt) ->
+	# show elapse time at the end
+	require('time-grunt')(grunt)
+
+	# load all plug-ins
+	require('load-grunt-tasks')(grunt)
 
 	# grunt things... 
 	# automation rules...
 	# T4TAGS = grunt.file.readJSON('t4tags_list.json');
 
-
-	# load plug-ins
-	grunt.loadNpmTasks('grunt-contrib-cssmin')
-	grunt.loadNpmTasks('grunt-contrib-watch')
-	grunt.loadNpmTasks('grunt-contrib-uglify')
-	grunt.loadNpmTasks('grunt-coffee-build')
-	grunt.loadNpmTasks('grunt-contrib-less')
-	grunt.loadNpmTasks('grunt-open')
-	# grunt.loadNpmTasks('grunt-regex-replace')
+	# config 
+	yeomanConfig = 
+		app : 'app',
+		dist: 'dist'
 
 	# css files to be minified and combined
 	# ignore example : !background-img.css
 
-	cssFiles = ['public/css/*.css', '!public/css/utils/mediaAllForIE8.css','!public/css/vendor/*.css',
-	'!public/css/inherit/*.css', 'public/css/utils/print.css'];
+	cssFiles = ['public/css/*.css', 
+	'!public/css/utils/mediaAllForIE8.css',
+	'!public/css/vendor/*.css',
+	'!public/css/inherit/*.css',
+	 'public/css/utils/print.css'];
 
 	# cssFiles = ['public/css/main.css']
 
@@ -31,6 +40,8 @@ module.exports = (grunt) ->
 
 	grunt.initConfig({
 
+		yeoman : yeomanConfig,
+
 		pkg : grunt.file.readJSON('package.json'),
 
 		# open : {
@@ -38,7 +49,18 @@ module.exports = (grunt) ->
 					
 		# 	}
 		# },
-			  
+
+		# coffeescript compile
+		coffee : {
+			dist : {
+				files : [{
+					expand: true,
+					cwd : ""
+					}]
+			}
+		}
+
+		# minify css
 		cssmin : {
 			options : {
 				# expand: true, 
@@ -124,7 +146,6 @@ module.exports = (grunt) ->
 	# watch event notifier
 	grunt.event.on 'watch', (action, path, target)  ->
 		grunt.log.writeln(target + ' : ' + path + ' has been ' + action)
-
 
     # Register tasks
 	grunt.registerTask('buildcss', ['cssmin'])
