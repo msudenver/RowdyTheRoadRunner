@@ -6,8 +6,13 @@
 <!--[if IE 9 ]><html lang="en" class="ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" data-ng-app="templatingApp"><!--<![endif]-->
 	<head>
-		<!-- msu header template -->
 		<msu:header></msu:header>
+		<!-- msu header template -->
+		<!-- Modernizr CDN -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js">
+		</script>
+		<!-- modernizr load function -->
+		<script src="../js/utils/modernizrLoadFunction.js"></script>
 
 		<!-- angular dep, remove b4 uploading -->
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
@@ -274,7 +279,8 @@ h1 a, h2 a, h3 a, h4 a {
 <h3>Daily News Clips</h3>
 <span>Read the most recent articles on MSU Denver, higher education and K-12 issues as well as articles showcasing faculty expertise.</span>
 </a>
-</div><style>
+</div>
+<style>
 /*
 /*!
  * Bootstrap v2.3.1
@@ -328,7 +334,8 @@ h1 a, h2 a, h3 a, h4 a {
 	For MSU Denver
 
 */
-/*.carousel img {
+/*
+.carousel img {
 	width:  auto;
 	height: 300px;
   }
@@ -345,15 +352,15 @@ h1 a, h2 a, h3 a, h4 a {
 
 .carousel-control {
 	color: rgb(255,255,255);
-/*
+
 	height: 50px;
 	width:  50px;
-*/
 	margin-top: 126px;
 	text-shadow: 0 1px 1px rgba(0,0,0,1);
-	/*background-color: transparent;*/
+	/*background-color: transparent;
 	z-index: 10;
 }
+*/
 
 /*.promo_date{ color:#365F91; }
 
@@ -381,6 +388,7 @@ h1 a, h2 a, h3 a, h4 a {
 <!-- *********************************  -->
 <!-- SITEMANAGER START FOOTER -->
 <!-- *********************************  -->
+
 					</div><!-- /content -->
 				</div>
 			</div>
