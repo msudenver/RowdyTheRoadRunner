@@ -1,6 +1,9 @@
 
+// log utils
+var log  = function(args){ console.log(args)};
+var warn = function(args){ console.warn(args)};
+
 // replacement for modernizr.load Function
-//
 
 // test if this is the /newsroom
 Modernizr.addTest('newsroom', function(){
@@ -49,9 +52,6 @@ yepnope([
     }
 ]);
 
-// log utils
-var log  = function(x){ console.log(x)};
-var warn = function(x){ console.warn(x)};
 
 
 
