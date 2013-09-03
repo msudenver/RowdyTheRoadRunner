@@ -21,4 +21,13 @@
 
 
 <!--Image/Responsive-->
-<img class="img-polaroid" src='<t4 type="content" name="Media" output="file" />' alt='<t4 type="content" name="Description" output="normal"/>' style='<t4 type="media" attribute="margin" format="margin : $value;"/>  <t4 type="media" attribute="float" format="float : $value;"/>'/>
+<img class="img-responsive" src='<t4 type="content" name="Media" output="file" />' alt='<t4 type="content" name="Description" output="normal"/>' style='<t4 type="media" attribute="margin" format="margin : $value;"/>  <t4 type="media" attribute="float" format="float : $value;"/>'/>
+
+
+<!-- image/caption -->
+<div class="col-lg-5 col-md-5 col-5">
+<div class="thumbnail">
+<img src='<t4 type="content" name="Media" output="file" modifiers=""/>' alt="<t4 type='content' name='Description' output='normal'/>"/> 
+<p class="image_caption"><t4 type='content' name='Description' output='normal'/></p>
+</div>  
+</div>
