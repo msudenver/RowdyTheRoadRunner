@@ -724,7 +724,7 @@ p.actionHeader {
   font-size: 16.099999999999998px;
   font-weight: 200;
   line-height: 1.4;
-  padding: 1.5em;
+  padding: 0.5em 1em 0.5em 1em;
 }
 .lead {
   font-size: 16.099999999999998px;
@@ -837,21 +837,27 @@ button.btn.btn-default.dropdown-toggle {
   padding: 0 0.25em 0 0.25em;
 }
 .lead {
-  padding: 1.5em;
+  padding: 0.5em 1em 0.5em 1em;
 }
 .firstLead {
   font-size: 16.099999999999998px;
   font-weight: 200;
   line-height: 1.4;
-  padding: 1.5em;
+  padding: 0.5em 1em 0.5em 1em;
   font-size: x-large !important;
 }
 .secondLead {
   font-size: 16.099999999999998px;
   font-weight: 200;
   line-height: 1.4;
-  padding: 1.5em;
+  padding: 0.5em 1em 0.5em 1em;
   font-size: 14px !important;
+}
+.homepage-caption p:nth-child(2) {
+  font-size: 16.099999999999998px;
+  font-weight: 200;
+  line-height: 1.4;
+  padding: 0.5em 1em 0.5em 1em;
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width: 320px) and (max-width: 480px) {

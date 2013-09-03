@@ -12,15 +12,15 @@ $ ->
 	Modernizr.addTest 'firefox', ->
 		!!navigator.userAgent.match(/firefox/i);
 
-	# adds check for sitemanager build 
-	Modernizr.addTest 'sitemanager' , ->		
+	# adds check for sitemanager build
+	Modernizr.addTest 'sitemanager' , ->
 		!!document.location.host.match(/sitemanager.msudenver.edu/i) or
 		!!document.location.host.match(/msudenver.edu/i)
 
 	# loads top 3 stories from the newsroom
-	if $("html").hasClass('sitemanager') 
+	if $("html").hasClass('sitemanager')
 
-		# adds Trumba spud to Homepage events <div>	
+		# adds Trumba spud to Homepage events <div>
 		$Trumba.addSpud({
 			webName: "msudenver-events-calendars",
 			spudType : "upcoming" ,
@@ -30,7 +30,7 @@ $ ->
 		});
 		# load top 3 stories on the homepage
 		$('div#top3').load("/newsroom/home/")
-		
+
 		console.warn("running on sitemanager")
 
 	else console.warn "running on localhost"
