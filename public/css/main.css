@@ -746,9 +746,6 @@ p.actionHeader {
   padding-left: 0.55em;
   padding-right: 0.55em;
 }
-.nav.navbar-nav .input-group-btn {
-  padding-left: 20%;
-}
 .input-group-btn.open > ul > li > a:hover {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -851,7 +848,7 @@ button.btn.btn-default.dropdown-toggle {
   font-weight: 200;
   line-height: 1.4;
   padding: 0.5em 1em 0.5em 1em;
-  font-size: 14px !important;
+  font-size: large !important;
 }
 .homepage-caption p:nth-child(2) {
   font-size: 16.099999999999998px;
