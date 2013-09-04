@@ -1,7 +1,7 @@
+
 'use strict';
 
 $ ->
-	# $('body').removeClass("preload")
 
 	# Turns elements with class .clickable into links
 	$(".clickable").click (event) ->

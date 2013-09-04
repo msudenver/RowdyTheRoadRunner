@@ -742,6 +742,10 @@ p.actionHeader {
   /* ie */
 
 }
+.nav > li {
+  position: relative !important;
+  display: block !important;
+}
 .navbar-inverse {
   padding-left: 0.55em;
   padding-right: 0.55em;
@@ -1265,7 +1269,7 @@ a:focus {
   font-size: 10px;
 }
 .well {
-  min-height: 7em;
+  min-height: 5em;
   padding: 1.2575em;
   margin-bottom: 20px;
   background-color: #ffffff;
@@ -1318,6 +1322,11 @@ li.active > a {
   padding-right: 0;
   padding-left: 0;
   *zoom: 1;
+}
+.thumbnail,
+.img-thumbnail {
+  padding: .5em;
+  margin: 1em;
 }
 .no-csstransforms .triangle,
 .no-csstransforms3d .triangle,
