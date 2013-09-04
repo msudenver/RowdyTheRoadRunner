@@ -739,6 +739,10 @@ p.actionHeader {
   /* ie */
 
 }
+.nav > li {
+  position: relative !important;
+  display: block !important;
+}
 .navbar-inverse {
   padding-left: 0.55em;
   padding-right: 0.55em;

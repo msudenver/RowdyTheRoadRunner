@@ -7,6 +7,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" data-ng-app="templatingApp"><!--<![endif]-->
 	<head>
 		<msu:header></msu:header><!-- msu header template -->
+
 		<!-- angular dep, remove b4 uploading -->
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
 		<script src="../js/utils/ngModule.js"></script>
@@ -14,12 +15,12 @@
 	<body class="preload">
 		<div class="container"><!-- begins main container -->
 			<div class="container"> <!-- Logo and QuickLInks -->
-			    <div class="row"> 
+			    <div class="row">
        			 	<!-- toolbar -->
         			<div class="navbar toolbar col-12 col-sm-7 col-lg-7 col-push-5">
 			            <!-- Quick Links navbar-toggle -->
 			            <a class="navbar-brand visible-sm">Quick Links</a>
-			            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".quick-navbar-responsive-collapse">                           
+			            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".quick-navbar-responsive-collapse">
 			              <span class="icon-bar"></span>
 			              <span class="icon-bar"></span>
 			              <span class="icon-bar"></span>
@@ -32,7 +33,7 @@
 			                    <li><a href="http://library.auraria.edu">Library</a></li>
 			                    <li><a href="/maps">Maps</a></li>
 			                    <li>
-			                        <a href="/student/" ><strong>Current Students</strong></a>  
+			                        <a href="/student/" ><strong>Current Students</strong></a>
 			                    </li>
 			                    <li>
 			                        <a  href="/facstaff/"><strong>Faculty &amp; Staff</strong></a>
@@ -41,8 +42,8 @@
 			                        <a data-toggle="collapse" href="#quicksearch"><span class="glyphicon glyphicon-search"></span><strong><em>  Search </em>
 			                        </strong></a>
 			                    </li>
-			                </ul> 
-			                <div id="quicksearch" class="collapse col-12">  
+			                </ul>
+			                <div id="quicksearch" class="collapse col-12">
 			                    <form action="http://msudenver.edu/a_to_z/search/" class="navbar-form form-inline">
 			                        <input type="hidden" name="cx" value="004867254463714202705:1ammfpknuzw">
 			                        <input type="hidden" name="cof" value="FORID:11">
@@ -92,7 +93,7 @@
 										<li><a href="#">Questions/Comments</a></li>
 										<li><a href="#">Urban Impact</a></li>
 										<li><a href="#">Visit MSU Denver</a></li>
-									</ul> 
+									</ul>
 	                        	</div>
 	                        </li>
 	                        <li class="input-group">
@@ -112,7 +113,7 @@
 										<li><a href="#">Schedules &amp; Calendars</a></li>
 										<li><a href="#">Special Programs</a></li>
 										<li><a href="#">Tuition &amp; Fees</a></li>
-									</ul> 
+									</ul>
 	                        	</div>
 	                        </li>
 	                        <li class="input-group">
@@ -177,7 +178,7 @@
 	                        </li>
 	                        <li class="input-group">
 	                        	<div class="input-group-btn">
-		                        	<a href="http://gometrostate.com/" class="btn">ATHLETICS</a>              
+		                        	<a href="http://gometrostate.com/" class="btn">ATHLETICS</a>
 	                        	</div>
 	                        </li>
 						</ul>
@@ -195,7 +196,7 @@
 								<div class="homepage-caption">
 									<img src="../assets/img/group_of_three_for_homepage/1.jpg" alt="" class="">
 									<p class="firstLead">
-										Welcome students. Time to get rowdy!
+										The Roadrunners kick off fall sports. Which games will you attend?
 									</p>
 								</div>
 							</div>
@@ -268,7 +269,7 @@
 							<h3 class="actionHeader events clickable" data-href="/events">Events</h3>
 							<div id="homepage_events" class="container">
 								<noscript>
-								Your browser must support JavaScript to view this content. 
+								Your browser must support JavaScript to view this content.
 								Please enable JavaScript in your browser settings then try again.
 								</noscript>
 							</div>
@@ -277,6 +278,7 @@
 				</div>
 			</div>
 		</div><!-- / end of main container-->
-		<msu:footer></msu:footer>  <!-- msu footer template -->
+		<!-- msu footer template -->
+		<msu:footer></msu:footer>
 	</body>
 </html>

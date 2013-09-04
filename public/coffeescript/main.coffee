@@ -1,5 +1,3 @@
-$(window).onload ->
-	$('body').removeClass("preload")
 
 'use strict';
 
