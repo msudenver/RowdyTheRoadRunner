@@ -1016,7 +1016,6 @@ li.active > a {
 .thumbnail,
 .img-thumbnail {
   padding: .5em;
-  margin: 1em;
 }
 .no-csstransforms .triangle,
 .no-csstransforms3d .triangle,
