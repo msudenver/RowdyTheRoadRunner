@@ -7,10 +7,35 @@ var warn = function(args){ console.warn(args)};
 
 // test if this is the /newsroom
 Modernizr.addTest('newsroom', function(){
-            return !!document.location.href.match(/newsroom/i);
+    return !!document.location.href.match(/newsroom/i);
 });
 
 yepnope([
+    {
+        load : "//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css",
+        // load main.min.css, resource # 62508
+        // "<t4 type='media' id='62508'/>"
+
+        // callback will alwats fire after an error or a timeout
+        // typically 5000 ms
+        callback : function(url, result, key){
+            console.log("url :: " + url)
+            console.log("result :: " + result)
+            console.log("key :: " + key)
+            console.log("----------------")
+            if(result === false){
+                yepnope('../css/vendor/bootstrap.min.css');
+                console.warn("bootstrap.css loaded from server")
+            }
+            console.warn("bootstrap.css loaded from CDN")
+
+
+        },
+        complete : function(){
+            yepnope('../css/main.min.css');
+            console.warn("main.min.css loaded from server");
+        }
+    },
     {
         load : "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js",
         callback : function (url, result, key){
