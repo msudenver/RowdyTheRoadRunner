@@ -70,8 +70,8 @@ yepnope([
                 "../js/vendor/plugins.js",
                 // main.min.js resource # 62498
                 // "<t4 type='media' id='62497'/>"
-                "../js/main.min.js"]);
-            console.log("")
+                "../js/main.min.js"
+            ]);
         }
     },
     {
@@ -84,8 +84,10 @@ yepnope([
         // 62509
         // "<t4 type='media' id='62509'/>"
          "../css/newsroom.css"],
-        complete : function(){
-            initCarousel();
+        callback : function(url, result, key){
+            log(url);
+            log(result);
+            log(key);
         }
     }
 ]);

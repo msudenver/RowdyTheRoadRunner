@@ -12,15 +12,6 @@ Modernizr.addTest('newsroom', function(){
 
 yepnope([
     {
-        load : ["//nnetdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css",
-        // load main.min.css, resource # 62508
-        "<t4 type='media' id='62508'/>"],
-        complete : function(){
-            console.warn("bootstrap.css loaded from CDN");
-            console.warn("main.min.css loaded from server");
-        }
-    },
-    {
         load : "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js",
         callback : function (url, result, key){
             if(!window.jQuery){
@@ -33,14 +24,38 @@ yepnope([
         }
     },
     {
+        load : "//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css",
+
+        // callback will alwats fire after an error or a timeout
+        // typically 5000 ms
+        callback : function(url, result, key){
+            if($("#bootstrapCssTest").is(":visible") === true){
+                // load bootstrap.min.css, resource # 62542
+                yepnope("<t4 type='media' id='62542'/>");
+                console.warn("bootstrap.min.css loaded from server")
+            }else{
+                console.warn("bootstrap.min.css loaded from CDN")
+            }
+
+        }
+
+    },
+    {
+        // load main.min.css, resource # 62508
+        load: "<t4 type='media' id='62508'/>",
+        complete : function(){
+            console.warn("main.min.css loaded from server");
+        }
+    },
+    {
         load : "//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js",
         callback : function (url, result, key){
             if(!$.fn.modal){
-                // load bootstrap.min.js, resource # 62497
+                // load main.min.css, resource # 62497
                 yepnope("<t4 type='media' id='62497'/>");
-                console.warn("bootstrap was loaded from Server");
+                console.warn("bootstrapmin.js was loaded from Server");
             }else{
-                console.warn("bootstrap was loaded from CDN");
+                console.warn("bootstrap.min.js was loaded from CDN");
             }
         },
         complete: function(){
@@ -50,24 +65,19 @@ yepnope([
                 // main.min.js resource # 62498
                 "<t4 type='media' id='62497'/>"
             ]);
-            console.warn("trumba spuds, plugins.js and main.min.js loaded");
         }
     },
     {
-        //  adds check for /newsroom url
+        //  adds check for newsroom url build
         test : Modernizr.newsroom,
         yep : [
-        // 62500
-        "../js/utils/slider.js",
-        // 62509
-         "../css/newsroom.css"],
-        complete : function(){
+        // "../js/utils/slider.js", 62500
+        "<t4 type='media' id='62500'/>",
+        // "../css/newsroom.css", 62509
+        "<t4 type='media' id='62509'/>"
+        ],
+        callback : function(){
             initCarousel();
         }
     }
 ]);
-
-
-
-
-
