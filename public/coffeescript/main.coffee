@@ -2,6 +2,7 @@
 'use strict';
 
 $ ->
+    $(".no-fouc").removeClass("no-fouc");
 
 	# Turns elements with class .clickable into links
 	$(".clickable").click (event) ->
