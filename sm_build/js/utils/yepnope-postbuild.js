@@ -49,7 +49,7 @@ yepnope([
             }else{
                 warn("jQuery was loaded from CDN")
             }
-        } 
+        }
     },
 
     {
@@ -65,18 +65,20 @@ yepnope([
             }
         }
     },
-    
+
     {
 
         test : !!href.match(/homepage/i),
         yep  : timeout+"http://www.trumba.com/scripts/spuds.js",
         nope : warn("not the homepage !!!!!!!"),
         both : [
-            "<t4 type='media' id='62497'/>",
-            "<t4 type='media' id='62497'/>"
+            // // plugins.js, resource # 62499
+            "<t4 type='media' id='62499'/>",
+            // main.min.js resource # 62498
+            "<t4 type='media' id='62498'/>"
         ]
         // both : ["../js/vendor/plugins.js", "../js/main.min.js" ]
-  
+
     },
 
     // {
@@ -91,7 +93,7 @@ yepnope([
 
     //     ]
 
-    // }, 
+    // },
 
     {
         //  adds check for newsroom url build
@@ -99,7 +101,7 @@ yepnope([
         test : !!href.match(/newsroom/i),
         yep : {
         // slider.js 62500
-        "slider.js" : "<t4 type='media' id='62500'/>"
+        "slider.js" : "<t4 type='media' id='62500'/>",
         // "slider.js" : "../js/utils/slider.js",
 
         // newsroom.css  62509
