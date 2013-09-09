@@ -51,7 +51,7 @@ function initCarousel(){
 
     // start carousel function call
     carousel_div.carousel({
-        interval: 10000,
+        interval: 5000,
         pause: "hover"
     });
     console.warn("!!! carousel function called !!!");
