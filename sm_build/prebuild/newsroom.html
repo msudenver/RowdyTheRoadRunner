@@ -29,6 +29,11 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,300,700,600' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
 
+        <style type="text/css" media="screen">
+            /* hide body until full page load */
+            body{ opacity: 0;}
+        </style>
+
         <!-- JS -->
 
         <!-- HTML5 shim & respond.js, for IE6-8 support of HTML5 elements -->
@@ -38,10 +43,6 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
         <![endif]-->
 
-        <style type="text/css" media="screen">
-        	/* hide body until full page load */
-        	body{ opacity: 0;}
-        </style>
 
         <!-- Fav and touch icons -->
 
@@ -80,8 +81,8 @@
 			            </button>
 			            <!-- Quick Links Navbar-toggle -->
 			            <div class="container nav-collapse collapse quick-navbar-responsive-collapse">
-			                <ul class="nav navbar-nav ">
-			                    <li><a href="/a_to_z" >A-Z</a></li>
+			                <ul class="nav navbar-nav">
+			                    <li><a href="/a_to_z">A-Z</a></li>
 			                    <li><a href="https://connectu.msudenver.edu/cp/home/displaylogin">ConnectU</a></li>
 			                    <li><a href="http://library.auraria.edu">Library</a></li>
 			                    <li><a href="/maps">Maps</a></li>
@@ -109,7 +110,7 @@
 	        		</div><!-- /.container -->
 			        <!-- logo -->
 			       	<div class="msudenver_logo col-12 col-sm-5 col-lg-5 col-pull-7">
-                                  <img class="clickable" src="../assets/branding/MSUDenver_Formal.gif" alt="MSU Denver Formal Logo" data-href="/">
+                          <img class="clickable" src="../assets/branding/MSUDenver_Formal.gif" alt="MSU Denver Formal Logo" data-href="/">
         			</div>
 			    </div><!-- /.row -->
 			</div><!-- /.container -->
@@ -317,17 +318,16 @@
                     <img class="clickable" src="../assets/webicons/images/fc-webicon-twitter.png" alt="Twitter Logo" data-href="http://twitter.com/msudenver">
                     <img class="clickable" src="../assets/webicons/images/fc-webicon-youtube.png" alt="YouTube Logo" data-href="http://www.youtube.com/user/msudenver">
                     <img class="clickable" src="../assets/webicons/images/fc-webicon-flickr.png" alt="Flickr Logo" data-href="http://www.flickr.com/photos/msudenver/sets/">
-                    <!-- <img class="clickable" src="<t4 type='media' id='60295' formatter='image/path'/>" alt="Facebook Logo" data-href="#">
-                    <img class="clickable" src="<t4 type='media' id='60367' formatter='image/path'/>" alt="Twitter Logo" data-href="#">
-                    <img class="clickable" src="<t4 type='media' id='60379' formatter='image/path'/>" alt="YouTube Logo" data-href="#">
-                    <img class="clickable" src="<t4 type='media' id='60298' formatter='image/path'/>" alt="Flickr Logo" data-href="#"> -->
-                    <!-- <a href="/socialmedia">Social Media Directory</a> -->
+                    <!-- <img class="clickable" src="<t4 type='media' id='60295' formatter='image/path'/>" alt="Facebook Logo" data-href="https://www.facebook.com/msudenver">
+                    <img class="clickable" src="<t4 type='media' id='60367' formatter='image/path'/>" alt="Twitter Logo" data-href="http://twitter.com/msudenver">
+                    <img class="clickable" src="<t4 type='media' id='60379' formatter='image/path'/>" alt="YouTube Logo" data-href="http://www.youtube.com/user/msudenver">
+                    <img class="clickable" src="<t4 type='media' id='60298' formatter='image/path'/>" alt="Flickr Logo" data-href="http://www.flickr.com/photos/msudenver/sets/"> -->
                 </div>
                 <div class="col-lg-4 col-sm-6 campus-info">
                     <p>
                         Telephone: 303-556-2400
-                    <br>Auraria Campus Police: 303-556-5000
-                    <br>Inclement Weather Line: 303-556-2401
+                        <br>Auraria Campus Police: 303-556-5000
+                        <br>Inclement Weather Line: 303-556-2401
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-6">
@@ -340,5 +340,7 @@
             </div>
         </div>
     </div>
+    <!-- footer includes -->
+    <!-- <t4 type="navigation" id="103"/> -->
 	</body>
 </html>
