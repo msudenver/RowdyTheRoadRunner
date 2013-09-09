@@ -20,8 +20,8 @@
         <t4 type="meta" id="5"/> <!-- meta DC.title -->
         <t4 type="meta" id="6"/> <!-- meta DC.description -->
         <t4 type="meta" id="7"/> <!-- meta DC.language -->
-        <t4 type="meta" id="8"/> <!-- meta DC.modified --
->        <t4 type="meta" id="9"/> <!-- meta DC.format -->
+        <t4 type="meta" id="8"/> <!-- meta DC.modified -->
+        <t4 type="meta" id="9"/> <!-- meta DC.format -->
         <t4 type="meta" id="10"/> <!-- meta DC.date -->
         <t4 type="meta" id="11"/> <!-- meta DC.contributor -->
 
@@ -37,11 +37,14 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
         <![endif]-->
+
         <style type="text/css" media="screen">
+        	/* hide body until full page load */
         	body{
         		opacity: 0;
         	}
         </style>
+
         <!-- Fav and touch icons -->
 
         <link rel="stylesheet" type="text/css" href="">
@@ -59,6 +62,14 @@
         <script src="../js/utils/yepnope.js"></script>
 	</head>
 	<body>
+		<noscript>
+			<style type="text/css" media="screen">
+				body{
+					opacity: 1;
+					display: block;
+				}
+			</style>
+		</noscript>
         <div class="container"><!-- begins main container -->
 			<div class="container"> <!-- Logo and QuickLInks -->
 			    <div class="row">

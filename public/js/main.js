@@ -2,7 +2,7 @@
 'use strict';jQuery(function() {
   $('body').animate({
     opacity: 1
-  }, 100);
+  });
   $(".clickable").click(function(event) {
     event.preventDefault();
     if ($(this).data().href) {

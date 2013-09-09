@@ -5,7 +5,7 @@
 
 jQuery ->
 
-	$('body').animate( {opacity:1}, 100)
+	$('body').animate({opacity:1})
 
 	# Turns elements with class .clickable into links
 	$(".clickable").click (event) ->

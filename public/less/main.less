@@ -13,6 +13,7 @@
 
 // BODY AND LINK COLORS
 // -------- * ---------
+@time : 0.25s;
 
 body{
   .background-img-uri;   /* body background image loaded via data url scheme */
@@ -21,11 +22,13 @@ body{
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  -webkit-transition: opacity 1.2s ease-in;
-  -moz-transition: opacity 1.2s ease-in;
-  -o-transition: opacity 1.2s ease-in;
-  -ms-transition: opacity 1.2s ease-in;
-  transition: opacity 1.2s ease-in;
+
+  -webkit-transition: opacity @time ease-in;
+  -moz-transition: opacity @time ease-in;
+  -o-transition: opacity @time ease-in;
+  -ms-transition: opacity @time ease-in;
+  transition: opacity @time ease-in;
+
 }
 
 // data-href
