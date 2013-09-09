@@ -10,6 +10,7 @@
   max-height: 300px;
   max-width: 300px;
 }
+.thumbnail,
 .carousel-caption {
   right: 5%;
   bottom: 0;
@@ -19,10 +20,14 @@
   z-index: 99;
   text-align: center;
   margin: 0 auto;
+  background-color: inherit;
+  border: none;
+  padding: 0;
   /* Smartphones (portrait and landscape) ----------- */
 
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
+  .thumbnail,
   .carousel-caption {
     right: 5%;
     top: 5%;

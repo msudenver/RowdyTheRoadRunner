@@ -12,7 +12,7 @@
 	max-width: 300px;
 }
 
-.carousel-caption {
+.thumbnail, .carousel-caption {
 	right: 5%;
 	bottom: 0;
 	top: 10%;
@@ -21,6 +21,9 @@
 	z-index: 99;
 	text-align: center;
 	margin:0 auto;
+    background-color: inherit;
+    border: none;
+    padding:0;
 	/* Smartphones (portrait and landscape) ----------- */
 	@media only screen and (min-width : 320px) and (max-width : 480px) {
 		right: 5%;
@@ -29,12 +32,8 @@
 		text-align: left;
 		padding: 2em;
 		background-color: rgba(27,85,122, .7);
-
-
 	}
 }
-
-
 .carousel-caption p  {
 	position: relative;
 	padding-top: .5em;
@@ -65,8 +64,8 @@ p.lead{
 }
 
 
-.promo_date{ 
-	// color:#1b557a; 
+.promo_date{
+	// color:#1b557a;
 	font-size: 2em;
 }
 
@@ -86,18 +85,18 @@ p.lead{
 }
 // .icon-next, .icon-prev{
 // 	/* iPads (portrait) ----------- */
-// 	@media only screen 
-// 	and (min-width : 768px) 
-// 	and (max-width : 1024px) 
+// 	@media only screen
+// 	and (min-width : 768px)
+// 	and (max-width : 1024px)
 // 	and (orientation : portrait) {
 // 		/* Styles */
 // 		color: blue !impoz;
-// 	}		
+// 	}
 // }
 .icon-next{
 	/* Desktops and laptops ----------- */
 	// color: red;
-	
+
 	@media only screen and (min-width : 1224px) {
 		left: 80% !important;
 		font-size: 70px !important;
@@ -113,7 +112,7 @@ p.lead{
 		width: 0 !important;
 		left: 20% !important;
 		font-size: 70px !important;
-		
+
 	}
 }
 
