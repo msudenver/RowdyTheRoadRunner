@@ -1,11 +1,9 @@
 
 'use strict';
 
+$ ->
 
-
-jQuery ->
-
-	$('body').animate({opacity:1})
+	$('body').animate({ opacity: 1 })
 
 	# Turns elements with class .clickable into links
 	$(".clickable").click (event) ->
