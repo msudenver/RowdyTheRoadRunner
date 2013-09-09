@@ -287,13 +287,12 @@ table.atoz {
   border-color: #bdc3c7;
 }
 table.atoz th {
-  padding: 1em;
   background-color: #2980b9;
   color: #ffffff;
   border-width: 1px;
   border-style: solid;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 table.atoz th.department {
   width: 40%;
