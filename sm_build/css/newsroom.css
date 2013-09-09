@@ -1,14 +1,6 @@
 .item {
   height: 300px;
-  max-height: 300px;
   background: black;
-}
-.item > img {
-  margin: auto;
-  width: 300px;
-  height: 300px;
-  max-height: 300px;
-  max-width: 300px;
 }
 .thumbnail,
 .carousel-caption {
@@ -22,7 +14,8 @@
   margin: 0 auto;
   background-color: inherit;
   border: none;
-  padding: 0;
+  background-color: rgba(27, 85, 122, 0.7);
+  padding: 2em;
   /* Smartphones (portrait and landscape) ----------- */
 
 }

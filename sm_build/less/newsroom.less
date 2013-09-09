@@ -1,15 +1,15 @@
 
 .item{
 	height: 300px;
-	max-height: 300px;
+	// max-height: 400px;
 	background: black;
 }
 .item > img {
- 	margin: auto;
- 	width: 300px;
-	height: 300px;
-	max-height: 300px;
-	max-width: 300px;
+ 	// margin: auto;
+ // 	width: 300px;
+	// height: 300px;
+	// max-height: 300px;
+	// max-width: 300px;
 }
 
 .thumbnail, .carousel-caption {
@@ -23,9 +23,10 @@
 	margin:0 auto;
     background-color: inherit;
     border: none;
-    padding:0;
+    background-color: rgba(27,85,122, .7);
+    padding: 2em;
 	/* Smartphones (portrait and landscape) ----------- */
-	@media only screen and (min-width : 320px) and (max-width : 480px) {
+    @media only screen and (min-width : 320px) and (max-width : 480px) {
 		right: 5%;
 		top: 5%;
 		left: 5%;
@@ -34,6 +35,9 @@
 		background-color: rgba(27,85,122, .7);
 	}
 }
+
+
+
 .carousel-caption p  {
 	position: relative;
 	padding-top: .5em;

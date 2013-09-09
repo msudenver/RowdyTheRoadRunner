@@ -37,7 +37,8 @@ yepnope([
     },
 
     {
-        load : timeout + "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js",
+        load : timeout + "//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js",
+        // load : timeout + "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js", TOO NEW FOR IE8
         callback : function(url, result, key){
             if(!window.jQuery){
                 // load jquery.min.js, resource # 62496
@@ -47,7 +48,7 @@ yepnope([
             }else{
                 warn("jQuery was loaded from CDN")
             }
-        } 
+        }
     },
 
     {
@@ -63,14 +64,14 @@ yepnope([
             }
         }
     },
-    
+
     {
 
         test : !!href.match(/homepage/i),
         yep  : timeout+"http://www.trumba.com/scripts/spuds.js",
         nope :  warn("not the homepage !!!!!!!"),
         both : ["../js/vendor/plugins.js", "../js/main.min.js" ]
-  
+
     },
 
     // {
@@ -85,7 +86,7 @@ yepnope([
 
     //     ]
 
-    // }, 
+    // },
 
     {
         //  adds check for newsroom url build

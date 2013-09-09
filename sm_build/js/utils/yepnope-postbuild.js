@@ -39,7 +39,8 @@ yepnope([
     },
 
     {
-        load : timeout + "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js",
+        load : timeout + "//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js",
+        // load : timeout + "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js", TOO NEW FOR IE8
         callback : function(url, result, key){
             if(!window.jQuery){
                 // load jquery.min.js, resource # 62496
