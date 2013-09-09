@@ -1062,33 +1062,6 @@ body {
 .depsocial {
   margin-bottom: 1.5em;
 }
-/***************Carousel *********************/
-.carousel-inner {
-  background: #000000;
-  height: 400px;
-  vertical-align: bottom;
-  bottom: 0;
-}
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  max-height: 400px;
-  max-width: 100%;
-  line-height: 1;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-.carousel-caption {
-  right: 0%;
-  bottom: 0;
-  left: 0%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: #ffffff;
-  background-color: rgba(42, 42, 42, 0.26);
-  text-align: center;
-  text-shadow: 0;
-}
 .clickable {
   cursor: pointer;
 }
