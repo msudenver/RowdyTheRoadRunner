@@ -1,27 +1,15 @@
 
-// .carousel-inner {
-// 	// background: black;
-// 	height: 300px;
-// 	// vertical-align: bottom;
-// 	// bottom: 0;
-// }
-
 .item{
 	height: 300px;
 	max-height: 300px;
 	background: black;
 }
 .item > img {
- 	// display: inline-block;
  	margin: auto;
  	width: 300px;
 	height: 300px;
 	max-height: 300px;
 	max-width: 300px;
-	// line-height: 1;
-	// margin-left: auto;
-	// margin-right: auto;
-	// margin-bottom: 10px;
 }
 
 .carousel-caption {
@@ -35,32 +23,15 @@
 	margin:0 auto;
 	/* Smartphones (portrait and landscape) ----------- */
 	@media only screen and (min-width : 320px) and (max-width : 480px) {
-		right: 10%;
-		// bottom: 40%;
+		right: 5%;
 		top: 5%;
-		// position: relative;
 		left: 5%;
-		// background-color: white;
 		text-align: left;
 		padding: 2em;
-		// padding-left: 5px;
-		// padding-right: 5px;
-		// margin-left: 0;
-		// margin-right: 0;
-		// height: 100%;
-		// padding-top: 0;
-		// margin-top: 0;
-		background-color: rgba(42, 42, 42, .7);
+		background-color: rgba(27,85,122, .7);
 
 
 	}
-
-	// padding-top: 10px;
-	// padding-bottom: 10px;
-	
-	
-	// background-color: white;
-
 }
 
 
@@ -76,7 +47,7 @@
 		top: 25%;
 		left: 0;
 		// font-size: 1em;
-		padding:10px;
+		padding:10px 25px 5px 15px;
 		margin:0 auto;
 		// padding-left: 1em;
 		// background-color: rgba(42, 42, 42, 0.7);
@@ -88,6 +59,9 @@ p.lead{
 	font-size: 1em;
 	padding:0;
 	margin:0 auto;
+	@media only screen and (min-width : 320px) and (max-width : 480px) {
+		padding:10px 25px 5px 15px;
+	}
 }
 
 
@@ -97,27 +71,29 @@ p.lead{
 }
 
 
-.carousel img {
-	// width:  auto;
-	// height: 300px;
+.carousel-indicators {
+	z-index: 101;
+	@media only screen and (min-width : 320px) and (max-width : 480px) {
+		bottom: -3%;
+	}
 }
-
-
-
 
 .carousel-control {
 	color: white;
-	// left: 15%;
-	// height: 150px;
-	// width:  150px;
-	// padding-top: 126px;
-	// text-shadow: 0 1px 1px rgba(0,0,0,1);
-	// background-color: transparent;
 	font-size: 5em;
 	z-index: 100;
 
 }
-
+// .icon-next, .icon-prev{
+// 	/* iPads (portrait) ----------- */
+// 	@media only screen 
+// 	and (min-width : 768px) 
+// 	and (max-width : 1024px) 
+// 	and (orientation : portrait) {
+// 		/* Styles */
+// 		color: blue !impoz;
+// 	}		
+// }
 .icon-next{
 	/* Desktops and laptops ----------- */
 	// color: red;
@@ -141,59 +117,3 @@ p.lead{
 	}
 }
 
-
-// #slider{
-// 	width: 100%;
-// 	margin-left: 0;
-// 	// float: left;
-// 	// border :none;
-// }
-
-
-// .carousel-control .right .left {
-// 	text-decoration: none;
-// 	left: auto;
-// 	// right: 15px;
-// }
-
-// // .carousel-control.left {
-
-// // }
-// // .carousel-control {
-
-// // }
-
-// // .left{
-// // 	float:inherit;
-// // }
-
-// span{
-//  color:black;
-// }
-
-// table{
-// 	 width: 100%;
-// 	 border: 1px ;
-// 	 padding: 5px;
-// 	 color: silver;
-// }
-
-// div > img.border {
-// 	max-width: 300px;
-// 	max-height:300px;
-// }
-
-// p.image_caption {
-//          display:none;
-// }
-
-// div.contents{
-//          float: left;
-//          padding: 15px;
-// }
-// h4 a{
-// 	color: #4F639F;
-// }
-// .carousel-inner > h1 a, h2 a, h3 a, h4 a {
-// 	// color: white;/
-// }
