@@ -18,7 +18,6 @@
 
 // original url for newsroom top 3
 // var url = "/newsroom/channels/slider/";
-
 var url = "slider/slider.html";
 
 var carousel_indicators = ['<ol class="carousel-indicators">',
@@ -46,12 +45,15 @@ function initCarousel(){
     carousel_div.append([carousel_indicators, '<div class="carousel-inner"></div>']);
 
     $(".carousel-inner").load(url, function(){
-        $(".item :first").addClass('active');
+        $(".item:first").addClass('active');
     });
     carousel_div.append(carousel_controls);
 
     // start carousel function call
-    carousel_div.carousel();
+    carousel_div.carousel({
+        interval: 10000,
+        pause: "hover"
+    });
     console.warn("!!! carousel function called !!!");
 }
 
