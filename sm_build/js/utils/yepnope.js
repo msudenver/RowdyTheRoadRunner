@@ -15,11 +15,11 @@ var href = document.location.href
 
 var timeout = "timeout=" + 1000 + "!"; // one sec
 
-        // injectCss || injectJS
+        // yepnope.injectCss || yepnope.injectJS
         // Function Signature(".js", callback, encoding:utf-8, timeout:5000ms)
 
 yepnope([
-
+    //  load stylesheets first, then scripts
     {
         load : "../css/vendor/bootstrap.min.css",
         complete : function(){
@@ -69,10 +69,7 @@ yepnope([
         test : !!href.match(/homepage/i),
         yep  : timeout+"http://www.trumba.com/scripts/spuds.js",
         nope :  warn("not the homepage !!!!!!!"),
-        callback : function(){
-            yepnope("../js/vendor/plugins.js")
-            yepnope("../js/main.min.js")
-        }
+        both : ["../js/vendor/plugins.js", "../js/main.min.js" ]
   
     },
 

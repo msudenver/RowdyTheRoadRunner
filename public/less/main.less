@@ -11,6 +11,23 @@
 // @import "./vendor/bootstrap-glyphicons.css" ; # this causes an error on sitemanager
 
 
+// BODY AND LINK COLORS
+// -------- * ---------
+
+body{
+  .background-img-uri;   /* body background image loaded via data url scheme */
+  font-family: Open Sans, helvetica, arial, sans-serif;
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  -webkit-transition: opacity 1.2s ease-in;
+  -moz-transition: opacity 1.2s ease-in;
+  -o-transition: opacity 1.2s ease-in;
+  -ms-transition: opacity 1.2s ease-in;
+  transition: opacity 1.2s ease-in;
+}
+
 // data-href
 // pointer-
 // --------
@@ -69,18 +86,7 @@ h6 {
 }
 
 
-// BODY AND LINK COLORS
-// -------- * ---------
 
-body {
-  font-family: Open Sans, helvetica, arial, sans-serif;
-  margin: 0;
-  font-size: 14px;
-  line-height: 20px;
-  color: #333333;
-  // opacity: 0;
-  /* !!!remark: body background image loaded via data url scheme */
-}
 
 a {
   color: @contentlink;
@@ -344,19 +350,11 @@ li.active > a{
 //   // display: none !important;
 //   // opacity: 0 !important;
 // }
-
-// body {
-
-//   -webkit-transition: opacity 1.2s ease-in;
-//   -moz-transition: opacity 1.2s ease-in;
-//   -o-transition: opacity 1.2s ease-in;
-//   -ms-transition: opacity 1.2s ease-in;
-//   transition: opacity 1.2s ease-in;
-
-// }
 // .preload * {
 //   // opacity: 0;
 // }
+
+
 .content-inner{
   background-color: @white;
 }
