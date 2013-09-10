@@ -2,6 +2,7 @@
 'use strict';
 
 $ ->
+    href = document.location.href
 
 	$('body').animate({ opacity: 1 })
 
@@ -15,12 +16,11 @@ $ ->
 		!!navigator.userAgent.match(/firefox/i);
 
 	# adds check for sitemanager build
-	Modernizr.addTest 'sitemanager' , ->
-		!!document.location.host.match(/sitemanager.msudenver.edu/i) or
-		!!document.location.host.match(/msudenver.edu/i)
+	Modernizr.addTest 'homepage' , ->
+		!!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g)
 
 	# loads top 3 stories from the newsroom
-	if $("html").hasClass('sitemanager')
+	if $("html").hasClass('homepage')
 
 		# adds Trumba spud to Homepage events <div>
 		$Trumba.addSpud({
@@ -30,10 +30,9 @@ $ ->
 			teaserBase : "http://msudenver.edu/events",
 			spudId : "homepage_events"
 		});
+
 		# load top 3 stories on the homepage
 		$('div#top3').load("/newsroom/home/")
-
-		console.warn("running on sitemanager")
 
 	else console.warn "running on localhost"
 

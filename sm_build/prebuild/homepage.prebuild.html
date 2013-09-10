@@ -4,15 +4,69 @@
 <!--[if IE 7 ]><html lang="en" class="ie7"><![endif]-->
 <!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
 <!--[if IE 9 ]><html lang="en" class="ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" data-ng-app="templatingApp"><!--<![endif]-->
-	<head>
-		<msu:header></msu:header><!-- msu header template -->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" data-ng-app="templatingApp"><!--<![endif]-->
+    <head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Metropolitan State University of Denver</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<!-- angular dep, remove b4 uploading -->
-		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
-		<script src="../js/utils/ngModule.js"></script>
+        <t4 type="navigation" id="504"/> <!-- Meta Data -->
+        <t4 type="meta" id="1"/> <!-- meta DC.keywords -->
+        <t4 type="meta" id="2"/> <!-- meta DC.abstract -->
+        <t4 type="meta" id="3"/> <!-- meta DC.author -->
+        <t4 type="meta" id="4"/> <!-- meta DC.copyright -->
+        <t4 type="meta" id="5"/> <!-- meta DC.title -->
+        <t4 type="meta" id="6"/> <!-- meta DC.description -->
+        <t4 type="meta" id="7"/> <!-- meta DC.language -->
+        <t4 type="meta" id="8"/> <!-- meta DC.modified -->
+        <t4 type="meta" id="9"/> <!-- meta DC.format -->
+        <t4 type="meta" id="10"/> <!-- meta DC.date -->
+        <t4 type="meta" id="11"/> <!-- meta DC.contributor -->
+
+		<!-- google open sans -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,300,700,600' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
+        <style type="text/css" media="screen">
+            /* hide body until full page load */
+            body{ opacity: 0;}
+        </style>
+
+        <!-- JS -->
+
+        <!-- HTML5 shim & respond.js, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="../css/utils/mediaAllForIE8.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+        <![endif]-->
+
+
+        <!-- Fav and touch icons -->
+
+        <link rel="stylesheet" type="text/css" href="">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touche-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="../assets/ico/favicon.png">
+
+        <!-- Modernizr CDN -->
+        <!-- <script type="text/javascript" src="<t4 type='media' id='62527'/>"></script> -->
+        <script src="../js/vendor/modernizr.js"></script>
+        <!-- yepnope.js -->
+        <!-- <script src="<t4 type='media' id='62511'/>"></script> -->
+        <script src="../js/utils/yepnope.js"></script>
 	</head>
-	<body class="preload">
+	<body>
+        <noscript>
+            <style type="text/css" media="screen">
+                /* no-js or print version */
+                body{ opacity: 1; display: block;}
+            </style>
+        </noscript>
 		<div class="container"><!-- begins main container -->
 			<div class="container"> <!-- Logo and QuickLInks -->
 			    <div class="row">
@@ -278,7 +332,7 @@
 				</div>
 			</div>
 		</div><!-- / end of main container-->
-		<!-- msu footer template -->
-		<msu:footer></msu:footer>
-	</body>
+		<!-- footer includes -->
+        <!-- <t4 type="navigation" id="103"/> -->
+        </body>
 </html>

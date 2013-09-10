@@ -15,8 +15,8 @@ var href = document.location.href
 
 var timeout = "timeout=" + 1000 + "!"; // one sec
 
-        // yepnope.injectCss || yepnope.injectJS
-        // Function Signature(".js", callback, encoding:utf-8, timeout:5000ms)
+    // yepnope.injectCss || yepnope.injectJS
+    // Function Signature(".js", callback, encoding:utf-8, timeout:5000ms)
 
 yepnope([
     //  load stylesheets first, then scripts
@@ -66,40 +66,29 @@ yepnope([
     },
 
     {
-
-        test : !!href.match(/homepage/i),
+        // test : !!href.match(/homepage/i),
+        test : function(){
+            // test msudenver.edu domain href or look for .spuds class in page via jQuery
+            return !!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g) || !!$(".spuds")
+            // return !!href.match(/^(http|https)(\:\/\/localhost\/newsroom\/$)/g) || !!$(".container")
+        },
         yep  : timeout+"http://www.trumba.com/scripts/spuds.js",
-        nope :  warn("not the homepage !!!!!!!"),
         both : ["../js/vendor/plugins.js", "../js/main.min.js" ]
 
     },
-
-    // {
-    //     load : [
-    //         // plugins.js, resource # 62499
-    //         // "<t4 type='media' id='62497'/>",
-    //        "../js/vendor/plugins.js" ,
-
-    //         // main.min.js resource # 62498
-    //         // "<t4 type='media' id='62497'/>"
-    //         "../js/main.min.js"
-
-    //     ]
-
-    // },
 
     {
         //  adds check for newsroom url build
         // test : Modernizr.newsroom,
         test : !!href.match(/newsroom/i),
         yep : {
-        // slider.js 62500
-        // "<t4 type='media' id='62500'/>"
-        "slider.js" : "../js/utils/slider.js",
+            // slider.js 62500
+            // "<t4 type='media' id='62500'/>"
+            "slider.js" : "../js/utils/slider.js",
 
-        // newsroom.css  62509
-        // "<t4 type='media' id='62509'/>"
-        "newsroom"  : "../css/newsroom.css"
+            // newsroom.css  62509
+            // "<t4 type='media' id='62509'/>"
+            "newsroom"  : "../css/newsroom.css"
         },
         callback : function(url, result, key){
             // log("should only be called in newsroom")
@@ -108,20 +97,6 @@ yepnope([
         }
     }
 
-    // {
-    //     load : "//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css",
-    //     // callback will always fire after an error or a timeout
-    //     // typically 5000 ms
-    //     callback : function(url, result, key){
-    //         if($("#bootstrapCssTest").is(":visible") === true){
-    //             // load bootstrap.min.css, resource # 62542
-    //             // yepnope("<t4 type='media' id='62542'/>")
-    //             yepnope('../css/vendor/bootstrap.min.css')
-    //             console.warn("bootstrap.min.css loaded from server")
-    //         }else{
-    //             console.warn("bootstrap.min.css loaded from CDN")
-    //         }
-    //     }
-    // },
+
 
 ])
