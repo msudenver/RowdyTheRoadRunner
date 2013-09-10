@@ -15,12 +15,14 @@ var href = document.location.href
 
 var timeout = "timeout=" + 1000 + "!"; // one sec
 
-    // yepnope.injectCss || yepnope.injectJS
-    // Function Signature(".js", callback, encoding:utf-8, timeout:5000ms)
+// yepnope.injectCss || yepnope.injectJS
+// Function Signature(".js", callback, encoding:utf-8, timeout:5000ms)
 
 yepnope([
     //  load stylesheets first, then scripts
     {
+        // load bootstrap.min.css, resource # 62542
+        // "<t4 type='media' id='62542'/>"
         load : "../css/vendor/bootstrap.min.css",
         complete : function(){
             warn("bootstrap.min.css loaded from server")
@@ -29,8 +31,8 @@ yepnope([
 
     {
         // load main.min.css, resource # 62508
-        load: '../css/main.min.css',
         // load: "<t4 type='media' id='62508'/>",
+        load: '../css/main.min.css',
         complete : function(){
             console.warn("main.min.css loaded from server")
         }
@@ -41,9 +43,11 @@ yepnope([
         // load : timeout + "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js", TOO NEW FOR IE8
         callback : function(url, result, key){
             if(!window.jQuery){
+
                 // load jquery.min.js, resource # 62496
                 // yepnope("<t4 type='media' id='62496'/>")
                 yepnope("../js/vendor/min/jquery.min.js")
+
                 warn("jQuery was loaded from Server")
             }else{
                 warn("jQuery was loaded from CDN")
@@ -55,12 +59,14 @@ yepnope([
         load : timeout + "//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js",
         callback : function (url, result, key){
             if(!$.fn.modal){
+
                 // load bootstrap.min.css, resource # 62497
                 // yepnope("<t4 type='media' id='62497'/>")
                 yepnope('../js/vendor/min/bootstrap.min.js')
-                console.warn("bootstrapmin.js was loaded from Server")
+
+                warn("bootstrapmin.js was loaded from Server")
             }else{
-                console.warn("bootstrap.min.js was loaded from CDN")
+                warn("bootstrap.min.js was loaded from CDN")
             }
         }
     },
@@ -74,7 +80,12 @@ yepnope([
         },
         yep  : timeout+"http://www.trumba.com/scripts/spuds.js",
         both : ["../js/vendor/plugins.js", "../js/main.min.js" ]
-
+        // both : [
+        //     // // plugins.js, resource # 62499
+        //     "<t4 type='media' id='62499'/>",
+        //     // main.min.js resource # 62498
+        //     "<t4 type='media' id='62498'/>"
+        // ]
     },
 
     {
@@ -96,7 +107,5 @@ yepnope([
             ("slider.js" === key && result === true) ? initCarousel() : nope()
         }
     }
-
-
 
 ])
