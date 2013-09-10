@@ -18,10 +18,6 @@ var timeout = "timeout=" + 1000 + "!"; // one sec
 // yepnope.injectCss || yepnope.injectJS
 // Function Signature(".js", callback, encoding:utf-8, timeout:5000ms)
 
-// Modernizr.addTest("trumba", function(){
-//         return !!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g) || !!_$(".spuds")
-// })
-
 yepnope([
     //  load stylesheets first, then scripts
     {
@@ -76,10 +72,15 @@ yepnope([
     {
         // test msudenver.edu domain href or look for .spuds class in page via jQuery
         // test : !!href.match(/homepage/i),
-        test : !!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g) || !!$$$(".spuds"),
-        yep  : "http://trumba.com/scripts/spuds.js",
-        nope : warn(".spuds not found or not the homepage"),
-        both : ["../js/vendor/plugins.js", "../js/main.min.js"]
+        // test : (!!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g) || !!$$$(".spuds")),
+        load  : {
+            "spuds.js" : "http://trumba.com/scripts/spuds.js",
+            "plugins.js" : "../js/vendor/plugins.js",
+            "main.min.js" : "../js/main.min.js"
+        },
+        complete : function(url, result, key){
+            ("spuds.js" === key && result === true) ? warn("_____ spuds.js loaded _____") : nope("_____spuds.js not loaded _____")
+        }
         // both : [
         //     // // plugins.js, resource # 62499
         //     "<t4 type='media' id='62499'/>",
