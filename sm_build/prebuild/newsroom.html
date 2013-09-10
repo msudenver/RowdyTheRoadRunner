@@ -5,25 +5,12 @@
 <!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
 <!--[if IE 9 ]><html lang="en" class="ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en" data-ng-app="templatingApp"><!--<![endif]-->
+<html lang="en"><!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">  -->
         <title>Metropolitan State University of Denver</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <t4 type="navigation" id="504"/> <!-- Meta Data -->
-        <t4 type="meta" id="1"/> <!-- meta DC.keywords -->
-        <t4 type="meta" id="2"/> <!-- meta DC.abstract -->
-        <t4 type="meta" id="3"/> <!-- meta DC.author -->
-        <t4 type="meta" id="4"/> <!-- meta DC.copyright -->
-        <t4 type="meta" id="5"/> <!-- meta DC.title -->
-        <t4 type="meta" id="6"/> <!-- meta DC.description -->
-        <t4 type="meta" id="7"/> <!-- meta DC.language -->
-        <t4 type="meta" id="8"/> <!-- meta DC.modified -->
-        <t4 type="meta" id="9"/> <!-- meta DC.format -->
-        <t4 type="meta" id="10"/> <!-- meta DC.date -->
-        <t4 type="meta" id="11"/> <!-- meta DC.contributor -->
 
         <!-- google open sans -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,300,700,600' rel='stylesheet' type='text/css'>
@@ -121,6 +108,19 @@
 				</div>
 					<!-- BREADCRUMBS -->
 			    <div class="container">
+
+        <div id ="homepage_events" class="spuds">
+                <script type="text/javascript">
+
+                $Trumba.addSpud({
+                    webName: "msudenver-events-calendars",
+                    spudType : "upcoming" ,
+                    url : { filterview : "HomePageFeed" } ,
+                    teaserBase : "http://msudenver.edu/events"
+                });
+
+                </script>
+        </div>
 			    	<ul class="breadcrumb">
 			    		<a href="/">MSU Denver Home</a>&nbsp;/&nbsp;Newsroom
 			    	</ul>
@@ -167,8 +167,6 @@
     <!-- Edited by MGW 07-08-13 UPDATED FOR 2013 Re-Design -->
 	<!--text/linkcol-->
 	<div class="well">
-
-
 		<table class="staffdirectory" style="width: 100%;">
 	<tbody>
 	<tr><th>In Case of Emergency</th></tr>

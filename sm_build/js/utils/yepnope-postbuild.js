@@ -12,7 +12,7 @@ var log  = function(x){ console.log(x)}
 var warn = function(x){ console.warn(x)}
 var nope = function(){ return }
 var href = document.location.href
-
+var $$ = function (expr, cond){ return(cond || document).querySelector(expr)}
 var timeout = "timeout=" + 1000 + "!"; // one sec
 
 // yepnope.injectCss || yepnope.injectJS
@@ -59,11 +59,9 @@ yepnope([
         load : timeout + "//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js",
         callback : function (url, result, key){
             if(!$.fn.modal){
-
                 // load bootstrap.min.css, resource # 62497
                 yepnope("<t4 type='media' id='62497'/>")
                 // yepnope('../js/vendor/min/bootstrap.min.js')
-
                 warn("bootstrapmin.js was loaded from Server")
             }else{
                 warn("bootstrap.min.js was loaded from CDN")
@@ -71,15 +69,20 @@ yepnope([
         }
     },
 
-    {
+    // {
+    //     load : "http://trumba.com/scripts/spuds.js"
+    //     complete : {
 
+    //     }
+    // },
+
+    {
+        // test msudenver.edu domain href or look for .spuds class in page via jQuery
         // test : !!href.match(/homepage/i),
-        test : function(){
-            // test msudenver.edu domain href or look for .spuds class in page via jQuery
-            return !!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g) || !!$(".spuds")
-            // return !!href.match(/^(http|https)(\:\/\/localhost\/newsroom\/$)/g) || !!$(".container")
-        },
-        yep  : timeout+"http://www.trumba.com/scripts/spuds.js",
+
+        test : !!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g) || !!$$(".spuds"),
+        yep  : "<t4 type='media' id='62783'/>",
+        nope : warn(".spuds not found or not the homepage"),
         // both : ["../js/vendor/plugins.js", "../js/main.min.js" ],
         both : [
             // // plugins.js, resource # 62499
