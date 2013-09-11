@@ -23,7 +23,7 @@ yepnope([
     {
         // load bootstrap.min.css, resource # 62542
         // "<t4 type='media' id='62542'/>"
-        load : "../css/vendor/bootstrap.min.css",
+        load : "css!../css/vendor/bootstrap.min.css",
         complete : function(){
             warn("bootstrap.min.css loaded from server")
         }
@@ -32,7 +32,7 @@ yepnope([
     {
         // load main.min.css, resource # 62508
         // load: "<t4 type='media' id='62508'/>",
-        load: '../css/main.min.css',
+        load: 'css!../css/main.min.css',
         complete : function(){
             console.warn("main.min.css loaded from server")
         }
@@ -99,7 +99,7 @@ yepnope([
 
             // newsroom.css  62509
             // "<t4 type='media' id='62509'/>"
-            "newsroom"  : "../css/newsroom.css"
+            "newsroom"  : "css!../css/newsroom.css"
         },
         callback : function(url, result, key){
             // log("should only be called in newsroom")

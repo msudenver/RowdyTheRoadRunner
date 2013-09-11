@@ -12,6 +12,8 @@ var log  = function(x){ console.log(x)}
 var warn = function(x){ console.warn(x)}
 var nope = function(){ return }
 var href = document.location.href
+var host = document.location.hostname
+var adt4apps = "adt4apps"
 var $$$ = function (expr, cond){ return(cond || document).querySelector(expr)}
 var timeout = "timeout=" + 1000 + "!"; // one sec
 
@@ -19,11 +21,26 @@ var timeout = "timeout=" + 1000 + "!"; // one sec
 // Function Signature(".js", callback, encoding:utf-8, timeout:5000ms)
 
 yepnope([
+    {
+        test : (function(){
+            return !!host === adt4apps
+        })(),
+        yep  : {
+            "uncompressed_main.css" : "css!<t4 type='media' id='62898'/>",
+            "uncompressed_bootstrap.css" : "css!<t4 type='media' id='62897'/>"
+        },
+        nope : warn("not adt4apps"),
+        callback : function(url, result, key){
+            console.log("url ::" + url)
+            console.log("result ::" + result)
+            console.log("key ::" + key)
+        }
+    },
     //  load stylesheets first, then scripts
     {
         // load bootstrap.min.css, resource # 62542
         // load : "../css/vendor/bootstrap.min.css",
-        load : "<t4 type='media' id='62542'/>",
+        load : "css!<t4 type='media' id='62542'/>",
         complete : function(){
             warn("bootstrap.min.css loaded from server")
         }
@@ -32,7 +49,7 @@ yepnope([
     {
         // load main.min.css, resource # 62508
         // load: '../css/main.min.css',
-        load: "<t4 type='media' id='62508'/>",
+        load: "css!<t4 type='media' id='62508'/>",
         complete : function(){
             console.warn("main.min.css loaded from server")
         }
@@ -60,7 +77,7 @@ yepnope([
         callback : function (url, result, key){
             if(!$.fn.modal){
                 // load bootstrap.min.css, resource # 62497
-                yepnope("<t4 type='media' id='62497'/>")
+                yepnope("css!<t4 type='media' id='62497'/>")
                 // yepnope('../js/vendor/min/bootstrap.min.js')
                 warn("bootstrapmin.js was loaded from Server")
             }else{
@@ -103,7 +120,7 @@ yepnope([
             // "slider.js" : "../js/utils/slider.js",
 
             // newsroom.css  62509
-            "newsroom.css"  : "<t4 type='media' id='62509'/>"
+            "newsroom.css"  : "css!<t4 type='media' id='62509'/>"
             // "newsroom.css"  : "../css/newsroom.css"
         },
         callback : function(url, result, key){
