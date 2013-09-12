@@ -13,18 +13,15 @@ var warn = function(x){ console.warn(x)}
 var nope = function(){ return }
 var href = document.location.href
 var host = document.location.hostname
-var adt4apps = "adt4apps"
+var adt4apps = "adt4apps.msudenver.edu"
 var $$$ = function (expr, cond){ return(cond || document).querySelector(expr)}
 var timeout = "timeout=" + 1000 + "!"; // one sec
 
 // yepnope.injectCss || yepnope.injectJS
 // Function Signature(".js", callback, encoding:utf-8, timeout:5000ms)
-
 yepnope([
     {
-        test : (function(){
-            return !!host === adt4apps
-        })(),
+        test : (host === adt4apps),
         yep  : {
             "uncompressed_main.css" : "css!<t4 type='media' id='62898'/>",
             "uncompressed_bootstrap.css" : "css!<t4 type='media' id='62897'/>"
@@ -35,7 +32,11 @@ yepnope([
             console.log("result ::" + result)
             console.log("key ::" + key)
         }
-    },
+    }
+]);
+
+yepnope([
+
     //  load stylesheets first, then scripts
     {
         // load bootstrap.min.css, resource # 62542
