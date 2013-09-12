@@ -19,18 +19,19 @@ var timeout = "timeout=" + 1000 + "!"; // one sec
 
 // yepnope.injectCss || yepnope.injectJS
 // Function Signature(".js", callback, encoding:utf-8, timeout:5000ms)
+
 yepnope([
     {
         test : (host === adt4apps),
         yep  : {
-            "uncompressed_main.css" : "css!<t4 type='media' id='62898'/>",
-            "uncompressed_bootstrap.css" : "css!<t4 type='media' id='62897'/>"
+            "uncompressed_main.css" : "<t4 type='media' id='62898'/>",
+            "uncompressed_bootstrap.css" : "<t4 type='media' id='62897'/>"
         },
-        nope : warn("not adt4apps"),
         callback : function(url, result, key){
-            console.log("url ::" + url)
-            console.log("result ::" + result)
+            console.log("url :: " + url)
+            console.log("result :: " + result)
             console.log("key ::" + key)
+            log('callback was called....................');
         }
     }
 ]);
