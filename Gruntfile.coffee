@@ -58,8 +58,8 @@ module.exports = (grunt) ->
 				livereload: 35729 # or true
 				# change this host to 0.0.0.0 to access the server
 				# from outsite
-				# hostname: '0.0.0.0',
-				hostname: 'localhost'
+				hostname: '0.0.0.0',
+				# hostname: 'localhost'
 
 			server :
 				options :

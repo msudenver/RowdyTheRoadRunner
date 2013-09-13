@@ -95,7 +95,7 @@
   position: absolute;
   display: block;
   top: 25%;
-  right: 10%;
+  right: 8%;
   z-index: 100;
   font-size: 2.5em;
   color: #1abc9c;
@@ -227,7 +227,7 @@
 /*
 
 	INFO-SECTION BTNS
-	---------------------------
+	-----------------
 */
 .info-section .container {
   padding: 0;
@@ -264,7 +264,8 @@
 .info-four:hover,
 .info-five:hover,
 .info-six:hover {
-  color: black;
+  color: #00447c;
+  border: 0.1em solid #00447c;
   background-color: #ecf0f1;
 }
 .info-one,
@@ -290,4 +291,48 @@
 .info-five,
 .info-six {
   padding-top: 1em;
+}
+.marginsForIE8Colums {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.ie8 .ThreeCornerBox {
+  width: 300px;
+}
+.ie8 .ThreeCornerBox i {
+  display: none;
+}
+.ie8 .action-one,
+.ie8 .action-two,
+.ie8 .action-three {
+  width: 400px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.ie8 .tool-one,
+.ie8 .tool-two,
+.ie8 .tool-three,
+.ie8 .tool-four {
+  width: 200px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.ie8 .info-one,
+.ie8 .info-two,
+.ie8 .info-three,
+.ie8 .info-four,
+.ie8 .info-five,
+.ie8 .info-six {
+  width: 300px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.ie8 .col-lg-4 .container #admissions-calendar {
+  width: 400px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.ie8 .admissions-feature-caption {
+  background: #00447c;
+  background-color: #00447c;
 }

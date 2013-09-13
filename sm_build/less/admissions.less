@@ -59,6 +59,7 @@
 		/* Styles */
 		top: 85%;
 	}
+	
 }
 
 
@@ -75,7 +76,6 @@
  @corners2 : 0 0 833px;
  @t : 0.3s;
 
-
 .ThreeCornerBox {
 	.rect(inherit, inherit, @turquoise);
 	.rounded(@corners);
@@ -89,20 +89,15 @@
 	position: absolute;
 	display: block;
 	top: 25%;
-	right: 10%;
+	right: 8%;
 	z-index: 100;
 	font-size: 2.5em;
 	color: @turquoise;
 }
 .ThreeCornerBox:hover {
-	// background: pink;
 	.rounded(@corners2);
-	// border-top-right-radius: 30%;
 }
-.ThreeCornerBox span:hover {
-	// color:black;
-	// text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
-}
+
 .ThreeCornerBox span {
 	padding: 1.225em 1.5em 1em;
 	display: block;
@@ -146,7 +141,6 @@
 .action-one {
 	margin-left: 0;
 	width: 100%;
-	// border-top-right-radius: 0;
 	padding: 1em;
 	text-align: center;
 	line-height: 2em;
@@ -227,7 +221,7 @@
 /*
 
 	INFO-SECTION BTNS
-	---------------------------
+	-----------------
 */
 
 
@@ -238,7 +232,6 @@
 .info-one, .info-two, .info-three, .info-four, .info-five, .info-six{
 	.action-two;
 	padding-top: 1.5em;
-	// margin-top: 1.5em;
 	height: 100px;
 	font-size: 150%;
 	.animate(0.3s);
@@ -246,7 +239,8 @@
 
 .info-one:hover, .info-two:hover, .info-three:hover, 
 .info-four:hover, .info-five:hover, .info-six:hover{
-	color: black;
+	color: @rowdyblue;
+	border: 0.1em  solid @rowdyblue;
 	background-color: @clouds;
 	// .rounded(@corners2);
 }
@@ -272,6 +266,53 @@
 .info-five, .info-six{
 	padding-top: 1em;
 }
+
+// IE8 FIXES
+.marginsForIE8Colums{
+	margin-left: 30px;
+	margin-right: 30px;
+
+}
+.ie8{
+	.ThreeCornerBox{
+		width: 300px;
+		// .marginsForIE8Colums;
+	}
+	.ThreeCornerBox i{
+		display: none;
+	}
+}
+.ie8 {
+	.action-one , .action-two, .action-three{
+		width: 400px;
+		.marginsForIE8Colums;
+	}
+}
+.ie8 {
+	.tool-one, .tool-two, .tool-three, .tool-four{
+		width: 200px;
+		.marginsForIE8Colums;
+	}
+}
+.ie8 {
+	.info-one, .info-two, .info-three, .info-four, .info-five, .info-six {
+		width: 300px;
+		.marginsForIE8Colums;
+	}	
+}
+.ie8 {
+	.col-lg-4 .container #admissions-calendar{
+		width: 400px;
+		.marginsForIE8Colums;
+	}
+}
+.ie8{
+	 .admissions-feature-caption{
+		 background: @rowdyblue;
+		 background-color: @rowdyblue;
+	 }
+}
+
 
 //Flat UI Colors 
  @turquoise : #1ABC9C;
