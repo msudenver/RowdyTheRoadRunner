@@ -96,7 +96,7 @@ module.exports = function(grunt) {
   grunt.registerTask('buildwatch', ['watch']);
   grunt.registerTask('server', function(target) {
     grunt.log.writeln("target " + target);
-    return grunt.task.run(['brewcoffee', 'connect:server:keepalive', 'watch']);
+    return grunt.task.run(['cssmin', 'brewcoffee', 'connect:server:keepalive', 'watch']);
   });
   return grunt.registerTask('default', ['watch']);
 };

@@ -1,0 +1,338 @@
+/*
+
+	ADMISSIONS FEATURE CAPTION
+	--------------------------
+
+*/
+.admissions-feature-caption {
+  position: absolute;
+  padding: 1.1em;
+  top: 85%;
+  color: white;
+  font-size: 1.6em;
+  margin: 0 15px 0 15px;
+  left: 0 !important;
+  right: 0 !important;
+  text-align: left;
+  background-color: rgba(27, 85, 122, 0.7);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  /* iPads (portrait and landscape) ----------- */
+
+  /* Desktops and laptops ----------- */
+
+  /* Large Desktops ----------- */
+
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .admissions-feature-caption {
+    top: 0%;
+    padding: 50px 65px 60px 75px;
+    line-height: 1.5em;
+    word-break: normal;
+    background-color: rgba(27, 85, 122, 0.85);
+    margin: 0 15px 0 15px;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 491px) and (max-width: 767px) {
+  .admissions-feature-caption {
+    /* Styles */
+  
+    top: 75%;
+    line-height: 1.3em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .admissions-feature-caption {
+    /* Styles */
+  
+    top: 80%;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1224px) {
+  .admissions-feature-caption {
+    /* Styles */
+  
+    top: 71%;
+  }
+}
+@media only screen and (min-width: 1224px) and (max-width: 1380px) {
+  .admissions-feature-caption {
+    /* Styles */
+  
+    top: 85%;
+  }
+}
+/*
+
+	REAVEAL BTNS
+	------------
+
+*/
+.ThreeCornerBox {
+  width: inherit;
+  height: inherit;
+  background: #1abc9c;
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+
+  -webkit-border-radius: 3px 3px 3px 3px;
+  /* Firefox 1-3.6 */
+
+  -moz-border-radius: 3px 3px 3px 3px;
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+
+  border-radius: 3px 3px 3px 3px;
+  border-top-right-radius: 30px;
+  transition: 0.3s;
+  margin: 10px;
+  height: 150px;
+  z-index: 101;
+}
+.ThreeCornerBox i {
+  position: absolute;
+  display: block;
+  top: 25%;
+  right: 8%;
+  z-index: 100;
+  font-size: 2.5em;
+  color: #1abc9c;
+}
+.ThreeCornerBox:hover {
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+
+  -webkit-border-radius: 0 0 833px;
+  /* Firefox 1-3.6 */
+
+  -moz-border-radius: 0 0 833px;
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+
+  border-radius: 0 0 833px;
+  border-top-right-radius: 30px;
+}
+.ThreeCornerBox span {
+  padding: 1.225em 1.5em 1em;
+  display: block;
+  position: relative;
+  top: 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  z-index: 103;
+  transition: .9s;
+}
+/*
+
+	ACTION SECTION ADMISSIONS 2A
+	---------------------------
+
+*/
+.action-one {
+  margin: 0;
+  padding: 1em;
+}
+.action-one {
+  margin-left: 0;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  line-height: 2em;
+  color: #ffffff;
+}
+.action-two,
+.action-three {
+  margin-left: 0;
+  width: 100%;
+  border-top-right-radius: 0;
+  padding: 1.8em;
+  height: 150px;
+  z-index: 100;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+.action-one,
+.action-two,
+.action-three {
+  margin-top: 0.5em;
+}
+.action-two {
+  background-color: #e67e22;
+}
+.action-three {
+  background-color: #8e44ad;
+}
+/*
+
+	TOOLS SECTION ADMISSIONS 2A
+	---------------------------
+*/
+.tool-one,
+.tool-two,
+.tool-three,
+.tool-four {
+  margin-left: 0;
+  width: 100%;
+  border-top-right-radius: 0;
+  padding: 1.8em;
+  height: 150px;
+  z-index: 100;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  color: #ffffff;
+  margin-top: 0.5em;
+  background-color: #e67e22;
+  display: block;
+  position: relative;
+  padding: 1.5em 0 1.5em 0;
+  margin: 0;
+  height: 78px;
+  font-size: 1.2em;
+  background-color: #ffffff;
+  color: #00447c;
+  text-align: left;
+  border-bottom: 1px solid #00447c;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  /* Desktops and laptops ----------- */
+
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .tool-one,
+  .tool-two,
+  .tool-three,
+  .tool-four {
+    height: 55px;
+    padding: .5em 0 .5em 0;
+    padding: 1em 0  1em 0;
+  }
+}
+.tool-one:hover,
+.tool-two:hover,
+.tool-three:hover,
+.tool-four:hover {
+  background-color: #16a085;
+  color: white;
+}
+.tool-one {
+  margin-top: 1em;
+  border-top: 1px solid #00447c;
+}
+/*
+
+	INFO-SECTION BTNS
+	-----------------
+*/
+.info-section .container {
+  padding: 0;
+}
+.info-one,
+.info-two,
+.info-three,
+.info-four,
+.info-five,
+.info-six {
+  margin-left: 0;
+  width: 100%;
+  border-top-right-radius: 0;
+  padding: 1.8em;
+  height: 150px;
+  z-index: 100;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  color: #ffffff;
+  margin-top: 0.5em;
+  background-color: #e67e22;
+  padding-top: 1.5em;
+  height: 100px;
+  font-size: 150%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.info-one:hover,
+.info-two:hover,
+.info-three:hover,
+.info-four:hover,
+.info-five:hover,
+.info-six:hover {
+  color: #00447c;
+  border: 0.1em solid #00447c;
+  background-color: #ecf0f1;
+}
+.info-one,
+.info-four {
+  background-color: #2472a4;
+}
+.info-two,
+.info-five {
+  background-color: #20638f;
+}
+.info-three,
+.info-six {
+  background-color: #00447c;
+}
+.info-three {
+  padding-top: 0.25em;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .info-three {
+    padding-top: 0.75em;
+  }
+}
+.info-five,
+.info-six {
+  padding-top: 1em;
+}
+.marginsForIE8Colums {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.ie8 .ThreeCornerBox {
+  width: 300px;
+}
+.ie8 .ThreeCornerBox i {
+  display: none;
+}
+.ie8 .action-one,
+.ie8 .action-two,
+.ie8 .action-three {
+  width: 400px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.ie8 .tool-one,
+.ie8 .tool-two,
+.ie8 .tool-three,
+.ie8 .tool-four {
+  width: 200px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.ie8 .info-one,
+.ie8 .info-two,
+.ie8 .info-three,
+.ie8 .info-four,
+.ie8 .info-five,
+.ie8 .info-six {
+  width: 300px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.ie8 .col-lg-4 .container #admissions-calendar {
+  width: 400px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.ie8 .admissions-feature-caption {
+  background: #00447c;
+  background-color: #00447c;
+}

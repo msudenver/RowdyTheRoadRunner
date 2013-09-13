@@ -6,14 +6,17 @@
 @import "mediaQueries.less" ;
 @import "./utils/background-img.less" ;
 @import "./utils/contentTypes.less" ;
-// @import "./utils/print.less" ;
+@import "./utils/admissions.less" ;
 
 // @import "./vendor/bootstrap-glyphicons.css" ; # this causes an error on sitemanager
 
 // modal fix for ie8
 
-.ie8 .modal-dialog, .ie8 .modal{
-    margin: 0 80px 0 80px;
+.ie8 {
+    .modal-dialog, .ie8 .modal{
+        margin: 0 80px 0 80px;
+    }
+
 }
 
 
