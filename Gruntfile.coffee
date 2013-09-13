@@ -55,17 +55,18 @@ module.exports = (grunt) ->
 		# connect server config
 		connect:  
 			options : 
-				port: 9000
+				port: 9001
 				livereload: 35729
 				# change this host to 0.0.0.0 to access the server 
 				# from outsite
 				# hostname: '0.0.0.0',
 				hostname: 'localhost'
 				
-			sm_build :
+			server :
 				options :
 					open : true
-					base: "web-root"
+					base: "./sm_build"
+					directory: "sm_build/"
 	
 
 		
@@ -123,7 +124,7 @@ module.exports = (grunt) ->
 				tasks  : ['cssmin']
 				options: 
 					# default port 35729, uses livereload chrome browser plug-in
-					livereload: false
+					livereload: true
 				
 			lessChanges : 
 				files  : [lessFiles]
@@ -144,7 +145,7 @@ module.exports = (grunt) ->
 	grunt.registerTask 'buildcoffee', ['coffee_build'] 
 	grunt.registerTask 'buildless', ['less'] 
 	grunt.registerTask 'buildwatch', ['watch'] 
-	grunt.registerTask 'server', ['connect:sm_build:keepalive'] 
+	grunt.registerTask 'server', ['connect:server:keepalive'] 
 
 	# default task(s)
 	grunt.registerTask 'default',  ['watch']
