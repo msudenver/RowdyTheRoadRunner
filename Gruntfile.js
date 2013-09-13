@@ -5,7 +5,7 @@ var LIVERELOAD_PORT;
 LIVERELOAD_PORT = 35729;
 
 module.exports = function(grunt) {
-  var coffeeFiles, cssFiles, htmlFiles, jsFiles, lessFiles, yeomanConfig;
+  var coffeeScriptFiles, cssFiles, htmlFiles, jsFiles, lessFiles, yeomanConfig;
 
   require('time-grunt')(grunt);
   require('load-grunt-tasks')(grunt);
@@ -14,21 +14,25 @@ module.exports = function(grunt) {
     dist: 'dist'
   };
   cssFiles = ['public/css/*.css', '!public/css/utils/mediaAllForIE8.css', '!public/css/vendor/*.css', '!public/css/inherit/*.css', 'public/css/utils/print.css'];
-  lessFiles = ['public/less/*.less', 'public/less/utils/*.less', 'public/less/vendor/*.less'];
+  lessFiles = ['public/less/*.less', 'sm_build/less/*.less'];
   htmlFiles = ['sm_build/*.html'];
   jsFiles = ['public/js/main.js'];
-  coffeeFiles = ['public/coffeescript/*.coffee'];
+  coffeeScriptFiles = ['public/coffeescript/*.coffee', 'sm_build/js/*.coffee'];
   grunt.initConfig({
     yeoman: yeomanConfig,
     pkg: grunt.file.readJSON('package.json'),
-    coffee: {
-      dist: {
-        files: [
-          {
-            expand: true,
-            cwd: ""
-          }
-        ]
+    connect: {
+      options: {
+        port: 9001,
+        livereload: 35729,
+        hostname: 'localhost'
+      },
+      server: {
+        options: {
+          open: true,
+          base: "sm_build",
+          directory: "sm_build/"
+        }
       }
     },
     cssmin: {
@@ -51,15 +55,16 @@ module.exports = function(grunt) {
         }
       }
     },
-    coffee_build: {
-      options: {
-        wrap: false
-      },
-      'public/js/main.js': coffeeFiles
+    coffee: {
+      compile: {
+        files: {
+          'public/js/main.js': coffeeScriptFiles
+        }
+      }
     },
     less: {
       options: {
-        paths: ['public/less']
+        paths: ['public/less/*.less', 'sm_build/less/*.less']
       },
       'public/css/main-style.css': lessFiles
     },
@@ -68,11 +73,15 @@ module.exports = function(grunt) {
         files: [cssFiles],
         tasks: ['cssmin'],
         options: {
-          livereload: false
+          livereload: true
         }
       },
+      lessChanges: {
+        files: [lessFiles],
+        tasks: ['less']
+      },
       jsChanges: {
-        files: [jsFiles],
+        files: [jsFiles, coffeeScriptFiles],
         tasks: ['uglify']
       }
     }
@@ -82,8 +91,12 @@ module.exports = function(grunt) {
   });
   grunt.registerTask('buildcss', ['cssmin']);
   grunt.registerTask('buildjs', ['uglify']);
-  grunt.registerTask('buildcoffee', ['coffee_build']);
+  grunt.registerTask('brewcoffee', ['coffee']);
   grunt.registerTask('buildless', ['less']);
   grunt.registerTask('buildwatch', ['watch']);
+  grunt.registerTask('server', function(target) {
+    grunt.log.writeln("target " + target);
+    return grunt.task.run(['brewcoffee', 'connect:server:keepalive', 'watch']);
+  });
   return grunt.registerTask('default', ['watch']);
 };

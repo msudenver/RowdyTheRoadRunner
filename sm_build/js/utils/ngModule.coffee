@@ -4,13 +4,13 @@
 app = angular.module('templatingApp',[]);
 
 # header template
-app.directive 'msuHeader', ->	
-	restrict : 'E', 
+app.directive 'msuHeader', ->
+	restrict : 'E',
 	transclude : true,
-    # restrict directive to 
+    # restrict directive to
     # Element | attribute | class | comment | combination
 	templateUrl : 'templates/prebuildHeader.html',
-	replace: false			
+	replace: false
 
 # footer template
 app.directive 'msuFooter', ->
@@ -19,4 +19,4 @@ app.directive 'msuFooter', ->
 	templateUrl : 'templates/prebuildFooter.html',
 	replace: false
 
-	
+

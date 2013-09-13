@@ -1,7 +1,7 @@
 
 'use strict';
 
-# grunt things... 
+# grunt things...
 # automation rules...
 # T4TAGS = grunt.file.readJSON('t4tags_list.json');
 
@@ -15,8 +15,8 @@ module.exports = (grunt) ->
 	# load all plug-ins
 	require('load-grunt-tasks')(grunt)
 
-	# config 
-	yeomanConfig = 
+	# config
+	yeomanConfig =
 		app : 'app'
 		dist: 'dist'
 
@@ -34,16 +34,15 @@ module.exports = (grunt) ->
 
 	lessFiles = [
 		'public/less/*.less'
-		'public/less/utils/*.less'
-		'public/less/vendor/*.less'
+		'sm_build/less/*.less'
 	 ]
 
 	htmlFiles = ['sm_build/*.html']
 	jsFiles   = ['public/js/main.js']
 
-	coffeeFiles = [
+	coffeeScriptFiles = [
 		'public/coffeescript/*.coffee'
-		'Gruntfile.coffee'
+		'sm_build/js/*.coffee'
 	]
 
 	grunt.initConfig
@@ -53,100 +52,99 @@ module.exports = (grunt) ->
 		pkg : grunt.file.readJSON('package.json'),
 
 		# connect server config
-		connect:  
-			options : 
+		connect:
+			options :
 				port: 9001
-				livereload: 35729
-				# change this host to 0.0.0.0 to access the server 
+				livereload: 35729 # or true
+				# change this host to 0.0.0.0 to access the server
 				# from outsite
 				# hostname: '0.0.0.0',
 				hostname: 'localhost'
-				
+
 			server :
 				options :
 					open : true
-					base: "./sm_build"
+					base: "sm_build"
 					directory: "sm_build/"
-	
 
-		
-		# coffeescript compile
-		coffee : 
-			dist : 
-				files : [
-					expand: true
-					cwd : ""
-				]
-		
+
 		# minify css
-		cssmin : 
-			options : 
-				# expand: true, 
+		cssmin :
+			options :
+				# expand: true,
 				# banner + timestapmt
 				banner : '/*! <%= pkg.name %> \n CSS Baked on <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> */\n'
-			
-			combine : 
+
+			combine :
 				# options for combining CSS files
-				files : 
+				files :
 					'sm_build/css/main.min.css' : cssFiles
-				
-			
+
+
 		# minify js files
-		uglify : 
-			options : 
+		uglify :
+			options :
 				banner :
 					'/*! <%= pkg.name %> \n JS Baked on <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> */\n\n'
-			
-			my_target : 
-				files : 
-					'sm_build/js/main.min.js' : jsFiles
-				
 
-		# coffeescript compile task 
-		coffee_build : 
-			options	 : 
-				wrap : false
-			,
-			'public/js/main.js' : coffeeFiles
+			my_target :
+				files :
+					'sm_build/js/main.min.js' : jsFiles
+
+
+		# coffeescript compile task
+		coffee :
+			compile  :
+				files : 'public/js/main.js' : coffeeScriptFiles
 
 		# less task
-		less : 
-			options : 
-					paths : ['public/less']
+		less :
+			options :
+					paths : ['public/less/*.less', 'sm_build/less/*.less']
 					# report : 'gzip'
 
 			'public/css/main-style.css' : lessFiles
 
 		# watch routinely for css changes
-		watch : 
-			cssChanges : 
+		watch :
+			cssChanges :
 				files  : [cssFiles]
 				tasks  : ['cssmin']
-				options: 
+				options:
 					# default port 35729, uses livereload chrome browser plug-in
 					livereload: true
-				
-			lessChanges : 
+
+			lessChanges :
 				files  : [lessFiles]
 				tasks  : ['less']
 
-			jsChanges : 
-				files : [jsFiles],
+			jsChanges :
+				files : [jsFiles, coffeeScriptFiles],
 				tasks : ['uglify']
-						
+
 
 	# watch event notifier
 	grunt.event.on 'watch', (action, path, target)  ->
 		grunt.log.writeln(target + ' : ' + path + ' has been ' + action)
 
-    # Register tasks
-	grunt.registerTask 'buildcss', ['cssmin'] 
-	grunt.registerTask 'buildjs', ['uglify'] 
-	grunt.registerTask 'buildcoffee', ['coffee_build'] 
-	grunt.registerTask 'buildless', ['less'] 
-	grunt.registerTask 'buildwatch', ['watch'] 
-	grunt.registerTask 'server', ['connect:server:keepalive'] 
+	# Register tasks
+	grunt.registerTask 'buildcss', ['cssmin']
+	grunt.registerTask 'buildjs', ['uglify']
+	grunt.registerTask 'brewcoffee', ['coffee']
+	grunt.registerTask 'buildless', ['less']
+	grunt.registerTask 'buildwatch', ['watch']
+
+	grunt.registerTask 'server', (target) ->
+
+		grunt.log.writeln "target #{target}"
+
+		grunt.task.run([
+			'brewcoffee'
+			'connect:server:keepalive'
+			'watch'
+
+		])
 
 	# default task(s)
 	grunt.registerTask 'default',  ['watch']
-	
+
