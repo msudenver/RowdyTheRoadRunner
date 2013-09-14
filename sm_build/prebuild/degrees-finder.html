@@ -59,8 +59,9 @@
 
     <!-- HeaderCode -->
     <!-- <t4 type='navigation' id='804'/> -->
+    <!-- add these two to header code  -->
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-   	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
 </head>
 
 <body>
@@ -182,13 +183,121 @@
             <!--/span-->
             <div class="col-lg-9">
                 <div class="content">
-
                     <!-- *********************************  -->
                     <!-- SITEMANAGER HEADER ENDS HERE -->
                     <!-- *********************************  -->
                     <!-- DAV 08-27-13 -->
                     <div class="content-inner container">
-                        
+                        <div data-ng-app="MajorsAndMinorsApp">
+                            <!-- anchor top for old-ie -->
+                            <a id="top"></a>
+                            <div class="container" data-ng-controller="ProgramController">
+                                <div class="back2top">
+                                    <span> <a href="#">Back to Top</a>
+                                    </span>
+                                    <div class="shadow1"></div>
+                                    <div class="shadow2"></div>
+                                    <div class="shapes">
+                                        <div class="line1"></div>
+                                        <div class="line2"></div>
+                                    </div>
+                                </div>
+                                <div ng-show="hide" class="container-fluid" data-ng-controller="Visualization">
+                                    <img src="img/icon-richvisual.png" alt="Toggle Visualizations" width="25">
+                                    <button data-ng-click="showVis()">Toggle</button>
+                                    <section class="" data-ng-show="show">
+                                        <div class="d3vis"></div>
+                                    </section>
+                                </div>
+                                <div class="container-fluid">
+                                    <span id="content-width" style="float:right"></span>
+                                </div>
+                                <div class="todo container-fluid">
+                                    <div class="row-fluid">
+                                        <div class="span12">
+                                            <div class="pull-right">
+                                                <label id="search_label">SEARCH
+                                                    <input class="todo-search " data-ng-model="search" type="search" value placeholder="Degree Options" name="Search">
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="filterBox" class="container">
+                                        <p class="" style="font-size:15px">
+                                            <em>Filter by</em>
+                                        </p>
+                                        <div class="span12">
+                                            <div id="filterbox" class="span" data-ng-repeat="t in types">
+                                                <label class="selected">
+                                                    <input name="selection" class="checkbox" type="radio" data-ng-click="sortByType($event, t)" id="{{t}}">
+                                                    <span class="checkboxText">{{t}}</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="program_count">
+                                    <section class="palette img-rounded">
+                                        <h3>{{total}}</h3>
+                                        MSU Denver
+                                        <em id="changeSelectionType">DEGREE OPTIONS</em>
+                                    </section>
+                                </div>
+                                <table class="results">
+                                    <thead class="categories row">
+                                        <th class="Name span ">Program</th>
+                                        <th class="Masters span2">Master</th>
+                                        <th class="Major span2 ">Major</th>
+                                        <th class="Minor span2 ">Minor</th>
+                                        <th class="Concentration span">Concentration</th>
+                                        <th class="Certification span">Certification</th>
+                                        <th class="Licensure span2 ">Licensure</th>
+                                    </thead>
+
+                                    <caption>
+                                        Masters, Majors, Minors, Concentrations and Licensures offered by MSU Denver
+                                    </caption>
+
+                                    <tbody>
+                                        <tr data-ng-repeat="program in list | filter:search">
+
+                                            <td class="Name palette">
+                                                <span>
+                                                    <a href="{{program.www}}" target="_blank">
+														{{program.name}}
+													</a>
+                                                </span>
+                                            </td>
+
+                                            <td class="inner Masters {{program.masters}}">
+                                                <img class="degreeCircle" src="img/10px.png" alt="{{altTag(program.name, program.masters, 'Masters')}}" width="10" height="10">
+                                            </td>
+
+                                            <td class="inner Major {{program.major}}">
+                                                <img class="degreeCircle" src="img/10px.png" alt="{{altTag(program.name, program.major, 'Major')}}" width="10" height="10">
+                                            </td>
+
+                                            <td class="inner Minor {{program.minor}}">
+                                                <img class="degreeCircle" src="img/10px.png" alt="{{altTag(program.name, program.minor, 'Minor')}}" width="10" height="10">
+                                            </td>
+
+                                            <td class="inner Concentration {{program.concentration}}">
+                                                <img class="degreeCircle" src="img/10px.png" alt="{{altTag(program.name, program.concentration, 'Concentration')}}" width="10" height="10">
+                                            </td>
+
+                                            <td class="inner Certification {{program.certification}}">
+                                                <img class="degreeCircle" src="img/10px.png" alt="{{altTag(program.name, program.certification, 'Certification')}}" width="10" height="10">
+                                            </td>
+
+                                            <td class="inner Licensure {{program.licensure}}">
+                                                <img class="degreeCircle" src="img/10px.png" alt="{{altTag(program.name, program.licensure, 'Licensure')}}" width="10" height="10">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                     <!-- *********************************  -->
                     <!-- SITEMANAGER START FOOTER -->
@@ -228,5 +337,9 @@
             </div>
         </div>
     </div>
+    <!-- Footer Code includes -->
+    <script src="js/controllers.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
