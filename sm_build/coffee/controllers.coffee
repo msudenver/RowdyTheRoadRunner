@@ -36,7 +36,7 @@ MajorsAndMinorsApp.controller "ProgramController", ($scope, $http) ->
 		else if  found  < 0 then category.splice(found, 1) 
 
 
-	($http({method: 'GET', cache: true , url:'/dataset/csv/set3.csv'}))
+	($http({method: 'GET', cache: true , url:'../dataset/csv/set3.csv'}))
 		.success (data) ->
 
 			list.all = d3.csv.parse(data)

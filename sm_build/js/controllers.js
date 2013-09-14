@@ -67,7 +67,7 @@ MajorsAndMinorsApp.controller("ProgramController", function($scope, $http) {
   ($http({
     method: 'GET',
     cache: true,
-    url: '/dataset/csv/set3.csv'
+    url: '../dataset/csv/set3.csv'
   })).success(function(data) {
     var i, _i, _len, _ref, _results;
 

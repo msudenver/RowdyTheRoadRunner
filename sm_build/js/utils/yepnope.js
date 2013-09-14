@@ -15,22 +15,6 @@ var href = document.location.href
 var $$$  = function(expr, cond) { return (cond || document).querySelector(expr) }
 var timeout = "timeout=" + 1000 + "!"; // one sec
 
-// yepnope.injectCss || yepnope.injectJS
-// Function Signature(".js", callback, encoding:utf-8, timeout:5000ms)
-
-// var location = (function(href){
-
-//     switch (href) {
-//         case "http://msudenver.edu/admissions/":
-//             console.warn("msudenver:admissions");
-
-//         case "http://localhost:9001/prebuild/admissions.1col.prebuild.html":
-//             console.warn("local:admissions");
-//     }
-
-// })(href);
-
-
 
 yepnope([
     //  load stylesheets first, then scripts
@@ -82,27 +66,37 @@ yepnope([
         complete: function() {
             yepnope('../js/vendor/plugins.js')
             yepnope('../js/main.min.js')
+            yepnope('../js/controllers.js')
+            yepnope('../js/main.js')
         }
     },
 
     {
-        // test msudenver.edu domain href or look for .spuds class in page via jQuery
-        // test : !!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g) || !!$$$(".spuds"),
-        test: true,
-        yep: {
-            "spuds.js": "http://trumba.com/scripts/spuds.js"
-        },
-        nope: warn("no spuds to be seen"),
-        callback: function(url, result, key) {
-            ("spuds.js" === key && result === true) ? warn("_____ spuds.js loaded _____") : nope("_____spuds.js not loaded _____")
-        }
-        // both : [
-        //     // // plugins.js, resource # 62499
-        //     "<t4 type='media' id='62499'/>",
-        //     // mai`n.min.js resource # 62498
-        //     "<t4 type='media' id='62498'/>"
-        // ]
+        // test : !!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g), # check for majors/minors href
+        test : true,
+        yep  : ['../js/controllers.js','../js/main.js'],
+        nope : warn('no good')
+
     },
+
+    // {
+    //     // test msudenver.edu domain href or look for .spuds class in page via jQuery
+    //     // test : !!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g) || !!$$$(".spuds"),
+    //     test: true,
+    //     yep: {
+    //         "spuds.js": "http://trumba.com/scripts/spuds.js"
+    //     },
+    //     nope: warn("no spuds to be seen"),
+    //     callback: function(url, result, key) {
+    //         ("spuds.js" === key && result === true) ? warn("_____ spuds.js loaded _____") : nope("_____spuds.js not loaded _____")
+    //     }
+    //     // both : [
+    //     //     // // plugins.js, resource # 62499
+    //     //     "<t4 type='media' id='62499'/>",
+    //     //     // mai`n.min.js resource # 62498
+    //     //     "<t4 type='media' id='62498'/>"
+    //     // ]
+    // },
 
     {
         //  adds check for newsroom url build
@@ -125,3 +119,20 @@ yepnope([
     }
 
 ])
+
+
+// yepnope.injectCss || yepnope.injectJS
+// Function Signature(".js", callback, encoding:utf-8, timeout:5000ms)
+
+// var location = (function(href){
+
+//     switch (href) {
+//         case "http://msudenver.edu/admissions/":
+//             console.warn("msudenver:admissions");
+
+//         case "http://localhost:9001/prebuild/admissions.1col.prebuild.html":
+//             console.warn("local:admissions");
+//     }
+
+// })(href);
+
