@@ -94,6 +94,8 @@ module.exports = (grunt) ->
 
 		# coffeescript compile task
 		coffee :
+            options  :
+                base : true
 			compile  :
 				files : 'public/js/main.js' : coffeeScriptFiles
 

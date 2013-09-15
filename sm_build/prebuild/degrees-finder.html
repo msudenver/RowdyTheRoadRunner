@@ -53,13 +53,11 @@
     <!-- <script type="text/javascript" src="<t4 type='media' id='62527'/>"></script> -->
     <script src="../js/vendor/modernizr.js"></script>
     <!-- yepnope.js -->
-    <!-- <script src="<t4 type='media' id='62511'/>"></script> -->
-    <script src="../js/utils/yepnope.js"></script>
-
+     <!-- <script src="<t4 type='media' id='62511'/>"></script> -->
+    <!-- <script src="../js/utils/yepnope.js"></script> -->
     <!-- HeaderCode -->
     <!-- <t4 type='navigation' id='804'/> -->
     <!-- add these two to header code  -->
-    
 </head>
 <body>
     <div class="container">
@@ -183,89 +181,68 @@
                     <!-- *********************************  -->
                     <!-- SITEMANAGER HEADER ENDS HERE -->
                     <!-- *********************************  -->
-                    <div class="content-inner container">
-                        <div data-ng-app="MajorsAndMinorsApp">
-                            <!-- anchor top for old-ie -->
+                        <div class="container" data-ng-app="MajorsAndMinorsApp">
                             <a id="top"></a>
-                            <div class="container" data-ng-controller="ProgramController">
-                                <div class="back2top">
-                                    <span> <a href="#">Back to Top</a>
-                                    </span>
-                                    <div class="shadow1"></div>
-                                    <div class="shadow2"></div>
-                                    <div class="shapes">
-                                        <div class="line1"></div>
-                                        <div class="line2"></div>
-                                    </div>
-                                </div>
-                                <div ng-show="hide" class="container-fluid" data-ng-controller="Visualization">
-                                    <img src="../assets/img/icon-richvisual.png" alt="Toggle Visualizations" width="25">
-                                    <button data-ng-click="showVis()">Toggle</button>
-                                    <section class="" data-ng-show="show">
-                                        <div class="d3vis"></div>
-                                    </section>
-                                </div>
-                                <div class="container-fluid">
-                                    <span id="content-width" style="float:right"></span>
-                                </div>
-                                <div class="todo container-fluid">
-                                    <div class="row-fluid">
-                                        <div class="span12">
-                                            <div class="pull-right">
-                                                <label id="search_label">SEARCH
-                                                    <input class="todo-search " data-ng-model="search" type="search" value placeholder="Degree Options" name="Search">
-                                                </label>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="filterBox" class="container">
-                                        <p class="" style="font-size:15px">
-                                            <em>Filter by</em>
-                                        </p>
-                                        <div class="span12">
-                                            <div id="filterbox" class="span" data-ng-repeat="t in types">
-                                                <label class="selected">
-                                                    <input name="selection" class="checkbox" type="radio" data-ng-click="sortByType($event, t)" id="{{t}}">
-                                                    <span class="checkboxText">{{t}}</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="program_count">
+                            <p class="caption">
+                                Masters, Majors, Minors, Concentrations and Licensures offered by MSU Denver
+                            </p>
+                            <div class="mainContainer" data-ng-controller="ProgramController">
+                                <div id="program_count" class="center">
                                     <section class="palette img-rounded">
-                                        <h3>{{total}}</h3>
-                                        MSU Denver
-                                        <em id="changeSelectionType">DEGREE OPTIONS</em>
+                                        <p>{{total}}</p>
+                                        <p> MSU Denver
+                                            <em id="changeSelectionType">DEGREE OPTIONS</em>
+                                        </p>
                                     </section>
                                 </div>
+                                <div class="container">
+                                    <div class="container">
+                                        <div class="back2top center">
+                                            <span> <a href="#">Back to Top</a></span>
+                                            <div class="shadow1"></div>
+                                            <div class="shadow2"></div>
+                                            <div class="shapes">
+                                                    <div class="line1"></div>
+                                                    <div class="line2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <label id="search_label">SEARCH</label>
+                                                    </div>
+                                                <div class="col-6">
+                                                    <input  class="todo-search " data-ng-model="search" type="search" value placeholder="Degree Options" name="Search">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filterBox">
+                                        <p style="font-size:15px"><em>Filter by</em></p>
+                                        <div class="row">
+                                            <div class="col-6" data-ng-repeat="t in types">
+                                                <label class="selected">
+                                                <input name="selection" class="checkbox" type="radio"  data-ng-click="sortByType($event, t)" id="{{t}}">
+                                                <span class="checkboxText">{{t}}</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <table class="results">
-                                    <thead class="categories row">
-                                        <th class="Name span ">Program</th>
-                                        <th class="Masters span2">Master</th>
-                                        <th class="Major span2 ">Major</th>
-                                        <th class="Minor span2 ">Minor</th>
-                                        <th class="Concentration span">Concentration</th>
-                                        <th class="Certification span">Certification</th>
-                                        <th class="Licensure span2 ">Licensure</th>
-                                    </thead>
-
-                                    <caption>
-                                        Masters, Majors, Minors, Concentrations and Licensures offered by MSU Denver
-                                    </caption>
-
                                     <tbody>
                                         <tr data-ng-repeat="program in list | filter:search">
-
                                             <td class="Name palette">
                                                 <span>
-                                                    <a href="{{program.www}}" target="_blank">
-														{{program.name}}
-													</a>
+                                                    <a href="{{program.www}}" target="_blank" >
+                                                        {{program.name}}
+                                                    </a>
                                                 </span>
                                             </td>
-
                                             <td class="inner Masters {{program.masters}}">
                                                 <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.masters, 'Masters')}}" width="10" height="10">
                                             </td>
@@ -292,47 +269,48 @@
                                         </tr>
                                     </tbody>
                                 </table>
+<!-- *********************************  -->
+<!-- SITEMANAGER START FOOTER -->
+<!-- *********************************  -->
                             </div>
                         </div>
+                </div>
+            </div>
+        </div>
+        <!-- / end of main container-->
+        <div class="container">
+            <div class="row footer">
+                <div class="col-lg-12">
+                    <div class="col-lg-4 col-sm-12">
+                        <img class="clickable" src="../assets/webicons/images/fc-webicon-facebook.png" alt="Facebook Logo" data-href="https://www.facebook.com/msudenver">
+                        <img class="clickable" src="../assets/webicons/images/fc-webicon-twitter.png" alt="Twitter Logo" data-href="http://twitter.com/msudenver">
+                        <img class="clickable" src="../assets/webicons/images/fc-webicon-youtube.png" alt="YouTube Logo" data-href="http://www.youtube.com/user/metrostatecollege">
+                        <img class="clickable" src="../assets/webicons/images/fc-webicon-flickr.png" alt="Flickr Logo" data-href="http://www.flickr.com/photos/msudenver/sets/">
                     </div>
-                    <!-- *********************************  -->
-                    <!-- SITEMANAGER START FOOTER -->
-                    <!-- *********************************  -->
-
+                    <div class="col-lg-4 col-sm-6 campus-info">
+                        <p>
+                            <a href="/contact">CONTACT US</a> | 303-556-2400
+                            <br>Auraria Campus Police: 303-556-5000
+                            <br>Inclement Weather Line: 303-556-2401
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <p>
+                            <a class="t4Edit-page" href="https://adt4apps.msudenver.edu/terminalfour/SiteManager?ctfn=publish&amp;fnno=31&amp;sid=19048&amp;chid=1&amp;lang=en&amp;ede=true">&copy;</a> Metropolitan State University of Denver
+                            <br>
+                            <a href="/privacy">Privacy Statement</a>
+                            <br>
+                            <a href="http://www.collegeportraits.org/CO/Metro-State">College Portrait</a> | <a href="http://tops.state.co.us/">Colorado TOPS</a>
+                            <br>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- / end of main container-->
-    <div class="container">
-        <div class="row footer">
-            <div class="col-lg-12">
-                <div class="col-lg-4 col-sm-12">
-                    <img class="clickable" src="../assets/webicons/images/fc-webicon-facebook.png" alt="Facebook Logo" data-href="https://www.facebook.com/msudenver">
-                    <img class="clickable" src="../assets/webicons/images/fc-webicon-twitter.png" alt="Twitter Logo" data-href="http://twitter.com/msudenver">
-                    <img class="clickable" src="../assets/webicons/images/fc-webicon-youtube.png" alt="YouTube Logo" data-href="http://www.youtube.com/user/metrostatecollege">
-                    <img class="clickable" src="../assets/webicons/images/fc-webicon-flickr.png" alt="Flickr Logo" data-href="http://www.flickr.com/photos/msudenver/sets/">
-                </div>
-                <div class="col-lg-4 col-sm-6 campus-info">
-                    <p>
-                        <a href="/contact">CONTACT US</a> | 303-556-2400
-                        <br>Auraria Campus Police: 303-556-5000
-                        <br>Inclement Weather Line: 303-556-2401
-                    </p>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <p>
-                        <a class="t4Edit-page" href="https://adt4apps.msudenver.edu/terminalfour/SiteManager?ctfn=publish&amp;fnno=31&amp;sid=19048&amp;chid=1&amp;lang=en&amp;ede=true">&copy;</a> Metropolitan State University of Denver
-                        <br>
-                        <a href="/privacy">Privacy Statement</a>
-                        <br>
-                        <a href="http://www.collegeportraits.org/CO/Metro-State">College Portrait</a> | <a href="http://tops.state.co.us/">Colorado TOPS</a> 
-                        <br>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer Code includes -->
-</body>
+        <!-- <script type="text/javascript" src="../js/controllers.js"></script> -->
+        <!-- Footer Code includes -->
+             <!-- yepnope.js -->
+         <!-- <script src="<t4 type='media' id='62511'/>"></script>  -->
+        <script src="../js/utils/yepnope.js"></script>
+    </body>
 </html>

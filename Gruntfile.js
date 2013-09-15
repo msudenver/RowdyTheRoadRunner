@@ -56,10 +56,13 @@ module.exports = function(grunt) {
       }
     },
     coffee: {
-      compile: {
-        files: {
-          'public/js/main.js': coffeeScriptFiles
-        }
+      options: {
+        base: true
+      }
+    },
+    compile: {
+      files: {
+        'public/js/main.js': coffeeScriptFiles
       }
     },
     less: {
