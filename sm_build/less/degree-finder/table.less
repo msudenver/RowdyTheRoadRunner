@@ -1,0 +1,163 @@
+@import "variables.less";
+
+/* 
+
+	table style
+	--------
+   
+*/
+
+table.results{
+	 empty-cells: show;
+}
+td{
+	width: 10em;
+	height: 1em;
+}
+caption {
+	// position: fixed;
+	z-index: 1001;
+	// width: @content_width;
+	// text-align: center;
+	padding: 1.5em;
+	width: 44em;
+	// margin-top: 7em;
+	// border-bottom: .2em solid #4ca;
+	// word-wrap: break-word;
+	// border-bottom: none;
+	// width: 46em;
+	top: 8.5em;
+	color:white;
+	font-size: 1.25em;
+	background-color: rgb(0,109,169);
+}
+
+.categories {
+	// width: @content_width;
+	color:white;
+	// position: fixed;
+	z-index: 1001;
+	// position: absolute;
+	top: 15.5em;
+	// z-index: 999;
+	padding-top: 1.5em;
+	padding-bottom: 1em;
+	background-color: #454345;
+	border-bottom: 0.5em rgb(209,18,66) solid;
+}
+table.results > tbody{
+	// position: relative;
+	// position: absolute;
+	top: 15em;
+	// width: @content_width;
+	margin-top: 4.4em;
+	padding-bottom: 35px;
+	padding-top: 0px;
+}
+th.Name{
+	min-width: 15em;
+	max-width: 20em;
+}
+th.Concentration{
+	padding-right: 5px;
+}
+th.Masters{
+	padding-left:43px;
+}
+th.palette{
+	position: relative;
+	padding-left: 0;
+	padding-right: 0;
+	margin: auto;
+}
+// Major Minor Parent hierarchy
+td.X{
+	width: 10em;
+	background-color: #3498db;
+	background-color: @msu-blue;
+	word-wrap: break-word;
+	color: white;
+}
+td.Name{
+	width: 30%;
+	background-color: rgb(0,125,125);
+	background-color: #575558;
+	border-bottom: 0.12em solid gray;
+}
+th.Name span{
+	background-color: none;
+}
+td.Name span a:hover{
+	color: white;
+	cursor: default;
+}
+td.Name span.X:hover{
+	border-radius: 28px 28px 28px 0px;
+}
+td.Name:hover{
+	color: white;
+	cursor: auto;
+	// -moz-transform: scale(1.01);
+	// -ms-transform: scale(1.01);
+	// -o-transform: scale(1.01);
+	// -webkit-transform: scale(1.01);
+	// transform: scale(1.01);
+	background-color: black;
+}
+span.X{
+	text-shadow: rgba(0,0,0,0.75) 2em;
+}
+tbody a{
+	display: table-cell;
+	padding-left: 20px;
+	width: 100%;
+	text-align: left;
+	left: 25px;
+	font-size:14px;	
+	font-style: italic;
+	text-transform:lowercase;
+	text-transform: capitalize;
+	color: white;
+	text-decoration: none;
+	word-wrap:break-word;
+}
+tbody a:hover{
+	color: black;
+}
+tbody span.X a{
+	text-transform:uppercase;
+	font-style: inherit;
+	text-align: left;
+	font-size:1em;
+	padding-left: 0;	
+}
+.container{
+	position: relative;
+}
+.inner{
+	max-width: 10em;
+	max-height: 10em;
+	background-color: #ECF0F1;
+	border-bottom: .1em solid @gray;
+	border-right: .1em solid @gray;
+	text-align: center;
+	color: #ECF0F1;
+}
+.span2{
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+thead.row.categories{
+	margin: 0;
+}
+thead.row.categories th{
+	text-align: center;
+}
+// class needed since ie does not 
+// pick up img attributes for width and height
+img.degreeCircle {
+  max-width: 10%;
+  height: auto;
+  width: auto \9;
+}

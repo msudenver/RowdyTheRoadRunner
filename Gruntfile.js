@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         options: {
           open: true,
           base: "sm_build",
-          directory: "sm_build/"
+          directory: "sm_build"
         }
       }
     },

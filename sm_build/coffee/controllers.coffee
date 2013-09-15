@@ -7,8 +7,6 @@ vis = {}; vis.show = false;
 
 MajorsAndMinorsApp = angular.module "MajorsAndMinorsApp", []
 
-# MajorsAndMinorsApp.factory "ng-alt", (foo) -> 3
-
 MajorsAndMinorsApp.controller "Visualization", ($scope) ->
 	$scope.show = vis.show;
 	# $scope.dataset = [ 25, 7, 5, 26, 11, 8, 25, 14, 23, 19, 14, 11, 22, 29, 11, 13, 12, 17, 18, 10, 24, 18, 25, 9, 3 ];
@@ -36,7 +34,7 @@ MajorsAndMinorsApp.controller "ProgramController", ($scope, $http) ->
 		else if  found  < 0 then category.splice(found, 1) 
 
 
-	($http({method: 'GET', cache: true , url:'../dataset/csv/set3.csv'}))
+	($http({method: 'GET', cache: false , url:'../dataset/csv/set3.csv'}))
 		.success (data) ->
 
 			list.all = d3.csv.parse(data)

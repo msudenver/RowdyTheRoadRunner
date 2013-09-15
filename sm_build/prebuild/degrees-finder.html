@@ -61,7 +61,6 @@
     <!-- add these two to header code  -->
     
 </head>
-
 <body>
     <div class="container">
         <!-- begins main container -->
@@ -184,7 +183,6 @@
                     <!-- *********************************  -->
                     <!-- SITEMANAGER HEADER ENDS HERE -->
                     <!-- *********************************  -->
-                    <!-- DAV 08-27-13 -->
                     <div class="content-inner container">
                         <div data-ng-app="MajorsAndMinorsApp">
                             <!-- anchor top for old-ie -->
@@ -201,7 +199,7 @@
                                     </div>
                                 </div>
                                 <div ng-show="hide" class="container-fluid" data-ng-controller="Visualization">
-                                    <img src="img/icon-richvisual.png" alt="Toggle Visualizations" width="25">
+                                    <img src="../assets/img/icon-richvisual.png" alt="Toggle Visualizations" width="25">
                                     <button data-ng-click="showVis()">Toggle</button>
                                     <section class="" data-ng-show="show">
                                         <div class="d3vis"></div>
@@ -269,27 +267,27 @@
                                             </td>
 
                                             <td class="inner Masters {{program.masters}}">
-                                                <img class="degreeCircle" src="img/10px.png" alt="{{altTag(program.name, program.masters, 'Masters')}}" width="10" height="10">
+                                                <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.masters, 'Masters')}}" width="10" height="10">
                                             </td>
 
                                             <td class="inner Major {{program.major}}">
-                                                <img class="degreeCircle" src="img/10px.png" alt="{{altTag(program.name, program.major, 'Major')}}" width="10" height="10">
+                                                <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.major, 'Major')}}" width="10" height="10">
                                             </td>
 
                                             <td class="inner Minor {{program.minor}}">
-                                                <img class="degreeCircle" src="img/10px.png" alt="{{altTag(program.name, program.minor, 'Minor')}}" width="10" height="10">
+                                                <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.minor, 'Minor')}}" width="10" height="10">
                                             </td>
 
                                             <td class="inner Concentration {{program.concentration}}">
-                                                <img class="degreeCircle" src="img/10px.png" alt="{{altTag(program.name, program.concentration, 'Concentration')}}" width="10" height="10">
+                                                <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.concentration, 'Concentration')}}" width="10" height="10">
                                             </td>
 
                                             <td class="inner Certification {{program.certification}}">
-                                                <img class="degreeCircle" src="img/10px.png" alt="{{altTag(program.name, program.certification, 'Certification')}}" width="10" height="10">
+                                                <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.certification, 'Certification')}}" width="10" height="10">
                                             </td>
 
                                             <td class="inner Licensure {{program.licensure}}">
-                                                <img class="degreeCircle" src="img/10px.png" alt="{{altTag(program.name, program.licensure, 'Licensure')}}" width="10" height="10">
+                                                <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.licensure, 'Licensure')}}" width="10" height="10">
                                             </td>
                                         </tr>
                                     </tbody>
@@ -336,7 +334,5 @@
         </div>
     </div>
     <!-- Footer Code includes -->
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
 </body>
 </html>

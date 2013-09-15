@@ -1,0 +1,99 @@
+// Core variables and mixins
+@import "variables.less";
+@import "animations.less";
+@import "back2top.less";
+@import "utils.less" ;
+@import "old-IE.less";
+@import "table.less";
+@import "vis.less";
+
+// widths will either be 630
+// or 960 px or 932px
+// left link bar is 250 px
+
+.container{
+	// max-width: @content_width;
+}
+
+/*
+
+  search
+  -----
+
+*/
+
+input[type='radio'] {
+	width:1em;
+	height:1em;
+	padding: 0;
+	margin: 0;
+}
+
+// input[type='checkbox']:checked {
+//     background: @msu-teal;
+// }
+
+.todo{
+	color: white;
+	// position: fixed;
+	z-index: 1001;
+	// width: @content_width;
+	background-color: @msu-blue;
+	// padding-bottom: 5em;
+	margin-bottom: 0;
+	// border-radius: 18px 18px 0 0px;
+}
+.search {
+	// margin-top: 45px;
+	// margin-bottom:135px;
+}
+.checkboxText:hover{
+	color: #3498db;
+}
+
+/*
+
+  floating green box
+  ---------------
+
+*/
+#filterbox {
+	padding-top: 1.5em;
+}
+#filterbox > label{
+	// font-size: 14px;
+}
+#program_count section{
+	// position: fixed;
+	z-index: 1001;
+	width: 12em;
+	// position: absolute;
+	text-align: center;
+	// top: 27px;s
+	// top: 154px;
+	margin-left: 21em;
+	// margin-right: 35em;
+	box-shadow: 2.5px 2.5px 10px black;
+	border-radius: 0 0 18px 18px;
+	background-color: @msu-red;
+}
+
+/*
+
+  filter by type box
+  --------------
+
+*/
+
+.todo-search {
+	margin-top: 0.5em;
+	margin-bottom: 20em;
+	// background-color: @msu-teal;
+}
+.todo {
+	border-radius: 8px 8px 0 0;
+	// margin-top: em;
+}
+#search_label{
+	margin-top: 1em;
+}

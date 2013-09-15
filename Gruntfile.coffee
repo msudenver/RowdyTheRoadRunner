@@ -65,7 +65,7 @@ module.exports = (grunt) ->
 				options :
 					open : true
 					base: "sm_build"
-					directory: "sm_build/"
+					directory: "sm_build"
 
 
 		# minify css

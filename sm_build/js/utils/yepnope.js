@@ -1,25 +1,36 @@
 /*
                                     __-YEPNOPE-__
                                     -------------
-                         replacement for modernizr.load Function
+                                modernizr.load Function
 
 */
 
 'use strict'
 
 //  utils
-var log  = function(x) { console.log(x) }
-var warn = function(x) { console.warn(x) }
-var nope = function()  { return }
-var href = document.location.href
-var $$$  = function(expr, cond) { return (cond || document).querySelector(expr) }
-var timeout = "timeout=" + 1000 + "!"; // one sec
+var log  = function(x){ console.log(x) }
+,   warn = function(x){ console.warn(x) }
+,   nope = function(){ return }
+,   href = document.location.href
+,   host = document.location.hostname
+,   $$$  = function(expr, cond){ return (cond || document).querySelector(expr) }
+,   timeout = 'timeout=' + 1000 + '!' // one sec
+,   angularCDN =
+     '//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js'
+,   jQueryCDN  =
+    '//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js'
+,   bootstrapJsCDN =
+     '//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js';
 
 
 yepnope([
-    //  load stylesheets first, then scripts
+    
+    // styles load
+    // -----------
+    // * load stylesheets first, then scripts
+
     {
-        // load bootstrap.min.css, resource # 62542
+        // bootstrap.min.css, resource # 62542
         // "<t4 type='media' id='62542'/>"
         load: "../css/vendor/bootstrap.min.css",
         complete: function() {
@@ -28,20 +39,24 @@ yepnope([
     },
 
     {
-        // load main.min.css, resource # 62508
+        // main.min.css, resource # 62508
         // load: "<t4 type='media' id='62508'/>",
         load: '../css/main.min.css',
         complete: function() {
-            console.warn("main.min.css loaded from server")
+            warn("main.min.css loaded from server")
         }
     },
 
     {
-        load: timeout + "//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js",
-        // load : timeout + "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js", TOO NEW FOR IE8
+        // jQuery load v1.10
+        // -----------------
+        // jquery v2.0.3, incompatible with IE8
+
+        load: timeout + jQueryCDN,
+        
         callback: function(url, result, key) {
             if (!window.jQuery) {
-                // load jquery.min.js, resource # 62496
+                // jquery.min.js, resource # 62496
                 // yepnope("<t4 type='media' id='62496'/>")
                 yepnope("../js/vendor/min/jquery.min.js")
                 warn("jQuery was loaded from Server")
@@ -52,10 +67,13 @@ yepnope([
     },
 
     {
-        load: timeout + "//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js",
+        // Bootstrap 3.0 load
+        // ------------------
+
+        load: timeout + bootstrapJsCDN,
         callback: function(url, result, key) {
             if (!$.fn.modal) {
-                // load bootstrap.min.css, resource # 62497
+                // bootstrap.min.js, resource # 62497
                 // yepnope("<t4 type='media' id='62497'/>")
                 yepnope('../js/vendor/min/bootstrap.min.js')
                 warn("bootstrapmin.js was loaded from Server")
@@ -63,51 +81,60 @@ yepnope([
                 warn("bootstrap.min.js was loaded from CDN")
             }
         },
+        
+        // Main.min.js css & console.* polyfill load
+        // -----------------------------------------
+
         complete: function() {
+            // plugins.js, resource # 62499
+            // "<t4 type='media' id='62499'/>"
             yepnope('../js/vendor/plugins.js')
-            yepnope('../js/main.min.js')
-            yepnope('../js/controllers.js')
-            yepnope('../js/main.js')
+            // newsroom.css, resource # 62509
+            // "<t4 type='media' id='62509'/>"
+            // yepnope('../js/main.min.js')
         }
     },
 
     {
-        // test : !!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g), # check for majors/minors href
-        test : true,
-        yep  : ['../js/controllers.js','../js/main.js'],
-        nope : warn('no good')
-
+        // DEGREE-FINDER assets load
+        // -------------------------
+        load : ['../js/vendor/d3.js', angularCDN],
+        complete : function(){
+            yepnope('../css/degree-finder/main.css')
+            yepnope('preload!' + '../js/controllers.js')
+            // yepnope('../js/controllers.js')
+            yepnope('../js/main.js')
+            
+            yepnope('../js/main.min.js')
+        }
+        
     },
 
-    // {
-    //     // test msudenver.edu domain href or look for .spuds class in page via jQuery
-    //     // test : !!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g) || !!$$$(".spuds"),
-    //     test: true,
-    //     yep: {
-    //         "spuds.js": "http://trumba.com/scripts/spuds.js"
-    //     },
-    //     nope: warn("no spuds to be seen"),
-    //     callback: function(url, result, key) {
-    //         ("spuds.js" === key && result === true) ? warn("_____ spuds.js loaded _____") : nope("_____spuds.js not loaded _____")
-    //     }
-    //     // both : [
-    //     //     // // plugins.js, resource # 62499
-    //     //     "<t4 type='media' id='62499'/>",
-    //     //     // mai`n.min.js resource # 62498
-    //     //     "<t4 type='media' id='62498'/>"
-    //     // ]
-    // },
+    {
+        // TRUMBA:CALENDAR:SPUDS api load
+        // ------------------------------
+        // test for homepage url or .spuds class in the body
+
+        test : !!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g) || !!$$$(".spuds"),
+        yep: {
+            "spuds.js": "http://trumba.com/scripts/spuds.js"
+        },
+        nope: warn("no spuds to be seen"),
+        callback: function(url, result, key) {
+            ("spuds.js" === key && result === true) ? warn("_____ spuds.js loaded _____") : nope("_____spuds.js not loaded _____")
+        }
+    },
 
     {
         //  adds check for newsroom url build
         // test : Modernizr.newsroom,
         test: !! href.match(/newsroom/i),
         yep: {
-            // slider.js 62500
+            // slider.js, resource # 62500
             // "<t4 type='media' id='62500'/>"
             "slider.js": "../js/utils/slider.js",
 
-            // newsroom.css  62509
+            // newsroom.css, resource # 62509
             // "<t4 type='media' id='62509'/>"
             "newsroom": "../css/newsroom.css"
         },
@@ -118,11 +145,25 @@ yepnope([
         }
     }
 
-])
+]);
 
 
-// yepnope.injectCss || yepnope.injectJS
-// Function Signature(".js", callback, encoding:utf-8, timeout:5000ms)
+// yepnope.injectJs('../js/vendor/d3.js', function() {
+//     warn('d3.js loaded!');
+// }, { charset: "utf-8" })
+
+// yepnope.injectJs('', function() {
+//         warn('angular.js loaded!');
+// });
+
+// yepnope([{
+//     load: ['../css/degree-finder/main.css','../js/controllers.js', '../js/main.js'],
+//     complete: function() {
+//         warn('controller.js and main.js loaded!');
+//      }
+// }]);
+
+
 
 // var location = (function(href){
 
@@ -135,4 +176,3 @@ yepnope([
 //     }
 
 // })(href);
-
