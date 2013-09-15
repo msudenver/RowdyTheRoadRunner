@@ -26,6 +26,12 @@ var log  = function(x){ console.log(x) }
 ,   d3CDN =
     '//cdnjs.cloudflare.com/ajax/libs/d3/3.3.3/d3.min.js';
 
+var debugPrintOut = function(url ,result ,key){
+    log('url ::' + url)
+    log('result ::' + result)
+    log('key ::' + key)
+}
+
 
 yepnope([
 
@@ -72,48 +78,6 @@ yepnope([
         }
     },
 
-
-    {
-        // DEGREE-FINDER assets load
-        // -------------------------
-
-        load : timeout + d3CDN,
-        callback : function(url, result, key){
-            if(!window.d3){
-                yepnope('../js/vendor/d3.js')
-                warn('d3.js was loaded from Server')
-            }else{
-                warn('d3.js was loaded from CDN')
-            }
-        },
-        complete : function(){
-            yepnope('../css/vendor/flat-ui.css')
-            yepnope('../css/degree-finder/main.css')
-            yepnope([
-                {
-
-                    load : timeout + angularCDN,
-                    callback : function(url, result, key){
-                        if(!window.angular){
-                            yepnope('../js/vendor/angular.js')
-                            warn('angular.js was loaded from Server')
-                        }else{
-                            warn('angular.js was loaded from CDN')
-                        }
-                        // yepnope('preload!' + '../js/controllers.js')
-                    },
-                    complete : function(){
-                        yepnope('../js/controllers.js');
-                        yepnope('../js/degrees-finder.js')
-                        yepnope('../js/main.min.js')
-
-                    }
-                }
-            ])
-        }
-
-    },
-
     {
         // Bootstrap 3.0 load
         // ------------------
@@ -144,7 +108,62 @@ yepnope([
         }
     },
 
+    {
+        // DEGREE-FINDER assets load
+        // -------------------------
 
+        load : timeout + d3CDN,
+        callback : function(url, result, key){
+            if(!window.d3){
+                yepnope('../js/vendor/d3.js')
+                warn('d3.js was loaded from Server')
+            }else{
+                warn('d3.js was loaded from CDN')
+            }
+        },
+        complete : function(){
+            yepnope('../css/vendor/flat-ui.css')
+            yepnope('../css/degree-finder/main.css')
+        }
+
+    },
+
+    {
+
+        load :  timeout + angularCDNUncompressed,
+        callback : function(url, result, key){
+            debugPrintOut(url, result, key);
+            if(0 === key && result === true){
+                log('got here [1]')
+
+                yepnope('../js/vendor/angular.js')
+                warn('angular.js was loaded from Server')
+            }else{
+                warn('angular.js was loaded from CDN')
+            }
+            // yepnope('preload!' + '../js/controllers.js')
+        },
+        complete : function(){
+            log('got here [2]')
+            window.angular.element(document).ready(function() {
+                    angular.bootstrap(document, ['MajorsAndMinorsApp']);
+                });
+            // yepnope('../js/controllers.js')
+            // yepnope('../js/controllers.js')
+            yepnope('../js/degrees-finder.js')
+            yepnope('../js/main.min.js')
+
+
+        }
+    },
+
+    {
+        load : '../js/controllers.js',
+        complete : function(){
+            warn("controllers.js loaded");
+
+        }
+    },
 
     // {
     //     test : window.jQuery,
@@ -158,7 +177,7 @@ yepnope([
 
     // },
 
-    // {
+    {
         // TRUMBA:CALENDAR:SPUDS api load
         // ------------------------------
         // test for homepage url or .spuds class in the body
@@ -172,9 +191,9 @@ yepnope([
         // callback: function(url, result, key){
         //     ("spuds.js" === key && result === true) ? warn("_____ spuds.js loaded _____") : nope("_____spuds.js not loaded _____")
         // }
-    // },
+    },
 
-    // {
+    {
         // // adds check for newsroom url build
         // // test : Modernizr.newsroom,
         // test: !! href.match(/newsroom/i),
@@ -193,7 +212,7 @@ yepnope([
         //     ("slider.js" === key && result === true) ? initCarousel() : nope()
         // }
 
-    // }
+    }
 
 ]);
 

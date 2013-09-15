@@ -1,45 +1,13 @@
-
 "use strict"
 
-# `
-# /*
+list = {} ; list.all = [] ; regEx = /X/i ; list.total = 0;
+list.types = ["All", "Master", 'Major', 'Minor', 'Concentration', 'Certification', 'Licensure']
+majors = [] ; minors = [] ; licensures= [] ; certifications= [] ;  concentrations = []  ; masters = []
+vis = {}; vis.show = false;
 
-# var docready=[],
-# $ = function(){
-#     return {
-#         ready : function(fn){
-#             docready.push(fn)
-#         }
-#     }
-# };
+degreeFinder = angular.module "degreeFinder", []
 
-
-# var _a = { ready: function(fn){
-#     _as.push(fn);
-#     }
-# }
-# */
-
-# `
-list = {}
-list.all = []
-regEx = /X/i
-list.total = 0
-list.types = ['All', 'Master', 'Major', 'Minor', 'Concentration', 'Certification', 'Licensure']
-majors = []
-minors = []
-licensures= []
-certifications= []
-concentrations = []
-masters = []
-# vis = {}; vis.show = false;
-
-
-angular.element(document).ready ->
-    angular.module "MajorsAndMinorsApp", []
-    angular.bootstrap(document, ['MajorsAndMinorsApp']);
-
-MajorsAndMinorsApp.controller "ProgramController", ($scope, $http) ->
+degreeFinder.controller "ProgramController", ($scope, $http) ->
 
     lookup = (item, category) ->
 
@@ -137,26 +105,6 @@ MajorsAndMinorsApp.controller "ProgramController", ($scope, $http) ->
             return "#{name} #{type} not offered"
 
 
-
-# MajorsAndMinorsApp.factory "ng-alt", (foo) -> 3
-
-# MajorsAndMinorsApp.controller "Visualization", ($scope) ->
-# 	$scope.show = vis.show;
-# 	# $scope.dataset = [ 25, 7, 5, 26, 11, 8, 25, 14, 23, 19, 14, 11, 22, 29, 11, 13, 12, 17, 18, 10, 24, 18, 25, 9, 3 ];
-# 	# $scope.dataset = (i * (Math.random(20)) for i in [1..30])
-# 	$scope.dataset = ( Math.floor(Math.random() * 30 ) for i in [1..30])
-
-# 	d3.select(".d3vis")
-# 		.selectAll("div")
-# 		.attr("class", "bar")
-# 		.data($scope.dataset)
-# 		.enter().append("div")
-# 		.attr("class", "bar")
-# 		.style("height", (d) -> d  * 4 + "px" )
-
-# 	# Show / Hide visualization
-# 	$scope.showVis = ->
-# 		$scope.show = !$scope.show
 
 
 
