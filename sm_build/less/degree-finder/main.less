@@ -37,10 +37,12 @@ h1{
 */
 
 input[type='radio'] {
-	// width:1em;
-	// height:1em;
+	// width:3em;
+	// height:3em;
 	// padding: 0;
 	// margin: 0;
+	// background-image: url('../assets/img/todo-2x.png');
+	// background-image: url('todo.png')
 }
 
 input[type="search"]{
@@ -63,7 +65,7 @@ input[type='checkbox']:checked {
 	z-index: 1001;
 	// width: 100%;
 	// height: 100px;
-	width: @content_width;
+	// width: @content_width;
 	background-color: @msu-blue;
 	// background-color:#006da9;
 	// padding-bottom: 5em;
@@ -93,13 +95,13 @@ input[type='checkbox']:checked {
     0px -1px 0px @color, 1px -1px 0px @color, 1px 4px 5px white;
 }
 .filterBox {
-	// float: right;
+	float: right;
 	display: table;
-	// height:2em;
-	padding: 3em;
+	height:2em;
+	padding: 2em;
 }
 .filterBox label{
-	// float: right;
+	float: right;
 }
 #program_count section{
 	// position: fixed;
@@ -115,7 +117,7 @@ input[type='checkbox']:checked {
 	// .center;
 
 }
-#program_count section p:first-child{
+#program_count section p{
 	font-size: 3em;
 	@h : 0px;
 	@v : 0.15em;
@@ -124,17 +126,16 @@ input[type='checkbox']:checked {
 
 	// text shadow syntax
 	// text-shadow: H-offset V-offset blur color
-
 	-webkit-box-shadow: @h @v @b @c;
 	-moz-box-shadow: @h @v @b @c;
 	box-shadow: @h @v @b @c;
-
-	text-shadow: 0px 7.5px 5px rgba(0,0,0,0.3);
+	// text-shadow: 0px 7.5px 5px rgba(0,0,0,0.3);
 	// .textGlow;
 }
+
 #program_count section p:nth-child(2){
 	font-size: 1.25em;
-	text-shadow: 0px 7.5px 5px rgba(0,0,0,0.3);
+	// text-shadow: 0px 7.5px 5px rgba(0,0,0,0.3);
 }
 
 /*
@@ -145,16 +146,18 @@ input[type='checkbox']:checked {
 */
 
 .todo-search {
+	float: right;
 	margin-top: 0.5em;
-	margin-bottom: 20em;
+	
 	// background-color: @msu-teal;
 }
 .todo {
 	border-radius: 8px 8px 0 0;
-	// margin-top: em;
+	margin-top: 1em;
 }
 #search_label{
-	margin-top: 1em;
-	margin-left: 1em;
-	padding: 0.5em;
+	left: 60%;
+	// margin-top: 1em;
+	// margin-left: 1em;
+	// padding: 0.5em;
 }

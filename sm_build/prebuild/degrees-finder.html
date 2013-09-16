@@ -7,6 +7,7 @@
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="en" xmlns:ng="http://angularjs.org">
 <!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,14 +54,15 @@
     <!-- <script type="text/javascript" src="<t4 type='media' id='62527'/>"></script> -->
 
     <!-- yepnope.js -->
-     <!-- <script src="<t4 type='media' id='62511'/>"></script> -->
+    <!-- <script src="<t4 type='media' id='62511'/>"></script> -->
     <!-- <script src="../js/utils/yepnope.js"></script> -->
     <!-- HeaderCode -->
     <!-- <t4 type='navigation' id='804'/> -->
     <!-- add these two to header code  -->
     <script src="../js/vendor/modernizr.js"></script>
-        <script src="../js/utils/yepnope.js"></script>
+    <script src="../js/utils/yepnope.js"></script>
 </head>
+
 <body>
     <div class="container">
         <!-- begins main container -->
@@ -183,99 +185,106 @@
                     <!-- *********************************  -->
                     <!-- SITEMANAGER HEADER ENDS HERE -->
                     <!-- *********************************  -->
-                        <div class="container" >
-                            <a id="top"></a>
-                            <p class="caption">
-                                Masters, Majors, Minors, Concentrations and Licensures offered by MSU Denver
-                            </p>
-                            <div class="mainContainer" data-ng-controller="ProgramController">
-                                <div id="program_count" class="center">
-                                    <section class="palette img-rounded">
-                                        <p>{{total}}</p>
-                                        <p> MSU Denver
-                                            <em id="changeSelectionType">DEGREE OPTIONS</em>
-                                        </p>
-                                    </section>
-                                </div>
+                    <div class="container">
+                        <a id="top"></a>
+                        <p class="caption">
+                            Masters, Majors, Minors, Concentrations and Licensures offered by MSU Denver
+                        </p>
+                        <div class="mainContainer" data-ng-controller="ProgramController">
+                            <div id="program_count" class="center">
+                                <section class="palette img-rounded">
+                                    <p>{{total}}</p>
+                                    <p>MSU Denver
+                                        <em id="changeSelectionType">DEGREE OPTIONS</em>
+                                    </p>
+                                </section>
+                            </div>
+                            <div class="container">
                                 <div class="container">
-                                    <div class="container">
-                                        <div class="back2top center">
-                                            <span> <a href="#">Back to Top</a></span>
-                                            <div class="shadow1"></div>
-                                            <div class="shadow2"></div>
-                                            <div class="shapes">
-                                                    <div class="line1"></div>
-                                                    <div class="line2"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <label id="search_label">SEARCH</label>
-                                                    </div>
-                                                <div class="col-6">
-                                                    <input  class="todo-search " data-ng-model="search" type="search" value placeholder="Degree Options" name="Search">
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="filterBox">
-                                        <p style="font-size:15px"><em>Filter by</em></p>
-                                        <div class="row">
-                                            <div class="col-6" data-ng-repeat="t in types">
-                                                <label class="selected">
-                                                <input name="selection" class="checkbox" type="radio"  data-ng-click="sortByType($event, t)" id="{{t}}">
-                                                <span class="checkboxText">{{t}}</span>
-                                                </label>
-                                            </div>
+                                    <div class="back2top center">
+                                        <span> <a href="#">Back to Top</a>
+                                        </span>
+                                        <div class="shadow1"></div>
+                                        <div class="shadow2"></div>
+                                        <div class="shapes">
+                                            <div class="line1"></div>
+                                            <div class="line2"></div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-lg-12">
+                                    <div class="container">
+                                        <input class="todo-search " data-ng-model="search" type="search" value placeholder="Degree Options" name="Search">
+                                        <label id="search_label">SEARCH</label>
+                                    </div>
+                                </div>
+                                <div class="filterBox">
+                                    <p>
+                                        <em>Filter by</em>
+                                    </p>
+                                    <div class="row">
+                                        <div class="container">
+                                            <label class="selected"  data-ng-repeat="t in types">
+                                                <input name="selection" class="checkbox" type="radio" data-ng-click="sortByType($event, t)" id="{{t}}">
+                                                <span class="checkboxText">{{t}}</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                                <table class="results">
-                                    <tbody>
-                                        <tr data-ng-repeat="program in list | filter:search">
-                                            <td class="Name palette">
-                                                <span>
-                                                    <a href="{{program.www}}" target="_blank" >
+                            <table class="results">
+                                <thead class="categories">
+                                    <tr>
+                                        <th class="palette Name">Program</th>
+                                        <th class="palette Masters">Master</th>
+                                        <th class="palette Major">Major</th>
+                                        <th class="palette Minor">Minor</th>
+                                        <th class="palette Concentration">Concentration</th>
+                                        <th class="palette Certification">Certification</th>
+                                        <th class="palette Licensure">Licensure</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-ng-repeat="program in list | filter:search">
+                                        <td class="Name palette">
+                                            <span>
+                                                <a href="{{program.www}}" target="_blank">
                                                         {{program.name}}
                                                     </a>
-                                                </span>
-                                            </td>
-                                            <td class="inner Masters {{program.masters}}">
-                                                <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.masters, 'Masters')}}" width="10" height="10">
-                                            </td>
+                                            </span>
+                                        </td>
+                                        <td class="inner Masters {{program.masters}}">
+                                            <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.masters, 'Masters')}}" width="10" height="10">
+                                        </td>
 
-                                            <td class="inner Major {{program.major}}">
-                                                <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.major, 'Major')}}" width="10" height="10">
-                                            </td>
+                                        <td class="inner Major {{program.major}}">
+                                            <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.major, 'Major')}}" width="10" height="10">
+                                        </td>
 
-                                            <td class="inner Minor {{program.minor}}">
-                                                <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.minor, 'Minor')}}" width="10" height="10">
-                                            </td>
+                                        <td class="inner Minor {{program.minor}}">
+                                            <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.minor, 'Minor')}}" width="10" height="10">
+                                        </td>
 
-                                            <td class="inner Concentration {{program.concentration}}">
-                                                <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.concentration, 'Concentration')}}" width="10" height="10">
-                                            </td>
+                                        <td class="inner Concentration {{program.concentration}}">
+                                            <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.concentration, 'Concentration')}}" width="10" height="10">
+                                        </td>
 
-                                            <td class="inner Certification {{program.certification}}">
-                                                <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.certification, 'Certification')}}" width="10" height="10">
-                                            </td>
+                                        <td class="inner Certification {{program.certification}}">
+                                            <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.certification, 'Certification')}}" width="10" height="10">
+                                        </td>
 
-                                            <td class="inner Licensure {{program.licensure}}">
-                                                <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.licensure, 'Licensure')}}" width="10" height="10">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-<!-- *********************************  -->
-<!-- SITEMANAGER START FOOTER -->
-<!-- *********************************  -->
-                            </div>
+                                        <td class="inner Licensure {{program.licensure}}">
+                                            <img class="degreeCircle" src="../assets/img/10px.png" alt="{{altTag(program.name, program.licensure, 'Licensure')}}" width="10" height="10">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- *********************************  -->
+                            <!-- SITEMANAGER START FOOTER -->
+                            <!-- *********************************  -->
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -311,7 +320,8 @@
         </div>
         <!-- <script type="text/javascript" src="../js/controllers.js"></script> -->
         <!-- Footer Code includes -->
-             <!-- yepnope.js -->
-         <!-- <script src="<t4 type='media' id='62511'/>"></script>  -->
-    </body>
+        <!-- yepnope.js -->
+        <!-- <script src="<t4 type='media' id='62511'/>"></script>  -->
+</body>
+
 </html>

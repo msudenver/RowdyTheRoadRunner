@@ -168,10 +168,6 @@
 .lt-ie9 .todo {
   padding-bottom: 110px;
 }
-td {
-  width: 0.2em;
-  height: 0.2em;
-}
 .caption {
   text-align: center;
   margin: 0;
@@ -182,11 +178,6 @@ td {
   border-radius: 4px 4px 0 0px;
 }
 .categories {
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
   color: white;
   position: fixed;
   z-index: 1002;
@@ -195,27 +186,22 @@ td {
   padding-bottom: 1.5em;
   background-color: #454345;
   border-bottom: 0.5em #d11242 solid;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-th.Name {
-  min-width: 15em;
-  max-width: 20em;
-}
-th.Concentration {
-  padding-right: 5px;
-}
-th.Masters {
-  padding-left: 43px;
-}
-th.palette {
-  position: relative;
-  padding-left: 0;
-  padding-right: 0;
-  margin: auto;
+table.results > tbody {
+  top: 15em;
+  width: 100%;
+  margin-top: 4.4em;
+  padding-bottom: 35px;
+  padding-top: 0px;
 }
 td.X {
   width: 1em;
   background-color: #00447c;
-  word-wrap: break-word;
   color: white;
 }
 td.Name {
@@ -231,9 +217,6 @@ td.Name span a:hover {
   color: white;
   cursor: default;
 }
-td.Name span.X:hover {
-  border-radius: 28px 28px 28px 0px;
-}
 td.Name:hover {
   background-color: black;
   -webkit-transition: all 0.3s ease-in-out;
@@ -241,9 +224,6 @@ td.Name:hover {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
-.span.X:hover {
-  text-shadow: rgba(0, 0, 0, 0.75) 2em;
 }
 tbody a {
   text-align: left;
@@ -318,7 +298,6 @@ input[type="search"] {
   color: white;
   position: relative;
   z-index: 1001;
-  width: 100%;
   background-color: #00447c;
 }
 .checkboxText:hover {
@@ -333,8 +312,13 @@ input[type="search"] {
 
 */
 .filterBox {
+  float: right;
   display: table;
-  padding: 3em;
+  height: 2em;
+  padding: 2em;
+}
+.filterBox label {
+  float: right;
 }
 #program_count section {
   z-index: 1001;
@@ -344,16 +328,14 @@ input[type="search"] {
   border-radius: 0 0 18px 18px;
   background-color: #d11242;
 }
-#program_count section p:first-child {
+#program_count section p {
   font-size: 3em;
   -webkit-box-shadow: 0px 0.15em 0px #007dc3;
   -moz-box-shadow: 0px 0.15em 0px #007dc3;
   box-shadow: 0px 0.15em 0px #007dc3;
-  text-shadow: 0px 7.5px 5px rgba(0, 0, 0, 0.3);
 }
 #program_count section p:nth-child(2) {
   font-size: 1.25em;
-  text-shadow: 0px 7.5px 5px rgba(0, 0, 0, 0.3);
 }
 /*
 
@@ -362,14 +344,13 @@ input[type="search"] {
 
 */
 .todo-search {
+  float: right;
   margin-top: 0.5em;
-  margin-bottom: 20em;
 }
 .todo {
   border-radius: 8px 8px 0 0;
+  margin-top: 1em;
 }
 #search_label {
-  margin-top: 1em;
-  margin-left: 1em;
-  padding: 0.5em;
+  left: 60%;
 }
