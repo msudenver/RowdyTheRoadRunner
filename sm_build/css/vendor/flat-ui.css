@@ -180,7 +180,7 @@ body {
   font: 14px/1.231 "Lato", sans-serif; }
 
 a {
-  color: #1abc9c;
+  /*color: #1abc9c;*/
   text-decoration: underline;
   -webkit-transition: 0.25s;
   -moz-transition: 0.25s;
@@ -513,7 +513,7 @@ h6 {
 .navbar {
   font-size: 18px; }
   .navbar .brand {
-    color: #1abc9c;
+    /*color: #1abc9c;*/
     font-size: inherit;
     font-weight: 700;
     padding-bottom: 16px;
@@ -545,7 +545,8 @@ h6 {
   .navbar .nav > li > a {
     padding: 14px 15px 17px; }
     .navbar .nav > li > a:hover {
-      color: #1abc9c; }
+      /*color: #1abc9c; */
+  }
   .navbar .nav li {
     position: relative; }
     .navbar .nav li:hover > ul {

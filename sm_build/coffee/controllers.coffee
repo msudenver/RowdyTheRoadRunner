@@ -17,6 +17,7 @@ degreeFinder.controller "ProgramController", ($scope, $http) ->
 
 
     ($http({method: 'GET', cache: true , url:'../dataset/csv/set3.csv'}))
+    # ($http({method: 'GET', cache: true , url:"<t4 type='media' id='63073'/>"}))
         .success (data) ->
 
             list.all = d3.csv.parse(data)
@@ -46,12 +47,12 @@ degreeFinder.controller "ProgramController", ($scope, $http) ->
             list.total = newVal
 
         $scope.total = list.total
-    
+
 
     $scope.$watch "search", (newVal)->
         if newVal and newVal.match(/[a-z]|[0-9]/gi) then $scope.list = list.all
 
-    
+
 
     $scope.sortByType = ($event, type) ->
         # log "sort by type clicked "

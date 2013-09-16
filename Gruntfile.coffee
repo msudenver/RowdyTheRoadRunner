@@ -24,7 +24,8 @@ module.exports = (grunt) ->
 	# ignore example : !background-img.css
 
 	cssFiles = [
-		'public/css/*.css'
+        'public/css/*.css'
+		# 'public/css/utils/*.css'
 		'!public/css/utils/mediaAllForIE8.css'
 		'!public/css/vendor/*.css'
 		'!public/css/inherit/*.css'
@@ -141,12 +142,12 @@ module.exports = (grunt) ->
 		grunt.log.writeln "target #{target}"
 
 		grunt.task.run([
-            'cssmin'
-			'brewcoffee'
-			'connect:server:keepalive'
-			'watch'
-
+            'cssmin',
+			'brewcoffee',
+			'connect:server:keepalive',
+            'watch'
 		])
+
 
 	# default task(s)
 	grunt.registerTask 'default',  ['watch']

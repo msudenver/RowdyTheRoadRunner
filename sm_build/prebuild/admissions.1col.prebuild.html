@@ -7,7 +7,6 @@
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="en">
 <!--<![endif]-->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,16 +41,16 @@
     <!-- meta DC.contributor -->
 
     <!-- google open sans -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,300,700,600' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,300,700,600' rel='stylesheet' type='text/css'> -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
 
     <!-- CSS -->
     <!-- <link rel="stylesheet" type="text/css" href="../css/admissions.css"> -->
     <style type="text/css" media="screen">
-    /* hide body until full page load */
-    body {
-        opacity: 0;
-    }
+        /* hide body until full page load */
+        body {
+            opacity: 0;
+        }
     </style>
     <!-- Print CSS -->
     <!-- <t4 type="media" id="61332"/> -->
@@ -65,7 +64,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
         <![endif]-->
     <!-- Glyphicons -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"> -->
 
     <!-- Fav and touch icons -->
 
@@ -75,8 +74,15 @@
     <link rel="apple-touch-icon-precomposed" href="<t4 type='media' id='60989' formatter='image/path'/>">
     <link rel="shortcut icon" href="<t4 type='media' id='60993' formatter='image/path'/>">
 
+    <!-- Modernizr CDN -->
+    <!-- <script type="text/javascript" src="<t4 type='media' id='62527'/>"></script> -->
+    <script src="../js/vendor/modernizr.js"></script>
+    <!-- yepnope.js -->
+    <!-- <script src="<t4 type='media' id='62511'/>"></script> -->
+    <script src="../js/utils/yepnope.js"></script>
     <!-- HeaderCode -->
     <!-- <t4 type='navigation' id='804'/> -->
+
 </head>
 
 <body>
@@ -175,7 +181,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="content">
-                    <!-- <t4 type="navigation" id="106"/> -->
+
+                    <t4 type="navigation" id="106"/>
+
                     <!-- *********************************  -->
                     <!-- SITEMANAGER HEADER ENDS HERE -->
                     <!-- *********************************  -->
@@ -199,11 +207,13 @@
                                         <i class="glyphicon glyphicon-log-in"></i>
                                     </div>
                                 </div>
-                                <div class="action-two clickable" data-href="#">
+                                <div class="ThreeCornerBox action-two clickable" data-href="#">
                                     <span>CHECK YOUR ADMISSION STATUS</span>
+                                    <i class="glyphicon glyphicon-log-in"></i>
                                 </div>
-                                <div class=" action-three clickable" data-href="#">
+                                <div class="ThreeCornerBox action-three clickable" data-href="#">
                                     <span>AFTER YOU'VE BEEN ADMITTED</span>
+                                    <i class="glyphicon glyphicon-log-in"></i>
                                 </div>
                             </div>
                         </div>
@@ -330,12 +340,6 @@
             </div>
         </div>
     </div>
-     <!-- Modernizr CDN -->
-    <!-- <script type="text/javascript" src="<t4 type='media' id='62527'/>"></script> -->
-    <script src="../js/vendor/modernizr.js"></script>
-    <!-- yepnope.js -->
-    <!-- <script src="<t4 type='media' id='62511'/>"></script> -->
-    <script src="../js/utils/yepnope.js"></script>
     <!-- google analytics -->
     <t4 type="navigation" id="103" />
     <!-- FooterCode -->

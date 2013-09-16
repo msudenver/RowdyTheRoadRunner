@@ -21,6 +21,8 @@ var log  = function(x){ console.log(x) }
     '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.js'
 ,   jQueryCDN  =
     '//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js'
+,   glyphiconsCDN =
+    '//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css'
 ,   bootstrapJsCDN =
     '//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js'
 ,   d3CDN =
@@ -32,7 +34,6 @@ var debugPrintOut = function(url ,result ,key){
     log('key ::' + key)
 }
 
-var x = 0;
 
 yepnope([
 
@@ -42,23 +43,29 @@ yepnope([
 
     {
         // bootstrap.min.css, resource # 62542
-        // "<t4 type='media' id='62542'/>"
-        load: "../css/vendor/bootstrap.min.css",
+        load: ["../css/vendor/bootstrap.min.css"],
         complete: function(){
             warn("bootstrap.min.css loaded from server")
         }
     },
 
     {
+        load: glyphiconsCDN,
+        complete : function(){
+            warn('glyphicons loaded!')
+        }
+    },
+
+    {
         // main.min.css, resource # 62508
-        // load: "<t4 type='media' id='62508'/>",
-        load: '../css/main.min.css',
+        load: ['../css/main.min.css'],
         complete: function(){
             warn("main.min.css loaded from server")
         }
     },
 
     {
+
         // jQuery load v1.10
         // -----------------
         // jquery v2.0.3, incompatible with IE8
@@ -75,7 +82,7 @@ yepnope([
             }
         },
         complete: function(){
-            
+
         }
     },
 
@@ -102,11 +109,10 @@ yepnope([
 
         complete: function() {
             // plugins.js, resource # 62499
-            // "<t4 type='media' id='62499'/>"
+            // yepnope("<t4 type='media' id='62499'/>")
             yepnope('../js/vendor/plugins.js')
             // newsroom.css, resource # 62509
-            // "<t4 type='media' id='62509'/>"
-            // yepnope('../js/main.min.js')
+
         }
     },
 
@@ -117,6 +123,8 @@ yepnope([
         load : timeout + d3CDN,
         callback : function(url, result, key){
             if(!window.d3){
+                // d3.js, resource # 63059
+                // yepnope("<t4 type='media' id='63059'/>")
                 yepnope('../js/vendor/d3.js')
                 warn('d3.js was loaded from Server')
             }else{
@@ -124,9 +132,13 @@ yepnope([
             }
         },
         complete : function(){
-            yepnope('../css/vendor/flat-ui.css')
+            // flat.ui, resource # 63061
+            // yepnope("<t4 type='media' id='63061'/>")
+            // yepnope('../css/vendor/flat-ui.css')
+            // flat.ui, resource # 63062
+            // yepnope("<t4 type='media' id='63062'/>")
             yepnope('../css/degree-finder/main.css')
-        }   
+        }
 
     },
 
@@ -136,7 +148,11 @@ yepnope([
         callback : function(url, result, key){
             debugPrintOut(url, result, key);
             if(!window.angular){
+
                 log('got here [1]')
+
+                // angular.js, resource # 63063
+                // yepnope("<t4 type='media' id='63063'/>")
                 yepnope('../js/vendor/angular.js')
                 warn('angular.js was loaded from Server')
             }else{
@@ -144,35 +160,47 @@ yepnope([
             }
         },
         complete : function(){
-            // x++;
-            // log("called # of times " + x )
+
             log('got here [2]')
+
             if (window.angular) {
+
                 log('angular loaded')
 
                 yepnope([{
                     test : window.angular,
-                    yep  : '../js/controllers.js',
+                    // angular.js, resource # 63064
+                    yep  : ['../js/controllers.js'],
                     complete : function(){
+
                         warn("controllers.js loaded")
+
                         angular.element(document).ready(function() {
+
                             log('got here [3]')
+
                             // yepnope('../js/controllers.js')
                             angular.bootstrap(document, ['degreeFinder']);
                         });
+
+                        // degrees-finder.js, resource # 63067
+                        // yepnope("<t4 type='media' id='63067'/>")
                         yepnope('../js/degrees-finder.js')
+
+                        // main.min.js, resource # 62498
+                        // yepnope("<t4 type='media' id='62498'/>")
                         yepnope('../js/main.min.js')
                     }
                 }])
 
             }else{
                 log('angular not loaded')
-                // yepnope('../js/vendor/angular.js')  
+                // yepnope('../js/vendor/angular.js')
             }
         }
-    },
+    }
 
-    {
+    // {
         // TRUMBA:CALENDAR:SPUDS api load
         // ------------------------------
         // test for homepage url or .spuds class in the body
@@ -186,9 +214,9 @@ yepnope([
         // callback: function(url, result, key){
         //     ("spuds.js" === key && result === true) ? warn("_____ spuds.js loaded _____") : nope("_____spuds.js not loaded _____")
         // }
-    },
+    // },
 
-    {
+    // {
         // // adds check for newsroom url build
         // // test : Modernizr.newsroom,
         // test: !! href.match(/newsroom/i),
@@ -207,7 +235,7 @@ yepnope([
         //     ("slider.js" === key && result === true) ? initCarousel() : nope()
         // }
 
-    }
+    // }
 
 ]);
 
