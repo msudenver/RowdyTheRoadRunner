@@ -75,13 +75,6 @@
     <link rel="apple-touch-icon-precomposed" href="<t4 type='media' id='60989' formatter='image/path'/>">
     <link rel="shortcut icon" href="<t4 type='media' id='60993' formatter='image/path'/>">
 
-    <!-- Modernizr CDN -->
-    <!-- <script type="text/javascript" src="<t4 type='media' id='62527'/>"></script> -->
-    <script src="../js/vendor/modernizr.js"></script>
-    <!-- yepnope.js -->
-    <!-- <script src="<t4 type='media' id='62511'/>"></script> -->
-    <script src="../js/utils/yepnope.js"></script>
-
     <!-- HeaderCode -->
     <!-- <t4 type='navigation' id='804'/> -->
 </head>
@@ -279,9 +272,20 @@
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="container">
-                                    <div id="admissions-calendar" class="spuds">
-                                        <p>test trumba spud</p>
+                                <div class="well">
+                                    <h4 class="actionHeader events clickable a" data-href="/events">DATES / DEADLINES</h4>
+                                    <div id="homepage_events" class="container">
+                                        <script type="text/javascript" src="http://www.trumba.com/scripts/spuds.js">
+                                        </script>
+                                        <script type="text/javascript">
+                                        $Trumba.addSpud({
+                                        webName: "msu-events-calendars-admissions-dates-and-deadlines",
+                                        spudType : "upcoming" ,
+                                        teaserBase : "http://www.trumba.com/calendars/msu-events-calendars-admissions-dates-and-deadlines" });
+                                        </script>
+                                        <noscript>Your browser must support JavaScript to view this content.
+                                        Please enable JavaScript in your browser settings then try again.
+                                        </noscript>
                                     </div>
                                 </div>
                             </div>
@@ -326,12 +330,15 @@
             </div>
         </div>
     </div>
+     <!-- Modernizr CDN -->
+    <!-- <script type="text/javascript" src="<t4 type='media' id='62527'/>"></script> -->
+    <script src="../js/vendor/modernizr.js"></script>
+    <!-- yepnope.js -->
+    <!-- <script src="<t4 type='media' id='62511'/>"></script> -->
+    <script src="../js/utils/yepnope.js"></script>
     <!-- google analytics -->
     <t4 type="navigation" id="103" />
     <!-- FooterCode -->
     <t4 type='navigation' id='805' />
-    <script type="text/javascript" src="http://trumba.com/scripts/spuds.js"></script>
-    <script type="text/javascript" src="../js/myspud.js"></script>
 </body>
-
 </html>

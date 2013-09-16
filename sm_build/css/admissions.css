@@ -292,6 +292,11 @@
 .info-six {
   padding-top: 1em;
 }
+/*
+
+    IE8 FIXES
+    ^^^^^^^^^
+*/
 .marginsForIE8Colums {
   margin-left: 30px;
   margin-right: 30px;
@@ -335,4 +340,12 @@
 .ie8 .admissions-feature-caption {
   background: #00447c;
   background-color: #00447c;
+}
+/*
+
+    TRUMBA CALENDAR SPUD
+    ~~~~~~~~~~~~~~~~~~~~
+*/
+.admissions-deadlines {
+  font-size: 1em;
 }

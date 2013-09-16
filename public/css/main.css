@@ -1355,6 +1355,19 @@ button.btn.btn-default.dropdown-toggle {
 .info-six {
   padding-top: 1em;
 }
+/*
+
+    TRUMBA CALENDAR SPUD
+    ~~~~~~~~~~~~~~~~~~~~
+*/
+.admissions-deadlines {
+  font-size: 3em;
+}
+/*
+
+    IE8 FIXES
+    ^^^^^^^^^
+*/
 .marginsForIE8Colums {
   margin-left: 30px;
   margin-right: 30px;
