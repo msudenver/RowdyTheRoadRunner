@@ -24,7 +24,7 @@ $(window).scroll ->
 
 	position = $(this).scrollTop()
 
-	if   position > 200
+	if position > 200
 		back2top.removeClass "disappear"
 		back2top.addClass "appear"
 		# $("table#results > caption").css { "margin-bottom" : "27px"}

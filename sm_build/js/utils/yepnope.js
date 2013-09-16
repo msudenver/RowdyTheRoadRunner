@@ -144,9 +144,8 @@ yepnope([
             }
         },
         complete : function(){
-            x++;
-            log("called # of times " + x )
-            
+            // x++;
+            // log("called # of times " + x )
             log('got here [2]')
             if (window.angular) {
                 log('angular loaded')
@@ -159,7 +158,7 @@ yepnope([
                         angular.element(document).ready(function() {
                             log('got here [3]')
                             // yepnope('../js/controllers.js')
-                        angular.bootstrap(document, ['degreeFinder']);
+                            angular.bootstrap(document, ['degreeFinder']);
                         });
                         yepnope('../js/degrees-finder.js')
                         yepnope('../js/main.min.js')
@@ -172,33 +171,6 @@ yepnope([
             }
         }
     },
-
-    {
-        // test : window.angular,
-        // yep  : '../js/controllers.js',
-        // complete : function(){
-        //     warn("controllers.js loaded")
-        //     angular.element(document).ready(function() {
-        //         log('got here [3]')
-        //         // yepnope('../js/controllers.js')
-        //         angular.bootstrap(document, ['degreeFinder']);
-        //     });
-        //     yepnope('../js/degrees-finder.js')
-        //     yepnope('../js/main.min.js')
-        // }
-    },
-
-    // {
-    //     test : window.jQuery,
-    //     // yep  : ['../js/degrees-finder.js', '../js/main.min.js'],
-    //     complete : function(){
-    //         // yepnope('../js/degrees-finder.js')
-    //         // yepnope('../js/main.min.js')
-    //         warn('main.min.js and degrees-finder.js loaded!')
-    //     }
-
-
-    // },
 
     {
         // TRUMBA:CALENDAR:SPUDS api load
@@ -239,25 +211,7 @@ yepnope([
 
 ]);
 
-
-// yepnope.injectJs('../js/vendor/d3.js', function() {
-//     warn('d3.js loaded!');
-// }, { charset: "utf-8" })
-
-// yepnope.injectJs('', function() {
-//         warn('angular.js loaded!');
-// });
-
-// yepnope([{
-//     load: ['../css/degree-finder/main.css','../js/controllers.js', '../js/main.js'],
-//     complete: function() {
-//         warn('controller.js and main.js loaded!');
-//      }
-// }]);
-
-
-
-// var location = (function(href){
+// var locator = (function(href){
 
 //     switch (href) {
 //         case "http://msudenver.edu/admissions/":

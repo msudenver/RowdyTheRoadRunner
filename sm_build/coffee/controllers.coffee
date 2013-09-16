@@ -39,19 +39,19 @@ degreeFinder.controller "ProgramController", ($scope, $http) ->
 
     $scope.types = list.types
 
-    $scope.$watch("list.length", (newVal)->
+    $scope.$watch "list.length", (newVal)->
         if newVal is 234
             list.total = 225
         else
             list.total = newVal
 
         $scope.total = list.total
-    )
+    
 
-    $scope.$watch("search", (newVal)->
+    $scope.$watch "search", (newVal)->
         if newVal and newVal.match(/[a-z]|[0-9]/gi) then $scope.list = list.all
 
-    )
+    
 
     $scope.sortByType = ($event, type) ->
         # log "sort by type clicked "
