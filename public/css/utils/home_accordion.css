@@ -1,3 +1,98 @@
+/****Flat UI Colors****/
+/****Custom Colors****/
+/****Blue Left Navigation Colors****/
+/******Color Classes*****/
+.turquoise {
+  background: #1ABC9C;
+}
+.greensea {
+  background: #16A085;
+}
+.emerald {
+  background: #2ECC71;
+}
+.nephritis {
+  background: #27AE60;
+}
+.peterriver {
+  background: #3498DB;
+}
+.belizehole {
+  background: #2980B9;
+}
+.amethyst {
+  background: #9B59B6;
+}
+.wisteria {
+  background: #8E44AD;
+}
+.wetasphalt {
+  background: #34495E;
+}
+.midnightblue {
+  background: #2C3E50;
+}
+.sunflower {
+  background: #F1C40F;
+}
+.orange {
+  background: #F39C12;
+}
+.carrot {
+  background: #E67E22;
+}
+.pumpkin {
+  background: #D35400;
+}
+.alizarin {
+  background: #E74C3C;
+}
+.pomegranate {
+  background: #C0392B;
+}
+.clouds {
+  background: #ECF0F1;
+}
+.silver {
+  background: #BDC3C7;
+}
+.asbestos {
+  background: #7F8C8D;
+}
+.concrete {
+  background: #95A5A6;
+}
+/****Custom Colors****/
+.darkgray {
+  background: #333333;
+}
+.lightgray {
+  background: #bcbaba;
+}
+.white {
+  background: #ffffff;
+}
+.black {
+  background: #000000;
+}
+.contentlink {
+  background: #1b557a;
+}
+.contenthlink {
+  background: #20648f;
+}
+.rowdyblue {
+  background: #00447c;
+}
+.rowdyred {
+  background: #c50f3c;
+}
+.rowdygray {
+  background: #717073;
+}
+.mainnav {
+  background: #003663;
+}
 /*Homepage Accordion*/
 .home_accordion {
   width: 100%;
