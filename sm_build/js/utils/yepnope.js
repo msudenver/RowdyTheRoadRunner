@@ -32,6 +32,7 @@ var debugPrintOut = function(url ,result ,key){
     log('key ::' + key)
 }
 
+var x = 0;
 
 yepnope([
 
@@ -74,7 +75,7 @@ yepnope([
             }
         },
         complete: function(){
-
+            
         }
     },
 
@@ -85,6 +86,7 @@ yepnope([
         load: timeout + bootstrapJsCDN,
         // callback: function(url, result, key){
         callback: function(url, result, key){
+
             if (!$.fn.modal) {
                 // bootstrap.min.js, resource # 62497
                 // yepnope("<t4 type='media' id='62497'/>")
@@ -124,45 +126,66 @@ yepnope([
         complete : function(){
             yepnope('../css/vendor/flat-ui.css')
             yepnope('../css/degree-finder/main.css')
-        }
+        }   
 
     },
 
     {
 
-        load :  timeout + angularCDNUncompressed,
+        load :  timeout + angularCDN,
         callback : function(url, result, key){
             debugPrintOut(url, result, key);
-            if(0 === key && result === true){
+            if(!window.angular){
                 log('got here [1]')
-
                 yepnope('../js/vendor/angular.js')
                 warn('angular.js was loaded from Server')
             }else{
                 warn('angular.js was loaded from CDN')
             }
-            // yepnope('preload!' + '../js/controllers.js')
         },
         complete : function(){
+            x++;
+            log("called # of times " + x )
+            
             log('got here [2]')
-            window.angular.element(document).ready(function() {
-                    angular.bootstrap(document, ['MajorsAndMinorsApp']);
-                });
-            // yepnope('../js/controllers.js')
-            // yepnope('../js/controllers.js')
-            yepnope('../js/degrees-finder.js')
-            yepnope('../js/main.min.js')
+            if (window.angular) {
+                log('angular loaded')
 
+                yepnope([{
+                    test : window.angular,
+                    yep  : '../js/controllers.js',
+                    complete : function(){
+                        warn("controllers.js loaded")
+                        angular.element(document).ready(function() {
+                            log('got here [3]')
+                            // yepnope('../js/controllers.js')
+                        angular.bootstrap(document, ['degreeFinder']);
+                        });
+                        yepnope('../js/degrees-finder.js')
+                        yepnope('../js/main.min.js')
+                    }
+                }])
 
+            }else{
+                log('angular not loaded')
+                // yepnope('../js/vendor/angular.js')  
+            }
         }
     },
 
     {
-        load : '../js/controllers.js',
-        complete : function(){
-            warn("controllers.js loaded");
-
-        }
+        // test : window.angular,
+        // yep  : '../js/controllers.js',
+        // complete : function(){
+        //     warn("controllers.js loaded")
+        //     angular.element(document).ready(function() {
+        //         log('got here [3]')
+        //         // yepnope('../js/controllers.js')
+        //         angular.bootstrap(document, ['degreeFinder']);
+        //     });
+        //     yepnope('../js/degrees-finder.js')
+        //     yepnope('../js/main.min.js')
+        // }
     },
 
     // {

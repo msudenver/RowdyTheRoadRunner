@@ -1,14 +1,7 @@
-
 'use strict';
 
 $ ->
-    # $.holdReady(true);
-
-    # $.getScript "http://trumba.com/scripts/spuds.js", (data, status, jqxhr)->
-    #     console.log(data)
-    #     console.log(status)
-    #     console.log(jqxhr)
-
+	
     href = document.location.href
 
 	$('body').animate({ opacity: 1 })
@@ -43,45 +36,3 @@ $ ->
 
 	else console.warn "running on localhost"
 
-
-
-
-# `
-# function createCORSRequest(method, url) {
-#   var xhr = new XMLHttpRequest();
-#   if ("withCredentials" in xhr) {
-
-#     // Check if the XMLHttpRequest object has a "withCredentials" property.
-#     // "withCredentials" only exists on XMLHTTPRequest2 objects.
-#     xhr.open(method, url, true);
-
-#   } else if (typeof XDomainRequest != "undefined") {
-
-#     // Otherwise, check if XDomainRequest.
-#     // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
-#     xhr = new XDomainRequest();
-#     xhr.open(method, url);
-
-#   } else {
-
-#     // Otherwise, CORS is not supported by the browser.
-#     xhr = null;
-
-#   }
-#   return xhr;
-# }
-
-# `
-# xhr = createCORSRequest('GET', "http://trumba.com/scripts/spuds.js");
-# xhr2 = createCORSRequest('GET', "https://raw.github.com/jquery/jquery-color/master/jquery.color.js");
-
-# if not xhr then throw new Error('CORS not supported for xhr2');
-
-# if not xhr2 then throw new Error('CORS not supported for xhr2');
-# console.dir(xhr)
-# console.dir(xhr2)
-
-# xhr.onload = ->
-#     console.log("response text :: #{responseText}")
-# xhr.onerror = ->
-#     console.log("there was an error")
