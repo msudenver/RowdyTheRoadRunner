@@ -236,18 +236,13 @@ td.Name span.X:hover {
 }
 td.Name:hover {
   background-color: black;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .span.X:hover {
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
   text-shadow: rgba(0, 0, 0, 0.75) 2em;
 }
 tbody a {
