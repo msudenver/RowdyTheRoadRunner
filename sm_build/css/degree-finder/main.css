@@ -329,14 +329,14 @@ input[type="search"] {
   border-radius: 0 0 18px 18px;
   background-color: #d11242;
 }
-#program_count section p {
+.total {
   font-size: 3em;
-  -webkit-box-shadow: 0px 0.15em 0px #007dc3;
-  -moz-box-shadow: 0px 0.15em 0px #007dc3;
-  box-shadow: 0px 0.15em 0px #007dc3;
+  text-shadow: 0px 7.5px 5px rgba(0, 0, 0, 0.3);
+  border-bottom: 0.15em solid #007dc3;
 }
 #program_count section p:nth-child(2) {
   font-size: 1.25em;
+  text-shadow: 0px 7.5px 5px rgba(0, 0, 0, 0.3);
 }
 /*
 
