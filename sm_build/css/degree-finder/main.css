@@ -181,7 +181,7 @@
   color: white;
   position: fixed;
   z-index: 1002;
-  top: 57em;
+  top: 7em;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   background-color: #454345;
@@ -192,12 +192,27 @@
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-table.results > tbody {
-  top: 15em;
-  width: 100%;
+table.results tbody {
+  margin-top: 1000px;
   margin-top: 4.4em;
   padding-bottom: 35px;
   padding-top: 0px;
+}
+th.Name {
+  min-width: 15em;
+  max-width: 20em;
+}
+th.Concentration {
+  padding-right: 5px;
+}
+th.Masters {
+  padding-left: 43px;
+}
+th.palette {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  margin: auto;
 }
 td.X {
   width: 1em;
@@ -206,8 +221,7 @@ td.X {
   color: white;
 }
 td.Name {
-  width: 10%;
-  background-color: #007d7d;
+  width: 9%;
   background-color: #575558;
   border-bottom: 0.12em solid gray;
 }
@@ -227,6 +241,7 @@ td.Name:hover {
   transition: all 0.3s ease-in-out;
 }
 tbody a {
+  padding-left: 20px;
   text-align: left;
   left: 25px;
   font-size: 14px;
@@ -297,7 +312,6 @@ input[type="search"] {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   color: white;
-  position: relative;
   z-index: 1001;
   background-color: #00447c;
 }
@@ -317,9 +331,6 @@ input[type="search"] {
   display: table;
   height: 2em;
   padding: 2em;
-}
-.filterBox label {
-  float: right;
 }
 #program_count section {
   z-index: 1001;
@@ -346,6 +357,5 @@ input[type="search"] {
 */
 #search_label {
   position: absolute;
-  display: inline-table;
-  left: 30%;
+  left: 65%;
 }

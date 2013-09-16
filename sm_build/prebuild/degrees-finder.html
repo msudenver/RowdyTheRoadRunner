@@ -222,27 +222,30 @@
                                     <p>
                                         <em>Filter by</em>
                                     </p>
-                                    <div class="row">
+                                    <div class="container">
                                         <div class="container">
-                                            <label class="selected"  data-ng-repeat="t in types">
-                                                <input name="selection" class="checkbox" type="radio" data-ng-click="sortByType($event, t)" id="{{t}}">
-                                                <span class="checkboxText">{{t}}</span>
-                                            </label>
+                                            <ul class="nav navbar-nav">
+                                                <li>
+                                                    <label class="selected"  data-ng-repeat="t in types">
+                                                    <input name="selection" class="checkbox" type="radio" data-ng-click="sortByType($event, t)" id="{{t}}">
+                                                    <span class="checkboxText">{{t}}</span>
+                                                </label>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                             <table class="results">
                                 <thead class="categories">
                                     <tr>
-                                        <th class="palette Name">Program</th>
-                                        <th class="palette Masters">Master</th>
-                                        <th class="palette Major">Major</th>
-                                        <th class="palette Minor">Minor</th>
-                                        <th class="palette Concentration">Concentration</th>
-                                        <th class="palette Certification">Certification</th>
-                                        <th class="palette Licensure">Licensure</th>
+                                        <th class="Name">Program</th>
+                                        <th class="Masters">Master</th>
+                                        <th class="Major">Major</th>
+                                        <th class="Minor">Minor</th>
+                                        <th class="Concentration">Concentration</th>
+                                        <th class="Certification">Certification</th>
+                                        <th class="Licensure">Licensure</th>
                                     </tr>
                                 </thead>
                                 <tbody>
