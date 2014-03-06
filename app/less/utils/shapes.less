@@ -1,0 +1,52 @@
+// @import 'functions.less';
+// global vars
+
+@scale: 1.25;
+@rotate: 180deg;
+@color: red;
+@roundiness : 0px;
+
+// a + b = c
+
+// @a:3em;
+// @b:@a;
+// @c:@b;
+
+@a:5em;
+@b:1em;
+@c:5em;
+
+//  BOX
+
+// .rectangle{
+//   // position: absolute;
+//   // background: @color; // ie fail
+//   // background-color: @color;
+//   .scale(2);
+//   width: 10em;
+//   height: 10em;
+//   border-radius: @roundiness;
+// }
+
+// TRIANGLE 
+
+.triangle{
+  position: absolute;
+
+  // bottom tip
+  // @x: 0%  ; @y: 310%;
+  
+  
+  // transform-origin: @x @y;
+  // -ms-transform-origin:  @x @y;
+  // -webkit-transform-origin: @x @y;
+  
+  border-left: @a / 2 solid transparent;
+  border-right: @c / 2 solid transparent;
+  border-bottom: @b * 2 solid @color;
+ 
+  border-radius: @roundiness;
+
+}
+
+

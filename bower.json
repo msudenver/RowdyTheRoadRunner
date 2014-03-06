@@ -1,0 +1,19 @@
+{
+    "name": "package",
+    "version": "0.0.2",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "app/bower_components",
+        "test"
+    ],
+    "dependencies": {
+        "bootstrap": "3.0.3",
+        "console-polyfill": "~0.1.0",
+        "modernizr": "~2.7.1",
+        "jquery": "1.10.2",
+        "jquery-simpleweather": "~2.3.0",
+        "pure": "~0.3.0"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "app": "app",
+    "dest": "preview",
+    "prod": {
+        "title": {
+            "homepage": "Metropolitan State University of Denver",
+            "tfour": "<t4 type='title' /> | <t4 type='navigation' id='524' /> | MSU Denver"
+        },
+        "path": "prod"
+    },
+    "webdav" : {
+        "username" : "username",
+        "password" : "password"
+    }
+}
