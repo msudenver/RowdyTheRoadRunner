@@ -21,7 +21,5 @@ project/
 config/*
 
 # distributions
-dest/*
+dest
 prod
-# preview/*
-!preview/giving.html
