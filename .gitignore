@@ -7,20 +7,15 @@ Thumbs.db
 app/**/*.psd
 
 # node_modules
-node_modules/
+node_modules
 
 # automatic screenshots
 casperjs/screenshots
 
 # bower refs
-bower_components/
-app/bower_components/
+bower_components
+app/bower_components
 
-# Project files
-secret/
-project/
-config/*
-
-# distributions
-dest
+# distributions ignore
+preview
 prod
