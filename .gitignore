@@ -14,6 +14,7 @@ casperjs/screenshots
 
 # bower refs
 bower_components/
+app/bower_components/
 
 # Project files
 secret/
