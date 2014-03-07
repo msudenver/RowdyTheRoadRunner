@@ -1,38 +1,21 @@
 # Mac specifics
 .DS_Store
-._*
-.spotlight-v100
 .Trashes
 Thumbs.db
 
-# File backups and large assets
-backups-and-assets
-
 # Photoshop files
-public/img/psd/
-
-# Debugging tools 
-debugging/
-
-# DreamWeaver specific
-_notes/
+app/**/*.psd
 
 # node_modules
-node_modules/
-
-# OS generated files #
-.swp
-
-/iisnode
-/web.config
+node_modules
 
 # automatic screenshots
-casperjs_server/screenshots
+casperjs/screenshots
 
 # bower refs
-components/
-# and 
-bower_components/
+bower_components
+app/bower_components
 
-# Project files
-project/
+# distributions ignore
+preview
+prod

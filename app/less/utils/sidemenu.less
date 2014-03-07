@@ -1,0 +1,379 @@
+//Add transition to containers so they can push in and out.
+// *
+
+ #layout, #menu, .menu-link {
+ 	@time : 0.2s;
+	-webkit-transition: all @time ease-out;
+	-moz-transition: all @time ease-out;
+	-ms-transition: all @time ease-out;
+	-o-transition: all @time ease-out;
+	transition: all @time ease-out;
+}
+
+// This is the parent `<div>` that contains the menu and the content area.
+
+#layout {
+	z-index: 99;
+	padding-left: 200px;
+	/* left col width "#menu" */
+	left: 0;
+	top: 100px;
+}
+
+//  div.content
+//  WHERE ALL USER CONTENT GOES
+
+ .content {
+	margin: 0 auto;
+	padding: 0 2em;
+	max-width: 800px;
+	margin-bottom: 50px;
+	line-height: 1.6em;
+             color:@white;
+}
+
+.content-subhead {
+	margin: 50px 0 20px 0;
+	font-weight: 300;
+	color: #888;
+}
+
+.header {
+	margin: 0;
+	color: #333;
+	text-align: center;
+	padding: 2.5em 2em 0;
+	 h1 {
+		margin: 0.2em 0;
+		font-size: 3em;
+		font-weight: 300;
+	}
+	 h2 {
+		font-weight: 300;
+		color: #ccc;
+		padding: 0;
+		margin-top: 0;
+	}
+}
+
+
+// *
+// The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
+// appears on the left side of the page.
+//
+// By using the combination of `position: fixed; top: 0; bottom:0;`, we can make
+// the menu have 100% height and be fixed on the page as the rest of it scrolls.
+// *
+
+ #menu {
+	margin-left: -150px;
+	// this should be "#menu" width
+	width: 150px;
+	position: fixed;
+	padding-top: 50px;
+	top: 0;
+	left: 150px;
+	// this should be "#menu" width
+	bottom: 0;
+	z-index: 1;
+	// so the menu or its navicon stays above all content
+	// background: @contentlink;
+	// background: @rowdyblue;
+	background: @level-0;
+	overflow-y: auto;
+	-webkit-overflow-scroll: touch;
+	// for smooth scrolling on mobile
+	// All anchors inside the menu should be styled like this
+	 a {
+		// color: @white;
+		border: none;
+		padding: 10px 20px 10px 10px ;
+		line-height: 1em;
+		&:hover{
+			color: @level-0;
+			.animate(0.25);
+		}
+		.animate(0.25);
+	}
+
+	// Remove all background/borders, since we are applying them to #menu.
+
+	 .pure-menu,  .pure-menu ul {
+		border: none;
+		background:  @level-0;
+	}
+
+	// Add that light border to separate items into groups.
+
+	 .pure-menu ul, .pure-menu .menu-item-divided {
+		// border-top: 1px solid #333;
+	}
+
+
+	// Change color of the anchor links on hover/focus.
+
+
+	 .pure-menu li a:hover, .pure-menu li a:focus {
+		background: @white;
+		line-height: 1em;
+		// color: @contentlink;
+		color: @level-0;
+		padding: 10px 15px;
+		// padding: 10px 15px;
+	}
+
+
+	// This styles the selected menu item `<li>`.
+
+
+	 .pure-menu-selected, .pure-menu-heading {
+		// background: #1f8dd6;
+		background: @black;
+	}
+
+
+	// This styles a link within a selected menu item `<li>`.
+
+
+	 .pure-menu-selected a {
+		color: #fff;
+	}
+
+
+	// This styles the menu heading.
+
+	 .pure-menu-heading {
+		font-size: 110%;
+		color: #fff;
+		margin: 0;
+	}
+}
+
+// --    Dynamic Button For Responsive Menu -- //
+//	The button to open/close the Menu is custom-made and not part of Pure. Here's
+//	how it works:
+//	`.menu-link` represents the responsive menu toggle that shows/hides on
+//	small screens.
+
+.menu-link {
+	display: none;
+	/* show this only on small screens */
+	top: 223px;
+	left : 50px;
+	/* `#menu`'s width */
+	// ie8 no transperency fallback
+	background: rgb(27,85,122);
+	background: rgba(27,85,122,0.5);
+	//  `#menu`'s width
+	//  change this value to increase/decrease button size
+	width: 4.5em;
+	height: auto;
+	padding: 2.2em 1.6em;
+	// rotate toggle animation
+	.rotate(90deg);
+      span {
+          position: relative;
+          display: block;
+          background: #fff;
+          color:@white;
+          width: 100%;
+          height: 0.2em;
+          &:before, &:after {
+            background: #fff;
+            width: 100%;
+            height: 0.2em;
+            position: absolute;
+            margin-top: -0.6em;
+            content:" ";
+          }
+          &:after {
+            margin-top: 0.6em;
+          }
+      }
+}
+
+.menu-link:hover, .menu-link:focus {
+	// ie8 no transperency fallback
+	background: rgb(27,85,122);
+	background: rgba(27,85,122,1);
+	.rotate(0deg);
+      .animate(0.2);
+      // three bar indicator for collapse nav
+	span {
+		position: relative;
+		display: block;
+		background: #fff;
+             color:@white;
+		width: 100%;
+		height: 0.2em;
+		 &:before, &:after {
+			background: #fff;
+			width: 100%;
+			height: 0.2em;
+			position: absolute;
+			margin-top: -0.6em;
+			content:" ";
+		}
+		&:after {
+			margin-top: 0.6em;
+		}
+	}
+}
+
+
+// -- Responsive Styles (Media Queries) -
+// Hides the menu at `767px`, but modify this based on your app's needs.
+
+ @media (max-width: 767px) {
+	.header {
+		text-align: left;
+	}
+
+	//Navigation Push styles.
+
+	#layout {
+		position: relative;
+		padding-left: 0;
+	}
+	#layout.active {
+		position: relative;
+		left: 150px;
+	}
+	#layout.active #menu {
+		left: 150px;
+		// width: 150px;
+		width: 70%;
+	}
+	#menu {
+		left: 0;
+	}
+	.menu-link {
+                            position: fixed;
+                            left: 0;
+                            display: block;
+                           // ie8 no transperency fallback
+                            background: rgb(27,85,122);
+                            background: rgba(27,85,122,0.5);
+	             /* show the button on small screens */
+	}
+	#layout.active .menu-link {
+		left: 70%;
+            // background: rgba(27,85,122,0.5);
+	}
+}
+
+//
+// shows the menu at > `767px`
+// but positions relative and inside body content
+
+ @media (min-width: 767px) {
+ 	#layout{
+ 		// position: relative;
+ 		// width: 100%;
+ 		padding: 0;
+ 		margin: 0 auto;
+ 		left:0;
+ 	}
+ 	#menu{
+ 		position: relative;
+ 		left:0;
+ 		padding: 0;
+ 		margin: 0 auto;
+ 		width: 100%;
+ 	}
+ 	.header {
+		text-align: left;
+	}
+
+ }
+
+.sidebar-nav{
+	margin-bottom: 2em;
+	// background: @level-0;
+	background: @level-0;
+	color: red;
+
+	ul li{
+		list-style-type: none;
+	}
+
+	li a:hover{
+		position: relative;
+		padding: 10px 15px;
+		// color: @level-1;
+		color: red;
+
+	}
+
+	li:after{
+		.animate(0.25s);
+	}
+
+	li a{
+		display:block;
+		line-height:1em;
+		color: @white;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+		text-decoration: none;
+	}
+
+	li{
+		height: 100%;
+		width: 100%;
+		padding-top: 0;
+		padding-bottom: 0;
+
+	}
+
+	& li a:hover {
+		background: @white;
+		.animate(0.25s);
+
+	}
+
+	& li a:after, a:hover{
+		color: @white;
+	}
+
+}
+
+ul.multilevel-linkul-0 li  {
+	background: @level-1;
+}
+
+ul.multilevel-linkul-1 li {
+	background: @level-2;
+}
+ul.multilevel-linkul-2 li {
+	background: @level-3;
+}
+ul.multilevel-linkul-3 li {
+	background: @level-4;
+}
+ul.multilevel-linkul-4 li {
+	background: @level-5;
+}
+ul.multilevel-linkul-5 li {
+	background: @level-6;
+}
+
+// *
+// CURRENT BRANCH HIGHLIGHT STATE
+
+.currentbranch0 a {
+	background: @white;
+	color: @level-1 !important;
+}
+
+.currentbranch1 a {
+	background: @white;
+	color: @mainnav !important;
+}
+
+.currentbranch2 a {
+	background: @white;
+	color: @mainnav !important;
+}
+

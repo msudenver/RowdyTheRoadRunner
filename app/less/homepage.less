@@ -1,0 +1,304 @@
+// TODO
+// [ ] - make height on news and events 488px
+
+
+//  HOMEPAGE CAPTIONS FOR 3 FEATURE STORY
+
+.lead {
+	font-size: 16.099999999999998px;
+	font-weight: 200;
+	line-height: 1.4;
+	padding: 5%;
+}
+
+.homepage-caption {
+	position: relative;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0;
+	overflow: hidden;
+	max-height: 600px;
+	font-size: 4em;
+
+	& h1 {
+		color: @white;
+	}
+	& h4, p {
+		color: @white;
+		position: absolute;
+		padding: 0.555em;
+		line-height: 1.15em;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #333333; // ie8 fallback
+		background: rgba(0, 0, 0, 0.55);
+		margin: 0 ;
+		// padding: 10% 3% 10% 10%;
+		.lead;
+	}
+	& img{
+		width: 100%;
+	}
+}
+
+// MAIN BLUE NAVIGATION ON HOMEPAGE
+
+.mainBlueNavigation{
+
+        // @borderColor : lighten(hsl(200,100%,100%), 20%);
+        @borderColor : darken(@white, 60%);
+
+        .nav.navbar-nav > .dropdown{
+            margin: 0 0.5em 0 0.5em;
+        }
+
+      & b.caret{
+            .animate(0.25s);
+            color:@white;
+      }
+      &.navbar-inverse .navbar-nav>.open{
+            // background: @mainnav;
+            /* Portrait */
+            a { color: @mainnav;}
+
+            /* Smartphones (portrait and landscape) ----------- */
+            @media only screen
+            and (min-width : 320px)
+            and (max-width : 768px) {
+                button.btn &{
+                    padding-left: 10%;
+                }
+                text-align: right;
+                padding-right: 10%;
+                a { color: @white;};
+            }
+
+            & b.caret{
+                color:@white;
+                .rotate(180deg);
+                // .animate(0.25s);
+            }
+      }
+      &.navbar-inverse {
+        background: @mainnav;
+      }
+
+      li {
+        & button{
+            color: @white;
+            padding: 1em;
+            margin: 0;
+                             /* Smartphones (portrait and landscape) ----------- */
+            @media only screen
+            and (min-width : 320px)
+            and (max-width : 480px) {
+                    width: 40%;
+                    // margin-left: 5%;
+            }
+        }
+        & button.btn {
+            color: @white;
+            border: 1px solid @borderColor;
+            background: @mainnav;
+            &:hover{
+                background:@midnightblue;
+                 .animate(0.1);
+            }
+                 /* Smartphones (portrait and landscape) ----------- */
+            @media only screen
+            and (min-width : 320px)
+            and (max-width : 480px) {
+                    width: 40%;
+                    margin-left: 5%;
+            }
+        }
+        & button.btn.btn-default.badge{
+            // margin:1em;
+            background: @mainnav;
+            border: 1px solid @borderColor;
+            // border: none;
+        }
+        /* Desktops and laptops ----------- */
+          @media only screen
+          and (min-width : 1224px) {
+              margin: 0 7% 0 7%;
+              padding: 0 1em 0 1em;
+          }
+      }
+}
+
+ // TESTIMONIAL IMG
+
+ .testimonial img {
+	width: 100%;
+	max-width: 100%; // ie fix
+}
+
+
+// NAVIGATION
+
+.nav-header button a.navbar-brand {
+	color: @white;
+}
+.navbar-inverse {
+	padding-left: 0.55em;
+	padding-right: 0.55em;
+}
+.input-group-btn.open > ul > li > a:hover {
+	.animate(0.25s);
+	background: @mainnav;
+	color: @white;
+}
+.btn.btn-default.dropdown-toggle {
+	border-color: @mainnav;
+	color: @white;
+}
+
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+	color: @lightgray;
+}
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+	color: @lightgray;
+}
+
+// ACTION CENTER
+
+ .actionHeader.applynow, .actionHeader.give {
+	text-transform: uppercase;
+	font-stretch: condensed;
+	color: white;
+	height: 150px;
+	margin-bottom: 0;
+	word-spacing: normal;
+}
+
+.actionHeader.applynow {
+	font-size: 3.5em;
+	font-weight: lighter;
+	// padding-top: 0.25em;
+	letter-spacing: 0.15px;
+	background-color: @turquoise;
+}
+.actionHeader.give {
+	font-size: 2.4em;
+	font-weight: lighter;
+	// padding-top: 0.35em;
+	letter-spacing: 0.45px;
+	background-color:@belizehole;
+}
+.actionHeader.events {
+	background-color: @pomegranate;
+
+}
+.actionHeader.news {
+	background-color:@peterriver;
+}
+
+#homepage_events{
+	/* Desktops and laptops ----------- */
+	@media only screen
+	and (min-width : 1224px) {
+		height: 393px;
+	}
+
+}
+#top3{
+	/* Desktops and laptops ----------- */
+	@media only screen
+	and (min-width : 1224px) {
+		height: 393px;
+	}
+
+}
+
+// GROUP OF THREE PICTURES AND CAPTIONS
+
+.homepage-hero {
+	padding: 0 1.2575em 0 1.2575em;
+	margin: 0 auto;
+	& .clickable.col-12.col-lg-6, .clickable.col-lg-3.visible-lg {
+		padding: 0 0.25em 0 0.25em;
+	}
+}
+
+.homepage-caption .clickable {
+	padding: 0 !important;
+	margin: 0 auto;
+}
+
+.firstLead {
+	.lead;
+	font-size: x-large !important;
+}
+.secondLead {
+	.lead;
+	font-size: large !important;
+}
+.homepage-caption p:nth-child(2) {
+	.lead;
+}
+
+// ACTION SECTION
+//
+
+.actionHeader{
+  vertical-align:top;
+  box-sizing: border-box;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  font-size: 2em;
+  text-transform: uppercase;
+  // margin: 0.5em 0 5em;
+  letter-spacing: 0.25em;
+}
+
+//  smaller two action headers apply and give to msu denver
+
+p.actionHeader{
+	padding: 10%;
+	line-height:1.25em;
+	// font-height:2em;
+	color: @white;
+	text-align: center;
+	// font-weight: 400;
+	font-size: 1.755em;
+	text-transform: uppercase;
+	// min-height: 90px;
+	// padding-bottom: 10px;
+
+	/* Smartphones (portrait and landscape) ----------- */
+	@media only screen
+	and (min-width : 320px)
+	and (max-width : 480px) {
+		/* Styles */
+		padding: 8%;
+	}
+
+}
+
+// .actionHeader.news{
+//   background-color:#3498DB;
+// }
+
+.actionHeader.applynow{
+  background-color:@turquoise;
+}
+
+.actionHeader.give{
+  // font-size: 1.2em;
+  background-color: @belizehole;
+}
+
+.actionHeader.events{
+  background: @pomegranate;
+}
+
+
+
+

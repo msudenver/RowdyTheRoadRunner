@@ -1,15 +1,15 @@
->rowdy the roadrunner
-=
+####1. Install dependencies with:
 
-*Remarks*
+``` # npm i ```
 
----
+``` # bower i ```
 
-Directory 2011_Styles/ is previous styles,
-inherited for reference only.
+####3. Build preview(local) and prod directories:
 
-Current build of assets can be found in sm_build (site manager build).
+``` # gulp build ```
 
-**Contact :** @garzawicker, @dviramontes
+####3. Run with livereload workflow:
+
+``` # gulp  ```
 
 
