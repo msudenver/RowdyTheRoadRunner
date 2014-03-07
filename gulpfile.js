@@ -40,7 +40,7 @@ var dest = {
 // - prepend grunt-* to for grunt task
 // *
 
-gulp.task('Js', function() {
+gulp.task('js', function() {
     return gulp.src(src.mainJs)
         .pipe(uglify({
             outSourceMap: true
@@ -81,7 +81,7 @@ gulp.task('html', ['grunt-htmlbuild']);
 
 gulp.task('watch', function() {
     gulp.watch(src.less, ['css']);
-    gulp.watch(src.mainJs, ['Js']);
+    gulp.watch(src.mainJs, ['js']);
     gulp.watch(src.templates, ['html']);
     // gulp.watch('spec/unit/{*, /**}.js', ['spec']);
     gulp.watch('preview/**').on('change', function(file) {
