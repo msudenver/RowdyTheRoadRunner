@@ -50,6 +50,10 @@
       // @borderColor : lighten(hsl(200,100%,100%), 20%);
       @borderColor : darken(@white, 70%);
 
+      .dropdown{ background: @mainnav;}
+      .dropdown-menu a:hover{
+        color: @white;
+      }
       .nav.navbar-nav > .dropdown{
           margin: 0 0.5em 0 0.5em;
           // md  -----------
@@ -81,9 +85,6 @@
             @media only screen
             and (min-width : 320px)
             and (max-width : 768px) {
-                button.btn &{
-                    // padding-left: 10%;
-                }
                 text-align: right;
                 padding-right: 10%;
                 a { color: @white;};
@@ -103,7 +104,7 @@
         & button{
             color: @white;
             padding: 1em;
-            margin: 0;
+            // margin: 0;
             &:hover{
                 background:@peterriver;
             }
@@ -114,27 +115,31 @@
                     width: 40%;
                     // margin-left: 5%;
             }
+
         }
         & button.btn {
-            .animate(0.1);
             color: @white;
-            border: 1px solid @borderColor;
+            // border: 1px solid @borderColor;
+            border: none;
             background: @mainnav;
+            .animate(0.1);
             &:hover{
                 background:@peterriver;
-                 .animate(0.1);
+
             }
             // Smartphones (portrait and landscape) -----------
             @media only screen
             and (min-width : 320px)
             and (max-width : 768px) {
-                    width: 40%;
-                    // .animate(0.1);
                     margin-left: 7%;
+                    width: 40%;
+                    .animate(0.1);
+                    // padding-left: 7%;
+
             }
         }
         & button.btn.btn-default.badge{
-            // margin:1em;
+            margin:1em;
             background: @mainnav;
             border: 1px solid @borderColor;
             // border: none;
@@ -166,9 +171,9 @@
 	padding-right: 0.55em;
 }
 .input-group-btn.open > ul > li > a:hover {
-	.animate(0.25s);
-	background: @mainnav;
-	color: @white;
+	// .animate(0.25s);
+	// background: @mainnav;
+	// color: @white;
 }
 .btn.btn-default.dropdown-toggle {
 	border-color: @mainnav;
