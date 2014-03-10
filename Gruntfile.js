@@ -1,3 +1,10 @@
+
+
+//  RUN GULPFILE INSTEAD ,
+// THIS FILE IS PRESERVED AS A REFERENCE
+// TO OTHER TASKS *
+
+
 'use strict';
 
 var gulp = require('gulp');
@@ -68,7 +75,7 @@ module.exports = function(grunt) {
             gulpLessTask: gulpLessTask,
 
         },
-        
+
         clean: ['', '/bower_components'],
         concurrent: {
             target1: ['uglify', 'copy', 'html']
