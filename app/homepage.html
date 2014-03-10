@@ -81,13 +81,13 @@
         //  Toggle flyout on hover
 
         onWindowResize = function() {
-            // if (w > 768) {
-            //     $('button.btn-hover, ul.dropdown-menu').hover(function() {
-            //         $(this).parent('.dropdown').addClass('open');
-            //     }, function() {
-            //         $(this).parent('.dropdown').removeClass('open');
-            //     });
-            // }
+            if (w > 768) {
+                $('button.btn-hover, ul.dropdown-menu').hover(function() {
+                    $(this).parent('.dropdown').addClass('open');
+                }, function() {
+                    $(this).parent('.dropdown').removeClass('open');
+                });
+            }
         };
         //  call this this once and call again on resize
         onWindowResize();
