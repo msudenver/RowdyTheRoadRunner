@@ -74,7 +74,7 @@ gulp.task('css', function() {
 gulp.task('build', function(cb) {
     // runSequence reference:
     //  ( 1 # 1st  ,[2,3] # 2nd runs in parallel ,4 # 3rd )  cb   # call callback last
-    runSequence('grunt-htmlbuild', 'grunt-copy', cb);
+    runSequence('grunt-htmlbuild', 'grunt-copy', 'css', 'js', cb);
 });
 
 gulp.task('html', ['grunt-htmlbuild']);
