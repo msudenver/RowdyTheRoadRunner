@@ -2,80 +2,80 @@
 
 .toolbar {
 
-	background-color: @white;
-	border: none;
+  background-color: @white;
+  border: none;
 
-	&.navbar {
-		min-height: 0;
-	}
+  &.navbar {
+    min-height: 0;
+  }
 
-	background-color: @white;
+  background-color: @white;
 
-	// Desktops and laptops
-	@media only screen and (min-width : 1224px) {
-		// left: 14%;
-		margin-left: 7%;
-		width: 93%;
-	}
-	
-	// iPads (portrait and landscape)
-	@media only screen
-	and (min-width : 768px)
-	and (max-width : 1223px) {
-		padding-left: 17%;
-		background-color: @white;
-	}
+  // Desktops and laptops
+  @media only screen and (min-width : 1224px) {
+    // left: 14%;
+    margin-left: 7%;
+    width: 93%;
+  }
 
-	 & a.navbar-brand:hover {
- 		color: @mainnav;
-	 }
+  // iPads (portrait and landscape)
+  @media only screen
+  and (min-width : 768px)
+  and (max-width : 1223px) {
+    padding-left: 17%;
+    background-color: @white;
+  }
 
-	 & button.navbar-toggle{
-		border: none;
-		left: 0;
-		background-color:  @rowdyred;
-		& span.icon-bar {
-			color: white;
-		}
-	}
+   & a.navbar-brand:hover {
+    color: @mainnav;
+   }
 
-	& .navbar-collapse {
-		& .navbar-nav li a {
-			padding: 10px ;
-		}
-		& ul li a {
-			color: @mainnav;	
-			.animate(0.25s);		
-			&:hover{
-				// background:  @asbestos;
-				background:  @clouds;
-				color:  @black;
-			}
-		}
-		& .navbar-collapse.collapse .nav.navbar-nav.navbar-right{
-			margin: 0;
-		}
-	}
+   & button.navbar-toggle{
+    border: none;
+    left: 0;
+    background:  @lightgray;
+    & span.icon-bar {
+      color: @white;
+    }
+  }
 
-	// GOOGLE SEARCH FIELD OFFSET
-	& #qButton {
+  & .navbar-collapse {
+    & .navbar-nav li a {
+      padding: 10px ;
+    }
+    & ul li a {
+      color: @mainnav;
+      .animate(0.25s);
+      &:hover{
+        // background:  @asbestos;
+        background:  @clouds;
+        color:  @black;
+      }
+    }
+    & .navbar-collapse.collapse .nav.navbar-nav.navbar-right{
+      margin: 0;
+    }
+  }
 
-		// Desktops and laptops 
-		@media only screen
-		and (min-width : 1224px) {
-			margin-left: -50px;
-		}
-		// iPads (portrait and landscape)
-		@media only screen
-		and (min-device-width : 768px)
-		and (max-device-width : 1024px) {
-			margin-left: -50px;
-		}
-	}
+  // GOOGLE SEARCH FIELD OFFSET
+  & #qButton {
 
-	// CONNECT-U ACTIVE COLOR
-	& li.active a{
-		background:  @clouds !important;
-		color: @black !important;
-	}
+    // Desktops and laptops
+    @media only screen
+    and (min-width : 1224px) {
+      margin-left: -50px;
+    }
+    // iPads (portrait and landscape)
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px) {
+      margin-left: -50px;
+    }
+  }
+
+  // CONNECT-U ACTIVE COLOR
+  & li.active a{
+    background:  @clouds !important;
+    color: @black !important;
+  }
 }
