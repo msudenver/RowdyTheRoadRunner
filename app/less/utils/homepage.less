@@ -235,22 +235,31 @@
   background-color:@peterriver;
 }
 
-#homepage_events{
-  // Desktops and laptops -----------
-  @media only screen
-  and (min-width : 1224px) {
-    height: 393px;
-  }
+#homepage_events {
+    max-height: 423px;
+    overflow: hidden;
+    @media only screen
+      and (min-width : 1224px) {
+        height: 423px;
+      }
 
 }
+
 #top3{
-  // Desktops and laptops -----------
-  @media only screen
-  and (min-width : 1224px) {
-    height: 393px;
-  }
-
+    max-height: 423px;
+    overflow: hidden;
+      // Desktops and laptops -----------
+      @media only screen
+      and (min-width : 1224px) {
+        height: 423px;
+      }
 }
+
+.actionHeader.news & {
+    max-height: 423px;
+    background:@peterriver;
+}
+
 
 // GROUP OF THREE PICTURES AND CAPTIONS
 
