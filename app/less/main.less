@@ -1,24 +1,22 @@
 @import "./utils/colors.less";
 @import "./utils/functions.less";
+@import "./utils/homepage.less";
+// @import "./utils/newsroom.less";
 
-@import "./homepage.less";
 @import "./utils/weather.less";
 
 @import "./utils/sidemenu.less";
 @import "./utils/shapes.less";
 
-@import "./utils/print.less"; // ?
 @import "./utils/tables.less";  // ?
 @import "./utils/admissions.less"; // ?
 // @import "./utils/actionSection.less"; // ?
 @import "./utils/contentTypes.less"; // ?
-
 @import "./utils/ie8.less";
-@import "./utils/modernizr.less";
-@import "./utils/toolbar.less";  // quicktools
-@import "./utils/footer.less";  // global
-@import "./utils/page-content.less";  // div .content
-// @import "./mediaQueries.less"; //  media queries with only keywork for ie8
+@import "./utils/toolbar.less";  // also known as quicktools
+@import "./utils/footer.less";  // global footer
+@import "./utils/page-content.less";  // div .content [user content starts here]
+// @import "./utils/print.less";
 
  // GLOBAL TIME SIGNATURE FOR ANIMATION TRANSITIONS
  @time : 0.25s; // SPECIFIED FOR CONSISTENCY  //////////
@@ -45,6 +43,7 @@ img {
 
 // NEWSROOM SPECIFIC
 // *
+
 #slider > a.left.carousel-control, #slider > a.right.carousel-control{
   color: @white;
 }
@@ -201,7 +200,8 @@ ul.breadcrumb {
   // color: red;
 }
 
-// DEFINE
+// DEFINE OR DELETE
+// ???????         ???????
 
 .readmore {
   text-align:right;
@@ -294,6 +294,15 @@ ul.breadcrumb {
   padding-top: 12%;
 }
 
+// MODERNIZR*
+// *
+
+ // .no-csstransforms, .no-csstransforms3d, .no-csstransitoins, .firefox {
+ .no-csstransforms, .no-csstransforms3d, .no-csstransitoins {
+    .triangle {
+        display: none;
+    }
+}
 
 
 
