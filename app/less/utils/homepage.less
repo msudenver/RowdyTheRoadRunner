@@ -244,30 +244,31 @@
   background-color:@peterriver;
 }
 
+@section_height : 392px;
+
 #homepage_events {
-    max-height: 423px;
+    height: @section_height;
     overflow: hidden;
     @media only screen
       and (min-width : 1224px) {
-        height: 423px;
+        height: @section_height;
       }
 
 }
 
 #top3{
-    max-height: 423px;
+    height: @section_height;
     overflow: hidden;
       // Desktops and laptops -----------
       @media only screen
       and (min-width : 1224px) {
-        height: 423px;
+        height: @section_height;
       }
 }
 
-.actionHeader.news & {
-    max-height: 423px;
-    background:@peterriver;
-}
+// .actionHeader.news & {
+//     background:@peterriver;
+// }
 
 
 // GROUP OF THREE PICTURES AND CAPTIONS
