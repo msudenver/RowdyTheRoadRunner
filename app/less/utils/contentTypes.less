@@ -45,6 +45,12 @@
      }
  }
 
+ .linkcolumn{
+    a, p{
+        word-break: break-all;
+    }
+ }
+
  .linkcolumn .HighlightBox {
     & .triangle {
         border-bottom: 3em solid @pomegranate;
@@ -52,6 +58,10 @@
     margin: 0 0 1em 0;
     background: @pomegranate;
     zoom: 1;
+    // word-break: break-all;
+    p , a{
+        word-break: break-all;
+    }
  }
 
  .ThreeColumnRight .HighlightBox {
