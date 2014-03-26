@@ -2,85 +2,85 @@
 ////////////////////////////
 
  .HighlightBox {
-	@this_font_color : @white;
+    @this_font_color : @white;
 
- 	// BASE TRIANGLE CLASS RULE
-	// *
- 	& .triangle {
-	 	left: 50%;
-	 	bottom: 0;
-	 	top: 105%;
-	 	@x: 25%;
-	 	@y: 5%;
-	 	transform-origin: @x @y;
-	 	-ms-transform-origin: @x @y;
-	 	-webkit-transform-origin: @x @y;
-	 	z-index: -1;
-	 	.rotate(180deg);
-	}
+    // BASE TRIANGLE CLASS RULE
+    // *
+    & .triangle {
+        left: 50%;
+        bottom: 0;
+        top: 105%;
+        @x: 25%;
+        @y: 5%;
+        transform-origin: @x @y;
+        -ms-transform-origin: @x @y;
+        -webkit-transform-origin: @x @y;
+        z-index: -1;
+        .rotate(180deg);
+    }
 
- 	color: @this_font_color;
- 	padding: 1.5em;
- 	margin-bottom: 1.5em;
- 	background: @greensea;
- 	position: relative;
- 	zoom: 1;
- 	z-index: 2;
- 	//  see .triangle index , this one has to be greater than triangle
- 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
- 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
- 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    color: @this_font_color;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    background: @greensea;
+    position: relative;
+    zoom: 1;
+    z-index: 2;
+    //  see .triangle index , this one has to be greater than triangle
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 
- 	& .HighlightBox-title {
-		color: @this_font_color;
-	 	font-size: 1.5em;
- 		text-align: center;
- 	}
+    & .HighlightBox-title {
+        color: @this_font_color;
+        font-size: 1.5em;
+        text-align: center;
+    }
 
-	& .HighlightBox-content{
-		& a {
-		 	color: @this_font_color;
-		 	font-size: 1em;
-		 }
-	 }
+    & .HighlightBox-content{
+        & a {
+            color: @this_font_color;
+            font-size: 1em;
+         }
+     }
  }
 
  .linkcolumn .HighlightBox {
- 	& .triangle {
- 		border-bottom: 3em solid @greensea;
- 	}
- 	margin: 0 0 1em 0;
- 	// background: @pomegranate;
- 	zoom: 1;
+    & .triangle {
+        border-bottom: 3em solid @pomegranate;
+    }
+    margin: 0 0 1em 0;
+    background: @pomegranate;
+    zoom: 1;
  }
 
  .ThreeColumnRight .HighlightBox {
- 	margin: 0 0 1em 0;
- 	background: @orange;
- 	&  .HighlightBox-title {
-	 	color: @black;
-	 	font-size: 1.5em;
-	 	text-align: center;
-	 }
- 	& a {
- 		color : @midnightblue;
- 	}
+    margin: 0 0 1em 0;
+    background: @orange;
+    &  .HighlightBox-title {
+        color: @black;
+        font-size: 1.5em;
+        text-align: center;
+     }
+    & a {
+        color : @midnightblue;
+    }
  }
 
 .ThreeColumnRight .HighlightBox,
-	.ThreeColumnRight .HighlightBox .HighlightBox-content{
-	color : @black;
-	& a {
-		color : @black;
-		&:hover{
-			color : @black;
-		}
-	}
+    .ThreeColumnRight .HighlightBox .HighlightBox-content{
+    color : @black;
+    & a {
+        color : @black;
+        &:hover{
+            color : @black;
+        }
+    }
 
 }
 
  .ThreeColumnRight .HighlightBox .triangle {
- 	border-bottom: 3em solid @orange;
+    border-bottom: 3em solid @orange;
  }
 
  // *
@@ -88,78 +88,78 @@
 
 .content .HighlightBox{
 
-	& .HighlightBox-content{
-		color: @white;
-		& a {
-			color: @white;
-			&:hover{
-				color: @white;
-			}
-		}
-	}
-	// actual triangle color
-	& .triangle {
-		border-bottom: 3em solid @greensea;
-	}
+    & .HighlightBox-content{
+        color: @white;
+        & a {
+            color: @white;
+            &:hover{
+                color: @white;
+            }
+        }
+    }
+    // actual triangle color
+    & .triangle {
+        border-bottom: 3em solid @greensea;
+    }
 }
 
  // Zebra Stripe For Newsroom
 
  .story_preview {
- 	border: solid silver 1px;
+    border: solid silver 1px;
  }
 
  .story_preview {
- 	padding: 15px;
+    padding: 15px;
  }
 
  .story_preview:nth-child(odd) {
- 	background-color: #f0f0f0;
+    background-color: #f0f0f0;
  }
 
  .story_preview:nth-child(even) {
- 	background-color: @white;
+    background-color: @white;
  }
 
  // Banner Image
 
  .bannerImage {
- 	max-width: 100%;
- 	padding: 5px;
- 	overflow:hidden;
- 	margin-bottom:1.5em;
+    max-width: 100%;
+    padding: 5px;
+    overflow:hidden;
+    margin-bottom:1.5em;
  }
 
  // Accordion Group
 
  .accordion-group {
- 	margin-bottom: 20px;
- 	border-radius: 0;
+    margin-bottom: 20px;
+    border-radius: 0;
  }
 
 // Expert Profile
 
  .expert {
- 	padding: 1.5em;
- 	margin-bottom: 20px;
- 	position: relative;
- 	zoom: 1;
- 	border: 1px solid #e3e3e3;
- 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
- 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
- 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    padding: 1.5em;
+    margin-bottom: 20px;
+    position: relative;
+    zoom: 1;
+    border: 1px solid #e3e3e3;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
  }
 
 // Newsroom Story
 
  .newsimage {
- 	float: right;
+    float: right;
  }
 
 // Facebook Like
 
  .fb-like-box {
- 	margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
  }
 
  #fb-root {
@@ -167,14 +167,14 @@
   }
 
 .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
-   	width: 100% !important;
+    width: 100% !important;
     height: 450px;
 }
 
 // Department Social
 
 .depsocial {
-	margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 
