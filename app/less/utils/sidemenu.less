@@ -14,7 +14,7 @@
 // This is the parent `<div>` that contains the menu and the content area.
 
 #layout {
-    z-index: 9999;
+    z-index: 9998;  // quicktools is 9999 for consistency
     padding-left: 200px;
     /* left col width "#menu" */
     left: 0;
@@ -72,11 +72,12 @@
     width: 150px;
     position: fixed;
     padding-top: 50px;
+    // top: 50px;
     top: 0;
     left: 150px;
     // this should be "#menu" width
     bottom: 0;
-    z-index: 9999;
+    z-index: 9998;
     // so the menu or its navicon stays above all content
     // background: @contentlink;
     // background: @rowdyblue;
