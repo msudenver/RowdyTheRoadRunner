@@ -13,7 +13,7 @@
 // @import "./utils/actionSection.less"; // ?
 @import "./utils/contentTypes.less"; // ?
 @import "./utils/ie8.less";
-@import "./utils/toolbar.less";  // also known as quicktools
+@import "./utils/quicktools.less";  // also known as quicktools
 @import "./utils/footer.less";  // global footer
 @import "./utils/page-content.less";  // div .content [user content starts here]
 // @import "./utils/print.less"; // compiled separetely and included in
@@ -24,6 +24,15 @@
 img {
   max-width: 100%;
   height: auto;
+}
+
+
+// BOOTSTRAP OVERWRITES
+// ************************
+
+.accordion-group {
+    padding: 1em 1em 0.5em 1em;
+    border:1px solid #e8e8e8;
 }
 
 .img-responsive{
