@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     grunt.config('connect', {
         options: {
             // makes domain accessable to vms and world
-            hostname: 'localhost',
+            hostname: '0.0.0.0',
         },
         livereload: {
             options: {

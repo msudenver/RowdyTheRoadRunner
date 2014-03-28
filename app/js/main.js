@@ -13,6 +13,10 @@ $(function() {
   Modernizr.addTest('firefox', function() {
     return !!navigator.userAgent.match(/firefox/i);
   });
+
+  if($('html').hasClass('firefox')){
+    // $.webshims.polyfill();
+  }
   // adds check for sitemanager build
   // Modernizr.addTest('homepage', function() {
     // return !!href.match(/^(http|https)(\:\/\/msudenver.edu\/$)/g) || !!href.match(/^(http|https)(\:\/\/0.0.0.0:9000\/$)/g)
