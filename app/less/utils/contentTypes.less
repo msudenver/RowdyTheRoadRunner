@@ -4,20 +4,20 @@
  .HighlightBox {
     @this_font_color : @white;
 
-    // BASE TRIANGLE CLASS RULE
-    // *
-    & .triangle {
-        left: 50%;
-        bottom: 0;
-        top: 105%;
-        @x: 25%;
-        @y: 5%;
-        transform-origin: @x @y;
-        -ms-transform-origin: @x @y;
-        -webkit-transform-origin: @x @y;
-        z-index: -1;
-        .rotate(180deg);
-    }
+//    // BASE TRIANGLE CLASS RULE
+//    // *
+//    & .triangle {
+//        left: 50%;
+//        bottom: 0;
+//        top: 105%;
+//        @x: 25%;
+//        @y: 5%;
+//        transform-origin: @x @y;
+//        -ms-transform-origin: @x @y;
+//        -webkit-transform-origin: @x @y;
+//        z-index: -1;
+//        .rotate(180deg);
+//    }
 
     color: @this_font_color;
     padding: 1.5em;
@@ -53,9 +53,9 @@
  }
 
  .linkcolumn .HighlightBox {
-    & .triangle {
-        border-bottom: 3em solid @pomegranate;
-    }
+//    & .triangle {
+//        border-bottom: 3em solid @pomegranate;
+//    }
     margin: 0 0 1em 0;
     background: @pomegranate;
     zoom: 1;
@@ -68,9 +68,9 @@
 
  .ThreeColumnRight .HighlightBox {
     margin: 0 0 1em 0;
-    background: @orange;
+    background: @greensea;
     &  .HighlightBox-title {
-        color: @black;
+        color: @white;
         font-size: 1.5em;
         text-align: center;
      }
@@ -81,19 +81,19 @@
 
 .ThreeColumnRight .HighlightBox,
     .ThreeColumnRight .HighlightBox .HighlightBox-content{
-    color : @black;
+    color : @white;
     & a {
-        color : @black;
+        color : @white;
         &:hover{
-            color : @black;
+            color : @white;
         }
     }
 
 }
 
- .ThreeColumnRight .HighlightBox .triangle {
-    border-bottom: 3em solid @orange;
- }
+// .ThreeColumnRight .HighlightBox .triangle {
+//    border-bottom: 3em solid @orange;
+// }
 
  // *
  // PAGE CONTENT HIGHLIGHT BOX
@@ -109,10 +109,10 @@
             }
         }
     }
-    // actual triangle color
-    & .triangle {
-        border-bottom: 3em solid @greensea;
-    }
+//    // actual triangle color
+//    & .triangle {
+//        border-bottom: 3em solid @greensea;
+//    }
 }
 
  // Zebra Stripe For Newsroom
