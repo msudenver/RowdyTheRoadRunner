@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     'use strict';
 
     // grunt.loadNpmTasks('grunt-html-build');
-    var version = "0.0.2";
+    var version = "0.2.1";
 
     grunt.config('htmlbuild', {
 
