@@ -172,6 +172,59 @@
       }
 }
 
+
+.navbar-toggle, .navbar-toggle:focus, .navbar-toggle:active { background: none !important; border: none !important; box-shadow: none !important; }
+
+#user-navigation { background: #ffffff; }
+#user-navigation > .nav > li:hover { background: rgba(0, 0, 0, 0.08); }
+#user-navigation > .nav > li > a { color: #00447c; }
+
+#searchForm {
+  position: absolute;
+  margin-right: 15px;
+}
+
+.main-navigation > .navbar-header { background: #00325e; }
+
+#home-navigation { background: #00447c; border: 1px solid #00447c; border-radius: 4px; }
+#home-navigation .nav > li > a { color: #fff !important; padding: 15px 0px; margin: 0px !important; }
+#home-navigation .nav > li > a:hover,
+#home-navigation .nav > li > a:focus {
+        text-decoration: none;
+        background-color: #00325e;
+}
+#home-navigation .dropdown-menu { background-color: #00325e; padding: 1em 0; min-width: 220px; border: none; border-radius: 0px 0px 4px 4px; margin-top: -1px !important;}
+#home-navigation .dropdown-menu li { padding: 5px 0 5px 15px; }
+#home-navigation .dropdown-menu li:hover { background: #00447c; }
+#home-navigation .dropdown-menu a { color: #fff !important; }
+/*#home-navigation li.dropdown:hover .dropdown-menu,*/
+#home-navigation .dropdown:hover .dropdown-menu {
+        display: block !important;
+}
+
+li.dropdown:hover i {
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  -ms-transition: all .25s ease-in-out;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+}
+.main-navigation .navbar-collapse {
+        max-height: 500px !important;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        border-radius: 0px !important;
+}
+.hidden-lg, .hidden-md, .hidden-sm, .hidden-xs { display: inline-block !important; }
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+.in li.dropdown:hover .dropdown-menu { display: block; position: relative; width: 100% !important; margin-bottom: 2em; box-shadow: none; }
+}
+
+
  // TESTIMONIAL IMG
 
  .testimonial img {
@@ -350,7 +403,3 @@ p.actionHeader{
 // .actionHeader.events{
 //   background: @pomegranate;
 // }
-
-
-
-
