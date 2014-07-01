@@ -6,7 +6,7 @@ Install Node.js from http://nodejs.org/
 
 • Open terminal and enter:
 
-		# npm install gulp -g
+		# npm install gulp -g ```
 
 An error should appear displaying that npm does not have access to the directory under /usr/local/lib/node_modules and Please try running this command again as root/Administrator.
 
