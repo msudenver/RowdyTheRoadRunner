@@ -52,14 +52,13 @@
 
 // MAIN BLUE NAVIGATION ON HOMEPAGE
 // *
-
 .mainBlueNavigation{
 
       // @borderColor : lighten(hsl(200,100%,100%), 20%);
       // @borderColor : darken(@white, 70%);
       @activeNavState : lighten(@mainnav, 15%);
 
-      .dropdown{ background: @mainnav; }
+      .dropdown{ background: @darken(@mainnav, 10%); }
 
       .dropdown-menu {
         li {
