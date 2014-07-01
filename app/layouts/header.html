@@ -3,73 +3,58 @@
     <!-- Logo and QuickLInks -->
     <div class="row">
         <!-- QUICKLINKS TOOLBAR -->
-        <div class="col-lg-7 col-lg-push-5 ">
+        <div class="col-lg-7 col-md-7 col-lg-push-5 col-md-push-5">
             <!-- Static navbar -->
-            <div class="navbar navbar-static-top  toolbar navbar-inverse ">
+            <nav class="navbar navbar-default navbar-static-top user-navigation" role="navigation">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#" data-toggle="collapse" data-target=".navbar-collapse">QUICK LINKS</a>
-                    <button type="button " class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <a style="color: #202020;" class="navbar-brand visible-xs" href="#" data-toggle="collapse" data-target="#user-navigation">QUICK LINKS</a>
+                    <button type="button " class="navbar-toggle" data-toggle="collapse" data-target="#user-navigation">
                         <span class="sr-only">Toggle quick links navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        <i style="color: #c0392b;" class="fa fa-bars fa-lg fa-fw"></i>
                     </button>
                 </div>
-                <div class="navbar-collapse collapse">
+                <div class="collapse navbar-collapse" id="user-navigation">
                     <ul class="nav navbar-nav">
-                        <li class="quicktools"><a href="/a_to_z">A to Z</a>
+                        <li><a href="/a_to_z">A to Z</a>
                         </li>
-                        <li class="quicktools"><a href="https://connectu.msudenver.edu"><strong>ConnectU</strong></a>
-                        </li>
-                        <li class="quicktools"><a href="http://library.auraria.edu">Library</a>
-                        </li>
-                        <li class="quicktools"><a href="/maps">Maps</a>
-                        </li>
-                        <li class="quicktools"><a href="/student">Current Students</a>
-                        </li>
-                        <li class="quicktools"><a href="/facstaff">Faculty & Staff</a>
-                        </li>
-                        <li class="quicktools">
-                            <a data-toggle="collapse" href="#quicksearch">
-                                <em>
-                                    <b class="glyphicon glyphicon-search"></b>
-                                </em>
+                        <li>
+                            <a href="/a_to_z">
+                                <strong>ConnectU</strong>
                             </a>
                         </li>
-                        </ul>
-                            <div class="row">  
-                                <div id="quicksearch" class="collapse col-lg-12">
-                                    <form action="http://msudenver.edu/a_to_z/search" class="navbar-form navbar-left" role="search">
-                                          <div class="col-lg-12">
-                                            <div class="input-group">
-                                            <input type="hidden" name="cx" value="004867254463714202705:1ammfpknuzw" class="form-control" placeholder="Search">
-
-                                            <input type="hidden" name="cof" value="FORID:11" class="form-control" placeholder="Search">
-
-                                            <input type="hidden" name="ie" value="UTF-8" class="form-control" placeholder="Search">
-
-                                            <label for="q" class="sr-only">Search MSU Denver site</label>
-                                            <input id="q" autofocus type="search" name="q" class="form-control" class="form-control" placeholder="Search MSU Denver site" size="32">
-                                            <span class="input-group-btn">
-                                            <button id="qButton" type="submit" class="btn btn-default">
-                                            <em>Search</em>
-                                            </button>
-                                            </span>
-                                        </div>
-                                         </div>
-                                    </form>
-                               
-                                </div>
-                            </div>
-                       
-                    
+                        <li><a href="/a_to_z">Library</a>
+                        </li>
+                        <li><a href="/a_to_z">Maps</a>
+                        </li>
+                        <li><a href="/a_to_z">Current Students</a>
+                        </li>
+                        <li><a href="/a_to_z">Faculty & Staff</a>
+                        </li>
+                        <li><a data-toggle="collapse" href="#searchForm">&nbsp;&nbsp;<i class="fa fa-search fa-lg fa-fw"></i>&nbsp;&nbsp;</a>
+                        </li>
+                    </ul>
                 </div>
-                <!--/.nav-collapse -->
+            </nav>
+            <div id="searchForm" class="collapse">
+                <form action="http://msudenver.edu/a_to_z/search" role="search">
+                    <div class="input-group">
+                        <input type="hidden" name="cx" value="004867254463714202705:1ammfpknuzw" class="form-control" placeholder="Search">
+                        <input type="hidden" name="cof" value="FORID:11" class="form-control" placeholder="Search">
+                        <input type="hidden" name="ie" value="UTF-8" class="form-control" placeholder="Search">
+                        <label for="q" class="sr-only">Search MSU Denver site</label>
+                        <input id="q" autofocus type="search" name="q" class="form-control input-sm" placeholder="Search MSU Denver site" size="32" />
+                        <span class="input-group-btn">
+                            <button id="qButton" type="submit" class="btn btn-default btn-sm">
+                                <i class="fa fa-search fa-fw"></i>&nbsp;Find Results
+                            </button>
+                        </span>
+                    </div>
+                </form>
             </div>
         </div>
         <!-- MSU DENVER LOGO -->
         <div class="col-lg-8 col-lg-offset-0 col-md-offset-3 col-sm-offset-2 col-xs-offset-0">
-            <div class="msudenver_logo ">
+            <div class="msudenver_logo">
                 <!-- build:remove -->
                 <img class="clickable" src="images/branding/MSUDenver_Formal.gif" alt="MSU Denver Formal Logo" data-href="/">
                 <!-- /build -->
@@ -83,148 +68,116 @@
 <!-- BEGINS MAIN BLUE NAVIGATION -->
 <div class="container">
     <div class="row">
-    <!-- Static navbar -->
-    <div class="navbar navbar-inverse mainBlueNavigation" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".homenavigation">
-                <span class="sr-only">Toggle main navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand visible-xs" href="#">MAIN NAVIGATION</a>
-            <div id="weather"></div>
-        </div>
-        <div class="homenavigation navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-            <li class="dropdown">
-                <button class="btn clickable btn-hover" data-href="/about">
-                    ABOUT
-                </button>
-                <button class="btn btn-default btn-hover" data-toggle="dropdown"><b class="caret"></b>
-                </button>
-                <ul class="dropdown-menu">
-                    <t4 type="navigation" id="98" />
-                    <!-- build:remove -->
-                    <li><a href="http://google.com">Action</a>
-                    </li>
-                    <li><a href="http://google.com">Another action</a>
-                    </li>
-                    <li><a href="http://google.com">Something else here</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="http://google.com">Separated link</a>
-                    </li>
-                    <li><a href="http://google.com">One more separated link</a>
-                    </li>
-                    <!-- /build -->
-                </ul>
-            </li>
-            <li class="dropdown">
-                <button class="btn clickable btn-hover" data-href="/academics">
-                    ACADEMICS
-                </button>
-                <button class="btn btn-default btn-hover" data-toggle="dropdown"><b class="caret"></b>
-                </button>
-                <ul class="dropdown-menu">
-                    <t4 type="navigation" id="97" />
-                    <!-- build:remove -->
-                    <li><a href="#">Action</a>
-                    </li>
-                    <li><a href="#">Another action</a>
-                    </li>
-                    <li><a href="#">Something else here</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a>
-                    </li>
-                    <li><a href="#">One more separated link</a>
-                    </li>
-                    <!-- /build -->
-                </ul>
-            </li>
-            <li class="dropdown">
-                <button class="btn clickable btn-hover" data-href="/admissions">
-                    ADMISSIONS
-                </button>
-                <button class="btn btn-default btn-hover" data-toggle="dropdown"><b class="caret"></b>
-                </button>
-                <ul class="dropdown-menu">
-                    <t4 type="navigation" id="96" />
-                    <!-- build:remove -->
-                    <li><a href="#">Action</a>
-                    </li>
-                    <li><a href="#">Another action</a>
-                    </li>
-                    <li><a href="#">Something else here</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a>
-                    </li>
-                    <li><a href="#">One more separated link</a>
-                    </li>
-                    <!-- /build -->
-                </ul>
-            </li>
-            <li class="dropdown">
-                <button class="btn clickable btn-hover" data-href="/campuslife">
-                    CAMPUS LIFE
-                </button>
-                <button class="btn btn-default btn-hover" data-toggle="dropdown"><b class="caret"></b>
-                </button>
-                <ul class="dropdown-menu">
-                    <t4 type="navigation" id="94" />
-                    <!-- build:remove -->
-                    <li><a href="#">Action</a>
-                    </li>
-                    <li><a href="#">Another action</a>
-                    </li>
-                    <li><a href="#">Something else here</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a>
-                    </li>
-                    <li><a href="#">One more separated link</a>
-                    </li>
-                    <!-- /build -->
-                </ul>
-            </li>
-            <li class="dropdown">
-                <button class="btn clickable btn-hover" data-href="/alumni">
-                        ALUMNI &#38; FRIENDS
+        <div class="col-sm-12">
+            <!-- Static navbar -->
+            <div class="navbar navbar-default main-navigation" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#home-navigation">
+                        <span class="sr-only">Toggle main navigation</span>
+                        <i style="color: #ffffff;" class="fa fa-bars fa-lg fa-fw"></i>
                     </button>
-                    <button class="btn btn-default btn-hover" data-toggle="dropdown"><b class="caret"></b></button>
-                <ul class="dropdown-menu">
-                    <t4 type="navigation" id="93" />
-                    <!-- build:remove -->
-                    <li><a href="#">Action</a>
-                    </li>
-                    <li><a href="#">Another action</a>
-                    </li>
-                    <li><a href="#">Something else here</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a>
-                    </li>
-                    <li><a href="#">One more separated link</a>
-                    </li>
-                    <!-- /build -->
-                </ul>
-            </li>
-            <li class="dropdown">
-                <button class="btn clickable" data-href="http://gometrostate.com/">
-                    ATHLETICS
-                </button>
-            </li>
-        </ul>
-        <!--/.nav-collapse -->
+                    <a style="color: #ffffff;" class="navbar-brand visible-xs" href="#">MAIN NAVIGATION</a>
+                </div>
+                <div class="navbar-collapse collapse" id="home-navigation">
+                    <ul class="nav nav-justified">
+                        <li class="dropdown">
+                            <a class="clickable" data-href="/about">ABOUT <i class="fa fa-caret-right fa-fw hidden-xs hidden-sm"></i></a>
+                            <ul class="dropdown-menu">
+                                <t4 type="navigation" id="98" />
+                                <!-- build:remove -->
+                                <li><a href="http://google.com">Action</a>
+                                </li>
+                                <li><a href="http://google.com">Another action</a>
+                                </li>
+                                <li><a href="http://google.com">Something else here</a>
+                                </li>
+                                <li><a href="http://google.com">Separated link</a>
+                                </li>
+                                <li><a href="http://google.com">One more separated link</a>
+                                </li>
+                                <!-- /build -->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="clickable" data-href="/academics">ACADEMICS <i class="fa fa-caret-right fa-fw hidden-xs hidden-sm"></i></a>
+                            <ul class="dropdown-menu">
+                                <t4 type="navigation" id="97" />
+                                <!-- build:remove -->
+                                <li><a href="#">Action</a>
+                                </li>
+                                <li><a href="#">Another action</a>
+                                </li>
+                                <li><a href="#">Something else here</a>
+                                </li>
+                                <li><a href="#">Separated link</a>
+                                </li>
+                                <li><a href="#">One more separated link</a>
+                                </li>
+                                <!-- /build -->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="clickable" data-href="/admissions">ADMISSIONS <i class="fa fa-caret-right fa-fw hidden-xs hidden-sm"></i></a>
+                            <ul class="dropdown-menu">
+                                <t4 type="navigation" id="96" />
+                                <!-- build:remove -->
+                                <li><a href="#">Action</a>
+                                </li>
+                                <li><a href="#">Another action</a>
+                                </li>
+                                <li><a href="#">Something else here</a>
+                                </li>
+                                <li><a href="#">Separated link</a>
+                                </li>
+                                <li><a href="#">One more separated link</a>
+                                </li>
+                                <!-- /build -->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="clickable" data-href="/campuslife">CAMPUS LIFE <i class="fa fa-caret-right fa-fw hidden-xs hidden-sm"></i></a>
+                            <ul class="dropdown-menu">
+                                <t4 type="navigation" id="94" />
+                                <!-- build:remove -->
+                                <li><a href="#">Action</a>
+                                </li>
+                                <li><a href="#">Another action</a>
+                                </li>
+                                <li><a href="#">Something else here</a>
+                                </li>
+                                <li><a href="#">Separated link</a>
+                                </li>
+                                <li><a href="#">One more separated link</a>
+                                </li>
+                                <!-- /build -->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="clickable" data-href="/alumni">ALUMNI&nbsp;&#38;&nbsp;FRIENDS <i class="fa fa-caret-right fa-fw hidden-xs hidden-sm"></i></a>
+                            <ul class="dropdown-menu">
+                                <t4 type="navigation" id="93" />
+                                <!-- build:remove -->
+                                <li><a href="#">Action</a>
+                                </li>
+                                <li><a href="#">Another action</a>
+                                </li>
+                                <li><a href="#">Something else here</a>
+                                </li>
+                                <li><a href="#">Separated link</a>
+                                </li>
+                                <li><a href="#">One more separated link</a>
+                                </li>
+                                <!-- /build -->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="clickable" data-href="http://gometrostate.com/">ATHLETICS</a>
+                        </li>
+                    </ul>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
         </div>
     </div>
-</div>
 </div>
 <!-- ENDS MAIN BLUE NAVIGATION + LOGO + QUICK-LINKS
