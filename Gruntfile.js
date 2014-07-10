@@ -8,10 +8,10 @@
 'use strict';
 
 var gulp = require('gulp');
-var cssmin = require('gulp-cssmin');
-var rename = require('gulp-rename');
-var header = require('gulp-header');
-var less = require('gulp-less');
+// var cssmin = require('gulp-cssmin');
+// var rename = require('gulp-rename');
+// var header = require('gulp-header');
+// var less = require('gulp-less');
 var dest = 'preview/css';
 var src = 'app/less/main.less';
 var pkg = require('./package.json');
@@ -44,12 +44,12 @@ gulpLessTask = function() {
         .pipe(gulp.dest(dest));
 };
 
-gulp.task('watch', function() {
-    gulp.watch(src, ['css']);
-});
-
-gulp.task('css', gulpLessTask);
-gulp.task('default', ['watch']);
+// gulp.task('watch', function() {
+//     gulp.watch(src, ['css']);
+// });
+//
+// gulp.task('css', gulpLessTask);
+// gulp.task('default', ['watch']);
 
 // Grunt config for rest of yeoman scaffold
 // *
@@ -85,15 +85,15 @@ module.exports = function(grunt) {
 
     // grunt.registerTask('sync', ['browser_sync']);
     // grunt.registerTask("server", ['connect:livereload', 'browser_sync' ,'watch']);
-    grunt.registerTask("server", ['connect:livereload', 'watch']);
+    // grunt.registerTask("server", ['connect:livereload', 'watch']);
 
     grunt.registerTask('gulpTask', ['gulp:gulpLessTask']);
 
     // locally defined tasks
     grunt.registerTask("build",
         'Run tasks concurrently, target 1', ['concurrent:target1']);
-    grunt.registerTask("default",
-        'Loads server with livereload', ['server']);
+    // grunt.registerTask("default",
+    //     'Loads server with livereload', ['server']);
     grunt.registerTask("specs",
         'Runs watcher on tests', ['watch:specs']);
     grunt.registerTask('uncomment',
