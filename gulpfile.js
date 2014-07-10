@@ -53,7 +53,7 @@ gulp.task('js', function() {
             type: 'JS'
         }))
         .pipe(gulp.dest(dest.js))
-})
+});
 
 gulp.task('css', function() {
     return gulp.src(src.mainlessFile)
@@ -82,24 +82,22 @@ gulp.task('html', ['grunt-htmlbuild']);
 gulp.task('watch', function() {
     gulp.watch(src.less, ['css']);
     gulp.watch(src.mainJs, ['js']);
-    gulp.watch(src.templates, ['html']);
+    // gulp.watch(src.templates, ['html']);
     // gulp.watch('spec/unit/{*, /**}.js', ['spec']);
-    gulp.watch('preview/**').on('change', function(file) {
-        livereload().changed(file.path);
-    });
+    // gulp.watch('preview/**').on('change', function(file) {livereload().changed(file.path);});
 });
 
 // Run $ webdriver-manager start
-gulp.task('spec', function() {
-    return gulp.src(["spec/unit/*.js"])
-        .pipe(protractor({
-            configFile: "spec/protractor.config.js",
-            args: ['--baseUrl', 'http://127.0.0.1:8000']
-        }))
-        .on('error', function(e) {
-            throw e;
-        });
-});
+// gulp.task('spec', function() {
+//     return gulp.src(["spec/unit/*.js"])
+//         .pipe(protractor({
+//             configFile: "spec/protractor.config.js",
+//             args: ['--baseUrl', 'http://127.0.0.1:8000']
+//         }))
+//         .on('error', function(e) {
+//             throw e;
+//         });
+// });
 
 gulp.task('server', ['grunt-connect', 'watch']);
 gulp.task('default', ['server']);
