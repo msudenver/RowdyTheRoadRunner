@@ -101,5 +101,5 @@ gulp.task('spec', function() {
         });
 });
 
-gulp.task('server', ['grunt-connect', 'watch']);
+gulp.task('serve', ['grunt-connect', 'watch']);
 gulp.task('default', ['server']);

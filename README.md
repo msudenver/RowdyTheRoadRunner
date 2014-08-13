@@ -10,6 +10,4 @@
 
 ####3. Run with livereload workflow:
 
-``` # gulp  ```
-
-
+``` # gulp serve ```
