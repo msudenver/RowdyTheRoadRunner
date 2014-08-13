@@ -1,11 +1,10 @@
 {
-  "name": "package",
-  "version": "0.0.2",
+  "name": "RowdyTheRoadrunnerBower",
+  "version": "0.3.0",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "app/bower_components",
     "test"
   ],
   "dependencies": {

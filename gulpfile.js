@@ -71,7 +71,7 @@ gulp.task('css', function() {
         .pipe(gulp.dest(dest.css));
 });
 
-gulp.task('build', function(cb) {
+gulp.task('prep', function(cb) {
     // runSequence reference:
     //  ( 1 # 1st  ,[2,3] # 2nd runs in parallel ,4 # 3rd )  cb   # call callback last
     runSequence('grunt-htmlbuild', 'grunt-copy', 'css', 'js', cb);
@@ -83,100 +83,10 @@ gulp.task('watch', function() {
     gulp.watch(src.less, ['css']);
     gulp.watch(src.mainJs, ['js']);
     gulp.watch(src.templates, ['html']);
-    // gulp.watch('spec/unit/{*, /**}.js', ['spec']);
     gulp.watch('preview/**').on('change', function(file) {
         livereload().changed(file.path);
     });
 });
 
-// Run $ webdriver-manager start
-gulp.task('spec', function() {
-    return gulp.src(["spec/unit/*.js"])
-        .pipe(protractor({
-            configFile: "spec/protractor.config.js",
-            args: ['--baseUrl', 'http://127.0.0.1:8000']
-        }))
-        .on('error', function(e) {
-            throw e;
-        });
-});
-
-gulp.task('server', ['grunt-connect', 'watch']);
+gulp.task('serve', ['grunt-connect', 'watch']);
 gulp.task('default', ['server']);
-
-// Grunt config for rest of yeoman scaffold
-// *
-//  $ grunt --gruntfile gulpfile.js
-
-// module.exports = function(grunt) {
-
-
-//     // require('time-grunt')(grunt);
-//     // require('load-grunt-tasks')(grunt);
-
-//     // // load grunt-gulp tasker
-//     // grunt.loadNpmTasks('grunt-gulp');
-
-//     var projectConfig = grunt.file.readJSON('projectConfig.json');
-
-//     grunt.initConfig({
-
-//         yeoman: projectConfig,
-//         pkg: grunt.file.readJSON('package.json'),
-
-//         // gulp: {
-//         //     gulpLessTask: gulpLessTask,
-
-//         // },
-
-//         // clean: ['', '/bower_components'],
-//         // concurrent: {
-//         //     target1: ['uglify', 'copy', 'html']
-//         // }
-
-//     });
-
-//     // grunt.registerTask('sync', ['browser_sync']);
-//     // grunt.registerTask("server", ['connect:livereload', 'browser_sync' ,'watch']);
-//     // grunt.registerTask("server", ['connect:livereload', 'watch']);
-
-//     // grunt.registerTask('gulpTask', ['gulp:gulpLessTask']);
-
-//         // Load per-task config from separate files.
-//     grunt.loadTasks('tasks');
-
-//     // locally defined tasks
-//     grunt.registerTask("build",
-//         'Run tasks concurrently, target 1', ['concurrent:target1']);
-
-//     // grunt.registerTask("default",
-//     //     'Loads server with livereload', ['server']);
-//     // grunt.registerTask("specs",
-//     //     'Runs watcher on tests', ['watch:specs']);
-//     // grunt.registerTask('uncomment',
-//     //     'Uncomments t4 tags inside templates', ['replace:uncommentT4tags']);
-
-//     grunt.registerTask('bower-inject',
-//         'Injects front-end dependencies into templates', ['bower-install']);
-//     // grunt.registerTask('sync', 'Deploys to various webdav servers', ['webdav_sync']);
-
-
-
-//     grunt.registerTask("html",
-//         'Preprocess html templates', ['htmlbuild']);
-
-//     // grunt.registerTask('format',
-//     //     'Prettifies code according to beautifier.js rules ', ['jsbeautifier']);
-
-//     // grunt-gulp task
-//     // grunt.registerTask('gulp-less-cssmin', 'pipe less -> css -> min.css ', ['gulp']);
-
-//     // reconstruct templates
-//     grunt.registerTask("rebuild",
-//         'Reruns build process', ['html', 'copy', 'bower-inject']);
-
-//     // prepare prod assets,
-//     // pending ftp/webdav task
-//     grunt.registerTask('deploy',
-//         'Prepares production assets', ['copy:bower', 'html:prod']);
-// };

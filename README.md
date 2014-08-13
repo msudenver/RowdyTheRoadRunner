@@ -8,7 +8,6 @@ Install Node.js from http://nodejs.org/
 
 		# npm install gulp -g
 
-An error should appear displaying that npm does not have access to the directory under /usr/local/lib/node_modules and Please try running this command again as root/Administrator.
 
 • Install gulp as admin or sudo:
 
@@ -46,12 +45,12 @@ If you are using a Mac you will get the following message if you have never set 
 Agree to the installation and once it's complete return to Terminal
 
 
-####4. Build preview(local) and prod directories:
+####4. Prepares preview and prod directories:
 
-        # gulp build
+        # gulp prep
 
 ####5. Run with livereload workflow:
 
-        # gulp
+        # gulp serve
 
 This should open a new tab in your default browser displaying all files and preview html files.

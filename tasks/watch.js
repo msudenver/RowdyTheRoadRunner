@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 
         bower_deps: {
             // options : { livereload : true },
-            files: ['app/bower_components/**'],
+            files: ['bower_components/**'],
             tasks: ['copy:bower', 'bower-install']
         },
 

@@ -44,14 +44,14 @@ module.exports = function(grunt) {
         bower: {
             files: [{
                 expand: true,
-                cwd: 'app/bower_components',
+                cwd: 'bower_components',
                 src: '**/*',
                 dest: 'preview/bower_components/',
                 flatten: false,
                 filter: 'isFile',
             }, {
                 expand: true,
-                cwd: 'app/bower_components',
+                cwd: 'bower_components',
                 src: '**/*',
                 dest: 'prod/bower_components/',
                 flatten: false,
