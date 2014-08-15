@@ -19,8 +19,8 @@ module.exports = function(grunt) {
         // },
         css: {
             expand: true,
-            cwd: 'app/css/',
-            src: 'main.min.css',
+            cwd: 'app/less/',
+            src: 'print.css',
             dest: 'preview/css/',
             flatten: true,
             filter: 'isFile',
