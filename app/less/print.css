@@ -6,13 +6,11 @@
 		box-shadow: none !important;
 	}
 	.msudenver_logo img{
-		/* position:absolute; */
 		width: 200px;
 		padding:1em;
-		/* margin:1em; */
-    margin-top: 20px;
+    margin-top: 10px;
 	}
-	.navbar, .navbar-inverse,
+	.sr-only, .navbar, .navbar-inverse,
 	.navbar-fixed-top, .sidebar-nav, .linkcolumn {
 		display:none;
 	}
@@ -23,7 +21,7 @@
 	}
 	h1 {
 		font-size:20px;
-    margin-top: 20px;
+    margin-top: 10px;
 	}
 	h2 {
 		font-size:18px;
