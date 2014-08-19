@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         less: {
             // options : { livereload : false }, // reset this for browser_sync
             //files: ['app/less/{*,utils/*}.less'],
-            files: ['app/less/main.less'],
+            files: ['app/less/{main.min.css,print.css}'],
             tasks: ['css']
         },
 
