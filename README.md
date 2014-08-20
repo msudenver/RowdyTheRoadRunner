@@ -1,15 +1,39 @@
-####1. Install dependencies with:
+####1. Node JS installation
 
-``` # npm i ```
+Install Node.js from http://nodejs.org/
 
-``` # bower i ```
+####2. Node packages Installation
 
-####3. Build preview(local) and prod directories:
+• Navigate to git repository:
 
-``` # gulp build ```
+    # cd git/RowdytheRoadRunner
 
-####3. Run with livereload workflow:
+• Once in the directory run:
 
-``` # gulp  ```
+    # sudo npm install
+
+####3. Package Installation and dependencies on Git Repository
+
+• Install bower packages:
+
+		# bower install
+
+###Note. Mac and Xcode
+
+If you are using a Mac you will get the following message if you have never set up Xcode:
+
+        Additional error details:
+        xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+
+Agree to the installation and once it's complete return to Terminal
 
 
+####4. Prepares preview and prod directories:
+
+        # gulp prep
+
+####5. Run with livereload workflow:
+
+        # gulp serve
+
+This should open a new tab in your default browser displaying all files and preview html files.

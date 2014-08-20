@@ -19,8 +19,8 @@ module.exports = function(grunt) {
         // },
         css: {
             expand: true,
-            cwd: 'app/css/',
-            src: 'main.min.css',
+            cwd: 'app/less/',
+            src: 'print.css',
             dest: 'preview/css/',
             flatten: true,
             filter: 'isFile',
@@ -44,14 +44,14 @@ module.exports = function(grunt) {
         bower: {
             files: [{
                 expand: true,
-                cwd: 'app/bower_components',
+                cwd: 'bower_components',
                 src: '**/*',
                 dest: 'preview/bower_components/',
                 flatten: false,
                 filter: 'isFile',
             }, {
                 expand: true,
-                cwd: 'app/bower_components',
+                cwd: 'bower_components',
                 src: '**/*',
                 dest: 'prod/bower_components/',
                 flatten: false,

@@ -12,14 +12,14 @@ module.exports = function(grunt) {
 
         bower_deps: {
             // options : { livereload : true },
-            files: ['app/bower_components/**'],
+            files: ['bower_components/**'],
             tasks: ['copy:bower', 'bower-install']
         },
 
         less: {
             // options : { livereload : false }, // reset this for browser_sync
             //files: ['app/less/{*,utils/*}.less'],
-            files: ['app/less/main.less'],
+            files: ['app/less/{main.min.css,print.css}'],
             tasks: ['css']
         },
 
