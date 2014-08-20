@@ -4,36 +4,19 @@ Install Node.js from http://nodejs.org/
 
 ####2. Node packages Installation
 
-• Open terminal and enter:
-
-		# npm install gulp -g
-
-
-• Install gulp as admin or sudo:
-
-		# sudo npm install gulp -g
-
-• Install grunt as admin or sudo:
-
-		# sudo npm install grunt -g
-
-• Install bower as admin or sudo:
-
-		# sudo npm install bower -g
-
-####3. Package Installation and dependencies on Git Repository
-
 • Navigate to git repository:
 
-		# cd git/RowdytheRoadRunner
+    # cd git/RowdytheRoadRunner
 
 • Once in the directory run:
 
-		# npm i
+    # sudo npm install
 
-• When completed run:
+####3. Package Installation and dependencies on Git Repository
 
-		# bower i
+• Install bower packages:
+
+		# bower install
 
 ###Note. Mac and Xcode
 

@@ -12,6 +12,7 @@ var runSequence = require('run-sequence'),
     pkg = require('./package.json'),
     moment = require('moment'),
     uglify = require('gulp-uglify'),
+    del = require('del'),
     protractor = require('gulp-protractor').protractor;
 
 // var _ = require('lodash');
@@ -90,3 +91,6 @@ gulp.task('watch', function() {
 
 gulp.task('serve', ['grunt-connect', 'watch']);
 gulp.task('default', ['server']);
+
+// Clean all build files as a new project except for node_modules
+gulp.task('nuke', del.bind(null, ['preview', 'prod', 'bower_components' ]));
