@@ -31,7 +31,6 @@ module.exports = function(grunt) {
                     views: {
                         homepageThreeFeatures: 'app/views/homepageThreeFeatures.html',
                         newsAndCalendar: 'app/views/newsAndCalendar.html',
-                        weather: 'app/views/weather.html'
                     },
                     layout: {
                         header: 'app/layouts/header.html',
