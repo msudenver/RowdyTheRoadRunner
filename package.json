@@ -2,6 +2,7 @@
   "name": "RowdyTheRoadRunner",
   "version": "0.0.2",
   "devDependencies": {
+    "bower-config": "^0.6.1",
     "grunt": "~0.4.1",
     "grunt-contrib-copy": "~0.4.1",
     "grunt-open": "~0.2.2",
