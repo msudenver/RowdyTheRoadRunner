@@ -13,6 +13,7 @@
     "modernizr": "~2.7.1",
     "jquery": "1.10.2",
     "pure": "~0.3.0",
-    "mediaelement": "~2.14.0"
+    "mediaelement": "~2.14.0",
+    "gulp": "~3.9.0"
   }
 }
